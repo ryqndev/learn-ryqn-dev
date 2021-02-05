@@ -1,0 +1,10 @@
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+a:visited{
+    color: var(--text-primary);
+}
+a:hover{
+    color: grey;
+}

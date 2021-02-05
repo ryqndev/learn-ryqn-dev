@@ -1,0 +1,25 @@
+.transcript-w{
+    background-color: #252525;
+    width: 80%;
+    height: 500px;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+.transcript-line--w{
+    font-family: 'B612 Mono', monospace;
+    font-size: 1.5rem;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 1fr;
+    margin: 10px;
+    column-gap: 50px;
+    & .time{
+        text-align: right;
+        & span{
+            color: grey;
+        }
+    }
+    & .content{
+        overflow-x: hidden;
+    }
+}

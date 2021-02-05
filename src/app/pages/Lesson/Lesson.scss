@@ -1,0 +1,41 @@
+:root {
+    --table-color: rgb(204, 143, 255);
+}
+
+.lesson-wrapper {
+    display: grid;
+    padding: 50px 0px;
+    font-size: 1.3rem;
+    user-select: text;
+    main {
+        place-self: center;
+        max-width: 1000px;
+        width: calc(100vw - 80px);
+        p {
+            font-family: 'Nunito', sans-serif;
+            margin: 20px 0px;
+        }
+        table {
+            border: 1px solid var(--table-color);
+            width: 100%;
+            border-radius: 4px;
+            font-family: 'Nunito', sans-serif;
+
+            tr {
+                padding: 20px 50px;
+                td, th {
+                    padding: 15px 20px;
+                    text-align: left;
+                    border-left: 1px solid var(--table-color);
+                }
+                tbody{
+                    padding-top: 400px;
+                }
+                th {
+                    border-bottom: 1px solid var(--table-color);
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
