@@ -1,5 +1,5 @@
 import MarkdownRenderer from './MarkdownRenderer';
-import Code from './Code';
+import Code from './MarkdownRenderer/Code';
 
 export {
     MarkdownRenderer,

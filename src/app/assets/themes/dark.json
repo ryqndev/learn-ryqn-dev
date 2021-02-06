@@ -1,0 +1,10 @@
+{
+    "themeName": "Dark",
+    "themeStyles": {
+        "--dark-mode": "1",
+        "--bg-primary": "#101010",
+        "--bg-secondary": "#000000",
+        "--text-primary": "white",
+        "--accent": "#f68080"
+    }
+}

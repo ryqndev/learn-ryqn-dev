@@ -14,11 +14,16 @@ const Lesson = () => {
         fetch(url).then(res => res.text()).then(setContent);
     }, [lessonName]);
 
+    
+    const imageRenderer = (props) => {
+        let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}`;
+        return <img alt={props.alt} src={url + props.src.substr(1)} />;
+    }
 
     return (
         <div className="lesson-wrapper">
             <main>
-                <ReactMarkdown plugins={[gfm]} renderers={MarkdownRenderer}>
+                <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}}>
                     {content}
                 </ReactMarkdown>
             </main>

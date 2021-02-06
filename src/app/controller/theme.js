@@ -41,7 +41,7 @@ const Theme = () => { setTheme(getTheme()) }
  */
 const setTheme = (value) => {
     localStorage.setItem('theme', value);
-
+    // console.log(themeStyles, value);
     let styles = themeStyles[value].themeStyles;
     for(let style in styles){
         document.documentElement.style.setProperty(style, styles[style]);

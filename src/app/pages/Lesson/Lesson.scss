@@ -4,13 +4,16 @@
 
 .lesson-wrapper {
     display: grid;
-    padding: 50px 0px;
+    padding: 100px 0px 200px;
     font-size: 1.3rem;
     user-select: text;
     main {
         place-self: center;
         max-width: 1000px;
         width: calc(100vw - 80px);
+        @media screen and (max-width: 800px){
+            width: calc(100vw - 40px);
+        }
         p {
             font-family: 'Nunito', sans-serif;
             margin: 20px 0px;
@@ -20,7 +23,6 @@
             width: 100%;
             border-radius: 4px;
             font-family: 'Nunito', sans-serif;
-
             tr {
                 padding: 20px 50px;
                 td, th {
