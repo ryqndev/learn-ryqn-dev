@@ -9,7 +9,7 @@
     user-select: text;
     main {
         place-self: center;
-        max-width: 1000px;
+        max-width: 950px;
         width: calc(100vw - 80px);
         @media screen and (max-width: 800px){
             width: calc(100vw - 40px);

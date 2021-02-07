@@ -2,6 +2,7 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: color 500ms, background-color 500ms;
+    overflow-y: hidden;
 }
 a:visited{
     color: var(--text-primary);
