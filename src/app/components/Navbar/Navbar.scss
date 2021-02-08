@@ -1,0 +1,29 @@
+nav {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 100vw;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    background-color: var(--bg-secondary);
+    // box-shadow: 0 0 2px 2px #151515;
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    transition: background-color 500ms;
+    svg {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+    }
+    h2 {
+        place-self: center start;
+    }
+    .t-w {
+        padding: 18px 40px;
+        grid-column: 3/4;
+    }
+    
+}

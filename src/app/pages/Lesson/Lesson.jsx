@@ -23,7 +23,7 @@ const Lesson = () => {
     return (
         <div className="lesson-wrapper">
             <main>
-                <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}}>
+                <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
                     {content}
                 </ReactMarkdown>
             </main>

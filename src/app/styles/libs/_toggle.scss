@@ -1,16 +1,3 @@
-.t-w {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	z-index: 350;
-}
-
-@media screen and (min-width: 600px) {
-	.t-w {
-		top: 30px;
-		right: 30px;
-	}
-}
 .react-toggle {
 	touch-action: pan-x;
 	display: inline-block;

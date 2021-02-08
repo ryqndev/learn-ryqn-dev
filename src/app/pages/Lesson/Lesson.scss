@@ -4,7 +4,7 @@
 
 .lesson-wrapper {
     display: grid;
-    padding: 100px 0px 200px;
+    padding: 150px 0px 200px;
     font-size: 1.3rem;
     user-select: text;
     main {
@@ -17,6 +17,7 @@
         p {
             font-family: 'Nunito', sans-serif;
             margin: 20px 0px;
+            line-height: 2rem;
         }
         table {
             border: 1px solid var(--table-color);

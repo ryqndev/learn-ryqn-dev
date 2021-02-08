@@ -11,6 +11,7 @@ const MarkdownRenderer = {
     heading: (props) => {
         switch(props?.level){
             case 1:
+                document.title = props.node.children[0].value;
                 return (
                     <div className="article--header">
                         <h1 className="md-render--header">{props.node.children[0].value}</h1>
