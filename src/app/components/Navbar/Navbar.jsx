@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import Toggle from 'react-toggle';
 import {getTheme, setTheme as updateTheme} from '../../controller/theme';
 import {ReactComponent as Logo} from '../../assets/logo.svg';
-import './Navbar.scss';
 
 const Navbar = () => {
     const [theme, setTheme] = useState(getTheme());

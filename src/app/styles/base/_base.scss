@@ -4,9 +4,10 @@ body {
     transition: color 500ms, background-color 500ms;
     overflow-x: hidden;
 }
-a:visited{
-    color: var(--text-primary);
+a:any-link {
+    color: inherit;
+    transition: color 250ms;
 }
-a:hover{
-    color: grey;
+a:hover {
+    color: var(--accent);
 }

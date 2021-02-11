@@ -3,7 +3,6 @@ import ReactMarkdown from 'react-markdown';
 import {useParams} from 'react-router-dom';
 import gfm from 'remark-gfm';
 import {MarkdownRenderer} from '../../components';
-import './Lesson.scss';
 
 const Lesson = () => {
     const { lessonName } = useParams();
@@ -22,7 +21,7 @@ const Lesson = () => {
 
     return (
         <div className="lesson-wrapper">
-            <main>
+            <main className="md-renderer">
                 <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
                     {content}
                 </ReactMarkdown>

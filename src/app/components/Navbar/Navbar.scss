@@ -7,8 +7,6 @@ nav {
     width: 100vw;
     padding: 0px 20px;
     box-sizing: border-box;
-    background-color: var(--bg-secondary);
-    // box-shadow: 0 0 2px 2px #151515;
     display: grid;
     grid-template-columns: 60px 1fr auto;
     transition: background-color 500ms;

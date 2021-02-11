@@ -2,7 +2,6 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import Lesson from './pages/Lesson';
 import {Footer, Navbar} from './components';
-import './styles/main.scss';
 
 const App = () => {
 	return (
