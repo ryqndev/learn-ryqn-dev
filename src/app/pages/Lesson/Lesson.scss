@@ -1,13 +1,9 @@
-:root {
-    --table-color: rgb(204, 143, 255);
-}
-
 .lesson-wrapper {
     display: grid;
     padding: 150px 0px 200px;
     font-size: 1.3rem;
     user-select: text;
-    main {
+    article {
         place-self: center;
         max-width: 950px;
         width: calc(100vw - 80px);
@@ -20,7 +16,7 @@
             line-height: 2rem;
         }
         table {
-            border: 1px solid var(--table-color);
+            border: 1px solid var(--accent);
             width: 100%;
             border-radius: 4px;
             font-family: 'Nunito', sans-serif;
@@ -29,13 +25,13 @@
                 td, th {
                     padding: 15px 20px;
                     text-align: left;
-                    border-left: 1px solid var(--table-color);
+                    border-left: 1px solid var(--accent);
                 }
                 tbody {
                     padding-top: 400px;
                 }
                 th {
-                    border-bottom: 1px solid var(--table-color);
+                    border-bottom: 1px solid var(--accent);
                     font-weight: bold;
                 }
             }

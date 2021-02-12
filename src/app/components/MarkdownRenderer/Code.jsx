@@ -33,7 +33,7 @@ const Code = ({language, node, value}) => {
                 />
             </div>
         </div>
-    )
+    );
 }
 
-export default Code
+export default Code;

@@ -1,6 +1,5 @@
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import Home from './pages/Home';
-import Lesson from './pages/Lesson';
+import * as Page from './pages';
 import {Footer, Navbar} from './components';
 
 const App = () => {
@@ -8,12 +7,9 @@ const App = () => {
 		<Router basename={process.env.PUBLIC_URL}>
             <Navbar />
             <Switch>
-                <Route exact strict path="/">
-                    <Home />
-                </Route>
-                <Route path="/:lessonName">
-                    <Lesson />
-                </Route>
+                <Route exact strict path="/" component={Page.Home} />
+                <Route exact path="/articles" component={Page.ArticlesList} />
+                <Route exact path="/:lessonName" component={Page.Lesson} />
             </Switch>
             <Footer />
 		</Router>

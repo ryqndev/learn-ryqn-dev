@@ -5,14 +5,13 @@ import gfm from 'remark-gfm';
 import {MarkdownRenderer} from '../../components';
 
 const Lesson = () => {
-    const { lessonName } = useParams();
+    const {lessonName} = useParams();
     const [content, setContent] = useState('');
 
     useEffect(() => {
         let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}/README.md`;
         fetch(url).then(res => res.text()).then(setContent);
     }, [lessonName]);
-
     
     const imageRenderer = (props) => {
         let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}`;
@@ -21,11 +20,11 @@ const Lesson = () => {
 
     return (
         <div className="lesson-wrapper">
-            <main className="md-renderer">
+            <article className="md-renderer">
                 <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
                     {content}
                 </ReactMarkdown>
-            </main>
+            </article>
         </div>
     )
 }

@@ -2,9 +2,10 @@
     "themeName": "Dark",
     "themeStyles": {
         "--dark-mode": "1",
-        "--bg-primary": "#101010",
-        "--bg-secondary": "#000000",
+        "--bg-primary": "#191D2A",
+        "--bg-secondary": "#101010",
         "--text-primary": "white",
-        "--accent": "#f68080"
+        "--accent": "#f68080",
+        "--header-secondary": "#f68080"
     }
 }
