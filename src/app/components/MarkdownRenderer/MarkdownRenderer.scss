@@ -1,8 +1,12 @@
 .md-renderer{
     img {
         width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
     }
-
+    .list-item__indent {
+        padding-left: 40px;
+    }
     ol > a, ul > a{
         text-decoration: none;
     }
@@ -12,9 +16,18 @@
         span {
             color: var(--accent);
             transition: color 500ms;
+            &.text {
+                color: inherit;
+                padding-bottom: 3px;
+                border-bottom: 2px solid #f6808044;
+                transition: border-color 350ms;
+            }
         }
         &:hover > span{
             color: var(--accent-alt);
+            &.text {
+                border-color: var(--accent-alt);
+            }
         }
     }
 

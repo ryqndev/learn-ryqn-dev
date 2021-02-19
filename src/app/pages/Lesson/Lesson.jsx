@@ -2,11 +2,11 @@ import {useState, useEffect} from 'react';
 import ReactMarkdown from 'react-markdown';
 import {useParams} from 'react-router-dom';
 import gfm from 'remark-gfm';
-import {MarkdownRenderer} from '../../components';
+import {MarkdownRenderer, Spinner} from '../../components';
 
 const Lesson = () => {
     const {lessonName} = useParams();
-    const [content, setContent] = useState('');
+    const [content, setContent] = useState(null);
 
     useEffect(() => {
         let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}/README.md`;
@@ -18,7 +18,9 @@ const Lesson = () => {
         return <img alt={props.alt} src={url + props.src.substr(1)} />;
     }
 
-    return (
+    return content === null ? (
+        <Spinner />
+    ) : (
         <div className="lesson-wrapper">
             <article className="md-renderer">
                 <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
@@ -26,7 +28,7 @@ const Lesson = () => {
                 </ReactMarkdown>
             </article>
         </div>
-    )
+    );
 }
 
 export default Lesson;

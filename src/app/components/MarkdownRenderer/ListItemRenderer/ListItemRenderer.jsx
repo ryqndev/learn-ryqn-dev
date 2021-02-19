@@ -9,13 +9,24 @@ const ListItem = ({ordered, children, ...props}) => {
      * work for now as long as all list items in markdown are links.
      */
     const extraTextFromInnerLink = (node) => node.children?.[0]?.children?.[0]?.children?.[0]?.value;
+    const linkLocation = location.pathname + children[0].props.href;
 
     if(children.length > 1) { 
         return (
             <li>{'\u00A0'.repeat(ordered ? 6 : 0)}
                 <ol>
-                <HashLink smooth to={location.pathname + children[0].props.href} scroll={el => scrollWithOffset(el)}>
-                    <li>{'\u00A0'.repeat(ordered ? 6 : 0)} <span>•</span> {'\u00A0'.repeat(6)} {extraTextFromInnerLink(props.node)}</li>
+                <HashLink
+                    smooth
+                    to={linkLocation}
+                    scroll={el => scrollWithOffset(el)}
+                >
+                    <li>{'\u00A0'.repeat(ordered ? 6 : 0)} 
+                        <span>•</span> 
+                        {'\u00A0'.repeat(6)}
+                        <span className="text">
+                            {extraTextFromInnerLink(props.node)}
+                        </span>
+                    </li>
                 </HashLink>
                 {children.slice(1)}
                 </ol>
@@ -23,8 +34,19 @@ const ListItem = ({ordered, children, ...props}) => {
         );
     }
     return (
-        <HashLink smooth to={location.pathname + children[0].props.href} scroll={el => scrollWithOffset(el)}>
-            <li>{'\u00A0'.repeat(ordered ? 6 : 0)} <span>•</span> {'\u00A0'.repeat(6)} {extraTextFromInnerLink(props.node)}</li>
+        <HashLink
+            smooth
+            to={linkLocation}
+            scroll={el => scrollWithOffset(el)}
+        >
+            <li>
+                {'\u00A0'.repeat(ordered ? 6 : 0)}
+                <span>•</span>
+                {'\u00A0'.repeat(6)} 
+                <span className="text">
+                    {extraTextFromInnerLink(props.node)}
+                </span>
+            </li>
         </HashLink>
     )
 }

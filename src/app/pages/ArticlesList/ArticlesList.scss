@@ -38,6 +38,10 @@
                     font-weight: bold;
                     transition: color 400ms;
                 }
+                & > span.date {
+                    font-size: 1.1rem;
+                    color: grey;
+                }
                 & > p {
                     color: var(--text-primary);
                     font-size: 1.3rem;

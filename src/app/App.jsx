@@ -1,16 +1,21 @@
+import {Suspense, lazy} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import * as Page from './pages';
-import {Footer, Navbar} from './components';
+import {Footer, Navbar, Spinner} from './components';
+const Home = lazy(() => import('./pages/Home'));
+const ArticlesList = lazy(() => import('./pages/ArticlesList'));
+const Lesson = lazy(() => import('./pages/Lesson'));
 
 const App = () => {
 	return (
 		<Router basename={process.env.PUBLIC_URL}>
             <Navbar />
-            <Switch>
-                <Route exact strict path="/" component={Page.Home} />
-                <Route exact path="/articles" component={Page.ArticlesList} />
-                <Route exact path="/:lessonName" component={Page.Lesson} />
-            </Switch>
+            <Suspense fallback={<Spinner />}>
+                <Switch>
+                    <Route exact strict path="/" component={Home} />
+                    <Route exact path="/articles" component={ArticlesList} />
+                    <Route exact path="/:lessonName" component={Lesson} />
+                </Switch>
+            </Suspense>
             <Footer />
 		</Router>
 	);
