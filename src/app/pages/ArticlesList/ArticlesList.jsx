@@ -4,7 +4,7 @@ import articlesData from '../../assets/articlesData.json';
 
 const ArticlesList = () => {
     return (
-        <div className="article-list--wrapper">
+        <div className="article-list--wrapper page__component">
             <main>
                 <h1>Articles List</h1>
                 <div className="list">

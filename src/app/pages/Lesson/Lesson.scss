@@ -1,19 +1,14 @@
 .lesson-wrapper {
-    display: grid;
-    padding: 150px 0px 200px;
-    font-size: 1.3rem;
     user-select: text;
+    padding-top: 180px;
+    @media screen and (max-width: 800px) {
+        padding-top: 80px;        
+    }
     article {
-        place-self: center;
-        max-width: 950px;
-        width: calc(100vw - 80px);
-        @media screen and (max-width: 800px){
-            width: calc(100vw - 40px);
-        }
         p {
             font-family: 'Nunito', sans-serif;
             margin: 20px 0px;
-            line-height: 2rem;
+            line-height: 1.8em;
         }
         table {
             border: 1px solid var(--accent);

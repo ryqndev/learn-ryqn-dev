@@ -8,20 +8,36 @@ nav {
     padding: 0px 20px;
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: 60px 1fr auto;
+    column-gap: 40px;
+    // background-color: var(--bg-secondary);
+    grid-template-columns: 60px auto 1fr auto;
     transition: background-color 500ms;
+    grid-template-areas: "logo name template toggle";
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 60px 1fr 1fr auto;
+        column-gap: 10px;
+        padding: 0px 10px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        grid-template-areas: "logo template toggle";
+    }
     svg {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
         padding: 15px;
+        grid-area: logo;
     }
-    h2 {
+    .name {
+        grid-area: name;
+    }
+    a {
         place-self: center start;
+        text-decoration: none;
     }
     .t-w {
         padding: 18px 40px;
-        grid-column: 3/4;
+        grid-area: toggle;
     }
     
 }

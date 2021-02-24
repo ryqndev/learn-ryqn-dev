@@ -3,6 +3,7 @@
     "themeStyles": {
         "--dark-mode": "0",
         "--bg-primary": "#FFEEEE",
+        "--bg-primary-1": "#FFFFFF",
         "--bg-secondary": "#ff9999",
         "--text-primary": "black",
         "--accent": "#f68080",

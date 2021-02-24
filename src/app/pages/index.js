@@ -1,9 +1,11 @@
+import ArticlesList from './ArticlesList';
 import Home from './Home';
 import Lesson from './Lesson';
-import ArticlesList from './ArticlesList';
+import TemplateGenerator from './TemplateGenerator';
 
 export {
     ArticlesList,
-    Lesson,
     Home,
+    Lesson,
+    TemplateGenerator,
 }

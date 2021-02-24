@@ -21,7 +21,7 @@ const Lesson = () => {
     return content === null ? (
         <Spinner />
     ) : (
-        <div className="lesson-wrapper">
+        <div className="lesson-wrapper page__component">
             <article className="md-renderer">
                 <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
                     {content}

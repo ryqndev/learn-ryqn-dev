@@ -11,8 +11,9 @@ const Navbar = () => {
 
     return (
         <nav>
-            <Link to="/"><Logo /></Link>
-            <h2>learn.ryqn.dev</h2>
+            <Link to="/"><Logo /> </Link>
+            <Link to="/" className="name">learn.ryqn.dev</Link>
+            <Link to="/templates">templates</Link>
             <label className="t-w">
                 <Toggle checked={!!theme} icons={false} onChange={() => {setTheme(+!theme)}} />
             </label>

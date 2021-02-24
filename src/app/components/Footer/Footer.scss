@@ -16,9 +16,11 @@
         font: 25vw 'Hyperwave';
     }
     & .made-with{
+        box-sizing: border-box;
         position: absolute;
         font-size: 15px;
-        width: 100vw;
+        width: 100%;
+        padding: 0px 40px;
         text-align: center;
         color: #666666;
         font-family: 'Poppins';
