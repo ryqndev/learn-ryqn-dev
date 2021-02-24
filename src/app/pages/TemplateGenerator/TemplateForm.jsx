@@ -97,7 +97,7 @@ const Result = ({formData}) => {
     const documentationLink = `/docs/${formData.frontendLink}${formData.hasBackend ? '+' + formData.backendLink : ''}`;
     return (
         <div>
-            {JSON.stringify(formData)}
+            {/* {JSON.stringify(formData)} */}
             <Link target="_blank" rel="noopener noreferrer" to={documentationLink}>Click here for the documentation</Link>
         </div>
     );

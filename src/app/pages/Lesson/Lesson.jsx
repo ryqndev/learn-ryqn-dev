@@ -9,12 +9,14 @@ const Lesson = () => {
     const [content, setContent] = useState(null);
 
     useEffect(() => {
-        let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}/README.md`;
+        // let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}/README.md`;
+        let url = `https://cdn.jsdelivr.net/gh/ryqndev/api-learn-ryqn-dev/content/${lessonName}/README.md`;
         fetch(url).then(res => res.text()).then(setContent);
     }, [lessonName]);
     
     const imageRenderer = (props) => {
-        let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}`;
+        // let url = `https://raw.githubusercontent.com/ryqndev/api-learn-ryqn-dev/master/content/${lessonName}`;
+        let url = `https://cdn.jsdelivr.net/gh/ryqndev/api-learn-ryqn-dev/content/${lessonName}`;
         return <img alt={props.alt} src={url + props.src.substr(1)} />;
     }
 
