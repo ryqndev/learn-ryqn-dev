@@ -3,17 +3,31 @@
         height: calc(95vh - 60px);
         display: grid;
         place-content: center;
-        row-gap: 20px;
-        & > h1 { 
-            color: var(--accent);
-            font-family: 'Raleway';
-            font-size: 5em;
+        row-gap: 100px;
+        & > section {
+            display: grid;
+            row-gap: 40px;
+            & > h1 { 
+                color: var(--accent);
+                font-family: 'Raleway';
+                font-size: 5em;
+            }
+            & > h2 {
+                color: var(--accent);
+                font-family: 'Raleway';
+                font-size: 2em;
+            }
+            & > p {
+                font-size: 1.3em;
+                line-height: 1.5em;
+                font-family: 'Source Sans Pro';
+                &.description {
+                    font-size: 1.2em;
+                    line-height: 1.3em;
+                }
+            }
         }
-        & > p {
-            font-size: 1.3em;
-            line-height: 1.5em;
-            font-family: 'Source Sans Pro';
-        }
+        
     }
     & > .layout--split-vertical {
         display: grid;

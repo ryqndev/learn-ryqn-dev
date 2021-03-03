@@ -1,6 +1,6 @@
 :root{
-    --animation-time: 350ms;
-    --animation-quick: 100ms;
+    --animation-time: 5000ms;
+    --animation-quick: 5000ms;
 }
 
 .fade-left-enter {
@@ -37,4 +37,31 @@
 .fade-quick-enter-active,
 .fade-quick-exit-active{
     transition: opacity var(--animation-quick);
+}
+
+
+.slide-enter,
+.slide-exit {
+  transition: opacity 350ms ease-out;
+}
+
+.slide-enter {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.slide-enter.slide-enter-active {
+    opacity: 1;
+}
+
+.slide-exit {
+
+  opacity: 1;
+}
+
+.slide-exit-active {
+    opacity: 0;
 }

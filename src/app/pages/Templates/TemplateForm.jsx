@@ -79,12 +79,12 @@ const FrontendFramework = ({formData, setFormData, send}) => {
                     <h2>HTML/CSS/JS (Vanilla)</h2>
                     <p>Recommended for beginners</p>
                 </button>
-                <button className={`option`} onClick={() => {setFrontendFramework('React', 'react')}}>
+                <button className={`option`} onClick={() => {setFrontendFramework('React', 'reactjs')}}>
                     <h2>React (with Hooks, not Classes)</h2>
                 </button>
-                <button className={`option`} onClick={() => {setFrontendFramework('Vue.js', 'vue')}}>
+                {/* <button className={`option`} onClick={() => {setFrontendFramework('Vue.js', 'vue')}}>
                     <h2>Vue.js (3)</h2>
-                </button>
+                </button> */}
                 <button className="option">
                     <h2 className="disabled">More to come...</h2>
                 </button>

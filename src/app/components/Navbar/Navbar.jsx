@@ -13,7 +13,7 @@ const Navbar = () => {
         <nav>
             <Link to="/"><Logo /> </Link>
             <Link to="/" className="name">learn.ryqn.dev</Link>
-            <Link to="/templates">templates</Link>
+            <Link to="/template">templates</Link>
             <label className="t-w">
                 <Toggle checked={!!theme} icons={false} onChange={() => {setTheme(+!theme)}} />
             </label>

@@ -1,6 +1,6 @@
 import {useParams} from 'react-router-dom';
 
-const TemplateDocumentation = () => {
+const Documentation = () => {
     const {stack} = useParams();
     console.log("stack:", stack);
     return (
@@ -10,4 +10,4 @@ const TemplateDocumentation = () => {
     );
 }
 
-export default TemplateDocumentation;
+export default Documentation;
