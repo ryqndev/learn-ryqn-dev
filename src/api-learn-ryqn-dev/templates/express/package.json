@@ -1,0 +1,15 @@
+{
+  "name": "generated-template",
+  "version": "1.0.0",
+  "description": "This is a description of our generated tempalate",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ryan Yang (Replace with your name(s))",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
