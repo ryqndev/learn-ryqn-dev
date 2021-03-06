@@ -1,10 +1,7 @@
 import {Link} from 'react-router-dom';
-import './TemplateForm.scss';
 
-const TemplateForm = ({formState, formData, setFormData, send}) => {    
-    const props = {send: send, formData: formData, setFormData: setFormData};
-
-    console.log(props)
+const TemplateForm = ({formState, formData, setFormData, send}) => {
+    const props = {send: send, formData: formData, setFormData: setFormData, back: () => send('BACK')};
     switch(formState.value){
         case 'add_backend':
             return <BackendLanguage {...props} />
@@ -41,7 +38,7 @@ const Backend = ({formData, setFormData, send}) => {
     );
 }
 
-const BackendLanguage = ({formData, setFormData, send}) => {
+const BackendLanguage = ({formData, setFormData, send, back}) => {
     const setBackendLanguage = (value, link) => {
         setFormData({...formData, backendLanguage: value, backendLink: link});
         setTimeout(() => {send('CHOOSE_LANGUAGE')}, 100);
@@ -62,11 +59,12 @@ const BackendLanguage = ({formData, setFormData, send}) => {
                     <h2 className="disabled">More to come...</h2>
                 </button>
             </div>
+            <button className="back-nav" onClick={back}>back</button>
         </div>
     );
 }
 
-const FrontendFramework = ({formData, setFormData, send}) => {
+const FrontendFramework = ({formData, setFormData, send, back}) => {
     const setFrontendFramework = (value, link) => {
         setFormData({...formData, frontendFramework: value, frontendLink: link});
         setTimeout(() => {send('FINISH')}, 100);
@@ -89,16 +87,18 @@ const FrontendFramework = ({formData, setFormData, send}) => {
                     <h2 className="disabled">More to come...</h2>
                 </button>
             </div>
+            <button className="back-nav" onClick={back}>back</button>
         </div>
     );
 }
 
-const Result = ({formData}) => {
+const Result = ({formData, back}) => {
     const documentationLink = `/docs/${formData.frontendLink}${formData.hasBackend ? '+' + formData.backendLink : ''}`;
     return (
         <div>
             {/* {JSON.stringify(formData)} */}
             <Link target="_blank" rel="noopener noreferrer" to={documentationLink}>Click here for the documentation</Link>
+            <button className="back-nav" onClick={back}>back</button>
         </div>
     );
 }

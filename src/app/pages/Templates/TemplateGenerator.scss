@@ -32,10 +32,15 @@
     & > .layout--split-vertical {
         display: grid;
         grid-template-columns: 360px 1fr;
+        grid-template-rows: auto;
         column-gap: 80px;
         height: 100vh;
         max-width: 1200px;
         margin: 0 auto;
+        @media screen and (max-width: 950px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
         &::before {
             position: absolute;
             right: 0;

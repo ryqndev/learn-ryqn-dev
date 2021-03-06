@@ -3,7 +3,7 @@ import {useMachine} from '@xstate/react';
 import {Machine} from 'xstate';
 import {CSSTransition} from 'react-transition-group';
 import {Stepper} from '../../../components';
-import TemplateForm from '../TemplateForm';
+import TemplateForm from './TemplateForm';
 import useSteps from '../../../controller/hooks/useSteps';
 
 const templateGeneratorMachine = Machine({
@@ -19,15 +19,18 @@ const templateGeneratorMachine = Machine({
         add_backend: {
             on: {
                 CHOOSE_LANGUAGE: "pick_framework",
+                BACK: "started",
             },
         },
         pick_framework: {
             on: {
                 FINISH: "finish",
+                BACK: "add_backend",
             },
         },
         finish: {
             type: "final",
+            BACK: "pick_framework",
         },
     }
 });
