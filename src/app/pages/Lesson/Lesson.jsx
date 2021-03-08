@@ -15,7 +15,7 @@ const Lesson = () => {
     }, [lessonName]);
     
     const imageRenderer = (props) => {
-        let url = `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/master/src/content/${lessonName}${props.src.substr(1)}`;
+        let url = `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${props.src.substr(1)}`;
         return <img alt={props.alt} src={url} />;
     }
 
