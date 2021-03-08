@@ -25,12 +25,14 @@ const templateGeneratorMachine = Machine({
         pick_framework: {
             on: {
                 FINISH: "finish",
-                BACK: "add_backend",
+                BACK: "started",
             },
         },
         finish: {
-            type: "final",
-            BACK: "pick_framework",
+            on: {
+                FINISH: "finish",
+                BACK: "add_backend",
+            },
         },
     }
 });

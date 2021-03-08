@@ -9,13 +9,13 @@ const Lesson = () => {
     const [content, setContent] = useState(null);
 
     useEffect(() => {
-        import(`../../../api-learn-ryqn-dev/content/${lessonName}/README.md`).then(response => {
+        import(`../../../content/${lessonName}/README.md`).then(response => {
             fetch(response.default).then(res => res.text()).then(setContent);
         });
     }, [lessonName]);
     
     const imageRenderer = (props) => {
-        let url = `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/master/src/api-learn-ryqn-dev/content/${lessonName}${props.src.substr(1)}`;
+        let url = `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/master/src/content/${lessonName}${props.src.substr(1)}`;
         return <img alt={props.alt} src={url} />;
     }
 

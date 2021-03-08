@@ -9,7 +9,7 @@ nav {
     box-sizing: border-box;
     display: grid;
     column-gap: 40px;
-    // background-color: var(--bg-secondary);
+    background-color: var(--bg-primary);
     grid-template-columns: 60px auto 1fr auto;
     transition: background-color 500ms;
     grid-template-areas: "logo name template toggle";

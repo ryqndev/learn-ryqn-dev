@@ -7,6 +7,33 @@
         font-family: 'Raleway';
         color: var(--accent);
     }
+    & .nav-button--grid {
+        place-self: right;
+        text-align: right;
+        font-size: 2em;
+        & > button {
+            border: none;
+            font-family: 'Raleway';
+            font-size: 0.8em;
+            letter-spacing: 5px;
+            transition: color 350ms;
+            &:disabled {
+                color: grey !important; 
+            }
+            &.next {
+                color: var(--accent-alt);
+                &:hover {
+                    color: var(--accent);
+                }
+            }
+            &.start {
+                color: rgb(86, 226, 86);
+                &:hover {
+                    color: var(--accent-alt);
+                }
+            }
+        }
+    }
     & button.option {
         place-content: start;
         border-radius: 4px;
@@ -62,7 +89,7 @@
         & > button.option {
             padding: 15px 25px;
             row-gap: 5px;
-            border-width: 1px;
+            border-width: 2px;
             & > h2 {
                 font-size: 0.6em;
                 &.disabled {
@@ -74,5 +101,22 @@
             }
         }
     }
-
+    & > .details {
+        display: grid;
+        row-gap: 30px;
+        & > .detail {
+            display: grid;
+            grid-template-rows: auto auto;
+            row-gap: 10px;
+            & > h2 {
+                font-size: 0.9em;
+                font-family: 'Raleway';
+            }
+            & > p {
+                color: var(--accent);
+                font-size: 1.6em;
+                letter-spacing: 2px;
+            }
+        }
+    }
 }

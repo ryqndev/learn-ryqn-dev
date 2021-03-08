@@ -1,14 +1,16 @@
 import {Link, useRouteMatch} from 'react-router-dom';
+import {ScrollableNotice} from '../../../components';
 
 const About = () => {
     let { url } = useRouteMatch();
 
     return (
         <div className="template-about--wrapper">
-            <div className="hero page__component">
+            <div className="page__component">
                 <section>
                     <h1>Templates</h1>
                     <p>This is a templating tool that will set up a web app boilerplate with your preferred languages. Not limited to but ideal for hackathons. Documentation will be provided as well.</p>
+                    <ScrollableNotice className="hero" />
                 </section>
 
                 <section>
@@ -39,7 +41,9 @@ const About = () => {
 
                     <p className="description">With these things in mind, <span>let's get started!</span></p>
                 </section>
-                <div><button><Link to={`${url}/create`}>START</Link></button></div>
+                <Link to={`${url}/create`}>
+                    <button>START</button>
+                </Link>
             </div>
         </div>
     )

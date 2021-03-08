@@ -1,14 +1,10 @@
-import {lazy, Suspense, useEffect} from 'react';
-import {BrowserRouter as Router, Switch, Route, useLocation, useRouteMatch} from 'react-router-dom';
+import {useEffect} from 'react';
+import {Switch, Route, useLocation, useRouteMatch} from 'react-router-dom';
 import {CSSTransition, TransitionGroup} from 'react-transition-group';
-import {Spinner} from '../../components';
-import './Templates.scss';
 import About from './About';
 import Generator from './Generator';
-// const About = lazy(() => import('./About'));
-// const Generator = lazy(() => import('./Generator'));
-const Documentation = lazy(() => import('./Documentation'));
-
+import Documentation from './Documentation';
+import './Templates.scss';
 
 const TemplateRouter = () => {
     const location = useLocation();
@@ -20,7 +16,7 @@ const TemplateRouter = () => {
 
     return (
         <TransitionGroup>
-            <CSSTransition key={location.key} classNames="slide" timeout={350}>
+            <CSSTransition key={location.key} classNames="fade" timeout={350}>
                 <div className="expandable">
                     <Switch location={location}>
                         <Route exact path={`${path}`} component={About} />

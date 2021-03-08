@@ -4,9 +4,9 @@
  * 
  * @param {boolean} flipped - if set to true, will invert the dark/light theme
  */
-const ScrollableNotice = () => {
+const ScrollableNotice = ({className=""}) => {
     return (
-        <div className="scrollable-notice--wrapper">
+        <div className={`scrollable-notice--wrapper ${className}`}>
             <div className="mouse">
                 <div className="wheel"></div>
             </div>
