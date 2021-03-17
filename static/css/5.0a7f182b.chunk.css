@@ -1,2 +1,0 @@
-.home--wrapper{height:100vh;width:100vw;background-color:var(--bg-primary);display:grid;transition:background-color .5s}.home--wrapper a.cta--btn{place-self:center;font-size:2rem;text-decoration:none;border:4px solid var(--text-primary);padding:30px 40px 30px 55px;letter-spacing:15px;transition:border-color .25s,color .25s}.home--wrapper a.cta--btn:hover{color:var(--accent);border-color:var(--accent)}
-/*# sourceMappingURL=5.0a7f182b.chunk.css.map */

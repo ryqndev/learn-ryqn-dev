@@ -1,2 +1,0 @@
-(this["webpackJsonplearn-ryqn-dev"]=this["webpackJsonplearn-ryqn-dev"]||[]).push([[5],{108:function(e,n,t){},213:function(e,n,t){"use strict";t.r(n);var c=t(12),r=t(0),s=function(){return Object(r.jsx)("div",{className:"home--wrapper",children:Object(r.jsx)(c.Link,{to:"/articles",className:"cta--btn",children:"EXPLORE"})})};t(108),n.default=s}}]);
-//# sourceMappingURL=5.1ec75620.chunk.js.map
