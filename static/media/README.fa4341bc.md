@@ -7,16 +7,20 @@
 * [CSS](#css)
 * [JS](#JS)
 * [Tying it all together](#tying-it-all-together)
-    * [Website Strucutre](#website-structure)
+    1. [Website Strucutre](#website-structure)
 * [Learn More](#learn-more)
 
 ## Intro
 
-Web development is done with 3 main languages: HTML (HyperText Markup Language), CSS (Cascading Style Sheets), and JS (Javascript). We use these languages in conjunction to render beautiful webpages and program meaningful interactions through these sites. So, why do we split it into 3 separate languages? After all, when we do other programming like Python, C++, or Java, we only use that one language exclusively. This is because each of these languages are meant to tackle a different problem - which we'll investigate in a bit - but also because the web has significantly evolved since it's inception. When Sir Tim Berners-Lee first submitted his proposal for the world wide web in 1989, he envisioned a information sharing system where people could connect their computers to something called the internet and access documents hosted by other people. These documents (what we now call websites), in addition to the informational content, would contain something he called a "hyperlink" which would link to another document also hosted on the internet. Eventually, a system would arise that would compose of documents that all linked to each other - forming a ... web. 
+Web development is done with 3 main languages: `HTML (HyperText Markup Language)`, `CSS (Cascading Style Sheets)`, and `JS (Javascript)`. We use these languages in conjunction to render beautiful webpages and program meaningful interactions through these sites. So, why do we split it into 3 separate languages? After all, when we do other programming like Python, C++, or Java, we only use that one language exclusively. This is because each of these languages are meant to tackle a different problem - which we'll investigate in a bit - but also because the web has significantly evolved since it's inception. 
+
+When Sir Tim Berners-Lee first submitted his proposal for the world wide web in 1989, he envisioned a information sharing system where people could connect their computers to something called the internet and access documents hosted by other people. These documents (what we now call websites), in addition to the informational content, would contain something he called a "hyperlink" which would link to another document also hosted on the internet. Eventually, a system would arise that would compose of documents that all linked to each other - forming a ... web. 
 
 That proposal spurred the development of the biggest information sharing system in history. Today, the internet holds an estimated 44 Zettabytes of data (1,125,899,910,000,000 megabytes) and continues to grow. However, in 1989, no one could've possibly predicted the growth of technology. What Berners-Lee originally proposed was targeted for computers that barely had a single megabyte of RAM and was fairly limited in functionality (compared to what we have today) and so early webpages were only capable of holding text content. To make the documents look more organized, an early version of HTML was invented that formatted text. HTML today has that same functionality although it's much more powerful.
 
 Later on, CSS would be proposed several years later as well as Javascript as people realized that websites could become more than just text documents.
+
+Onto the code...
 
 ## HTML
 
@@ -64,11 +68,11 @@ into this:
 Hi! My name is <b>Ryan</b>.
 
 <style>
-    b {
-        color: red;
-        font-size: 30px;
-        border: 1px dotted black;
-    }
+  b {
+    color: red;
+    font-size: 30px;
+    border: 1px dotted black;
+  }
 </style>
 ```
 ![css-example](./assets/css-sample.png)
@@ -105,16 +109,16 @@ Now let's go ahead and put the three languages together. Here is a simple site t
 ```html index.html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Learning</title>
-        <link rel="stylesheet" type="text/css" href="./styles.css" />
-        <script src="./scripts.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" /> 
-    </head>
-    <body>
-        <button onclick="incrementCounter()"></button>
-        <p id="display">Pressed 0 times</p>
-    </body>
+  <head>
+    <title>Learning</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="./scripts.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" /> 
+  </head>
+  <body>
+    <button onclick="incrementCounter()"></button>
+    <p id="display">Pressed 0 times</p>
+  </body>
 </html>
 
 ```
@@ -189,12 +193,12 @@ There is a certain structure that all HTML files need to have which looks like t
 ```html index.html
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Document</title>
-    </head>
-    <body>
-        <!-- Actual website -->
-    </body>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Actual website -->
+  </body>
 </html>
 ```
 
@@ -210,7 +214,6 @@ Line 4: `<title>` tag is the text that goes into the tab in your browser. It goe
 Line 7: This is where your actual HTML code for your website goes.
 
 This is the general structure you'll see every website have and you should follow it too.
-
 
 ## Learn More
 
