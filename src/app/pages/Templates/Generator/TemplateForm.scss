@@ -103,7 +103,7 @@
     }
     & > .details {
         display: grid;
-        row-gap: 30px;
+        row-gap: 50px;
         & > .detail {
             display: grid;
             grid-template-rows: auto auto;
@@ -113,9 +113,10 @@
                 font-family: 'Raleway';
             }
             & > p {
+                font-family: 'Raleway';
+
                 color: var(--accent);
                 font-size: 1.6em;
-                letter-spacing: 2px;
             }
         }
     }

@@ -1,5 +1,15 @@
 [
     {
+        "link": "/intro-to-web-dev",
+        "title": "Intro to Web Dev",
+        "content": "Assuming you have no experience with web development, we investigate the languages that make up the web and analyze a basic sample",
+        "tags": ["HTML", "CSS", "JS", "frontend", "web developement"],
+        "date": {
+            "updated": "Wed, 17 Mar 2021 17:54:32 GMT",
+            "uploaded": "Wed, 17 Mar 2021 17:54:32 GMT"
+        }
+    },
+    {
         "link": "/learning-about-http-requests",
         "title": "Learning about HTTP requests",
         "content": "Here, we will take a look at how we are using HTTP requests whenever we browse the internet. Then, we can take a look at API's and how we can utilize http requests to call them and test them.",

@@ -1,15 +1,17 @@
+import {useEffect} from 'react';
 import {Link, useRouteMatch} from 'react-router-dom';
 import {ScrollableNotice} from '../../../components';
 
 const About = () => {
     let { url } = useRouteMatch();
+    useEffect(() => {document.title = 'Learn'}, []);
 
     return (
         <div className="template-about--wrapper">
             <div className="page__component">
                 <section>
                     <h1>Templates</h1>
-                    <p>This is a templating tool that will set up a web app boilerplate with your preferred languages. Not limited to but ideal for hackathons. Documentation will be provided as well.</p>
+                    <p>This is a templating tool that will set up a web app boilerplate with your preferred languages. Not limited to but made for beginner hackathons in mind. The documentation provided is also written in the perspective for those starting out web development for the first time.</p>
                     <ScrollableNotice className="hero" />
                 </section>
 
@@ -32,12 +34,12 @@ const About = () => {
                     <p className="description">If you answered 'yes' to any of the above, you will likely need a backend. If your use case is simple or you prefer not having to worry about a backend, you can use a BaaS (Backend as a Service) like Firebase but otherwise, you'll likely answer yes to the first question.</p>
 
                     <h3>Backend Language</h3>
-                    <p className="description">If you choose to have a backend, you will need to select a language. First, and most important, point to consider, is to pick the correct tool for the job. If your app requires some machine learning like image recognition or NLP, you will probably want to go for Python since it's been the long preferred language for that job.</p>
+                    <p className="description">If you choose to have a backend, you will need to select a language to write it in. The first and most important point to consider is to pick the correct tool for the job. If your app requires some machine learning like image recognition or NLP, you will probably want to go for Python since it is one of the <a href="https://github.blog/2019-01-24-the-state-of-the-octoverse-machine-learning/" target="_blank" rel="noopener noreferrer">most popular</a> and supported language for this type of work.</p>
                     
-                    <p className="description">The only other thing to consider is which language you are most comfortable with. If you've only written Java before, you should go for Java as your server side language of choice. Since most of your algorithms will be run on the server-side, it's best that you're in a comfortable environment so you're solving problems with your code, rather than in your code.</p>
+                    <p className="description">The other thing to consider is which language you are most comfortable with. If you've only written Java before, you should go for Java as your server side language of choice. Since most of your core algorithms/business logic will be run on the server-side, it's best that you're in a comfortable environment where you're focused on solving problems with your code, rather than in your code.</p>
                     
                     <h3>Frontend</h3>
-                    <p className="description">There are no "language" options for the frontend. Every webpage is written in HTML, styled with CSS, and executes Javascript. Your choice, however, lies in frameworks. Frameworks often look like a language themselves considering how unique each one works but the idea behind them are the same. If you are new to web development, it is highly recommended that you pick "vanilla" (no framework) so you can learn the ropes and learn later on what these frameworks are doing for you. Eventually, you'll want to use one of the many frameworks available if you're developing a decently sized project.</p>
+                    <p className="description">There are no "language" options for the frontend. Every webpage is written in HTML, styled with CSS, and executes Javascript. Your choice, however, lies in frameworks. Frameworks often look like a language themselves considering how unique each one works but the idea behind them are the same. If you are new to web development, it is highly recommended that you pick "vanilla" (no framework) so you can learn the ropes and learn later on what these frameworks are doing for you. Eventually, you'll want to use one of the many frameworks available if you're developing a mid to large sized project.</p>
 
                     <p className="description">With these things in mind, <span>let's get started!</span></p>
                 </section>

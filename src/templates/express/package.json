@@ -1,15 +1,22 @@
 {
-  "name": "generated-template",
+  "name": "thecookbook-backend",
   "version": "1.0.0",
-  "description": "This is a description of our generated tempalate",
+  "description": "A platform to help users find and share their favorite recipes.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Ryan Yang (Replace with your name(s))",
+  "author": "Ryan Yang",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-  }
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "marked": "^2.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "type": "module"
 }

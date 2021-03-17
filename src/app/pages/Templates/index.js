@@ -10,6 +10,8 @@ const TemplateRouter = () => {
     const location = useLocation();
     let { path } = useRouteMatch();
 
+    useEffect(() => {document.title = 'Template'}, []);
+
     useEffect(() => {
         window.scrollTo({top: 0, behavior: 'smooth'});
     }, [location]);

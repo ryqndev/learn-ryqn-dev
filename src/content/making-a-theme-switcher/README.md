@@ -316,7 +316,7 @@ When our user toggles a theme and leaves the website, we should keep track of th
 
 ```javascript script.js
 // the ?? operator is called the nullish-coalescing operator which allows us to 
-// set a default value in case a localstorage value is not found
+// set a default value in case a localStorage value is not found
 let darkTheme = JSON.parse(localStorage.getItem('theme')) ?? false;
 // we also use JSON.parse(...) because localStorage always saves values as a string
 // but we need to parse the string for the actual boolean variable 

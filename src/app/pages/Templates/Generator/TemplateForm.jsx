@@ -126,7 +126,7 @@ const Result = ({formData, back}) => {
                     )
                 }
                 <div className="detail">
-                    <h2>FRONTNED FRAMEWORK</h2>
+                    <h2>FRONTEND FRAMEWORK</h2>
                     <p>{formData?.frontendFramework}</p>
                 </div>
             </div>

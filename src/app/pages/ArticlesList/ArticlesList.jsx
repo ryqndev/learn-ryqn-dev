@@ -1,8 +1,10 @@
+import {useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import {TagsList} from '../../components';
 import articlesData from '../../assets/articlesData.json';
 
 const ArticlesList = () => {
+    useEffect(() => {document.title = 'Articles'}, []);
     return (
         <div className="article-list--wrapper page__component">
             <main>

@@ -24,11 +24,11 @@ Web API's.
 
 The definition for API in general is simply a way for two pieces of software to communicate with one another (keyword: interface). Web API's are a subset of API's that in which the two pieces of software use HTTP requests to communicate. This definition is still pretty confusing so let's take a look at an example.
 
-Spotify is a digital streaming service that streams music. Because of this business model, they need to have a database of pretty much every single song in the world. Spotify also offers a Web API that allows developers to *communicate* with their service through http requests. For example, if you want to have a feature in which a user can search for songs, you can use the spotify Web API Browse endpoint.
+Spotify is a digital streaming service that streams music. Because of this business model, they need to have a database of pretty much every single song in the world. Spotify also offers a Web API that allows developers to *communicate* with their service through http requests. For example, if you want to have a feature in which a user can search for songs, you can use the Spotify Web API Browse endpoint.
 
 ## How can we use API's?
 
-Well, imagine we're writing a music based app - let's say an app in which users swipe left and right (like Tinder) on random songs and all the songs that they swipe right on will get saved into their own playlist. To implement this, we will "call" Spotify's Web API to to pull random songs and after the user is done swiping, we need to then call the Spotify Web API again to create a playlist, add all the swiped songs, and finally return the playlist link. Everytime we "call" the Spotify Web API, we are making an HTTP request to a specific "endpoint".
+Well, imagine we're writing a music based app - let's say an app in which users swipe left and right (like Tinder) on random songs and all the songs that they swipe right on will get saved into their own playlist. To implement this, we will "call" Spotify's Web API to to pull random songs and after the user is done swiping, we need to then call the Spotify Web API again to create a playlist, add all the swiped songs, and finally return the playlist link. Every time we "call" the Spotify Web API, we are making an HTTP request to a specific "endpoint".
 
 ## Demo:
 
