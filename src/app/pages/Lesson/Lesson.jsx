@@ -13,18 +13,15 @@ const Lesson = () => {
             fetch(response.default).then(res => res.text()).then(setContent);
         });
     }, [lessonName]);
-    
-    const imageRenderer = (props) => {
-        let url = `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${props.src.substr(1)}`;
-        return <img alt={props.alt} src={url} />;
-    }
+
+    const transformImageUri = uri => `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${uri.substr(1)}`;
 
     return content === null ? (
         <Spinner />
     ) : (
         <div className="lesson-wrapper page__component">
             <article className="md-renderer">
-                <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer, image: imageRenderer}} transformLinkUri={null}>
+                <ReactMarkdown plugins={[gfm]} renderers={{...MarkdownRenderer}} transformLinkUri={null} transformImageUri={transformImageUri}>
                     {content}
                 </ReactMarkdown>
             </article>

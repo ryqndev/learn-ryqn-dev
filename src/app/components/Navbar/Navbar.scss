@@ -4,7 +4,7 @@ nav {
     top: 0;
     left: 0;
     height: 60px;
-    width: 100vw;
+    width: 100%;
     padding: 0px 20px;
     box-sizing: border-box;
     display: grid;
@@ -14,12 +14,12 @@ nav {
     transition: background-color 500ms;
     grid-template-areas: "logo name template toggle";
     @media screen and (max-width: 800px) {
-        grid-template-columns: 60px 1fr 1fr auto;
+        grid-template-columns: 60px 1fr auto;
         column-gap: 10px;
         padding: 0px 10px;
-        overflow-x: scroll;
-        overflow-y: hidden;
-        grid-template-areas: "logo template toggle";
+        // overflow-x: scroll;
+        overflow: hidden;
+        grid-template-areas: "logo name toggle";
     }
     svg {
         box-sizing: border-box;
@@ -30,13 +30,15 @@ nav {
     }
     .name {
         grid-area: name;
+        font-family: "Hyperwave";
+        font-size: 2em;
     }
     a {
         place-self: center start;
         text-decoration: none;
     }
     .t-w {
-        padding: 18px 40px;
+        padding: 18px 15px 18px 0px;
         grid-area: toggle;
     }
     

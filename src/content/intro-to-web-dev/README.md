@@ -5,7 +5,7 @@
 * [Intro](#intro)
 * [HTML](#html)
 * [CSS](#css)
-* [JS](#JS)
+* [Javascript](#javascript)
 * [Tying it all together](#tying-it-all-together)
     1. [Website Strucutre](#website-structure)
 * [Learn More](#learn-more)

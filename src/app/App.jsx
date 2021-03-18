@@ -1,11 +1,6 @@
-import {BrowserRouter as Router, Route, Switch, useLocation} from 'react-router-dom';
+import {Route, Switch, useLocation} from 'react-router-dom';
 import {Footer, Navbar} from './components';
 import {TransitionGroup, CSSTransition} from 'react-transition-group';
-
-// const Home = lazy(() => import('./pages/Home'));
-// const ArticlesList = lazy(() => import('./pages/ArticlesList'));
-// const TemplateRouter = lazy(() => import('./pages/Templates'));
-// const Lesson = lazy(() => import('./pages/Lesson'));
 import {Home, ArticlesList, TemplateRouter, Lesson} from './pages';
 
 const App = () => {
@@ -15,7 +10,7 @@ const App = () => {
         <>
             <Navbar />
             <TransitionGroup>
-                <CSSTransition key={location.key} classNames="fast fade" timeout={150}>
+                <CSSTransition key={location.pathname} classNames="fast fade" timeout={150}>
                     <div className="expandable">
                         <Switch location={location}>
                             <Route exact strict path="/" component={Home} />
