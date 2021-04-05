@@ -4,18 +4,26 @@ import marked from 'marked';
 import fs from 'fs';
 import path from 'path';
 import router from './routes/index.js';
+import initializeAllServices from './services/index.js';
 
 const app = express();
+app.use(express.json()); // enable json
 app.use(cors()); // enable CORS
 
 // Default endpoint return README.md file
 app.get('/', (req, res) => {
-    const readme = fs.readFileSync(path.resolve('', 'README.md'), 'utf8');  // Read README.md file synchronously
-    res.send(marked(readme));    // Parse markdown into HTML and return as response
+
+    // Read README.md file synchronously
+    const readme = fs.readFileSync(path.resolve('', 'README.md'), 'utf8'); 
+
+    // Parse markdown into HTML and return as response
+    res.send(marked(readme));    
 });
 
-// All other routes initialized in /routes folder
-app.use(router());
+app.use(router()); // All other routes initialized in /routes folder
+
+initializeAllServices(); // initialize all services
+
 
 // Start our backend server and host it on our port specified in .env file or 5000
 const listener = app.listen(process.env.PORT || 5000, function(){

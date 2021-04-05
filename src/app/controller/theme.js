@@ -13,7 +13,7 @@ import darkTheme from '../assets/themes/dark.json';
 
 const themeStyles = [lightTheme, darkTheme];
 
-const THEME_SELECT_DEFAULT_VALUE = 0;
+const THEME_SELECT_DEFAULT_VALUE = 1;
 const THEME_SELECT_OPTIONS = [
     {
         'value': 0,

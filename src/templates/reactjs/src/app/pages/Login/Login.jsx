@@ -1,40 +1,21 @@
-import {useEffect} from 'react';
-import {Link, useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
+import useLogin from '../../controller/hooks/useLogin';
 import './Login.css';
 
-const Login = ({authToken, setAuthToken}) => {
-    const history = useHistory();
+function Login(){
+    const {login} = useLogin();
 
-    useEffect(() => {
-        if(authToken) history.push('/');
-    }, [authToken, history]);
-
-    const signIn = (event) => {
+    const handleLogin = (event) => {
         event.preventDefault();
-        const url = `http://localhost:5000/user/login`;
-        fetch(url, {
-            method: 'POST', 
-            cache: 'no-cache',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: document.getElementById('username').value,
-                password: document.getElementById('password').value,
-            })
-        }).then(function(response){
-            return response.json();
-        }).then(function(parsedResponse){
-            if(parsedResponse?.success){
-                localStorage.setItem('_token', parsedResponse.token);
-                setAuthToken(parsedResponse.token);
-            }
+        login({
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
         });
     }
 
     return (
         <div className="login--wrapper page">
-            <form className="login-form" onSubmit={signIn}>
+            <form className="login-form" onSubmit={handleLogin}>
                 <h2>LOG IN</h2>
                 <input placeholder="username" id="username" type="text" />
                 <input placeholder="password" id="password" type="password" />
@@ -44,7 +25,7 @@ const Login = ({authToken, setAuthToken}) => {
                             sign up
                         </Link>
                     </button>
-                    <button className="login" onClick={signIn}>⇀</button>
+                    <button className="login" onClick={handleLogin}>⇀</button>
                 </div>
             </form>
         </div>

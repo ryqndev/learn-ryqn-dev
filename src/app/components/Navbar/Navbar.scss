@@ -5,41 +5,40 @@ nav {
     left: 0;
     height: 60px;
     width: 100%;
-    padding: 0px 20px;
+    padding: 0px 40px;
     box-sizing: border-box;
     display: grid;
-    column-gap: 40px;
+    column-gap: 50px;
     background-color: var(--bg-primary);
-    grid-template-columns: 60px auto 1fr auto;
+    grid-template-columns: 30px auto 1fr auto;
     transition: background-color 500ms;
     grid-template-areas: "logo name template toggle";
     @media screen and (max-width: 800px) {
-        grid-template-columns: 60px 1fr auto;
-        column-gap: 10px;
-        padding: 0px 10px;
-        // overflow-x: scroll;
+        grid-template-columns: 30px 1fr auto;
+        column-gap: 15px;
+        padding: 0px 15px;
         overflow: hidden;
         grid-template-areas: "logo name toggle";
     }
     svg {
+        grid-area: logo;
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        padding: 15px;
-        grid-area: logo;
+        padding: 15px 0px;
     }
     .name {
         grid-area: name;
         font-family: "Hyperwave";
-        font-size: 2em;
+        font-size: 2.5em;
     }
     a {
         place-self: center start;
         text-decoration: none;
     }
     .t-w {
-        padding: 18px 15px 18px 0px;
         grid-area: toggle;
+        padding: 18px 0px 18px;
     }
     
 }

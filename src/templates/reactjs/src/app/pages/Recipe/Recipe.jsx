@@ -1,36 +1,41 @@
+import {useState, useEffect} from 'react';
+import {useParams} from 'react-router';
+import useAuth from '../../controller/hooks/useAuth';
+import InstructionDisplay from './InstructionDisplay';
 import './Recipe.css';
 
-const fakeRecipe = {
-    ingredients: [
-        '2 tablespoons loose-leaf black tea',
-        '1 pod star anise',
-        '2 pods cardamom',
-        '1/2 cinnamon stick, optional',
-        '1/8 vanilla bean, optional',
-        'Tamarind powder, to taste, optional',
-        '1/4 teaspoon almond extract, optional',
-        '1 cup boiling water',
-        '1 tablespoon sugar',
-        '1 tablespoon sweetened condensed milk',
-        '2 teaspoons evaporated milk, or coconut milk, or whole milk',
-    ],
-    steps: [
-        'Gather the ingredients.',
-        'Steep the tea, star anise, cardamom, cinnamon stick, vanilla bean, tamarind powder, and almond extract (if using) in the boiling water for 5 minutes.',
-        'Strain the tea.',
-        'Stir in the sugar and sweetened condensed milk until both are completely dissolved.',
-        'Fill 2 tall glasses with ice.',
-        'Pour the tea over the ice, leaving an inch or so of space at the top for the evaporated milk.', 
-        'Top up with more ice if needed, and then drizzle with 1 teaspoon of evaporated milk on each glass of tea.',
-    ],
-    inevitableLifeStoryIntroduction: 'When I was a child, my great-grandparent\'s dog took care of me when my parents were out working. I can recall a conversation I had with her when I was only 2 years old. She told me about her days when she was just a little pup on her sick days when her adoptive mother - an amber-coated Pitbull Thai Ridgeback mixed breed - would often make her Thai Tea to soothe her. 4 minutes ago, she tragically passed away. This recipe is all that reminds me of her, with the exception of her taxidermied body that rests on my living room couch.'
-}
+function Recipe(){
+    const {authUser} = useAuth();
+    const {id} = useParams();
+    const [recipeData, setRecipeData] = useState(null);
 
-const Recipe = ({ingredients, steps, inevitableLifeStoryIntroduction}=fakeRecipe) => {
+    useEffect(() => {
+        if(authUser === null) return;
+        const {username, _token} = authUser;
+        const url = `${process.env.REACT_APP_SERVER_ENDPOINT}/recipe/${id}?user=${username}&_token=${_token}`;
+
+        // ex: http://localhost:5000/recipe/thai-tea?user=ryan&_token=x8gj7wecs4
+        fetch(url)
+        .then(function(response){
+            return response.json();
+        }).then(function(parsedResponse){
+            if(parsedResponse.success){
+                setRecipeData(parsedResponse);
+            }else{
+                // if()
+            }
+        });
+    }, [id, authUser]);
+
+    if(recipeData === null) return (<h1 className="loading">Loading...</h1>);
+
     return (
         <div>
             <article>
-                <p>{inevitableLifeStoryIntroduction}</p>
+                <img src={recipeData.image} alt={recipeData.name}/>
+                <h1>{recipeData.name}</h1>
+                <p>{recipeData.description}</p>
+                <InstructionDisplay instructions={recipeData.steps}/>
             </article>
         </div>
     )
