@@ -7,12 +7,17 @@ import router from './routes/index.js';
 import initializeAllServices from './services/index.js';
 
 const app = express();
-app.use(express.json()); // enable json
+app.use(express.json()); // enable json formatted response
 app.use(cors()); // enable CORS
+
+// Print all server requests with timestamp and request path
+app.all('/*', function(req, res, next){
+    console.log(new Date().toUTCString(), req.originalUrl)
+    next();
+});
 
 // Default endpoint return README.md file
 app.get('/', (req, res) => {
-
     // Read README.md file synchronously
     const readme = fs.readFileSync(path.resolve('', 'README.md'), 'utf8'); 
 

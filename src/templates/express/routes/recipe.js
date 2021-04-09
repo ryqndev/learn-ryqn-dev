@@ -1,13 +1,8 @@
-import {Router} from 'express';
-import {getRecipe, getRecipes} from '../services/recipe.js';
+import {getRecipe, getRecipes, uploadRecipe} from '../services/recipe.js';
 
-const route = Router();
-
-const recipeRoutes = (app) => {
-    app.use('/', route);
-
-    route.get('/recipe/:id',(req, res) => {
-        console.log((new Date()).toDateString(), (new Date()).toTimeString(), ": Get recipe -",  req.params.id, req.query?.user);
+function recipeRoutes(app){
+    // get a single recipe with id
+    app.get('/recipe/:id',(req, res) => {
         const recipeData = getRecipe(req.params?.id, req.query?.user, req.query?._token);
 
         switch(recipeData?.message){
@@ -22,21 +17,20 @@ const recipeRoutes = (app) => {
         res.json(recipeData);
     });
 
-    route.get('/recipes', (req, res) => {
-        console.log((new Date()).toDateString(), (new Date()).toTimeString(), ": Get recipe list", req.query.user);
+    // get a list of recipes
+    app.get('/recipes', (req, res) => {
         const recipesList = getRecipes(req.query?.user, req.query?._token);
 
-        switch(recipesList?.message){
-            case 'AUTH_FAILED':
-                res.status(401);
-                break;
-            case 'NOT_FOUND':
-                res.status(404);
-                break;
-            // no default
-        }
-
+        if(recipesList?.message === 'AUTH_FAILED') res.status(401);
         res.json(recipesList);
+    });
+
+    // upload new recipe
+    app.post('/upload', (req, res) => {
+        const uploadRecipeResult = uploadRecipe(req.query?.user, req.query?._token, req.body);
+
+        if(uploadRecipeResult?.message === 'AUTH_FAILED') res.status(401);
+        res.json(uploadRecipeResult);
     });
 }
 

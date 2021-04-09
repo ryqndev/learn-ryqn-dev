@@ -4,7 +4,7 @@ import './Home.css';
 import useAuth from '../../controller/hooks/useAuth';
 
 function Home(){
-    const {authUser} = useAuth();
+    const {authUser, logout} = useAuth();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
@@ -14,13 +14,14 @@ function Home(){
 
         fetch(url)
         .then(function(response){
+            if(response.status === 401) logout();
             return response.json();
         }).then(function(parsedResponse){
             if(parsedResponse.success){
                 setRecipes(parsedResponse.recipes);
             }
         });    
-    }, [authUser]);
+    }, [authUser, logout]);
 
     return (
         <main>
@@ -35,7 +36,7 @@ function Home(){
 function RecipeCard({name, id, description, prepTime, image}){
     return (
         <Link to={`/recipe/${id}`} className="recipe-card">
-            <img src={image} alt="thai tea"/>
+            <img src={image} alt={name}/>
             <div>
                 <h2>{name}</h2>
                 <span>~ {prepTime}</span>

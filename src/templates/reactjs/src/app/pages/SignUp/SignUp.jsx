@@ -20,16 +20,16 @@ function SignUp(){
         <div className="login--wrapper page">
             <form className="login-form" onSubmit={handleSignup}>
                 <h2>Sign Up</h2>
-                <input placeholder="username" id="username" type="text" />
-                <input placeholder="password" id="password" type="password" />
-                <input placeholder="confirm password" id="confirm-password" type="password" />
+                <input placeholder="username" id="username" type="text" required/>
+                <input placeholder="password" id="password" type="password" required/>
+                <input placeholder="confirm password" id="confirm-password" type="password" required/>
                 <div className="login-form-buttons">
                     <button className="sign-up">
                         <Link to="/login">
                             log in
                         </Link>
                     </button>
-                    <button className="login" onClick={handleSignup}>⇀</button>
+                    <button className="login">⇀</button>
                 </div>
             </form>
         </div>

@@ -14,22 +14,39 @@ function getRecipe(recipeId, username, authToken){
 	return {success: true, ...recipeData};
 }
 
-function getRecipes(username, authToken){
+function getRecipes(username, authToken, limit=10){
     if(!verifyToken(username, authToken))
         return {success: false, message: 'AUTH_FAILED'};
 
-    const recipeData = db.get('recipes').sortBy('uploaded').take(10).value();
+    const recipeData = db.get('recipes').sortBy('uploaded').take(limit).value();
 
 	return {success:true, recipes: recipeData};
 }
 
-function generateRandomString(){
-	return crypto.randomBytes(20).toString('hex');
+function uploadRecipe(username, authToken, recipeData){
+    if(!verifyToken(username, authToken)) return {success: false, message: 'AUTH_FAILED'};
+    let recipeID = generateUniqueID(recipeData.name)
+    db.get('recipes').push({id: recipeID, uploaded: new Date().getTime(), ...recipeData}).write();
+	return {success:true, id: recipeID};
 }
 
+function generateUniqueID(name){
+    let path = name.toLowerCase().split(' ').join('-');
+    let pathUniqueIdentifier = '';
+    let generatedPath = path;
+    while(db.get('recipes').find({id: generatedPath}).value()){
+        pathUniqueIdentifier = generateRandomString();
+        generatedPath = path + '-' + pathUniqueIdentifier;
+    }
+    return generatedPath;
+}
 
+function generateRandomString(){
+	return crypto.randomBytes(3).toString('hex');
+}
 
 export {
 	getRecipe,
-    getRecipes
+    getRecipes,
+    uploadRecipe
 }

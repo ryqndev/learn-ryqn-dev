@@ -2,8 +2,8 @@
   "users": {
     "ryqndev": {
       "hash": "$2b$12$PYxzPH2NIgt9nHJX05q/d.t/88cXGCB.MbfV5qlDnxLt5XaVebT7G",
-      "_token": "e6184c977c2f96d42807799b0a29ac4cd1939939",
-      "_tokenExpiration": 1617665279662
+      "_token": "ccd8d8466d88a951e80ed4d0e3517d251f9ea3ed",
+      "_tokenExpiration": 1617983636709
     }
   },
   "recipes": [
@@ -56,6 +56,16 @@
         "With your 3/4 cup of tea in your favorite cup, add your sweetener first (we’re adding 1 tablespoon of honey) into your cup. Next, simply grab your preferred creamer, in this case, we’re using whole milk (for more creaminess than 2% milk), and pour it slowly into your jasmine tea base."
       ],
       "description": "When I was a child, my great-grandparent's dog took care of me when my parents were out working. I can recall a conversation I had with her when I was only 2 years old. She told me about her days when she was just a little pup on her sick days when her adoptive mother - an amber-coated Pitbull Thai Ridgeback mixed breed - would often make her Thai Tea to soothe her. 4 minutes ago, she tragically passed away. This recipe is all that reminds me of her, with the exception of her taxidermied body that rests on my living room couch."
+    },
+    {
+      "id": "chicken",
+      "uploaded": 1617994161355,
+      "prepTime": "2 hours",
+      "name": "Chicken",
+      "ingredients": [],
+      "steps": [],
+      "image": "",
+      "description": "This is some goood af chicken"
     }
   ]
 }

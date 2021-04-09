@@ -1,4 +1,4 @@
-import {useEffect, useContext} from 'react';
+import {useEffect, useContext, useCallback} from 'react';
 import {useHistory} from 'react-router-dom';
 import AuthUserContext from '../contexts/AuthUserContext';
 
@@ -10,10 +10,10 @@ const useAuth = () => {
         if(!authUser) history.push('/login');
     }, [authUser, history]);
 
-    const logout = () => {
+    const logout = useCallback(() => {
         localStorage.removeItem('user');
         setAuthUser(null);
-    }
+    }, [setAuthUser]);
 
     return {
         authUser: authUser,
