@@ -3,8 +3,7 @@ import useAuth from './useAuth';
 
 const useDatabase = () => {
     const {authUser, logout} = useAuth();
-    const {username, _token} = authUser;
-    const URLAuthQuery = `?user=${username}&_token=${_token}`;
+    const URLAuthQuery = `?user=${authUser?.username}&_token=${authUser?._token}`;
 
     const getDataFromServer = useCallback(async(endpoint, defaultValue) => {
         if(authUser === null) return defaultValue;
@@ -13,7 +12,7 @@ const useDatabase = () => {
         if(response.status === 401) logout();
 
         let parsedResponse = await response.json();
-        return parsedResponse.success ? parsedResponse : defaultValue;
+        return parsedResponse.success ? parsedResponse.data : defaultValue;
     }, [authUser, logout, URLAuthQuery]);
 
     const getRecipeFeed = useCallback(async () => {

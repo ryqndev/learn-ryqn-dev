@@ -11,7 +11,7 @@ function getRecipe(recipeId, username, authToken){
     if(!recipeData)
         return {success: false, message: 'NOT_FOUND'};
 
-	return {success: true, ...recipeData};
+	return {success: true, data: recipeData};
 }
 
 function getRecipes(username, authToken, limit=10){
@@ -20,7 +20,7 @@ function getRecipes(username, authToken, limit=10){
 
     const recipeData = db.get('recipes').sortBy('uploaded').take(limit).value();
 
-	return {success:true, recipes: recipeData};
+	return {success:true, data: recipeData};
 }
 
 function uploadRecipe(username, authToken, recipeData){

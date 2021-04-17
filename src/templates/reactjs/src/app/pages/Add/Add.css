@@ -24,3 +24,29 @@ form.add-form button.upload {
 form.add-form button.upload:hover {
     background-color: #7700ffcc;
 }
+form.add-form ol {
+    margin: 0px;
+}
+form.add-form li::marker {
+    line-height: 20rem;
+    font-size: 1.5rem;
+}
+form.add-form li > textarea {
+    margin: -14px 0px 20px;
+    vertical-align: text-top;
+    padding-bottom: 0px;
+}
+#step-add {
+    margin-top: -15px;
+    margin-left: 40px;
+}
+button[type=button] {
+    border-radius: 50%;
+    border: 2px solid #7700ff;
+    color: #7700ffcc;
+    width: 40px;
+    height: 40px;
+    display: grid;
+    font-size: 1.6rem;
+    background-color: transparent;
+}

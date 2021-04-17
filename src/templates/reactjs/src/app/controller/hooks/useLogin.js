@@ -21,6 +21,8 @@ const useLogin = () => {
             if(parsedResponse?.success){
                 localStorage.setItem('user', JSON.stringify(parsedResponse));
                 setAuthUser(parsedResponse);
+            }else{
+                alert(parsedResponse?.message);
             }
         });
     }
@@ -36,6 +38,8 @@ const useLogin = () => {
             if(parsedResponse?.success){
                 localStorage.setItem('user', JSON.stringify(parsedResponse));
                 setAuthUser(parsedResponse);
+            }else{
+                alert(parsedResponse?.message);
             }
         });
     }

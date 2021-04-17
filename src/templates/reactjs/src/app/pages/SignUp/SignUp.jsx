@@ -9,7 +9,7 @@ function SignUp(){
         event.preventDefault();
         let password = document.getElementById('password').value,
             confirmPassword = document.getElementById('confirm-password').value
-        if(password !== confirmPassword) return;
+        if(password !== confirmPassword) return alert('password mismatch');
         signup({
             username: document.getElementById('username').value,
             password: password,

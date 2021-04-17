@@ -90,17 +90,32 @@ which should result in something like this:
 ```bash
 ~$ nodemon
 [nodemon] 2.0.2
+[nodemon] reading config ./nodemon.json
 [nodemon] to restart at any time, enter `rs`
+[nodemon] or send SIGHUP to 15718 to restart
+[nodemon] ignoring: db.json
 [nodemon] watching dir(s): *.*
 [nodemon] watching extensions: js,mjs,json
 [nodemon] starting `node app.js`
+[nodemon] forking
+[nodemon] child pid: 15720
+[nodemon] watching 15 files
+============ SERVER START ==============
+Initializing all services:
+
+Initializing database...
+Database successfully initialized in [ db.json ]
+
+
 Server started and listening on port: 5000 (Press CTRL+C to quit)
     
 You can access the server through [http://localhost:5000/]
+[nodemon] files triggering change check: db.json
+[nodemon] changes after filters (before/after): 1/0
 
 ```
 
-If you see this, then congratulations, you are now running a web server. You can visit (http://localhost:5000/)[http://localhost:5000/] in your browser to verify that your server is responding to requests. The default endpoint, localhost:5000, should return this exact article in the browser (which is defined on line 12 in app.js).
+If you see this, then congratulations, you are now running a web server. You can visit (http://localhost:5000/)[http://localhost:5000/] in your browser to verify that your server is responding to requests. The default endpoint, localhost:5000, should return this exact article in the browser (which is defined on line 20 in app.js).
 
 ## Understanding the code
 

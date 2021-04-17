@@ -35,12 +35,12 @@ async function authenticateUser({ username, password }){
 }
 
 function verifyToken(username, token){
+	console.log(username, token)
 	if(!username || !token) return false;
 
 	const userRef = database.get('users.' + username);
 	const user = userRef.value();
-
-	return checkIfTokenExpired(user);
+	return !checkIfTokenExpired(user);
 }
 
 function generateTokens(){

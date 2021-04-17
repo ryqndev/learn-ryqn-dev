@@ -1,27 +1,15 @@
 import {Link} from 'react-router-dom';
 import {useState, useEffect} from 'react';
 import './Home.css';
-import useAuth from '../../controller/hooks/useAuth';
+import useDatabase from '../../controller/hooks/useDatabase';
 
 function Home(){
-    const {authUser, logout} = useAuth();
+    const {getRecipeFeed} = useDatabase();
     const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
-        if(authUser === null) return;
-        const {username, _token} = authUser;
-        const url = `${process.env.REACT_APP_SERVER_ENDPOINT}/recipes/?user=${username}&_token=${_token}`;
-
-        fetch(url)
-        .then(function(response){
-            if(response.status === 401) logout();
-            return response.json();
-        }).then(function(parsedResponse){
-            if(parsedResponse.success){
-                setRecipes(parsedResponse.recipes);
-            }
-        });    
-    }, [authUser, logout]);
+        (async() => setRecipes( await getRecipeFeed() ))();
+    }, [getRecipeFeed]);
 
     return (
         <main>
