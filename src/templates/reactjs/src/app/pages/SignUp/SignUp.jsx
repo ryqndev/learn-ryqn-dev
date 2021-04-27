@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom';
 import useLogin from '../../controller/hooks/useLogin';
-import './SignUp.css';
+import '../Login/Login.css';
 
 function SignUp(){
     const {signup} = useLogin();

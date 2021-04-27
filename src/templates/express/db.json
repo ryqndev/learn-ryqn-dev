@@ -2,8 +2,13 @@
   "users": {
     "ryqndev": {
       "hash": "$2b$12$PYxzPH2NIgt9nHJX05q/d.t/88cXGCB.MbfV5qlDnxLt5XaVebT7G",
-      "_token": "9aa3f67957c4cfbed3dd9b6fab0bc9fa0040cc58",
-      "_tokenExpiration": 1618643203922
+      "_token": "a42b961e47c06ce908c3a522e0fe28158617503f",
+      "_tokenExpiration": 1618785274520
+    },
+    "ryqn": {
+      "hash": "$2b$12$gOCEGv.icLF1mrzbD4jqneNko4n97nuJdQvh9Jb9/A829Z27q/azK",
+      "_token": "fc024271464a9d3986736b2cd8bdb63fa25de444",
+      "_tokenExpiration": 1618691003501
     }
   },
   "recipes": [

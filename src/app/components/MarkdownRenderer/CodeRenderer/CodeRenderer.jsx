@@ -1,4 +1,5 @@
 import {UnControlled as CodeMirror} from 'react-codemirror2';
+import FileStructureDisplay from './FileStructureDisplay';
 import 'codemirror/mode/python/python';
 import 'codemirror/mode/shell/shell';
 import 'codemirror/mode/javascript/javascript';
@@ -7,12 +8,14 @@ import 'codemirror/mode/css/css';
 
 const Code = ({language, node, value}) => {
     if(!language) return <p className="list-item__indent">{value}</p>;
-    if(language === 'file') return '';
+    
+    if(language === 'file') return (<FileStructureDisplay value={value}/>);
+
     const options = {
         mode: language,
         theme: 'material-palenight',
         lineNumbers: true,
-        viewportMargin: Infinity
+        viewportMargin: Infinity,
     }
     if(options.mode === 'html'){
         options.mode = 'htmlmixed';

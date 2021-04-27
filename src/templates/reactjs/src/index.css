@@ -7,7 +7,7 @@ a {
   color: black;
 }
 
-input[type=text], textarea {
+input[type=text], input[type=password], textarea {
   box-sizing: border-box;
   padding: 10px 5px;
   width: 100%;

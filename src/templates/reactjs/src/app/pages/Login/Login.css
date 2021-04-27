@@ -49,11 +49,13 @@ button.sign-up:hover {
 
 button.login {
     display: grid;
-    place-content: center;
-    width: 70px;
+    place-items: center;
+    height: 60px;
+    width: 80px;
+    padding: 0px 0px 65px;
+    color: white;
     background-color: #7700ff;
     font-size: 3em;
-    padding: 20px 0px 10px 0px;
     transform: scale(1.6) translateX(20px) translateY(10px);
     transition: transform 250ms;
 }

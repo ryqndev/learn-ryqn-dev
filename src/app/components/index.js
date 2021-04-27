@@ -1,4 +1,4 @@
-import Code from './MarkdownRenderer/Code';
+import CodeRenderer from './MarkdownRenderer/CodeRenderer';
 import Footer from './Footer';
 import MarkdownRenderer from './MarkdownRenderer';
 import Navbar from './Navbar';
@@ -8,7 +8,7 @@ import Stepper from './Stepper';
 import TagsList, {TagItem} from './TagsList';
 
 export {
-    Code,
+    CodeRenderer,
     Footer,
     MarkdownRenderer,
     Navbar,

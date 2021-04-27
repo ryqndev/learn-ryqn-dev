@@ -1,0 +1,13 @@
+.file-structure--display {
+    white-space: pre-wrap;
+    font-family: "Source Sans Pro";
+    background-color: var(--bg-code);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    h3 {
+        color: var(--accent);
+        padding: 5px 5px 20px;
+        font-weight: bold;
+    }
+}

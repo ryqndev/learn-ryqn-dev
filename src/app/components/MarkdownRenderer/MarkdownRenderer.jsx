@@ -5,10 +5,10 @@
  */
 import ListItemRenderer from './ListItemRenderer';
 import HeaderRenderer from './HeaderRenderer';
-import Code from './Code';
+import CodeRenderer from './CodeRenderer';
 
 const MarkdownRenderer = {
-    code: Code,
+    code: CodeRenderer,
     emphasis: ({children}) => (<span className="italicize">{children}</span>),
     heading: HeaderRenderer,
     inlineCode: ({children}) => (<span className="md-render--inline-code">{children}</span>),

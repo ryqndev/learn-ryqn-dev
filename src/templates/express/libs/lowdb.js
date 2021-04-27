@@ -61,7 +61,7 @@ function init(){
                     'Strain the tea.',
                     'With your 3/4 cup of tea in your favorite cup, add your sweetener first (we’re adding 1 tablespoon of honey) into your cup. Next, simply grab your preferred creamer, in this case, we’re using whole milk (for more creaminess than 2% milk), and pour it slowly into your jasmine tea base.',
                 ],
-                description: 'When I was a child, my great-grandparent\'s dog took care of me when my parents were out working. I can recall a conversation I had with her when I was only 2 years old. She told me about her days when she was just a little pup on her sick days when her adoptive mother - an amber-coated Pitbull Thai Ridgeback mixed breed - would often make her Thai Tea to soothe her. 4 minutes ago, she tragically passed away. This recipe is all that reminds me of her, with the exception of her taxidermied body that rests on my living room couch.'
+                description: 'Jasmine milk tea is banger. Here\'s how I make it:'
             },
         ]
     }).write();
