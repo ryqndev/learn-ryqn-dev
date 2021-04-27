@@ -106,6 +106,13 @@ and after clicking the button:
 
 Now let's go ahead and put the three languages together. Here is a simple site that has a button and keeps track of the number of time it's been pressed.
 
+```file
+└── counter-example
+    ├── index.html
+    ├── styles.css
+    └── script.js
+```
+
 ```html index.html
 <!DOCTYPE html>
 <html>
