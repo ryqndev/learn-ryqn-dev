@@ -1,4 +1,3 @@
-
 const FileStructureDisplay = ({value}) => {
 
     return (

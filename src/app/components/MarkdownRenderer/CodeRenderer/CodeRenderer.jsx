@@ -9,7 +9,7 @@ import 'codemirror/mode/css/css';
 const Code = ({language, node, value}) => {
     if(!language) return <p className="list-item__indent">{value}</p>;
     
-    if(language === 'file') return (<FileStructureDisplay value={value}/>);
+    if(language === 'file') return <FileStructureDisplay value={value}/>;
 
     const options = {
         mode: language,
@@ -17,11 +17,13 @@ const Code = ({language, node, value}) => {
         lineNumbers: true,
         viewportMargin: Infinity,
     }
+    
     if(options.mode === 'html'){
         options.mode = 'htmlmixed';
         options.tabSize = 2;
     }
-    return(
+
+    return (
         <div className="md-render--code">
             <div className="title-bar">
                 <svg height="44px" xmlns="http://www.w3.org/2000/svg">
