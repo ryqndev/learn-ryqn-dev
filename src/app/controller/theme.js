@@ -43,7 +43,7 @@ const setTheme = (value) => {
     localStorage.setItem('theme', value);
     // console.log(themeStyles, value);
     let styles = themeStyles[value].themeStyles;
-    for(let style in styles){
+    for (let style in styles) {
         document.documentElement.style.setProperty(style, styles[style]);
     }
 }
@@ -54,7 +54,7 @@ const setTheme = (value) => {
  * 
  * @returns {Number} value stored in local storage or default 0 if none exists
  */
-const getTheme = () => Number(localStorage.getItem('theme') ?? THEME_SELECT_DEFAULT_VALUE);
+const getTheme = () => isNaN(Number(localStorage.getItem('theme'))) ? THEME_SELECT_DEFAULT_VALUE : Number(localStorage.getItem('theme'));
 
 export default Theme;
 export {
