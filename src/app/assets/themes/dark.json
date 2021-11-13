@@ -7,6 +7,7 @@
         "--bg-secondary": "#101010",
         "--text-primary": "white",
         "--accent": "#f68080",
-        "--header-secondary": "#f68080"
+        "--header-secondary": "#f68080",
+        "--bg-card": "#292D3E"
     }
 }

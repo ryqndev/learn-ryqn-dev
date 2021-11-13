@@ -52,7 +52,8 @@
     .md-blockquote {
         font-size: 0.7em;
         padding: 20px 40px;
-        background-color: #292D3E;
+        background-color: var(--bg-card);
+        transition: background-color 350ms;
     }
 
     .md-render--code {

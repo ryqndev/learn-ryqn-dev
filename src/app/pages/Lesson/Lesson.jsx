@@ -9,6 +9,7 @@ const Lesson = () => {
 	const [content, setContent] = useState(null);
 
 	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 		import(`../../../content/${lessonName}/README.md`).then(response => {
 			fetch(response.default)
 				.then(res => res.text())
