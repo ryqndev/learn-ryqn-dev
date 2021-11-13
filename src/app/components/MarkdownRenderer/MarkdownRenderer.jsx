@@ -9,6 +9,7 @@ import CodeRenderer from './CodeRenderer';
 
 const MarkdownRenderer = {
     code: CodeRenderer,
+    blockquote: ({children}) => (<div className="md-blockquote">{children}</div>),
     emphasis: ({children}) => (<span className="italicize">{children}</span>),
     heading: HeaderRenderer,
     inlineCode: ({children}) => (<span className="md-render--inline-code">{children}</span>),
