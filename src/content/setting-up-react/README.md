@@ -40,7 +40,7 @@ Lastly, you're going to need React but more specifically, the developer environm
 
 Ensure that the versions you have installed are correct: [Node >= 14.0.0 and npm >= 5.6]
 
-You can type these commands in a standalone terminal or in the [integrated terminal built into VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
+You can type these commands in a standalone terminal or in the [integrated terminal built into VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal) to see if you've installed them correctly.
 
 ```bash terminal
 $ node -v
@@ -127,7 +127,7 @@ The terminal command we typed to generate the entire boilerplate code: `npx crea
  
  • Setup Babel - generates polyfills (code that makes your code backwards compatible and work on all browsers)
  
- • ... bunch of other stuff but these are some basic ones
+ • ... bunch of other stuff but the ones above are most important
 
 
 ## Finishing up
