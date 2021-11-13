@@ -4,11 +4,11 @@
 
 * [Very short intro about React](#very-short-intro-about-react)
 * [Installation and Setup](#installation-and-setup)
-    1. [Text Editor/IDE](#text-editor-ide)
+    1. [Text Editor IDE](#text-editor-ide)
     2. [Browser](#browser)
-    2. [Node, NPM, and React](#node-npm-and-react)
-    2. [Test Setup](#test-setup)
-# [About CRA](#about-cra)
+    3. [Node NPM and React](#node-npm-and-react)
+    4. [Test Setup](#test-setup)
+* [About CRA](#about-cra)
     
 ## Very short intro about React
 
@@ -17,7 +17,7 @@ React (React.js) is a Javascript library that makes building web interfaces easi
 
 ## Installation and Setup
 
-### Text Editor / IDE
+### Text Editor IDE
 Just like regular vanilla web development, we're going to need a text editor of some sort - ideally an IDE. My IDE of choice is [VSCode](https://code.visualstudio.com/), as is for many web developers. I highly highly highly recommend VSCode.
 
 ### Browser
@@ -27,7 +27,7 @@ Here's an example for writing CSS colors in hex color notation:
 ![caniuse snippet for CSS alpha hex code notation](./assets/caniuse.png)
 You can see that in Safari, it's only supported starting version 10 - which was released in Sept. 26, 2016. This is an example of a pretty well-supported feature but not all features have good compatability. For the purposes of a hackathon or learning web development, testing for browser compatability isn't important but being aware of it is.
 
-### Node, NPM, and React
+### Node NPM and React
 
 Lastly, you're going to need React but more specifically, the developer environment that can install it easily (as well as other packages React will need). We will need to [install Node and the package manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) it comes with - NPM (which funnily enough, does not actually stand for Node Package Manager)
 
