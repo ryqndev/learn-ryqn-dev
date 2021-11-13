@@ -22,6 +22,11 @@ const Code = ({language, node, value}) => {
         options.mode = 'htmlmixed';
         options.tabSize = 2;
     }
+    if(options.mode === 'bash'){
+        options.lineNumbers = false;
+        options.readOnly = true;
+        options.mode = 'shell';
+    }
 
     return (
         <div className="md-render--code">
