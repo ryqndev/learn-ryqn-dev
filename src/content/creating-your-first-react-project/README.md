@@ -45,13 +45,23 @@ Here, I `cd` (Change Directory) into my Desktop directory and create a folder ca
 
 The files will take some time depending on your internet speeds, computer hardware, etc. but also whether or not this is your first time installing. 
 
-If everything has finished correctly, you should have 
-
- • node_modules folder\
- • public folder\
- • src folder\
- • package.json file\
- • ...other files but if you have the above you're probably good to go
+If everything has finished correctly, you should have something like this:
+```file
+└── react-test
+    ├── node_modules
+    │   └── ...stuff
+    ├── public
+    │   ├── index.html
+    │   └── ...stuff
+    ├── src
+    │   ├── index.js
+    │   ├── App.js
+    │   └── ...stuff
+    ├── package.json
+    ├── README.md
+    └── ...problably other stuff
+```
+...stuff denotes may or may not have extra stuff but we don't that much yet
 
 ### Running our test server
 
@@ -104,5 +114,5 @@ Now that we have our entire setup ready, we can finally start getting into learn
 
 ### Hack at UCI
 
-The next section content will be released on the workshop day.
+The next section content (actually coding React) will be released on the workshop day.
 
