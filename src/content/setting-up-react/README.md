@@ -7,9 +7,8 @@
     1. [Text Editor / IDE](#text-editor-/-ide)
     2. [Browser](#browser)
     3. [Node, NPM, and React](#node,-npm,-and-react)
-    4. [Test Setup](#test-setup)
-* [About CRA](#about-cra)
-* [Finishing up](#finishing-up)
+* [Test Setup](#test-setup)
+* [Hack at UCI React Workshop](#hack-at-uci-react-workshop)
     
 ## Very short intro about React
 
@@ -50,86 +49,13 @@ $ npm -v
 8.1.0
 ```
 
-### Test Setup
-*this part is just to test if everything all works and not part of the setup*
+## Test Setup
 
-If you have all of these, then you can go ahead and install the boilerplate code which will set up everything for you to immediately dive into React code.
+Once you've have all of these: VSCode, Browser, and Node/NPM, you're ready to get started on coding React! If you're here for a workshop, read below first. Otherwise, let's first [run through setting up our first React project](./creating-your-first-react-project).
 
-Create a new folder somewhere on your system (folder should be completely empty). This is where all of our files will go. If you haven't done so already, open this folder up in the terminal and type the command `npx create-react-app .` - An example of this process will look something like this: (If you are on windows and want to follow these Unix commands, you can [switch your terminal to Bash](https://stackoverflow.com/questions/42606837/how-do-i-use-bash-on-windows-from-the-visual-studio-code-integrated-terminal))
+### Hack at UCI React Workshop
+November 18, 2021 @DBH
 
-```bash terminal
-$ ls
-Applications	Documents	Movies
-Downloads	    Desktop		Library	
+If you're here to just install and setup React for a workshop I'm doing, then you can pretty much stop right here. I'll be skimming through this write up at the start to make sure everyone has this stuff ready if they want to follow along and live code with me. 
 
-$ cd Desktop
-
-$ mkdir react-test
-
-$ cd Desktop
-
-$ npx create-react-app .
-Creating a new React app in /Users/Ryan/Desktop/react-test.
-
-Installing packages. This might take a couple of minutes.
-Installing react, react-dom, and react-scripts with cra-template...
-
-...
-```
-Here, I `cd` (Change Directory) into my Desktop directory and create a folder called react-test. Then I `cd` into that folder I just created and run the command `npx create-react-app .`. 
-> *Note: The `.` at the end of `npx create-react-app .` just means "in this folder" but you can type a folder name instead and it will create a folder for you.*
-
-The files will take some time depending on your internet speeds, computer hardware, etc. but also whether or not this is your first time installing. 
-
-If everything has finished correctly, you should have 
-
- • node_modules folder\
- • public folder\
- • src folder\
- • package.json file\
- • ...other files but if you have the above you're probably good to go
-
-### Running our boilerplate
-
-If all of this is good, then you can probably run a development server really quick by typing in your terminal
-```bash terminal
-$ npm start
-
-Compiled successfully!
-
-You can now view [folder name] in the browser.
-
-  Local:            http://localhost:3001
-  On Your Network:  http://[your local ip]:3001
-
-Note that the development build is not optimized.
-To create a production build, use yarn build.
-
-```
-![vscode screenshot of running the code](./assets/running.png)
-*mine is running on port :3001 because I have something on :3000 at the moment*
-
-and it should open up `http://localhost:3000` in your browser. If not, you can just enter `http://localhost:3000` in your browser to access your site.
-
-![test site running on local server](./assets/result.png)
-
-To stop the development server, you can just type [Ctrl + C] in the terminal to close it.
-
-### About CRA
-
-The terminal command we typed to generate the entire boilerplate code: `npx create-react-app [folder name/location]` does a little more than just download React for us. You'll often see this abbreviated in articles as [CRA](https://create-react-app.dev/) and it sets up a *production* level environment for us and is the easiest way to get coding in React. Here's an incomplete and simplified list of things it does:
-
- • Initialize npm - makes that node_modules folder and package.json that allows you install libraries with a simple command (something I'll demo later)
-
- • Setup basic scripts - commands like `npm start` and `npm build` that setup an entire testing platform with hot reloading and compiling prod files
- 
- • Setup webpack - bundles all your files into one and only imports things you need
- 
- • Setup Babel - generates polyfills (code that makes your code backwards compatible and work on all browsers)
- 
- • ... bunch of other stuff but the ones above are most important
-
-
-## Finishing up
-
-Now that we have our entire setup ready, we can finally start getting into learning React! I would first recommend learning a lil' about [vanilla web development in plain HTML/CSS/JS](./intro-to-web-dev) so you that when you start getting into React, you can see the benefits and understand why devs in the industry use React.
+If you want to test everything to make sure that you have everything working (completely optional), you can read [the next section](./creating-your-first-react-project) to start a quick project. I'll be doing that exact process live during the workshop but if you want to test everything works first, you can check it out. We will also be building from that boilerplate code so it'll be a small headstart if you have it done.

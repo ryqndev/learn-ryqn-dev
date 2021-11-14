@@ -1,12 +1,11 @@
 html, body {
-    overscroll-behavior: none;
+    overscroll-behavior-y: none;
 }
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     transition: color 500ms, background-color 500ms;
     overflow-x: hidden;
-    overscroll-behavior: none;
 }
 a:any-link {
     color: inherit;
