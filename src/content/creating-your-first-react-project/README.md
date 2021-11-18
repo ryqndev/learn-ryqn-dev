@@ -112,7 +112,3 @@ For every new React project, you'll likely be typing `npx create-react-app [fold
 Now that we have our entire setup ready, we can finally start getting into learning React! I would first recommend learning a lil' about [vanilla web development in plain HTML/CSS/JS](./intro-to-web-dev) so you that when you start getting into React, you can see the benefits and understand why devs in the industry use React.
 
 
-### Hack at UCI
-
-The next section content (actually coding React) will be released on the workshop day.
-
