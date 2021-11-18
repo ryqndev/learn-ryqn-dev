@@ -58,18 +58,16 @@ Here's a really bad, but short explanation of how React works - when you write c
  
 Here are some quick snippets that show you *how* React makes things simpler for you. Note: These snippets will not run by themselves, they're just here to illustrate differences in doing the same thing.
 
-
+Program that displays the text [old data] and button below it that, when click on, changes the text to [changed data].
 
 ```html Plain HTML/CSS/Javscript 
 <div id="display">old data</div>
 <button onclick="
-    document.getElementById('display').innerHTML = 'changed data';
-    document.getElementById('display-2').innerHTML = 'changed data';
+    let HTMLElement = document.getElementById('display');
+    HTMLElement.innerHTML = 'changed data';
 ">
     Click me to change the text!
 </button>
-<div id="display-2">old data</div>
-
 ```
 
 ```javascript React
@@ -80,7 +78,6 @@ return (
         <button onclick={() => setTextContent('changed data')}>
             Click me to change the text!
         </button>
-        <div>{textContent}</div>
     </>
 );
 ```
@@ -126,44 +123,8 @@ Since framework preference is mostly just a matter of personal preference, I wou
 
 ### Installation and Setup
 
-Just like regular vanilla web development, we're going to need a text editor of some sort - ideally an IDE. My IDE of choice is [VSCode](https://code.visualstudio.com/), as is for many web developers but since testing will be done through browsers and the compilation is done with one terminal command, any text editor is fine.
+You can find instructions on how to install React [here](./setting-up-react).
 
-As mentioned earlier, you will need a browser (likely something you already have) but preferably Chrome or Firefox. Sorry Safari and Internet Explorer lovers.
-
-Lastly, you're going to need React but more specifically, the developer environment that can install it (as well as other packages React will need). We will need to [install Node and the package manager](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) it comes with - NPM (which funnily enough, does not actually stand for Node Package Manager)
-
-Ensure that the versions you have installed are correct: [Node >= 14.0.0 and npm >= 5.6]
-
-You can type these commands in a standalone terminal or in the [integrated terminal built into VSCode](https://code.visualstudio.com/docs/editor/integrated-terminal).
-
-```bash
-node -v
-npm -v
-```
-
-If you have all of these, then you can go ahead and install the boilerplate code which will set up everything for you to immediately dive into React code.
-
-Create a new folder somewhere on your system. This is where all of our files will go. If you haven't done so already, open this folder up in the terminal and type the command `npx create-react-app .`. An example of this process will look something like this:
-
-```bash
-$ ls
-Applications	Documents	Movies
-Downloads	    Desktop		Library	
-
-$ cd Desktop
-
-$ mkdir react-test
-
-$ cd Desktop
-
-$ npx create-react-app .
-Creating a new React app in /Users/Ryan/Desktop/react-test.
-
-Installing packages. This might take a couple of minutes.
-Installing react, react-dom, and react-scripts with cra-template...
-
-...
-```
-Here, I `cd` into my Desktop directory and create a folder called react-test. Then I `cd` into that folder I just created and run the command `npx create-react-app .`. *Note: The `.` at the end just means "in this folder" but you can type a folder name instead and it will create a folder for you.*
+Then, you can move on and setup your first React project using Create React App [here](./creating-your-first-react-project).
 
 ### Running our code
