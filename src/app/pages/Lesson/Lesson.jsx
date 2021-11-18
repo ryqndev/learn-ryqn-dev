@@ -9,13 +9,16 @@ const Lesson = () => {
 	const [content, setContent] = useState(null);
 
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
 		import(`../../../content/${lessonName}/README.md`).then(response => {
 			fetch(response.default)
 				.then(res => res.text())
 				.then(setContent);
 		});
 	}, [lessonName]);
+
+	useEffect(() => {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}, [content]);
 
 	const transformImageUri = uri =>
 		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${uri.substr(
