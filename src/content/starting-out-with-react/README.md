@@ -6,10 +6,12 @@
 * [What is React?](#what-is-react?)
 * [React as an analogy](#react-as-an-analogy)
 * [How React is different](#how-react-is-different)
+* [More advanced use case](#more-advanced-use-case)
 * [When should I use React?](#when-should-i-use-react?)
 * [Write a basic React program](#write-a-basic-react-program)
     1. [Installation and Setup](#installation-and-setup)
-    2. [Understanding the code](#understanding-our-code)
+    2. [Understanding the code](#understanding-the-code)
+* [React Examples](#react-examples)
     
 
 ## Intro
@@ -94,7 +96,9 @@ However, in React, we practice declarative programming. In the example, we have 
 
 This is called declarative because we just declare what we want, rather than give instructions as to how to do it - and this concept is what makes React such a powerful tool for web developers. We no longer need to worry about *how* to make it work, it just works.
 
-This is a pretty basic example and probably sounds confusing to some of you but I want you to imagine how an app like Twitter of Facebook can benefit from this.
+## More advanced use case
+
+This is a pretty basic example and probably sounds confusing to some of you but I want you to imagine how an app like Twitter or Facebook can benefit from this.
 
 Imagine we were writing something that resembled Facebook's news feed. When we fetch data from our database, they'll give us an array of post data like this:
 
@@ -214,4 +218,112 @@ ReactDOM.render(
     <App />,
   document.getElementById('root')
 );
+
 ```
+
+You only use `render` from `react-dom` once so you don't need to memorize this (and it'll be generated for you with CRA anyways) but let's look at what it does. It will render this `<App />` component inside an HTML element with the `id="root"`. Ok I get it. But what the heck is `<App />` and why does it look like HTML?
+
+On line 3, we import App so lets go see where that file leads us. 
+
+```javascript src/App.js
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+```
+
+App is a simple Javascript function. However, unlike normal Javascript, it's returning to us JSX (HTML-like syntax). But think back to index.js, when we called `render(<App />, document.getElementById('root'))`, we're pretty much calling this `App` function -> which returns HTML -> which gets embedded into our HTML element with `id="root"`. 
+
+So React programming is literally just a bunch of functions that return HTML which all end up in the main HTML file inside the `<div id="root"></div>` that we found in `public/index.html`. This type of software architecture/design pattern is called component based architecture. We can have smaller components in their own separate files, making developing easier - but the biggest gain here, is that these components are *reusable*. You can put `<App />` as many times in your code as you want. 
+
+It gets better. These javascript functions that return JSX (we call them components), they operate just like normal functions. Like normal functions, they can take parameters. 
+
+## React Examples
+
+So imagine the Facebook news feed again; we can create a component for a singular post item like so:
+
+```javascript FeedItem.js
+function FeedItem(data) {
+  return (
+	<div className="feed-item--container">
+	  <h2>{data.author}</h2>
+	  <p>Likes: {data.likes}</p>
+	  <p>{data.content}</p>
+	</div>
+  );
+}
+export default FeedItem;
+
+```
+
+and in our News Feed, we have this:
+
+```javascript NewsFeed.js
+function NewsFeed() {
+  const [data, setData] = useState(
+	[
+	  { author: "ryan", likes: 3, content: "hello everyone"},
+	  { author: "susan", likes: 5, content: "im billy bob"},
+	  { author: "skyler", likes: 0, content: "i have no friends"},
+	]
+  );
+
+  return (
+    <>
+	  <FeedItem data={data[0]} />
+	  <FeedItem data={data[1]} />
+	  <FeedItem data={data[2]} />
+	</>
+  );
+}
+export default NewsFeed;
+
+```
+
+or even better
+
+```javascript NewsFeed.js
+function NewsFeed() {
+  const [data, setData] = useState(
+	[
+	  { author: "ryan", likes: 3, content: "hello everyone", id: "3956261942"},
+	  { author: "susan", likes: 5, content: "im billy bob", id: "6836295035"},
+	  { author: "skyler", likes: 0, content: "i have no friends", id: "195035966"},
+	]
+  );
+
+  return (
+	<>
+	  {data.map(postData => <FeedItem key={postData.id} data={postData} />)}
+	</>
+  );
+}
+export default NewsFeed;
+
+```
+
+and the idea here is, if we decide to change the data at all, we only have to call setData([...]) with the new updated array of posts and React will figure out not only which post needs to be updated, but also create/remove HTML elements as needed. All you need is to provide a unique key which React will use to create these mappings.
+
+
