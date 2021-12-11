@@ -18,6 +18,7 @@
     2. [Toggling](#toggling)
     3. [Saving and loading themes](#saving-and-loading-themes)
 * [Finishing touches](#finishing-touches)
+* [Just the code](#just-the-code)
     
 
 #### Intro
@@ -393,3 +394,7 @@ Which results in this:
 
 ![Final Demo](./assets/dark_mode_toggle_final.gif)
 
+## Just the code
+You can find the code for a running example here: [https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/making-a-theme-switcher/docs](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/making-a-theme-switcher/docs)
+
+How do I run this code? Go ahead and click that link above ^ and download those 3 files (index.html, style.css, and script.js) and open up index.html in the browser. (You can do this by right clicking the file icon and selecting "Open with..." and selecting your preferred browser).
