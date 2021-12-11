@@ -1,12 +1,13 @@
 import {Link} from 'react-router-dom';
 import {useEffect} from 'react';
+import cn from './Home.module.scss';
 
 const Home = () => {
     useEffect(() => {document.title = 'Learn'}, []);
     return (
-        <div className="home--wrapper">
+        <div className={cn.container}>
             <Link to='/articles'>
-                <button className="cta--btn">EXPLORE</button>
+                <button className={cn.explore}>EXPLORE</button>
             </Link>
         </div>
     );

@@ -8,6 +8,9 @@
         "--text-primary": "black",
         "--accent": "#f68080",
         "--header-secondary": "#FFFFFF",
-        "--bg-card": "#FFDCDC"
+        "--bg-card": "#FFDCDC",
+
+        "--nav-background": "#FFEEEECC",
+        "--nav-shadow": "#f6808088"
     }
 }

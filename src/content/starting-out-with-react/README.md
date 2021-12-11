@@ -19,11 +19,10 @@
 The web has been around for over three decades now and even today, it's still evolving. As computers get faster and the limits of technology get pushed, we, as software developers, should take full advantage of new realm of possibilities.
 
 Consider, just 10 years ago, youtube videos uploaded at 480p were considered "high-quality" and now, even 1080p at 60fps isn't enough for some users.
-![CHOCOLATE RAINNN](./assets/CHOCOLATE-RAINNNN.png) ![lit resolutions](./assets/lit-resolutions.png)
-
-First image: resolutions offered from an old CLASSIC "Chocolate Rain" by Tay Zonday (Youtube: April 2007)
-
-Second image: resolutions offered from an random video I found about nature (Youtube: November 2021) 
+| before | after |
+| --- | --- |
+| ![CHOCOLATE RAINNN](./assets/CHOCOLATE-RAINNNN.png) | ![lit resolutions](./assets/lit-resolutions.png) |
+| resolutions offered from an old CLASSIC "Chocolate Rain" by Tay Zonday (Youtube: April 2007) | Second image: resolutions offered from an random video I found about nature (Youtube: November 2021) |
 
 Why are all of these resolutions supported now and not back then? A couple reasons:
 

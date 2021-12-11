@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Toggle from 'react-toggle';
 import { getTheme, setTheme as updateTheme } from '../../controller/theme';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
+import cn from './Navbar.module.scss';
 
 const Navbar = () => {
 	const [theme, setTheme] = useState(getTheme());
@@ -12,15 +13,15 @@ const Navbar = () => {
 	}, [theme]);
 
 	return (
-		<nav>
+		<nav className={cn.container}>
 			<Link to='/'>
 				<Logo />
 			</Link>
-			<Link to='/' className='name'>
+			<Link to='/' className={cn.name}>
 				learn.ryqn.dev
 			</Link>
 			{/* <Link to="/template">templates</Link> */}
-			<label className='t-w'>
+			<label className={cn.toggle}>
 				<Toggle
 					checked={theme === 1}
 					icons={false}

@@ -1,11 +1,12 @@
-import { useState, useEffect } from 'react';
 import ReactMarkdown from 'react-markdown';
-import { useParams } from 'react-router-dom';
 import gfm from 'remark-gfm';
+import { useState, useEffect } from 'react';
+import { useParams, useLocation } from 'react-router-dom';
 import { MarkdownRenderer, Spinner } from '../../components';
 
 const Lesson = () => {
 	const { lessonName } = useParams();
+	const { hash } = useLocation();
 	const [content, setContent] = useState(null);
 
 	useEffect(() => {
@@ -17,8 +18,12 @@ const Lesson = () => {
 	}, [lessonName]);
 
 	useEffect(() => {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
-	}, [content]);
+		const anchor = document.getElementById(hash.substr(1));
+		window.scrollTo({
+			top: anchor ? anchor.getBoundingClientRect().top - 64 : 0,
+			behavior: 'smooth',
+		});
+	}, [content, hash]);
 
 	const transformImageUri = uri =>
 		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${uri.substr(

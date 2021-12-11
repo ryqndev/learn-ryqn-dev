@@ -8,6 +8,9 @@
         "--text-primary": "white",
         "--accent": "#f68080",
         "--header-secondary": "#f68080",
-        "--bg-card": "#292D3E"
+        "--bg-card": "#292D3E",
+
+        "--nav-background": "#191D2ACC",
+        "--nav-shadow": "#00000088"
     }
 }

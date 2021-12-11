@@ -54,12 +54,12 @@ There is only one prerequisite for this tutorial which is having Python 3 instal
 
 Let's first create an empty folder (anywhere you would like) for us to do all of our development in. 
 
-Then, we need to install the Flask library itself to be able to use it. If you're on Mac/Unix, you can download it using pip in the terminal like so:
+Then, we need to install the Flask library itself to be able to use it and we'll use something called pip. If you've installed Python with a version greater than 3.4, pip should come with that installation - in which you can run the following command:
 
 *Note: Make sure you download the library in the empty folder we just created. If you are familiar with using a virtual environment like `venv`, you can set that up first.*
 
 ```shell terminal
-pip3 install flask
+pip install flask
 ```
 
 #### 5 Lines of Code
@@ -82,6 +82,11 @@ With the base source code, we can finally run our program and so first, we'll le
 
 ```shell terminal
 export FLASK_APP=app.py
+```
+
+On windows: 
+```shell terminal
+set FLASK_APP=app.py
 ```
 
 and finally, to start the program:
