@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: #151515;
+    font-size: 1.2em;
+}
+
+.input--container {
+    box-sizing: border-box;
+    width: 80vw;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 20px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.input--container>input[type="text"] {
+    font-size: 1.5em;
+    border: none;
+}
+
+.input--container>input[type="text"]:focus {
+    outline: none;
+}
+
+.input--container>button {
+    font-size: 1em;
+    padding: 15px 25px;
+}
+
+.input--container>button:hover {
+    cursor: pointer;
+}
+
+.result-container {
+
+}

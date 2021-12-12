@@ -18,7 +18,7 @@ const Lesson = () => {
 	}, [lessonName]);
 
 	useEffect(() => {
-		const anchor = document.getElementById(hash.substr(1));
+		const anchor = hash ? document.getElementById(hash.substr(1)) : false;
 		window.scrollTo({
 			top: anchor ? anchor.getBoundingClientRect().top - 64 : 0,
 			behavior: 'smooth',

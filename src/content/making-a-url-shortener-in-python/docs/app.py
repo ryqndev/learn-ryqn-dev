@@ -1,17 +1,20 @@
-from flask import Flask
+from flask import Flask, render_template, request, redirect
+from flask.wrappers import Response
+from business_logic import create_short_link, get_long_link
 
 app = Flask(__name__)
 
-all_link_mappings = {
-    # An example of a mapping would look like this:
-    # "d3g2s" : "https://learn.ryqn.dev/starting-out-with-flask#installation-and-setup"
-    # So https://ourdomain.link/d3g2s -> https://learn.ryqn.dev/starting-out-with-flask#installation-and-setup
-}
-
 @app.route('/')
 def index():
-	return "Hello World!"
+	return render_template("index.html")
 
-@app.route('/create')
-def createLink():
-    pass
+@app.route('/create', methods=['POST'])
+def create():
+    server_url = request.host_url
+    long_link = request.form['link']
+    short_link = create_short_link(server_url, long_link)
+    return render_template("result.html", short_link=short_link)
+
+@app.route('/ss/<string:alias>')
+def find_and_redirect(alias):
+     return redirect(get_long_link(alias), code=301)
