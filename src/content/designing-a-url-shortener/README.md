@@ -58,10 +58,13 @@ Okay, assuming I figured out how to store my data, how do I do redirection? Well
 
 This solution... works! It's a perfectly fine implementation of a url shortener service and this is what a time sequence diagram would look like:
 
-![client rendered version](./assets/client-rendered.png)
+![Time sequence diagram of client executed redirection](./assets/client-rendered-diagram.png)
 
 This solution utilizes something called Client-Side Rendering (CSR) in which the client does all of the processing. Notice how after we make the initial request to `https://short.com/yckw7ts`, the browser has to extract the url, open a connection to the database, query the value, and then once it gets the data back, it'll redirect to the webpage. If we implement this solution, it'll get the job done but there's alot of extra steps being performed here.
 
-Not only are there performance related issues with this, there are user experience problems with this. First, when the user loads our website, it'll display a blank page in the browser first before redirecting to the next page, resulting in a page flash between the navigation. Second, by having so many steps in between, we introduce more points of fault to our program. A good software principle is to not over complicate your solution (KISS - Keep it simple, stupid).
+We can, instead, upgrade our website server from a web server to web **application** server. The difference is that in addition to hosting and serving static assets (like HTML/CSS/JS/images), a web application server can also execute code and programming logic. It'll look like this:
 
-We can, instead, practice something called Server-Side Rendering (SSR) here and eliminate the need for all of these trips performed by the client and keep the processing in the server. It'll look something like this: 
+![Time sequence diagram of web application server redirection through http codes](./assets/redirection-diagram.png)
+
+
+
