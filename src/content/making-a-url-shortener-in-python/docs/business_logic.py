@@ -60,3 +60,10 @@ def get_long_link(short_link_id):
             Ex.: http://learn.ryqn.dev/making-a-url-shortener-in-python#writing-the-business-logic
     """
     return link_mappings.get(short_link_id)
+
+if __name__ == "__main__":
+    long_link = "http://localhost:3000/making-a-url-shortener-in-python#intro"
+    short_link = create_short_link("https://short.com/", long_link)
+    print("Converted:", long_link, "->", short_link)
+    
+    print("Current state of link_mappings: ", link_mappings)

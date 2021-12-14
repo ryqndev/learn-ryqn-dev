@@ -14,9 +14,10 @@ const LinkRenderer = ({ href, children }) => {
 		return (
 			<HashLink
 				className={cn.container}
-				smooth
-				to={href}
-				scroll={el => scrollWithOffset(el)}
+				smooth to={href} 
+				scroll={el => {
+					setTimeout(() => scrollWithOffset(el), 20);
+				}}
 			>
 				{children}
 			</HashLink>

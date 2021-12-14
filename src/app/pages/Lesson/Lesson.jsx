@@ -1,6 +1,6 @@
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, memo } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
 import { MarkdownRenderer, Spinner } from '../../components';
 
@@ -19,8 +19,9 @@ const Lesson = () => {
 
 	useEffect(() => {
 		const anchor = hash ? document.getElementById(hash.substr(1)) : false;
+
 		window.scrollTo({
-			top: anchor ? anchor.getBoundingClientRect().top - 64 : 0,
+			top: anchor ? anchor.getBoundingClientRect().top - 80 : 0,
 			behavior: 'smooth',
 		});
 	}, [content, hash]);
@@ -48,4 +49,4 @@ const Lesson = () => {
 	);
 };
 
-export default Lesson;
+export default memo(Lesson);

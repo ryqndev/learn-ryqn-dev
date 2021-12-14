@@ -9,14 +9,18 @@
     </head>
 
     <body>
-        <div class="result-container">
-            Success! You can now access your site from 
-            <a 
-                href="{{ short_link }}" 
-                target="_blank" 
-                rel="noopener noreferrer"
-            >
-                {{ short_link }}
+        <div class="input--container">
+            <div class="content">
+                Success! You can now access your site from
+                <a href="{{ short_link }}" target="_blank" rel="noopener noreferrer">
+                    {{ short_link }}
+                </a>
+            </div>
+
+            <a href="./">
+                <button>
+                    Create another
+                </button>
             </a>
         </div>
     </body>

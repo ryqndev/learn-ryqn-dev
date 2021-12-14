@@ -35,7 +35,7 @@ Here are the most common HTTP request methods:
 
 • `POST` - updates data. An example is when a user updates their Facebook relationship status.
 
-    • In this example, a user isn't getting data from a server, they're sending data to the Facebook servers and letting them know they are updating a data field
+    • In this example, a user isn't getting data from a server, they're sending data to the Facebook servers and letting them know they are updating a data field. Often times, a POST request will also have authentificiation data that gives a user permission to edit data.
 
 • `CREATE` - creates data. An example is when a user is creating a new post on their blog, their computer will send a CREATE http request to the server.
 

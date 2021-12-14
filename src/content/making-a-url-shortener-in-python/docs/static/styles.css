@@ -22,6 +22,11 @@ body {
     padding: 15px;
 }
 
+.content {
+    display: grid;
+    place-content: center start;
+}
+
 .input--container>input[type="text"] {
     font-size: 1.5em;
     border: none;
@@ -31,15 +36,11 @@ body {
     outline: none;
 }
 
-.input--container>button {
+.input--container>button, .input--container>a>button {
     font-size: 1em;
     padding: 15px 25px;
 }
 
-.input--container>button:hover {
+.input--container>button:hover, .input--container>a>button:hover {
     cursor: pointer;
-}
-
-.result-container {
-
 }

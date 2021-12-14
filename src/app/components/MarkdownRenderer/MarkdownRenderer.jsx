@@ -21,6 +21,7 @@ const MarkdownRenderer = {
 	list: ({ children }) => <ol>{children}</ol>,
 	listItem: ListItemRenderer,
 	link: LinkRenderer,
+	strong: ({children}) => <strong className="bolded">{children}</strong>,
 	table: ({ children }) => {
 		return (
 			<div className='md-render--table'>
