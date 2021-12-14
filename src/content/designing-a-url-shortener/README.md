@@ -24,7 +24,7 @@ This design has 1 supported language, found here:
 ## What is a URL shortener?
 A URL shortener is a service that converts your long URL into a shorter one. For example, the link to this article is [https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener](https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener) which is 72 characters. When I use a url shortening service, it becomes [https://tinyurl.com/yckw7tcs](https://tinyurl.com/yckw7tcs) - a total of 28 characters. 
 
-![Using a URL shortener example]('./assets/tinyurl-example.png)
+![Using a URL shortener example](./assets/tinyurl-example.png)
 
 ## Why would I use a URL shortener?
 Regardless of what device you're on, typing the second link listed above is infinitely faster than typing the first one. This is the main benefit of URL shorteners: **convenience**. This benefit is immediately apparent when someone needs to manually input your link. A good use case to have URL shorteners in this case are on physical mediums, like posters and magazines, and intangible digital mediums, like screenshared presentations and unhighlightable text (for whatever reason). 
@@ -57,4 +57,4 @@ If I wanted to implement a database as well, I would first develop the system wi
 Okay, assuming I figured out how to store my data, how do I do redirection? Well, we know that in order to use our service, users have to go to our alias in the browser, which will then redirect them somewhere else. So does that mean I have to create a website? Let's explore how that would work. We would have a website at (let's imagine our website is hosted at https://short.com - this url is fake don't use pls) `short.com`. When someone goes on a short link, for example https://short.com/yckw7ts, our website would have to take that unique id: `yckw7ts` and then send that data to our database to obtain the mapping, and then once it gets the data back, it'll redirect to the correct location.
 
 This solution... works! It's a perfectly fine implementation of a url shortener service.
-![client rendered version](./client-rendered.png)
+![client rendered version](./assets/client-rendered.png)
