@@ -5,8 +5,7 @@
 
 * [Intro](#intro)
 * [Background info](#background-info)
-    1. [About this app](#about-this-app)
-    2. [Picking our tools](#picking-our-tools)
+* [Picking our tools](#picking-our-tools)
 * [Installation and Setup](#installation-and-setup)
 * [Ready to start coding](#ready-to-start-coding)
 * [Writing the business logic](#writing-the-business-logic)
@@ -14,28 +13,29 @@
     2. [Get link from alias](#get-link-from-alias)
     3. [Finishing up business logic](#finishing-up-business-logic)
 * [Understanding servers and web requests](#understanding-servers-and-web-requests)
-* [Attaching Flask](#attaching-flask)
+* [Writing the Flask code](#attaching-flask)
+    1. [Creating a web interface](#creating-a-web-interface)
+    1. [Redirecting](#redirecting)
+* [Final Result](#final-result)
 
 
 ## Intro
 This tutorial assumes basic knowledge of Python3 (variables, functions, if-statements, dictionaries, import python modules).
 
-You may have heard of services like [bit.ly](https://bit.ly) called URL shorteners whose job is to take a (usually) long link, and generate a shorter alias for it. 
+You may have heard of services like [bit.ly](https://bit.ly) called URL shorteners whose job is to take a long link, and generate a shorter alias for it. 
 
 Here, we will **write a URL shortener service in Python**. This article is meant for students who have dabbled with Python and are exploring ways to apply that knowledge to real-world applications. We'll be touching on setting up a webserver using Flask, serving webpages, understanding http codes, and some basic software design fundamentals. 
 
 Ideally, you'll be able to see the process a developer goes through when writing software and learn enough from the system so you have *some* direction when you work on your own project!
 
 ## Background info
-If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I'll talk a little about the tools we're going to use.
+If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](./designing-a-url-shortener) first.
 
-### About this app
-Before we start writing code, we should know exactly what we're trying to make here. Okay, so we want to make a URL shortener. The basic idea is this: a user will go on our site and give us a link that they want shortened. We will then generate a short, random, unique link to them. Then, whenever someone goes on our shortened link, we will redirect them to the longer link. Simple as that!
-
+We are essentially developing this:
+![Time sequence diagram](./redirection-diagram.png)
+Except our "database" will just be a dictionary variable in memory.
 ### Picking our tools
-Now that we know the main goal of our app, we need to pick the best tools that will help us achieve that goal. To let people use our service, we're going to need to set up a web server. A `web server` is, simply put, a computer that sits on the internet running our python code - constantly listening for requests, and then executes every request. In this case, we need a `web server` that will sit on the internet and listen for users who access our short link, and then redirect them to the longer link. We also need to handle a case for users who want to create a short link by giving us a long link. 
-
-As an aside, there are two main libraries for setting up web servers in Python: [Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Django](https://www.djangoproject.com/). 
+In our design doc, we realized we needed a web application server. In Python, there are 2 main web application server libraries:[Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Django](https://www.djangoproject.com/). 
 
 *We will be using Flask due to its simplicity but you may want to look at a more in-depth breakdown between the two tools when you're doing professional development.*
 
@@ -123,7 +123,7 @@ def get_long_link(short_link_id):
 
 ### Generating a short alias
 
-Generating a short alias has 3 main parts to it: first, we need to generate an unused random string, save the mapping of the newly generated alias to the long_link, and then finally return the full aliased url. It would look something like this:
+Generating a short alias has 3 parts to it: Generating an unused random string (we can call this a hash), saving the `<hash, long_link>` pair, and returning the full aliased url. It would look something like this:
 
 ```python business_logic.py
 import random
@@ -145,11 +145,11 @@ def create_short_link(server_url, long_link):
             Ex.: https://short.com/d63hs
     """
     LENGTH_OF_ALIAS_ID = 6
-    generated_random_id = generate_random_string(LENGTH_OF_ALIAS_ID);
+    unused_hash = generate_random_string(LENGTH_OF_ALIAS_ID);
 
-    link_mappings[generated_random_id] = long_link
+    link_mappings[unused_hash] = long_link
 
-    return server_url + generated_random_id
+    return server_url + unused_hash
 
 def generate_random_string(length_of_string):
     """Generates a valid random Base62 string of given length
@@ -178,32 +178,10 @@ def generate_random_string(length_of_string):
 # ...
 ```
 
-Notice that in our `link_mappings`, we are storing the generated_id, rather than the entire url. This is because we know that every short url will be prepended with our server url - in this example it's https://short.com/. (don't actually go on this site, it's a fake domain i made up) 
+Notice that in our `link_mappings`, we are storing the hash, rather than the entire url. This is because we know that every short url will be prepended with our server url - in this example it's https://short.com/. (don't actually go on this site, it's a fake domain i made up) 
 
 By not storing the whole link, not only do we save space in memory, we also solve another problem which is comparing URLS. https://short.com/d63hs, https://short.com/d63hs/, and http://short.com/d63hs are all "technically" the same URL but have different string values. However, we do know that they all have the same route: [d63hs] which is much easier to compare.
 
-
-### Design decisions
-I'm going to talk about the design decisions behind why I went for certain solutions / coding patterns so feel free to skip to the [next section](#get-link-from-alias) if you're only interested in the code.
-
-#### Choosing a length of random string
-First thing you might ask is how did I pick the magic number 6 seemingly out of nowhere for the length of the generated string? We need to keep in mind the point of our service: **to keep urls short**. This means that the random alias id we append to the end of our short url should be as short as possible. However, the shorter our generated id is, the less combinations possible, resulting in higher collisions and an upper limit to aliases we can make.
-
-The way to find our magic number requires a little bit of math and good understanding of our random number algorithm. URL's are case sensitive - meaning that an uppercase 'A' is different from a lower case 'a'. This allows our alphanumeric string to have 62 different characters: [A-Z] + [a-z] + [0-9] (also known as Base62). Since every character has 62 options, we can calculate the total number of combinations like so:
-
-Total Combinations = 62^(Length of string)
-
-If our alias was only two characters long, our users would be very happy because they would only need to type out https://short.com/j5, but we would only support 4096 aliases. If our alias was 20 characters long, our users would have to type https://short.com/f7sj4fvm3js9fjlzpqru, but we could support 1.329228 * 10^36 different aliases. So, **we want to have the shortest alias possible - making it easy for users to type - while supporting enough aliases for our service to be useful**.
-
-How do I pick a good number of aliases to support? Look at your use case. If you work for Youtube, for example, and you're generating unique ids for youtube links, you would probably want to look at the current number of Youtube videos and the rate at which Youtube videos get posted. Then you can plan for, say, 10 years of service and derive a safe number from that.
-
-In our case, 6 characters gives us 68,719,476,736 different combinations - a safe number I think for our application while being short enough for users.
-
-#### Random number generator infinite loop
-
-How about our random string generator function? There exists a case where our random number generator gets unlucky or we have too many urls generated already where the loop iterates multiple times before finding a valid id. You may want to catch this case by returning an error after looping too many times, or maybe even replace the last accessed alias, etc. I chose not to address this edge case because of how complex a good solution may be and might detract from the main message here. I do think it would be good practice to implement your own system to check this error, though.
-
-If your service doesn't guarantee permanence, you could maybe attach a timestamp value to the link_mappings that keeps track of the last time the alias was used, and after 5 loops - query the oldest timestamp value and replace that id. Just an idea and it's up to you to debate the pros and cons of this solution.
 ### Get link from alias
 
 Getting the link is actually pretty simple, thankfully. Since we have a dictionary mapping of short alias id's to their original links, we just need to get the corresponding value of a key, like so:
@@ -254,6 +232,7 @@ if __name__ == "__main__":
     print("Current state of link_mappings: ", link_mappings)
 
 ```
+
 which simply says if we run this file by itself, execute those commands. Otherwise (like when we import it as a module for our Flask application), don't.
 
 After running the file by itself in the terminal, we get this:
@@ -267,39 +246,32 @@ Current state of link_mappings:  {'x1GZrT': 'http://localhost:3000/making-a-url-
 
 Now that we know our business logic works, we can now start attaching our Flask routes to our core algorithms. But first let's understand conceptually how our web server will work.
 
-Our webserver is essentially a python program running on a computer connected to the internet and it's constantly listening for requests. Having a computer constantly running isn't going to be free and so when you hear the terms "hosting a server", you can think of it as "renting" someone else's computer. These computers operate very similarly to your personal computer, however, they are built *specifically* to work for long periods of time and efficiently manage requests. These types of computers are called servers. 
+Our webserver is essentially a python program always running on a computer connected to the internet and it's constantly listening for requests. An example of a request is when a user tries to access our short link. When they access `https://short.com/x1GZrT` in their favorite browser, that browser is making a GET request (type of HTTP request) to our server that's hosted on `https://short.com` through the `/x1GZrT` route. Since we are writing the server, we're can return any type of data we want in our response.
 
-> ### Cloud computing services
-> You have probably heard of some of the more popular server host providers like AWS (Amazon Web Services) or GCP (Google Cloud Platform). Traditionally, companies had to buy servers and manage the physical devices themselves, but when the internet became more and more lucrative, services like AWS were developed that offered **serverless** functionality. The idea being that you could "rent" a server without ever having to see the physical device. This service would also be extremely scaleable since, if your website experienced a surge of visitors, AWS could simply allocate more server resources to your app and charge you based off of how much processing power you used.
+In our app, we will return 2 different types of responses: First, we will return HTML code - essentially a website - to people who want to make their own short link. Second, we will return a URL Redirection response to people who are accessing short links.
 
-> AWS accounts for a majority of web traffic today and its scalability is a big reason why companies like Netflix choose to host using a serverless option. If you wanted to release your app to the public, you would likely pick one of these cloud providers to host your app.
+## Writing the Flask code
 
-I mentioned earlier that servers listen for requests. What is a request? Here, I'm talking specifically about **web requests** (which has several other related names like HTTP requests, GET/POST/DELETE/... requests). You can think of web requests as a way to transmit data through the internet. 
-
-You can read a little more about HTTP requests [here](./learning-about-http-requests). This article talks about http requests from the standpoint of a client, whereas in our case we are the server so you may want to keep that in mind.
-
-
-## Attaching Flask
-For people to use our link shortening service, we need to provide an interface that's easy for them to use. We can do this by having the default route of our server return a website that users can interact with to input their link for us to process. 
 ### Creating a web interface
 
-Tackling web development is a whole different beast in and of itself so you can read [this article](./intro-to-web-dev) to atleast understand the code we're about to write. The way Flask serves websites is through a templating engine called Jinja and their [tutorial](https://pythonbasics.org/flask-tutorial-templates/) on how to do templating is actually pretty good so I would check that out as well. Once again, the purpose of this write up isn't to learn web development but the general idea of creating a service in Python.
+I'm going to skip over the details of how to write a website for now (I have other tutorials on web dev). All you need to know is what the `index.html` code does. After the users type their long link into the textbox and submits it, their browser will send a POST request to our server at the `/create` endpoint through a form object. The way Flask serves websites is through a templating engine called Jinja and their [tutorial](https://pythonbasics.org/flask-tutorial-templates/) on how to utilize templating is actually pretty simple so I would check that out as well. Once again, the purpose of this write up isn't to learn web development but to see how one can implement a service in Python.
 
-To serve websites in Flask, we're going to use a function called `render_template` that takes in an HTML file and a list of variables. We'll embed variables later on but for now, we just want to return a simple website that has a text input and a shorten! button. By default, Flask will look for templates in the `/templates` folder so our filesystem. In addition to the HTML, we need to add some CSS styles so our website doesn't look THAT ugly. We'll put these in a `/static` folder and you can just copy and paste these until you're more familiar with front-end web development.
+To serve websites in Flask, we're going to use a function called `render_template` that takes in an HTML file and a list of variables. We'll embed variables later on but for now, we just want to return a simple website that has a text input and a shorten! button. By default, Flask will look for templates in the `/templates` folder in our filesystem. In addition to the HTML, we need to add some CSS styles so our website doesn't look THAT ugly. We'll put these in a `/static` folder and you can just copy and paste these until you're more familiar with front-end web development.
 
 ```file
 └── url-shortener
-            ├── templates
-            │	└── index.html
-            ├── static
-            │	└── styles.css
-            ├── app.py
-            └── business_logic.py
+	├── templates
+	│	└── index.html
+	├── static
+	│	└── styles.css
+	├── app.py
+	└── business_logic.py
+
 
 ```
 ```html templates/index.html
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <title>URL Shortener</title>
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
@@ -371,7 +343,7 @@ body {
 
 ```
 
-In our Flask code, instead of returning the string "Hello World!", we return a pretty website!
+In our Flask code, instead of returning the string "Hello World!" as we had before, we return a pretty website!
 
 ```python app.py 
 from flask import Flask, render_template
@@ -384,25 +356,261 @@ def index():
 
 ```
 
-When you want to return to users a website, you use a special type of HTML file called a template file. It's still saved with a `.html` file extension but these templates allow control flow statements (loops, if-statements, etc.) and also dynamic values and I'll show you an example.
-
-```html template.html
-<p>{{ name }}</p>
-<p>{{ birth_month }}</p>
-```
-
-When you return this template to a client with parameters in Python:
+I mentioned earlier that when someone submits their long link into our website, their browser will make a POST request to the `/create` endpoint. This request will contain form data in this format `{ link: "user_link_input_here" }`. Thus, we can setup a route in our Flask server to handle this request like so:
 
 ```python app.py
-return render_template('template.html', name='Ryan', birth_month='August')
+from flask import Flask, render_template
+from business_logic import create_short_link, get_long_link
+# ...
+
+@app.route('/create', methods=['POST'])
+def create():
+    server_url = request.host_url
+    long_link = request.form['link']
+    short_link = create_short_link(server_url, long_link)
+    return render_template("result.html", short_link=short_link)
+
+```
+Let's go through this line by line.
+
+On line 7: we define the `/create` route and specify it'll handle POST requests \
+On line 9: we get the current url of the server. (right now it should be http://localhost:5000) \
+On line 10: we are getting the user input value from the form data. \
+On line 11: we invoke the function we wrote earlier in `business_logic.py` \
+On line 12: we return an HTML file again, except this time we pass in the generated alias into the template to be displayed
+
+Since we're returning a different webpage, let's create `result.html` and define it like so:
+```file
+└── url-shortener
+	├── templates
+	│	├── result.html
+	│	└── index.html
+	├── static
+	│	└── styles.css
+	├── app.py
+	└── business_logic.py
+
+
+```
+```html templates/result.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    </head>
+
+    <body>
+        <div class="input--container">
+            <div class="content">
+                Success! You can now access your site from
+                <a href="{{ short_link }}" target="_blank" rel="noopener noreferrer">
+                    {{ short_link }}
+                </a>
+            </div>
+
+            <a href="./">
+                <button>
+                    Create another
+                </button>
+            </a>
+        </div>
+    </body>
+</html>
+
 ```
 
-The resulting HTML you send looks like this:
-```html template.html
-<p>Ryan</p>
-<p>August</p>
+### Redirecting
+Now that we've handled how a user will generate a short link, let's go ahead and implement the redirection process.
+
+```python app.py
+from flask import Flask, render_template, request, redirect
+# ...
+
+@app.route('/<alias>', methods=['GET'])
+def find_and_redirect(alias):
+     return redirect(get_long_link(alias), code=301)
+
 ```
 
-What happens is Flask will look at the `template.html` file and parse it. Whenever it encounters familiar syntax (`{{ variable }}`, `{% for item in arr %}`, `{% endfor %}` to name a few), it will execute that as Jinja code. After parsing the entire document, it will return the newly rendered HTML file to the user. This is called Server-Side Rendering (SSR) since the HTML is being rendered on the server before being sent to the client. If you've
+Ok. What does this all do?
+
+On line 4: We setup something called a "wildcard" route. It takes the text that would go there and stores it in a variable called `alias`.
+
+I think seeing examples will help demonstrate how these wildcard routes work:
+
+|   |`@app.route('/<alias>')`|`@app.route('/<alias>/there')`|
+|---|---|---|
+| will match: | / **hey** |/ **hey** / there|
+|                 | / **this-super-long-text** | / **boop** / there |
+| will **NOT** match: | / hey / there | / hey  |
+
+On line 6: Instead of returning HTML like we've done before, we will return a redirect response with a HTTP code 301. You can read the documentation for this function [here](https://flask.palletsprojects.com/en/2.0.x/api/#flask.redirect)
+
+## Final result
+Our final result should look like this:
+```file
+└── url-shortener
+	├── templates
+	│	├── result.html
+	│	└── index.html
+	├── static
+	│	└── styles.css
+	├── app.py
+	└── business_logic.py
 
 
+```
+
+```html templates/result.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    </head>
+
+    <body>
+        <div class="input--container">
+            <div class="content">
+                Success! You can now access your site from
+                <a href="{{ short_link }}" target="_blank" rel="noopener noreferrer">
+                    {{ short_link }}
+                </a>
+            </div>
+
+            <a href="./">
+                <button>
+                    Create another
+                </button>
+            </a>
+        </div>
+    </body>
+</html>
+
+```
+
+```html templates/index.html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>URL Shortener</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}" />
+    </head>
+
+    <body>
+        <form action="{{ url_for('create') }}" method="POST">
+            <div class="input--container">
+                <input 
+                    type="text" 
+                    name="link" 
+                    autocomplete="off" 
+                    required 
+                    placeholder="ex. https://ryqn.dev/" 
+                />
+                <button>Shorten!</button>
+            </div>
+        </form>
+    </body>
+</html>
+
+```
+
+```css static/styles.css
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-color: #151515;
+    font-size: 1.2em;
+}
+
+.input--container {
+    box-sizing: border-box;
+    width: 80vw;
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 20px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.content {
+    display: grid;
+    place-content: center start;
+}
+
+.input--container>input[type="text"] {
+    font-size: 1.5em;
+    border: none;
+}
+
+.input--container>input[type="text"]:focus {
+    outline: none;
+}
+
+.input--container>button, .input--container>a>button {
+    font-size: 1em;
+    padding: 15px 25px;
+}
+
+.input--container>button:hover, .input--container>a>button:hover {
+    cursor: pointer;
+}
+
+```
+
+```python app.py
+from flask import Flask, render_template, request, redirect
+from business_logic import create_short_link, get_long_link
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+	return render_template("index.html")
+
+@app.route('/create', methods=['POST'])
+def create():
+    server_url = request.host_url
+    long_link = request.form['link']
+    short_link = create_short_link(server_url, long_link)
+    return render_template("result.html", short_link=short_link)
+
+@app.route('/<string:alias>', methods=['GET'])
+def find_and_redirect(alias):
+    return redirect(get_long_link(alias), code=301)
+
+```
+
+```python business_logic.py
+import random
+
+link_mappings = {}
+
+def create_short_link(server_url, long_link):
+    LENGTH_OF_ALIAS_ID = 6
+    unused_hash = generate_random_string(LENGTH_OF_ALIAS_ID)
+    link_mappings[unused_hash] = long_link
+    return server_url + unused_hash
+
+def generate_random_string(length_of_string):
+    ALPHANUMERIC_CHARACTERS = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+
+    while True: 
+        valid_random_alphanumeric = ''.join(random.choice(
+            ALPHANUMERIC_CHARACTERS) for _ in range(length_of_string))
+
+        if valid_random_alphanumeric not in link_mappings:
+            return valid_random_alphanumeric
+
+def get_long_link(short_link_id):
+    return link_mappings.get(short_link_id)
+
+```

@@ -16,4 +16,4 @@ def create():
 
 @app.route('/<string:alias>', methods=['GET'])
 def find_and_redirect(alias):
-     return redirect(get_long_link(alias), code=301)
+    return redirect(get_long_link(alias), code=301)

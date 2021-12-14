@@ -17,11 +17,11 @@ def create_short_link(server_url, long_link):
             Ex.: https://short.com/d63hs
     """
     LENGTH_OF_ALIAS_ID = 6
-    generated_random_id = generate_random_string(LENGTH_OF_ALIAS_ID)
+    unused_hash = generate_random_string(LENGTH_OF_ALIAS_ID)
 
-    link_mappings[generated_random_id] = long_link
+    link_mappings[unused_hash] = long_link
 
-    return server_url + generated_random_id
+    return server_url + unused_hash
 
 
 def generate_random_string(length_of_string):
