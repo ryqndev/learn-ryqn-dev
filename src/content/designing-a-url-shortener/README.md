@@ -54,7 +54,14 @@ When a need arises to store large amounts of structured data, it's usually a sig
 If I wanted to implement a database as well, I would first develop the system without it, make sure the core functionality works, and then swap out the data access and storage code with database code. That way, I can focus on just learning how databases work without having to debug the main system.
 
 ### Redirection
-Okay, assuming I figured out how to store my data, how do I do redirection? Well, we know that in order to use our service, users have to go to our alias in the browser, which will then redirect them somewhere else. So does that mean I have to create a website? Let's explore how that would work. We would have a website at (let's imagine our website is hosted at https://short.com - this url is fake don't use pls) `short.com`. When someone goes on a short link, for example https://short.com/yckw7ts, our website would have to take that unique id: `yckw7ts` and then send that data to our database to obtain the mapping, and then once it gets the data back, it'll redirect to the correct location.
+Okay, assuming I figured out how to store my data, how do I do redirection? Well, we know that in order to use our service, users have to go to our alias in the browser, which will then redirect them somewhere else. So does that mean I have to create a website? Let's explore how that would work. We would have a website at (let's imagine our website is hosted at https://short.com - this url is fake. pls don't use) `short.com`. When someone goes on a short link, for example https://short.com/yckw7ts, our website would have to take that unique id: `yckw7ts` and then send that data to our database to obtain the mapping, and then once it gets the data back, it'll redirect to the correct location.
 
-This solution... works! It's a perfectly fine implementation of a url shortener service.
+This solution... works! It's a perfectly fine implementation of a url shortener service and this is what a time sequence diagram would look like:
+
 ![client rendered version](./assets/client-rendered.png)
+
+This solution utilizes something called Client-Side Rendering (CSR) in which the client does all of the processing. Notice how after we make the initial request to `https://short.com/yckw7ts`, the browser has to extract the url, open a connection to the database, query the value, and then once it gets the data back, it'll redirect to the webpage. If we implement this solution, it'll get the job done but there's alot of extra steps being performed here.
+
+Not only are there performance related issues with this, there are user experience problems with this. First, when the user loads our website, it'll display a blank page in the browser first before redirecting to the next page, resulting in a page flash between the navigation. Second, by having so many steps in between, we introduce more points of fault to our program. A good software principle is to not over complicate your solution (KISS - Keep it simple, stupid).
+
+We can, instead, practice something called Server-Side Rendering (SSR) here and eliminate the need for all of these trips performed by the client and keep the processing in the server. It'll look something like this: 
