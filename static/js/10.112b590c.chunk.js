@@ -1,2 +1,0 @@
-(this["webpackJsonplearn-ryqn-dev"]=this["webpackJsonplearn-ryqn-dev"]||[]).push([[10],{254:function(e,n,s){"use strict";s.r(n),n.default=s.p+"static/media/README.532ee011.md"}}]);
-//# sourceMappingURL=10.112b590c.chunk.js.map

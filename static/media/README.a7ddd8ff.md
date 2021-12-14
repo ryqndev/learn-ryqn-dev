@@ -10,9 +10,9 @@
 
 ## What are HTTP requests?
 
-HTTP is the most common way to communicate through the internet. You make HTTP requests everyday without even realizing it. Whenever you go on a website, you are making an HTTP request. We can think of HTTP requests as the way pass information through the internet - the mail service for the web. Here's an example:
+HTTP is the most common way to communicate through the internet. You make HTTP requests everyday without even realizing it. Whenever you go on a website, you are making an HTTP request. **We can think of HTTP requests as a way we pass information through the internet** - like a mail service for the web. Here's an example:
 
-If I go to https://google.com, I am making an HTTP request to the Google server asking them to give me their homepage. The Google server then returns an HTML file (called a response or HTTP response) and then displays it as a webpage.
+If I go to https://google.com, I am making an **HTTP request** to the Google server asking them to give me their homepage. The Google server then returns an HTML file (called a **response** or **HTTP response**) and then displays it as a webpage.
 
 First, I enter the website url (the url tells which server to make a request to)
 ![Typing https://google.com in the browser](./assets/inputting-url.png)
@@ -35,7 +35,7 @@ Here are the most common HTTP request methods:
 
 • `POST` - updates data. An example is when a user updates their Facebook relationship status.
 
-    • In this example, a user isn't getting data from a server, they're sending data to the Facebook servers and letting them know they are updating a data field
+    • In this example, a user isn't getting data from a server, they're sending data to the Facebook servers and letting them know they are updating a data field. Often times, a POST request will also have authentificiation data that gives a user permission to edit data.
 
 • `CREATE` - creates data. An example is when a user is creating a new post on their blog, their computer will send a CREATE http request to the server.
 
