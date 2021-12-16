@@ -13,3 +13,26 @@
         font-weight: bold;
     }
 }
+
+
+.md-render--code {
+    margin: 20px 0 20px 0;
+    border-radius: 8px;
+    background-color: var(--bg-code);
+    overflow: hidden;
+
+    .title-bar {
+        display: grid;
+        grid-template-columns: 100px 1fr;
+        h3 {
+            font-size: 1rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            padding-top: 13px;
+            font-weight: bold;
+            color: white;
+        }
+    }
+    .code-mirror--wrapper {
+        padding: 0px 10px 20px 10px;
+    }
+}

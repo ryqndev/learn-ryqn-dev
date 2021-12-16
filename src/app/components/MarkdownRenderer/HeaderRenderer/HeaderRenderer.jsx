@@ -1,3 +1,5 @@
+import cn from './HeaderRenderer.module.scss';
+
 const HeaderRenderer = props => {
 	const headerContent = props.node.children[0].value;
 	const headerHashLink = headerContent.split(' ').join('-').toLowerCase();
@@ -6,8 +8,8 @@ const HeaderRenderer = props => {
 		case 1:
 			document.title = headerContent;
 			return (
-				<header className='article--header'>
-					<h1 className='md-render--header' id={headerHashLink}>
+				<header className={cn.article}>
+					<h1 className={cn.header} id={headerHashLink}>
 						{headerContent}
 					</h1>
 					<p>
@@ -24,19 +26,19 @@ const HeaderRenderer = props => {
 			);
 		case 2:
 			return (
-				<h2 className='md-render--header' id={headerHashLink}>
+				<h2 className={cn.header} id={headerHashLink}>
 					{headerContent}
 				</h2>
 			);
 		case 3:
 			return (
-				<h3 className='md-render--header' id={headerHashLink}>
+				<h3 className={cn.header} id={headerHashLink}>
 					{headerContent}
 				</h3>
 			);
 		default:
 			return (
-				<h4 className='md-render--header' id={headerHashLink}>
+				<h4 className={cn.header} id={headerHashLink}>
 					{headerContent}
 				</h4>
 			);

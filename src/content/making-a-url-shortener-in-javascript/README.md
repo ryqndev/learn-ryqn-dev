@@ -1,6 +1,6 @@
-# Making a URL shortener in Python
+# Making a URL shortener in Javascript
 
-*The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/making-a-url-shortener-in-python/docs). To run it, you need to [setup Flask](https://learn.ryqn.dev/starting-out-with-flask#installation-and-setup). Once that's done, you can type `flask run` in your terminal to start the webserver*
+*The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/making-a-url-shortener-in-javascript/docs). To run it, you need to [setup Express.js](https://learn.ryqn.dev/starting-out-with-nodejs#installation-and-setup).*
 ## Table of Contents
 
 * [Intro](#intro)
@@ -13,18 +13,18 @@
     2. [Get link from alias](#get-link-from-alias)
     3. [Finishing up business logic](#finishing-up-business-logic)
 * [Understanding servers and web requests](#understanding-servers-and-web-requests)
-* [Writing the Flask code](#attaching-flask)
+* [Writing the Express code](#attaching-flask)
     1. [Creating a web interface](#creating-a-web-interface)
     1. [Redirecting](#redirecting)
 * [Final Result](#final-result)
 
 
 ## Intro
-This tutorial assumes basic knowledge of Python3 (variables, functions, if-statements, dictionaries, import python modules).
+This tutorial assumes basic knowledge of Javascript (variables, functions, if-statements, loops).
 
 You may have heard of services like [bit.ly](https://bit.ly) called URL shorteners whose job is to take a long link, and generate a shorter alias for it. 
 
-Here, we will **write a URL shortener service in Python**. This article is meant for students who have dabbled with Python and are exploring ways to apply that knowledge to real-world applications. We'll be touching on setting up a webserver using Flask, serving webpages, understanding http codes, and some basic software design fundamentals. 
+Here, we will **write a URL shortener service in Javascript**. This article is meant for students who have dabbled with Javascript and are exploring ways to apply that knowledge to real-world applications. We'll be touching on setting up a webserver using Node.js and Express.js, serving webpages, understanding http codes, and some basic software design fundamentals. 
 
 Ideally, you'll be able to see the process a developer goes through when writing software and learn enough from the system so you have *some* direction when you work on your own project!
 
@@ -32,10 +32,11 @@ Ideally, you'll be able to see the process a developer goes through when writing
 If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](./designing-a-url-shortener) first.
 
 We are essentially developing this:
-![Time sequence diagram](./assets/redirection-diagram.png)
-Except our "database" will just be a dictionary variable in memory.
+![Time sequence diagram](./redirection-diagram.png)
+Except our "database" will just be a JSON (more on this later) variable in memory.
 ### Picking our tools
-In our design doc, we realized we needed a web application server. In Python, there are 2 main web application server libraries:[Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Django](https://www.djangoproject.com/). 
+We need to first understand the differences between Javascript, Node.js, and Express.js.
+<!-- In our design doc, we realized we needed a web application server. In Javascript, there are 2 main web application server libraries:[Flask](https://flask.palletsprojects.com/en/2.0.x/) and [Django](https://www.djangoproject.com/).  -->
 
 *We will be using Flask due to its simplicity but you may want to look at a more in-depth breakdown between the two tools when you're doing professional development.*
 
@@ -46,7 +47,7 @@ We need to first install Python3 and  Flask, and setup our boilerplate code. Go 
 After following the steps from the link above, you should end up with this basic structure:
 ```file
 └── url-shortener
-            └── app.py
+	└── app.py
 ```
 
 ```python app.py

@@ -7,6 +7,7 @@ import ListItemRenderer from './ListItemRenderer';
 import HeaderRenderer from './HeaderRenderer';
 import CodeRenderer from './CodeRenderer';
 import LinkRenderer from './LinkRenderer';
+import './MarkdownRenderer.scss';
 
 const MarkdownRenderer = {
 	code: CodeRenderer,
