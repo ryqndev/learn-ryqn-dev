@@ -332,4 +332,4 @@ and the idea here is, if we decide to change the data at all, we only have to ca
 ## Recap
 What we've covered so far is mostly conceptual but ideally it allows you to understand how React works on a theoretical level. This way, when you read other code tutorials (that will mostly just provide code for you), you can see where those pieces fit in the whole context of a React project.
 
-Hopefully I get around to rewriting this article to become a full article, rather than supplemtal content for a live demo.
+Hopefully I get around to rewriting this article to become a full article, rather than supplemental content for a live demo.
