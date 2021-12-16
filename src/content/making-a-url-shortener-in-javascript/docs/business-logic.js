@@ -1,3 +1,4 @@
+let link_mappings = {};
 
 function create_short_link(server_url, long_link) {
 	let LENGTH_OF_ALIAS_ID = 6;
@@ -7,7 +8,6 @@ function create_short_link(server_url, long_link) {
 
 	return server_url + unused_hash;
 }
-let link_mappings = {};
 
 function generate_random_string(length_of_string) {
 	const ALPHANUMERIC_CHARACTERS =
@@ -27,4 +27,9 @@ function generate_random_string(length_of_string) {
 
 function get_long_link(short_link_id) {
 	return link_mappings[short_link_id];
+}
+
+export {
+	create_short_link,
+	get_long_link,
 }
