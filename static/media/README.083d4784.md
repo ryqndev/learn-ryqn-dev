@@ -12,6 +12,7 @@
     1. [Installation and Setup](#installation-and-setup)
     2. [Understanding the code](#understanding-the-code)
 * [React Examples](#react-examples)
+* [Recap](#recap)
     
 
 ## Intro
@@ -46,9 +47,11 @@ The official definition: `React is a Javascript library for building UI's (User 
 
 ## React as an analogy
 
-The top AI/ML researchers today are all using Python to write their complex and computationally expensive neural nets and whatnot yet Python has a reputation for being 'slow'. And that's true. Certain operations in Python are much slower than if it were to be implemented in C++ (except for the Python libraries written in C, of course) so why not write all AI/ML in C++ to get the maximum efficiency? Here's another question, should an AI/ML researcher have to concern themselves with how memory management? no. They have better shit to do - like writing smart stuff (I have no clue, I'm not that smart). So C++ developers can write fast mathematical operations in C++ and allow Python to call these functions and you get stuff like numpy. 
+The top AI/ML researchers today are all using Python to write their complex and computationally expensive neural nets and whatnot yet Python has a reputation for being 'slow'. And that's true. Certain operations in Python are much slower than if it were to be implemented in C++ (except for the Python libraries written in C, of course) so why not write all AI/ML in C++ to get the maximum efficiency? Here's another question, **should an AI/ML researcher have to concern themselves with how memory management? no**. They have better shit to do - like writing smart stuff (I have no clue, I'm not that smart). So C++ developers can write fast mathematical operations in C++ and allow Python to call these functions and you get stuff like numpy. 
 
-That's *sorta* like React. It's not exactly a perfect analogy because in most cases, React is actually more efficient than the traditional HTML/CSS/JS version (assuming humans write normal non-error prone code) but React makes developing dynamic web applications simpler by extracting away the stuff that you shouldn't need to worry about. Similar to how Python allows AI/ML researchers to focus on the actual AI/ML part of their job as opposed to worrying about writing good code, React allows front-end developers to focus on creating beautiful, interactive websites without having to worry about *how* to implement things (like *how* to change text on a screen).
+That's *sorta* like React. It's not exactly a perfect analogy because in most cases, React is likely more efficient than the traditional HTML/CSS/JS version (assuming humans write normal error-prone code). React makes developing dynamic web applications simpler by extracting away the stuff that you shouldn't need to worry about. 
+
+Similar to how **Python allows AI/ML researchers to focus on the actual AI/ML** part of their job as opposed to worrying about writing memory-efficient code, **React allows front-end developers to focus on creating beautiful, interactive websites** without having to worry about *how* to implement things (like *how* to change text on a screen).
 
 ## How React is different
 
@@ -86,26 +89,27 @@ return (
 
 What's the difference aside from the syntax? 
 
-When you do vanilla web development, you're usually doing something called imperative programming. That is, you are giving explicit instructions regarding how to do something. In this example above, we are giving explicit instructions when the button gets clicked: 
+When you do vanilla web development, you're usually doing something called **imperative programming**. That is, you are giving explicit instructions regarding how to do something. In this example above, we are giving explicit instructions when the button gets clicked: 
 
-Line 3: Find the HTML element with the `id="display"`
-Line 4: Set the HTML inside of that tag to `changed data`
+On line 3: Find the HTML element with the `id="display"` \
+On line 4: Set the HTML inside of that tag to `changed data`
 
-However, in React, we practice declarative programming. In the example, we have a variable (this is a special variable called `State` in React) and we directly embed that variable into the HTML-looking syntax (called `JSX` in React). Now, when we click the button, we change the variable only, and React will "react" to this and update all embedded variables in the HTML for us.
+However, in React, we practice **declarative** and **reactive programming**. In the example, we have a variable (this is a special variable called `State` in React) and we directly embed that variable into the HTML-looking syntax (called `JSX` in React). Now, when we click the button, we change the variable only, and React will ***react*** to this and update the places in the HTML where that variable was used.
 
-This is called declarative because we just declare what we want, rather than give instructions as to how to do it - and this concept is what makes React such a powerful tool for web developers. We no longer need to worry about *how* to make it work, it just works.
+This is called reactive and declarative programming because we simply say what value should change and let React take care of displaying this change to end-users; this concept is what makes React such a powerful tool for web developers. We no longer need to worry about *how* to make it work, it just works.
 
 ## More advanced use case
+**tl;dr for this section** it's very difficult to keep our data in memory in sync with the same data we display in the browser if we do it manually (i.e. without a library like React).
 
-This is a pretty basic example and probably sounds confusing to some of you but I want you to imagine how an app like Twitter or Facebook can benefit from this.
+That example was to show how it worked, but let's see how this helps us in *actual* production code. I want you to imagine how an app like Twitter or Facebook can benefit from this.
 
 Imagine we were writing something that resembled Facebook's news feed. When we fetch data from our database, they'll give us an array of post data like this:
 
 ```javascript
 [
-    { author: "ryan", likes: 3, content: "hello everyone"},
-    { author: "susan", likes: 5, content: "im billy bob"},
-    { author: "skyler", likes: 0, content: "i have no friends"},
+    { author: "ryan", likes: 3, content: "hello everyone" },
+    { author: "susan", likes: 5, content: "im billy bob" },
+    { author: "skyler", likes: 0, content: "i have no friends" },
 ]
 ```
 
@@ -113,7 +117,7 @@ How do we display this? Well, that's simple - we just loop through the array and
 
 *fyi this next section is supposed to cause confusion*
 
-Ok cool but what if one of these posts has a new update? Let's say the second post gets another like. Do we loop through everything again and regenerate the HTML? No, there could be hundreds of posts and rerendering everything will be expensive. So we have to create a mapping where you map every item in this array to an HTML element and when one of the posts has a data update, you update the corresponding HTML element, rather than the whole list. Ok but what if you add a comment? Then you need a 2-way mapping where once someone types a comment on a specific post on the website, it needs to map back to that piece of data, which then refreshes, and then goes back.... 
+Ok cool! but what if one of these posts has a new update? Let's say the second post gets another like. Do we loop through everything again and regenerate the HTML? No, there could be hundreds of posts and rerendering everything will be expensive. So we have to create a mapping where you map every item in this array to an HTML element and when one of the posts has a data update, you update the corresponding HTML element, rather than the whole list. Ok but what if you add a comment? Then you need a 2-way mapping where once someone types a comment on a specific post on the website, it needs to map back to that piece of data, which then refreshes, and then goes back.... 
 
 I'm completely lost now. and that's the point. 
 
@@ -124,7 +128,7 @@ This is why declarative libraries like React are so powerful; we don't need to m
 I like to think of front-end web development like this: As front-end developers, our job is to transform raw data into beautiful visual components. 
 ## When should I use React?
 
-Going back to my definition of React, I said it makes writing webapps *easier*. That doesn't mean that without React, it is impossible to write the next Facebook but it does make the job 10000x more doable. However, everything I've said so far is really just an argument for using a web framework/library and I would say that for pretty much any production project you have, you should always opt for a web framework/library of some sort whether that be React, JQuery, Vue, Svelte, Three.js, etc. over plain vanilla HTML/CSS/JS. 
+Going back to my definition of React, I said it makes writing webapps *easier*. That doesn't mean that without React, it is impossible to write the next Facebook. However, everything I've said so far is really just an argument for using a web framework/library and I would say that for pretty much any production project you have, you should always opt for a web framework/library of some sort whether that be React, JQuery, Vue, Svelte, Three.js, etc. over plain vanilla HTML/CSS/JS. 
 
 React is, once again, a library for building web interfaces. Before you consider whether or not you want React or one of its competitors, ask yourself if a web interface is the most important part of your product. If you're building a AR/VR product in the browser, or a graphics intensive game, you probably don't need React. To reiterate, pick the right tool for the job. Accidental complexity is killer. 
 
@@ -325,4 +329,7 @@ export default NewsFeed;
 
 and the idea here is, if we decide to change the data at all, we only have to call setData([...]) with the new updated array of posts and React will figure out not only which post needs to be updated, but also create/remove HTML elements as needed. All you need is to provide a unique key which React will use to create these mappings.
 
+## Recap
+What we've covered so far is mostly conceptual but ideally it allows you to understand how React works on a theoretical level. This way, when you read other code tutorials (that will mostly just provide code for you), you can see where those pieces fit in the whole context of a React project.
 
+Hopefully I get around to rewriting this article to become a full article, rather than supplemental content for a live demo.
