@@ -32,6 +32,9 @@ Ideally, you'll be able to see the process a developer goes through when writing
 If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](./designing-a-url-shortener) first.
 
 We are essentially developing this:
+![Demo of basic functionality of app](./assets/demo.gif)
+
+This is what our code will be doing in the back:
 ![Time sequence diagram](./assets/redirection-diagram.png)
 Except our "database" will just be a dictionary variable in memory.
 ### Picking our tools
