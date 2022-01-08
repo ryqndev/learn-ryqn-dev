@@ -48,7 +48,7 @@ The core concept here is **redirection**. When someone accesses our short link, 
 
 
 ### Data storage
-**tl;dr for this section** Databases are important, but we can store in memory for this application
+**tl;dr for this section** Databases are important, but we can store in memory for purposes of making this tutorial short
 
 When a need arises to store large amounts of structured data, it's usually a sign that your application will need to reach for a database. Database management is often an entire job all by itself and implementing a database is an additional system you would have to manage. With that in mind, we're going to hold off on adding a database and just store all of our data in memory - which is perfectly fine for developing a POC (proof-of-concept). 
 
