@@ -22,7 +22,7 @@ This design has 1 supported language, found here:
 [Making a URL Shortener in Python (Flask)](./making-a-url-shortener-in-python)
 
 ## What is a URL shortener?
-A URL shortener is a service that converts your long URL into a shorter one. For example, the link to this article is [https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener](https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener) which is 72 characters. When I use a url shortening service, it becomes [https://tinyurl.com/yckw7tcs](https://tinyurl.com/yckw7tcs) - a total of 28 characters. 
+A URL shortener is a service that converts your long URL into a shorter one. For example, the link to this article is [https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener?](https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener?) which is 72 characters. When I use a url shortening service, it becomes [https://tinyurl.com/yckw7tcs](https://tinyurl.com/yckw7tcs) - a total of 28 characters. 
 
 ![Using a URL shortener example](./assets/tinyurl-example.png)
 
