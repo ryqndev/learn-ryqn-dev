@@ -88,7 +88,7 @@ How do we generate short links and access the long link given the short link. We
 
 **Python**: dictionary \
 **Javascript**: JSON objects \
-**Java**: HashMap, TreeMap \
+**Java**: HashMap, TreeMap (not O(1) but same concept) \
 **C++**: std::map 
 
 ### Design decisions
