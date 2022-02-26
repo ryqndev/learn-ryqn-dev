@@ -224,6 +224,10 @@ When we're running our Flask server using `flask run` or `python -m flask run`, 
 
 So since our server is running on the internet that only exists on our computer, we can't actually communicate with the server if we're on a different computer.
 
+## just show me the code dude
+
+[https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/hackathon-flask/docs](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/hackathon-flask/docs)
+
 ### Run python in the browser
 
 *"I know python so I want to use python but I also want to write a website"*
