@@ -1,0 +1,16 @@
+{
+    "themeName": "Light",
+    "themeStyles": {
+        "--dark-mode": "0",
+        "--bg-primary": "#FFEEEE",
+        "--bg-primary-1": "#FFFFFF",
+        "--bg-secondary": "#ff9999",
+        "--text-primary": "black",
+        "--accent": "#f68080",
+        "--header-secondary": "#FFFFFF",
+        "--bg-card": "#FFDCDC",
+
+        "--nav-background": "#FFEEEECC",
+        "--nav-shadow": "#f6808088"
+    }
+}

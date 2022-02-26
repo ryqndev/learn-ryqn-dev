@@ -1,0 +1,131 @@
+{
+  "users": {
+    "ryqndev": {
+      "hash": "$2b$12$PYxzPH2NIgt9nHJX05q/d.t/88cXGCB.MbfV5qlDnxLt5XaVebT7G",
+      "_token": "c89e9549a69e3ae0772a8de854961a30b9132f93",
+      "_tokenExpiration": 1639678598764
+    },
+    "ryqn": {
+      "hash": "$2b$12$gOCEGv.icLF1mrzbD4jqneNko4n97nuJdQvh9Jb9/A829Z27q/azK",
+      "_token": "eec27faa2cd3c46bbaea1007eb8f1ca7706cfb0a",
+      "_tokenExpiration": 1639678641881
+    },
+    "ryqndev2": {
+      "hash": "$2b$12$GjcZkpeHmydeEZqtfKfC/uZfmN0J5rsEriGG5.uAedcw6I2stF/Om",
+      "_token": "39891dc5ebb98b863f1330de5eb5404d1c58b22f",
+      "_tokenExpiration": 1639676636760
+    }
+  },
+  "recipes": [
+    {
+      "id": "thai-tea",
+      "uploaded": 1617287557485,
+      "prepTime": "15 minutes",
+      "name": "Thai Tea",
+      "ingredients": [
+        "2 tablespoons loose-leaf black tea",
+        "1 pod star anise",
+        "2 pods cardamom",
+        "1/2 cinnamon stick, optional",
+        "1/8 vanilla bean, optional",
+        "Tamarind powder, to taste, optional",
+        "1/4 teaspoon almond extract, optional",
+        "1 cup boiling water",
+        "1 tablespoon sugar",
+        "1 tablespoon sweetened condensed milk",
+        "2 teaspoons evaporated milk, or coconut milk, or whole milk"
+      ],
+      "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/200824-delish-thai-iced-tea-horizontalpour1-15407-eb-1598987409.jpg",
+      "steps": [
+        "Gather the ingredients.",
+        "Steep the tea, star anise, cardamom, cinnamon stick, vanilla bean, tamarind powder, and almond extract (if using) in the boiling water for 5 minutes.",
+        "Strain the tea.",
+        "Stir in the sugar and sweetened condensed milk until both are completely dissolved.",
+        "Fill 2 tall glasses with ice.",
+        "Pour the tea over the ice, leaving an inch or so of space at the top for the evaporated milk.",
+        "Top up with more ice if needed, and then drizzle with 1 teaspoon of evaporated milk on each glass of tea."
+      ],
+      "description": "When I was a child, my great-grandparent's dog took care of me when my parents were out working. I can recall a conversation I had with her when I was only 2 years old. She told me about her days when she was just a little pup on her sick days when her adoptive mother - an amber-coated Pitbull Thai Ridgeback mixed breed - would often make her Thai Tea to soothe her. 4 minutes ago, she tragically passed away. This recipe is all that reminds me of her, with the exception of her taxidermied body that rests on my living room couch."
+    },
+    {
+      "id": "jasmine-tea",
+      "uploaded": 1617287557484,
+      "prepTime": "20-25 minutes",
+      "name": "Jasmine Milk Tea",
+      "ingredients": [
+        "Authentic loose leaf jasmine tea blend",
+        "1/4 cup choice of creamer or milk",
+        "1 Tablespoon of sweetener (honey, brown sugar, etc) "
+      ],
+      "image": "https://cookingwithawallflower.com/wp-content/uploads/2020/05/Brown-Sugar-Jasmine-Oolong-Milk-Tea-2.jpg",
+      "steps": [
+        "Gather the ingredients.",
+        "Fill it up with 3-4 cups of water and bring it to a boil.",
+        "Once your water has reached a rumbling boil, bring the heat back down to medium-high and add your loose leaf jasmine tea leaves. Let your tea steep to your preferred amount, usually, we steep any of our teas between 3-7 minutes for the best jasmine milk tea recipe. ",
+        "Strain the tea.",
+        "With your 3/4 cup of tea in your favorite cup, add your sweetener first (we’re adding 1 tablespoon of honey) into your cup. Next, simply grab your preferred creamer, in this case, we’re using whole milk (for more creaminess than 2% milk), and pour it slowly into your jasmine tea base."
+      ],
+      "description": "When I was a child, my great-grandparent's dog took care of me when my parents were out working. I can recall a conversation I had with her when I was only 2 years old. She told me about her days when she was just a little pup on her sick days when her adoptive mother - an amber-coated Pitbull Thai Ridgeback mixed breed - would often make her Thai Tea to soothe her. 4 minutes ago, she tragically passed away. This recipe is all that reminds me of her, with the exception of her taxidermied body that rests on my living room couch."
+    },
+    {
+      "id": "chicken",
+      "uploaded": 1617994161355,
+      "prepTime": "2 hours",
+      "name": "Chicken",
+      "ingredients": [],
+      "steps": [],
+      "image": "",
+      "description": "This is some goood af chicken"
+    },
+    {
+      "id": "",
+      "uploaded": 1618087416394,
+      "prepTime": "",
+      "name": "",
+      "ingredients": [],
+      "steps": [],
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": "-68df12",
+      "uploaded": 1618087416571,
+      "prepTime": "",
+      "name": "",
+      "ingredients": [],
+      "steps": [],
+      "image": "",
+      "description": ""
+    },
+    {
+      "id": "chicken-ed63d2",
+      "uploaded": 1618636074106,
+      "prepTime": "210 milliseconds",
+      "name": "Chicken",
+      "ingredients": [
+        "Raw chicken",
+        "Really powerful hand"
+      ],
+      "steps": [
+        "Put chicken on a study table",
+        "Slap chicken at 3725.95 miles per hour."
+      ],
+      "image": "",
+      "description": "Have you ever wanted to cook a chicken reaaaal quick? Now you can!"
+    },
+    {
+      "id": "hi",
+      "uploaded": 1639671511504,
+      "prepTime": "20",
+      "name": "hi",
+      "ingredients": [
+        "sd"
+      ],
+      "steps": [
+        ""
+      ],
+      "image": "",
+      "description": "sd"
+    }
+  ]
+}

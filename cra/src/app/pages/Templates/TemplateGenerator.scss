@@ -1,0 +1,84 @@
+.template-generator--wrapper {
+    & .hero {
+        height: calc(95vh - 60px);
+        display: grid;
+        place-content: center;
+        row-gap: 100px;
+        & > section {
+            display: grid;
+            row-gap: 40px;
+            & > h1 { 
+                color: var(--accent);
+                font-family: 'Raleway';
+                font-size: 5em;
+            }
+            & > h2 {
+                color: var(--accent);
+                font-family: 'Raleway';
+                font-size: 2em;
+            }
+            & > p {
+                font-size: 1.3em;
+                line-height: 1.5em;
+                font-family: 'Source Sans Pro';
+                &.description {
+                    font-size: 1.2em;
+                    line-height: 1.3em;
+                }
+            }
+        }
+        
+    }
+    & > .layout--split-vertical {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        grid-template-rows: auto;
+        column-gap: 80px;
+        height: 100vh;
+        max-width: 1200px;
+        margin: 0 auto;
+        @media screen and (max-width: 950px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+        }
+        &::before {
+            position: absolute;
+            right: 0;
+            z-index: -1;
+            content: "";
+            height: 100%;
+            width: 100%;
+            clip-path: polygon(100% 0, 40% 30%, 20% 100%,  100% 100%);
+            background-color: var(--bg-primary-1);
+            transition: background-color 500ms;
+        }
+        & > .layout-stepper {
+            padding: 0px 0px 40px 80px;
+            place-self: center;
+        }
+        & .selection {
+            display: grid;
+            place-content: center;
+            padding: 0px 80px 80px 0px;
+        }
+    } 
+    & > .result {
+        background-color: var(--bg-primary-1);
+        height: 500px;
+        transition: background-color 500ms;
+        & .bg{
+            height: 100%;
+            &::before {
+                position: absolute;
+                left: 0;
+                z-index: 100;
+                content: "";
+                height: 200px;
+                width: 20vw;
+                clip-path: polygon( 0% 0%, 0 100%, 100% 0%);
+                background-color: var(--bg-primary);
+                transition: background-color 500ms;
+            }
+        }
+    }
+}

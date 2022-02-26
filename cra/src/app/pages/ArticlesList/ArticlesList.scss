@@ -1,0 +1,64 @@
+.article-list--wrapper {
+    user-select: text;
+    main {
+        padding-top: 100px;
+        @media screen and (max-width: 800px) {
+            padding-top: 0px;
+        }
+        h1 {
+            font-size: 5em;
+            font-weight: bold;
+            color: var(--accent);
+            @media screen and (max-width: 800px) {
+                font-size: 3em;
+                text-align: center;
+            }
+        }
+        .list {
+            padding: 80px 0px;
+            display: grid;
+            row-gap: 40px;
+            @media screen and (max-width: 800px) {
+                padding: 40px 0px;
+            }
+            & > .item {
+                box-sizing: border-box;
+                background-color: var(--bg-secondary);
+                display: grid;
+                row-gap: 20px;
+                grid-template-rows: auto auto;
+                width: 100%;
+                text-decoration: none;
+                padding: 40px;
+                border-radius: 4px;
+                transition: color 500ms, background-color 500ms;
+                @media screen and (max-width: 800px) {
+                    padding: 40px 30px;
+                }
+                &:hover {
+                    & > h2 {
+                        color: inherit;
+                    } 
+                }
+                & > h2 {
+                    color: white;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    transition: color 400ms;
+                }
+                & > span.date {
+                    font-size: 0.8em;
+                    color: grey;
+                }
+                & > p {
+                    color: var(--text-primary);
+                    font-size: 1em;
+                    line-height: 1.5em;
+                    transition: color 500ms;
+                    font-family: 'Nunito';
+                }
+            }
+
+        }
+    }
+}
