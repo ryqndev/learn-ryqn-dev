@@ -14,13 +14,15 @@
     <script src="./script.js"></script>
 </head>
 
-<body>
+<body onmousemove="move(event)">
     <div class="container">
-        <button>click me</button>
+        <button class="btn" onclick="toggleTheme()" >click me</button>
 
-        <div>The current theme is: <span>Dark</span> Mode.</div>
-
-        <div class="information">
+        <a href="https://ryqn.dev" class="link">my site!</a>
+        <a href="https://ryqn.dev/sdfd" class="link">my site!</a>
+        <div>The current theme is: <span id="current-theme">Dark</span> Mode.</div>
+        <div id="popup" class="backdrop">
+        <div class="information" >
             <h1 class="title">Lorem Ipsum Dolor</h1>
             <p class="paragraph">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum dolor nulla. Suspendisse
@@ -33,6 +35,9 @@
             </p>
         </div>
     </div>
+    </div>
+
+    text
 
 </body>
 

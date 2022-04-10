@@ -19,3 +19,11 @@ for(int i = 0; i <= 100; i++){
 ```
 
 Javascript, or more specifically, web development, is driven by user-events. It only executes code in response to user actions. In this workshop, we'll take a look at how to have some interactivity in our website with a few lines of code.
+
+
+https://tinyurl.com/yckttx28 
+
+https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-theme-switcher/workshop
+
+https://learn.ryqn.dev/making-a-theme-switcher
+
