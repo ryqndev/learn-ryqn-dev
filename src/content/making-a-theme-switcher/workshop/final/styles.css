@@ -10,6 +10,7 @@ body {
     font-family: 'Mukta', sans-serif;
     font-size: 1.3em;
     transition: background-color 350ms, color 350ms;
+    
 }
 .container {
     width: 900px; 
