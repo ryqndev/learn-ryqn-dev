@@ -1,0 +1,14 @@
+body {
+    background-color: #151515; /* Background color */
+    color: white; /* Text color */
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.3em;
+}
+.container {
+    width: 900px; 
+    margin: 0 auto; /* center inside parent */ 
+}
+
+.information>.title {
+    color: #ff00ff;
+}

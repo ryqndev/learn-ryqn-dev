@@ -27,7 +27,7 @@ const Lesson = () => {
 	}, [content, hash]);
 
 	const transformImageUri = uri =>
-		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@main/src/content/${lessonName}${uri.substr(
+		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@content-update/src/content/${lessonName}${uri.substr(
 			1
 		)}`;
 
