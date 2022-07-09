@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@ryqndev/footer": "^3.0.4",
+    "@ryqndev/footer": "^3.1.1",
     "gh-pages": "^3.2.3",
     "i18next": "^19.8.4",
     "i18next-browser-languagedetector": "^6.0.1",
