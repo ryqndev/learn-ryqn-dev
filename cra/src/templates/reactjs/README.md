@@ -1,1 +1,0 @@
-*note: this app was bootstrapped by create-react-app*
