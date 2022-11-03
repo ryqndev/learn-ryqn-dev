@@ -37,8 +37,8 @@ const Lesson = () => {
 		<div className='lesson-wrapper page__component'>
 			<article className='md-renderer'>
 				<ReactMarkdown
-					plugins={[gfm]}
-					renderers={{ ...MarkdownRenderer }}
+					remarkPlugins={[gfm]}
+					components={{ ...MarkdownRenderer }}
 					transformLinkUri={null}
 					transformImageUri={transformImageUri}
 				>

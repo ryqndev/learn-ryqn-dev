@@ -9,7 +9,7 @@ const ListItem = ({ ordered, children, ...props }) => {
 	 * work for now as long as all list items in markdown are links.
 	 */
 	const extraTextFromInnerLink = node =>
-		node.children?.[0]?.children?.[0]?.children?.[0]?.value;
+		node.children?.[0]?.children?.[0]?.value;
 	const linkLocation = location.pathname + children[0].props.href;
 
 	if (children.length > 1) {

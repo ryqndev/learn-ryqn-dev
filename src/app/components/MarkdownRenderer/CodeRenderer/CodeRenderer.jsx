@@ -6,13 +6,15 @@ import 'codemirror/mode/javascript/javascript';
 import 'codemirror/mode/htmlmixed/htmlmixed';
 import 'codemirror/mode/css/css';
 
-const Code = ({language, node, value}) => {
-    if(!language) return <p className="list-item__indent">{value}</p>;
+const Code = ({node, children, className, inline}) => {
+    if(inline) return <span className='md-render--inline-code'>{children}</span>;
     
-    if(language === 'file') return <FileStructureDisplay value={value}/>;
+    if(!className) return children;
+    
+    if(className === 'language-file') return <FileStructureDisplay value={children}/>;
 
     const options = {
-        mode: language,
+        mode: className.split('-')[1],
         theme: 'material-palenight',
         lineNumbers: true,
         viewportMargin: Infinity,
@@ -36,11 +38,11 @@ const Code = ({language, node, value}) => {
                     <circle cx="48px" cy="22px" r="6.5px" fill="yellow"/>
                     <circle cx="71px" cy="22px" r="6.5px" fill="green"/>
                 </svg>
-                <h3>{node?.meta}</h3>
+                <h3>{node?.data?.meta}</h3>
             </div>
             <div className="code-mirror--wrapper">
                 <CodeMirror
-                    value={value}
+                    value={children[0]}
                     options={options}
                     onChange={(editor, data, value) => {}}
                 />
