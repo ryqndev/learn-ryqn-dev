@@ -59,7 +59,7 @@ We will be using Javascript as our language of choice for our backend. You may h
 
 The main prerequisite is to install Node as well as the Node Package Manager that allows us to... manage our packages (more info on that later). You can check out [this link](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) to get that done.
 
-Once you have Node and NPM, you can go ahead and download the boilerplate code above or [here](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/templates/express). 
+Once you have Node and NPM, you can go ahead and download the boilerplate code above or [here](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/templates/express). 
 
 Before we can run the server, we need to install all the packages and libraries that our program depends on to run (a.k.a. dependencies). This is where NPM comes in handy. In our code, you will find a file called `package.json`. This file is a list of information about our code that NPM uses in JSON format. Down the list of items in that JSON are two properties named `dependencies` and `devDependencies`. In those keys, there are a list of libraries that we need as well as the version which NPM will conveniently install for us when we type
 

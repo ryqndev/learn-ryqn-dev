@@ -17,36 +17,44 @@ const ListItem = ({ ordered, children, ...props }) => {
 			<li>
 				{'\u00A0'.repeat(ordered ? 6 : 0)}
 				<ol>
-					<HashLink
-						smooth
-						to={linkLocation}
-						scroll={el => scrollWithOffset(el)}
-					>
-						<li>
+					<li style={{lineHeight: '2em'}}>
+						<HashLink
+							smooth
+							to={linkLocation}
+							scroll={el => scrollWithOffset(el)}
+							style={{textDecoration: 'none'}}
+						>
 							{'\u00A0'.repeat(ordered ? 6 : 0)}
 							<span>•</span>
 							{'\u00A0'.repeat(6)}
 							<span className='text'>
 								{extraTextFromInnerLink(props.node)}
 							</span>
-						</li>
-					</HashLink>
-					{children.slice(1)}
+						</HashLink>
+
+						{children.slice(1)}
+					</li>
 				</ol>
 			</li>
 		);
 	}
 	return (
-		<HashLink smooth to={linkLocation} scroll={el => scrollWithOffset(el)}>
-			<li>
-				{'\u00A0'.repeat(ordered ? 6 : 0)}
-				<span>•</span>
-				{'\u00A0'.repeat(6)}
-				<span className='text'>
-					{extraTextFromInnerLink(props.node)}
-				</span>
-			</li>
-		</HashLink>
+		<>
+			<HashLink
+				smooth
+				to={linkLocation}
+				scroll={el => scrollWithOffset(el)}
+			>
+				<li>
+					{'\u00A0'.repeat(ordered ? 6 : 0)}
+					<span>•</span>
+					{'\u00A0'.repeat(6)}
+					<span className='text'>
+						{extraTextFromInnerLink(props.node)}
+					</span>
+				</li>
+			</HashLink>
+		</>
 	);
 };
 

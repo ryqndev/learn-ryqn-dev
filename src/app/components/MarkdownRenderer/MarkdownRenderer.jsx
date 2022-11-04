@@ -41,9 +41,6 @@ const MarkdownRenderer = {
 			{children}
 		</h4>
 	),
-	// pre: ({ children }) => (
-	// 	<span className='md-render--inline-code'>{children}</span>
-	// ),
 	ol: ({ children }) => <ol>{children}</ol>,
 	ul: ({ children }) => <ul>{children}</ul>,
 	li: ListItemRenderer,

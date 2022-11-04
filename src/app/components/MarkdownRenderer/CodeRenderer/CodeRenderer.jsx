@@ -8,7 +8,7 @@ import 'codemirror/mode/css/css';
 
 const Code = ({node, children, className, inline}) => {
     if(inline) return <span className='md-render--inline-code'>{children}</span>;
-    
+
     if(!className) return children;
     
     if(className === 'language-file') return <FileStructureDisplay value={children}/>;
@@ -18,11 +18,11 @@ const Code = ({node, children, className, inline}) => {
         theme: 'material-palenight',
         lineNumbers: true,
         viewportMargin: Infinity,
+        tabSize: 2,
     }
-    
+
     if(options.mode === 'html'){
         options.mode = 'htmlmixed';
-        options.tabSize = 2;
     }
     if(options.mode === 'bash'){
         options.lineNumbers = false;
