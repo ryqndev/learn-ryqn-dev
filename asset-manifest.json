@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6c4161cd.css",
-    "main.js": "/static/js/main.5b58584f.js",
+    "main.js": "/static/js/main.78b55448.js",
     "static/js/426.9d9906bf.chunk.js": "/static/js/426.9d9906bf.chunk.js",
     "static/js/595.89f2bbed.chunk.js": "/static/js/595.89f2bbed.chunk.js",
     "static/js/655.71395ba4.chunk.js": "/static/js/655.71395ba4.chunk.js",
@@ -16,7 +16,7 @@
     "static/js/737.c518bb41.chunk.js": "/static/js/737.c518bb41.chunk.js",
     "static/js/571.81db87ac.chunk.js": "/static/js/571.81db87ac.chunk.js",
     "static/js/150.c4583e0a.chunk.js": "/static/js/150.c4583e0a.chunk.js",
-    "static/js/726.e021e9f1.chunk.js": "/static/js/726.e021e9f1.chunk.js",
+    "static/js/726.d56417b4.chunk.js": "/static/js/726.d56417b4.chunk.js",
     "static/media/Hyperwave-Two.ttf": "/static/media/Hyperwave-Two.cd251d4ab3e5698f9204.ttf",
     "static/media/Poppins-Regular.ttf": "/static/media/Poppins-Regular.ccfdd78d095fe3607726.ttf",
     "static/media/Poppins-ExtraBold.ttf": "/static/media/Poppins-ExtraBold.2156e69bc095ee0ad41d.ttf",
@@ -29,10 +29,10 @@
     "static/media/discord.svg": "/static/media/discord.bbe11a0baaad3aed0c8b74da78a4b14d.svg",
     "static/media/github.svg": "/static/media/github.cef1b6081a1cd9575d9f128bf0c960e0.svg",
     "main.6c4161cd.css.map": "/static/css/main.6c4161cd.css.map",
-    "main.5b58584f.js.map": "/static/js/main.5b58584f.js.map"
+    "main.78b55448.js.map": "/static/js/main.78b55448.js.map"
   },
   "entrypoints": [
     "static/css/main.6c4161cd.css",
-    "static/js/main.5b58584f.js"
+    "static/js/main.78b55448.js"
   ]
 }
