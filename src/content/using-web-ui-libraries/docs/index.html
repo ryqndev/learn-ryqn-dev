@@ -9,7 +9,7 @@
 
     <!-- JQuery dependency -->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
     <!-- ADD SEMANTIC UI LIBRARY SOURCE CODE -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"
@@ -24,55 +24,38 @@
 </head>
 
 <body>
-    <div class="ui people shape">
-        <div class="sides">
-            <div class="side">
-                <div class="ui card">
-                    <div class="image">
-                        <img src="/images/avatar/large/steve.jpg">
-                    </div>
+    <div class="container">
+        <div class="ui people shape">
+            <div class="ui sides">
+                <div class="ui active side raised card rect">
                     <div class="content">
-                        <div class="header">Steve Jobes</div>
-                        <div class="meta">
-                            <a>Acquaintances</a>
-                        </div>
-                        <div class="description">
-                            Steve Jobes is a fictional character designed to resemble someone familiar to readers.
-                        </div>
+                        <h1>Calculator</h1>
+
+                        <form id="calculator" onsubmit="calculate(event)" class="ui form">
+                            <div class="field">
+                                <label>First Number</label>
+                                <input type="number" placeholder="Enter any number..." />
+                            </div>
+                            <div class="field">
+                                <label>Operator</label>
+                                <select name="operation" class="ui fluid dropdown">
+                                    <option value="+">Plus</option>
+                                    <option value="-">Minus</option>
+                                    <option value="*">Times</option>
+                                    <option value="/">Divided by</option>
+                                </select>
+                            </div>
+                            <div class="field">
+                                <label>Second Number</label>
+                                <input type="number" placeholder="Second Number" />
+                            </div>
+
+                            <button class="ui button">Submit</button>
+                        </form>
                     </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                            Joined in 2014
-                        </span>
-                        <span>
-                            <i class="user icon"></i>
-                            151 Friends
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="side active">
-                <div class="ui card">
-                    <div class="image">
-                        <img src="/images/avatar/large/stevie.jpg">
-                    </div>
-                    <div class="content">
-                        <a class="header">Stevie Feliciano</a>
-                        <div class="meta">
-                            <span class="date">Joined in 2014</span>
-                        </div>
-                        <div class="description">
-                            Stevie Feliciano is a library scientist living in New York City. She likes to spend her time
-                            reading, running, and writing.
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <a>
-                            <i class="user icon"></i>
-                            22 Friends
-                        </a>
-                    </div>
-                </div>
+                </div> 
+                <div class="ui raised card side rect" id="answer"></div>
+
             </div>
         </div>
     </div>

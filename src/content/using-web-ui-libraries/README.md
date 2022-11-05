@@ -108,16 +108,21 @@ UI libraries will usually consist of a CSS AND a Javscript file so don't forget 
 <html>
   <head>
     <title>Learning</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script src="./scripts.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet" /> 
-    
-    <!-- ADD SEMANTIC UI LIBRARY SOURCE CODE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js" integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css" integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- JQuery dependency -->
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <!-- ADD SEMANTIC UI LIBRARY SOURCE CODE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.js"
+        integrity="sha512-Xo0Jh8MsOn72LGV8kU5LsclG7SUzJsWGhXbWcYs2MAmChkQzwiW/yTQwdJ8w6UA9C6EVG18GHb/TrYpYCjyAQw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css"
+        integrity="sha512-KXol4x3sVoO+8ZsWPFI/r5KBVB/ssCGB5tsv2nVOKwLg33wTFP3fmnXa47FdSVIshVTgsYk/1734xSk9aFIa4A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="./script.js"></script>
 
   </head>
   <body>
@@ -128,7 +133,7 @@ UI libraries will usually consist of a CSS AND a Javscript file so don't forget 
 
 We just added line 10, 11, and 14 to import the library through the use of a CDN. If you look at the imports closely, you'll notice that they're just links and if you access those links, you'll see that it's just regular Javascript and CSS code. After all, these libraries are just prebuild CSS and Javascript code. Now, let's look at how we can use these in our project.
 
-### Using Semantic UI
+**Important Note** The order of the javascript imports matter! Our code will be utilizing the Semantic UI library so those variables and constants need to be instantiated first. Semantic UI, also depends on JQuery so that has to be imported before that. So finally, we have this import order of JQuery > SemanticUI > our custom JS.
 
 
 

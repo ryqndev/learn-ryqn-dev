@@ -1,0 +1,12 @@
+body {
+    display: grid;
+}
+
+.container {
+    place-self: center;
+}
+
+#answer {
+    min-width: 300px;
+    min-height: 400px;
+}
