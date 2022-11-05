@@ -316,3 +316,7 @@ function calculate(event) {
 }
 
 ```
+
+which results in:
+
+![finished](./assets/semantic-calculator.png)
