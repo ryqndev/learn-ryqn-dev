@@ -24,39 +24,31 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="ui people shape">
-            <div class="ui sides">
-                <div class="ui active side raised card rect">
-                    <div class="content">
-                        <h1>Calculator</h1>
+    <div class="ui card">
+        <div class="ui content">
+            <h1>Calculator</h1>
 
-                        <form id="calculator" onsubmit="calculate(event)" class="ui form">
-                            <div class="field">
-                                <label>First Number</label>
-                                <input type="number" placeholder="Enter any number..." />
-                            </div>
-                            <div class="field">
-                                <label>Operator</label>
-                                <select name="operation" class="ui fluid dropdown">
-                                    <option value="+">Plus</option>
-                                    <option value="-">Minus</option>
-                                    <option value="*">Times</option>
-                                    <option value="/">Divided by</option>
-                                </select>
-                            </div>
-                            <div class="field">
-                                <label>Second Number</label>
-                                <input type="number" placeholder="Second Number" />
-                            </div>
-
-                            <button class="ui button">Submit</button>
-                        </form>
-                    </div>
-                </div> 
-                <div class="ui raised card side rect" id="answer"></div>
-
-            </div>
+            <form class="ui form" id="calculator" onsubmit="calculate(event)">
+                <div class="ui field">
+                    <label>First Number</label>
+                    <input type="number" placeholder="Enter any number..." />
+                </div>
+                <div class="ui field">
+                    <label>Operator</label>
+                    <select name="operation" class="ui dropdown">
+                        <option value="+">Plus</option>
+                        <option value="-">Minus</option>
+                        <option value="*">Times</option>
+                        <option value="/">Divided by</option>
+                    </select>
+                </div>
+                <div class="ui field">
+                    <label>Second Number</label>
+                    <input type="number" placeholder="Second Number" />
+                </div>
+                <button class="ui button">Submit</button>
+            </form>
+            <div id="answer"></div>
         </div>
     </div>
 </body>

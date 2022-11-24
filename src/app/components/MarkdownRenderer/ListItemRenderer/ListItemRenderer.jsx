@@ -17,7 +17,7 @@ const ListItem = ({ ordered, children, ...props }) => {
 			<li>
 				{'\u00A0'.repeat(ordered ? 6 : 0)}
 				<ol>
-					<li style={{lineHeight: '2em'}}>
+					<li style={{lineHeight: '1.3em', padding: 0, margin: 0}}>
 						<HashLink
 							smooth
 							to={linkLocation}

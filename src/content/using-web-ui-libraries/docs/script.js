@@ -1,13 +1,12 @@
 $(document).ready(load);
 
 function load() {
-    $('.shape').shape();
+    $('.ui.dropdown').dropdown();
 }
 
 
 function calculate(event) {
     event.preventDefault();
-    console.log(event)
 
     const answer = eval(`${event.target[0].value }${event.target[1].value}${event.target[2].value}`)
 
@@ -17,7 +16,4 @@ function calculate(event) {
         + event.target[2].value
         + '='
         + answer;
-
-    $('.shape').shape('flip over');
-
 }
