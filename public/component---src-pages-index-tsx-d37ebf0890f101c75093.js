@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklearn_ryqn_dev=self.webpackChunklearn_ryqn_dev||[]).push([[691],{6854:function(n,e,r){r.r(e);var u=r(5893);e.default=function(){return(0,u.jsx)("main",{})}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-d37ebf0890f101c75093.js.map
