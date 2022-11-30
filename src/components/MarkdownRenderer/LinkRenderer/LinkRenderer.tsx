@@ -1,13 +1,13 @@
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 // import scrollWithOffset from '../../../controller/libs/hashLinkScroll';
 import cn from './LinkRenderer.module.scss';
 
 const LinkRenderer = ({ href, children }) => {
 	if (href.substring(0, 2) === './')
 		return (
-			<Link className={cn.container} to={href}>
+			// <Link className={cn.container} to={href}>
 				{children}
-			</Link>
+			// </Link>
 		);
 	// if (href.substring(0, 1) === '#')
 	// 	return (
