@@ -1,0 +1,94 @@
+body {
+    background-color: #151515; /* Background color */
+    color: white; /* Text color */
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.3em;
+
+    transition: background-color 350ms, color 350ms;
+}
+.container {
+    width: 900px; 
+    margin: 0 auto; /* center inside parent */ 
+}
+
+.information>.title {
+    color: #ff00ff;
+}
+
+.backdrop {
+    pointer-events: none;
+    transition: opacity 350ms;
+    opacity: 0;
+    position: fixed;
+    top:0 ;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.5);
+}
+.information {
+    position: fixed;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+
+    box-shadow: 0px 0px 10px 2px #444;
+    padding: 20px;
+    border-radius: 8px;
+    transition: opacity 350ms;
+}
+
+.btn {
+    font-size: 3em;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    border-radius: 100px;
+    background-color: red;
+    color: green;
+    font-weight: bold;
+    border-width: 25px;
+    border-color: green;
+    border-style: dotted;
+    cursor: pointer;
+    transition: background-color 350ms, color 350ms, border-color 350ms, letter-spacing 350ms, padding 350ms;
+}
+
+.btn:hover {
+    padding: 40px;
+    letter-spacing: 20px;
+    background-color: green;
+    color: red;
+    border-color: red;
+}
+
+
+/* .link {
+    text-decoration: none;
+    border-bottom: 2px solid #00000000;
+    transition: border-bottom 350ms;
+}
+.link:hover {
+    border-bottom-color: green;
+} */
+
+.link::after {
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    content: '';
+    height: 2px;
+    width: 0px;
+    border-radius: 1px;
+    background-color: red;
+    transition: width 350ms;
+}
+.link:visited {
+    color: violet;
+}
+.link:hover::after {
+    width: 80px;
+}
+
+

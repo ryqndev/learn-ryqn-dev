@@ -1,0 +1,22 @@
+:root {
+    --title-color: #ff00ff;
+    --paragraph-color: #000000;
+    --background-color: #151515;
+}
+
+body {
+    background-color: var(--background-color); /* Background color */
+    color: white; /* Text color */
+    font-family: 'Mukta', sans-serif;
+    font-size: 1.3em;
+    transition: background-color 350ms, color 350ms;
+    
+}
+.container {
+    width: 900px; 
+    margin: 0 auto; /* center inside parent */ 
+}
+
+.information>.title {
+    color: var(--title-color);
+}
