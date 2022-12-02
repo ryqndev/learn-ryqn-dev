@@ -7,11 +7,11 @@ import ListItemRenderer from './ListItemRenderer';
 import CodeRenderer from './CodeRenderer';
 import LinkRenderer from './LinkRenderer';
 import './MarkdownRenderer.scss';
-import cn from './HeaderRenderer/HeaderRenderer.module.scss';
+import * as cn from './HeaderRenderer/HeaderRenderer.module.scss';
 import H1Renderer from './H1Renderer';
 import type { SpecialComponents } from 'react-markdown/lib/ast-to-react';
 import type { NormalComponents } from 'react-markdown/lib/complex-types';
-import { ReactNode } from 'react';
+import type { ReactNode } from 'react';
 
 const MarkdownRenderer: SpecialComponents & NormalComponents = {
 	code: CodeRenderer,

@@ -1,24 +1,33 @@
-import type { GatsbyConfig } from "gatsby";
+import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
 	siteMetadata: {
 		title: `learn.ryqn.dev`,
-		siteUrl: `https://learn.ryqn.dev`
+		siteUrl: `https://learn.ryqn.dev`,
 	},
 	graphqlTypegen: true,
-	plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sitemap", {
-		resolve: 'gatsby-plugin-manifest',
-		options: {
-			"icon": "src/assets/logo.png"
-		}
-	}, "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+	plugins: [
+		'gatsby-plugin-image',
+		'gatsby-plugin-react-helmet',
+		'gatsby-plugin-sitemap',
+		'gatsby-plugin-sass',
+		'gatsby-plugin-sharp',
+		'gatsby-transformer-sharp',
+		{
+			resolve: 'gatsby-plugin-manifest',
+			options: {
+				icon: 'src/assets/logo.png',
+			},
+		},
+		{
 			resolve: 'gatsby-source-filesystem',
 			options: {
-				"name": "images",
-				"path": "./src/assets/"
+				name: 'images',
+				path: './src/assets/',
 			},
-			__key: "images"
-		}]
+			__key: 'images',
+		},
+	],
 };
 
 export default config;

@@ -1,5 +1,5 @@
 import React from 'react';
-import cn from '../HeaderRenderer/HeaderRenderer.module.scss';
+import * as cn from '../HeaderRenderer/HeaderRenderer.module.scss';
 
 const H1Renderer = (props) => {
     const headerContent = props.node.children[0].value;

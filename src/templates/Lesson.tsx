@@ -3,8 +3,15 @@ import gfm from 'remark-gfm';
 import { useState, useEffect, memo } from 'react';
 // import { useParams, useLocation } from 'react-router-dom';
 import { MarkdownRenderer } from '../components';
+import { PageProps } from 'gatsby';
 
-const Lesson = ({ article }: {article: string}) => {
+export interface LessonProps {
+	article: string;
+	lessonName: string;
+}
+
+const Lesson = ({ pageContext }: PageProps<any, LessonProps>) => {
+	const { article, lessonName } = pageContext;
 	// const { lessonName } = useParams();
 	// const { hash } = useLocation();
 
@@ -16,9 +23,10 @@ const Lesson = ({ article }: {article: string}) => {
 	// 		behavior: 'smooth',
 	// 	});
 	// }, [content, hash]);
+	// console.log(article, props);
 
 	const transformImageUri = uri =>
-		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@content-update/src/content/${lessonName}${uri.substr(
+		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev@content-update/src/content${lessonName}${uri.substr(
 			1
 		)}`;
 

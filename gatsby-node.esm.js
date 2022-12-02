@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 
 exports.onCreateBabelConfig = ({ actions }) => {
 	actions.setBabelPlugin({
@@ -25,7 +25,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 	createPage({
 		path: `/articles${lesson.link}`,
 		component: require.resolve('./src/templates/Lesson.tsx'),
-		context: { article: fetchArticle(lesson.link) },
+		context: { article: fetchArticle(lesson.link), lessonName: lesson.link },
 	});
 
 	// Create a page for each Pokémon.
@@ -39,7 +39,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 };
 
 const fetchArticle = link => {
-    const markdownContent = readFileSync(`./src/content${link}/README.md`);
+    const markdownContent = readFileSync(`./src/content${link}/README.md`, 'utf-8');
 
 	console.log('@ryqndev fetch', markdownContent);
 

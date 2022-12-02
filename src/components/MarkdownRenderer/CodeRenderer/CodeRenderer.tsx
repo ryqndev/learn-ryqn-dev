@@ -1,10 +1,10 @@
 import {UnControlled as CodeMirror} from 'react-codemirror2';
 import FileStructureDisplay from './FileStructureDisplay';
-import 'codemirror/mode/python/python';
-import 'codemirror/mode/shell/shell';
-import 'codemirror/mode/javascript/javascript';
-import 'codemirror/mode/htmlmixed/htmlmixed';
-import 'codemirror/mode/css/css';
+// import 'codemirror/mode/python/python';
+// import 'codemirror/mode/shell/shell';
+// import 'codemirror/mode/javascript/javascript';
+// import 'codemirror/mode/htmlmixed/htmlmixed';
+// import 'codemirror/mode/css/css';
 import cn from './CodeRenderer.module.scss';
 
 const Code = ({node, children, className, inline}) => {
