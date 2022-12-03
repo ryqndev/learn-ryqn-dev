@@ -29,21 +29,12 @@ const MarkdownRenderer: SpecialComponents & NormalComponents = {
 		<h2 className={header}>{children}</h2>
 	),
 	h3: ({ children }: ReactMarkdownProps) => (
-		<h3
-			className={header}
-			id={children[0].split(' ').join('-').toLowerCase()}
-		>
-			{children}
-		</h3>
+		<h3 className={header}>{children}</h3>
 	),
 	h4: ({ children }: ReactMarkdownProps) => (
-		<h4
-			className={header}
-			id={children[0].split(' ').join('-').toLowerCase()}
-		>
-			{children}
-		</h4>
+		<h4 className={header}>{children}</h4>
 	),
+	p: ({ children }) => <p className={cn.p}>{children}</p>,
 	ol: ({ children }: ReactMarkdownProps) => <ol>{children}</ol>,
 	ul: ({ children }: ReactMarkdownProps) => <ul>{children}</ul>,
 	li: ListItemRenderer,

@@ -31,9 +31,26 @@
             font-weight: bold;
             color: var(--text);
         }
+
+        circle {
+            cursor: pointer !important;
+        }
     }
     .editor {
         padding: 0px 10px 20px 10px;
+
+        &:active {
+            outline: none;
+        }
+    }
+}
+
+.icon {
+    fill: #00000000;
+    transition: fill 350ms;
+
+    &.hovered {
+        fill: rgb(71, 71, 71);
     }
 }
 

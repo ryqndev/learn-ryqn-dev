@@ -1,4 +1,3 @@
-import React from 'react';
 import * as cn from '../HeaderRenderer/HeaderRenderer.module.scss';
 
 const H1Renderer = (props) => {
