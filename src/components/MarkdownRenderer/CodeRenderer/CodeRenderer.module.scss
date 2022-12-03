@@ -1,10 +1,10 @@
-.file-structure--display {
+.file {
     white-space: pre-wrap;
     font-family: "Source Sans Pro";
-    background-color: var(--bg-code);
+    background-color: var(--card);
     padding: 20px;
     border-radius: 8px;
-    color: white;
+    color: var(--text);
     line-height: 1.21em;
 
     h3 {
@@ -15,13 +15,13 @@
 }
 
 
-.md-render--code {
+.code {
     margin: 20px 0 20px 0;
     border-radius: 8px;
-    background-color: var(--bg-code);
+    background-color: var(--card);
     overflow: hidden;
 
-    .title-bar {
+    .title {
         display: grid;
         grid-template-columns: 100px 1fr;
         h3 {
@@ -29,10 +29,14 @@
             font-family: 'Source Sans Pro', sans-serif;
             padding-top: 13px;
             font-weight: bold;
-            color: white;
+            color: var(--text);
         }
     }
-    .code-mirror--wrapper {
+    .editor {
         padding: 0px 10px 20px 10px;
     }
+}
+
+.inline { 
+
 }

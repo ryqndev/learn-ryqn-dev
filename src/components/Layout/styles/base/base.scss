@@ -1,0 +1,9 @@
+body {
+    background-color: var(--background);
+    color: var(--text);
+
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.8em;
+
+    transition: background-color 250ms, color 250ms;
+}

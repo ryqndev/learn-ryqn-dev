@@ -2,7 +2,10 @@
 // import { HashLink } from 'react-router-hash-link';
 // import scrollWithOffset from '../../../controller/libs/hashLinkScroll';
 
-const ListItem = ({ ordered, children, ...props }) => {
+import type { ReactElement } from "react";
+import type { LiComponent } from "react-markdown/lib/ast-to-react";
+
+const ListItem: LiComponent = ({ ordered, children, ...props }): ReactElement | null => {
 	// const location = useLocation();
 	/**
 	 * Links have an actual link nested deep inside. Will rethink infrastructure later but this will
@@ -11,7 +14,7 @@ const ListItem = ({ ordered, children, ...props }) => {
 	// const extraTextFromInnerLink = node =>
 	// 	node.children?.[0]?.children?.[0]?.value;
 	// const linkLocation = location.pathname + children[0].props.href;
-	return children;
+	return <>{children}</>;
 	// if (children.length > 1) {
 	// 	return (
 	// 		<li>

@@ -1,19 +1,23 @@
-// import { Link } from 'gatsby';
+import { Link } from 'gatsby';
 // import scrollWithOffset from '../../../controller/libs/hashLinkScroll';
+import { ReactNode } from 'react';
 import * as cn from './LinkRenderer.module.scss';
 
-const LinkRenderer = ({ href, children }) => {
-	// if (href.substring(0, 2) === './')
-	// 	return (
-	// 		// <Link className={cn.container} to={href}>
-	// 			// {children}
-	// 		// </Link>
-	// 	);
+const LinkRenderer = ({
+	href,
+	children,
+}: HTMLAnchorElement & { children: ReactNode }) => {
+	if (href.substring(0, 2) === './')
+		return (
+			<Link className={cn.container} to={href.substring(1)}>
+				{children}
+			</Link>
+		);
 	// if (href.substring(0, 1) === '#')
 	// 	return (
 	// 		<HashLink
 	// 			className={cn.container}
-	// 			smooth to={href} 
+	// 			smooth to={href}
 	// 			scroll={el => {
 	// 				setTimeout(() => scrollWithOffset(el), 20);
 	// 			}}
@@ -28,7 +32,7 @@ const LinkRenderer = ({ href, children }) => {
 			target='_blank'
 			rel='noopener noreferrer'
 		>
-			{/* {children} */}
+			{children}
 		</a>
 	);
 };

@@ -29,10 +29,10 @@ Here, we will **write a URL shortener service in Javascript**. This article is m
 Ideally, you'll be able to see the process a developer goes through when writing software and learn enough from the system so you have *some* direction when you work on your own project!
 
 ## Background info
-If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](./designing-a-url-shortener) first.
+If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](../designing-a-url-shortener) first.
 
 We are essentially developing this:
-![Time sequence diagram](./redirection-diagram.png)
+![Time sequence diagram](../redirection-diagram.png)
 Except our "database" will just be a JSON (more on this later) variable in memory.
 ### Picking our tools
 We need to first understand the differences between Javascript, Node.js, and Express.js.
@@ -410,7 +410,7 @@ Since we're returning a different webpage, let's create `result.html` and define
                 </a>
             </div>
 
-            <a href="./">
+            <a href="../">
                 <button>
                     Create another
                 </button>
@@ -480,7 +480,7 @@ Our final result should look like this:
                 </a>
             </div>
 
-            <a href="./">
+            <a href="../">
                 <button>
                     Create another
                 </button>

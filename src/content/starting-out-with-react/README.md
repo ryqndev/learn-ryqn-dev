@@ -153,13 +153,13 @@ Since framework preference is mostly just a matter of personal preference, I wou
 
 ## Write a basic React program
 
-Before we actually write React, you should have an understanding of basic HTML/JS. You can learn the basics [here](./intro-to-web-dev).
+Before we actually write React, you should have an understanding of basic HTML/JS. You can learn the basics [here](../intro-to-web-dev).
 
 ### Installation and Setup
 
-You can find instructions on how to install React [here](./setting-up-react).
+You can find instructions on how to install React [here](../setting-up-react).
 
-Then, you can move on and setup your first React project using Create React App [here](./creating-your-first-react-project).
+Then, you can move on and setup your first React project using Create React App [here](../creating-your-first-react-project).
 
 ### Understanding the code
 
@@ -215,7 +215,7 @@ Let's take a look at src/index.js to understand how a React program starts.
 ```javascript src/index.js (extra stuff removed but still runs)
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from '../App';
 
 ReactDOM.render(
     <App />,
@@ -229,8 +229,8 @@ You only use `render` from `react-dom` once so you don't need to memorize this (
 On line 3, we import App so lets go see where that file leads us. 
 
 ```javascript src/App.js
-import logo from './logo.svg';
-import './App.css';
+import logo from '../logo.svg';
+import '../App.css';
 
 function App() {
   return (

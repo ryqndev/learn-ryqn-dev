@@ -1,9 +1,9 @@
 import type { ReactNode } from "react";
-import cn from './CodeRenderer.module.scss';
+import * as cn from './CodeRenderer.module.scss';
 
 const FileStructureDisplay = ({ value }: {value: ReactNode}) => {
 	return (
-		<div className='file-structure--display'>
+		<div className={cn.file}>
 			<h3>File Structure</h3>
 			{value}
 		</div>

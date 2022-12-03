@@ -11,7 +11,7 @@
 
 ## Installing React
 
-This is a continuation of a React series so if you haven't installed Node/NPM yet, you're going to want to follow [these steps](./setting-up-react) first.
+This is a continuation of a React series so if you haven't installed Node/NPM yet, you're going to want to follow [these steps](.../setting-up-react) first.
 
 ## I have Node / NPM installed
 
@@ -109,6 +109,6 @@ For every new React project, you'll likely be typing `npx create-react-app [fold
 
 ## Ready to learn React
 
-Now that we have our entire setup ready, we can finally start getting into learning React! I would first recommend learning a lil' about [vanilla web development in plain HTML/CSS/JS](./intro-to-web-dev) so you that when you start getting into React, you can see the benefits and understand why devs in the industry use React.
+Now that we have our entire setup ready, we can finally start getting into learning React! I would first recommend learning a lil' about [vanilla web development in plain HTML/CSS/JS](../intro-to-web-dev) so you that when you start getting into React, you can see the benefits and understand why devs in the industry use React.
 
 

@@ -19,7 +19,7 @@
 This is a part of a series of design docs for different types of applications. Each of these design docs will (hopefully) have tutorials on how to implement them in various languages. The point of these are not to write a production-ready application but provide some direction on how to develop certain apps. This means that the best or most efficient solution may not always be provided - but rather, the one that gets the job done without significant drawbacks.
 
 This design has 1 supported language, found here:
-[Making a URL Shortener in Python (Flask)](./making-a-url-shortener-in-python)
+[Making a URL Shortener in Python (Flask)](../making-a-url-shortener-in-python)
 
 ## What is a URL shortener?
 A URL shortener is a service that converts your long URL into a shorter one. For example, the link to this article is [https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener?](https://learn.ryqn.dev/designing-a-url-shortener#what-is-a-url-shortener?) which is 72 characters. When I use a url shortening service, it becomes [https://tinyurl.com/yckw7tcs](https://tinyurl.com/yckw7tcs) - a total of 28 characters. 
@@ -125,4 +125,4 @@ We need to generate aliases and store the pair of links in our database (except 
 I'm sorry that I made you read all that just to say we need a web server.
 
 ## Picking how to implement this
-At this time, there's only a Python implementation of this so [this](./making-a-url-shortener-in-python) is your only option if you want to do this with me!
+At this time, there's only a Python implementation of this so [this](../making-a-url-shortener-in-python) is your only option if you want to do this with me!

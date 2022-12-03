@@ -66,7 +66,7 @@ Let's see how we can use Semantic UI in a fresh web app. To not get too bogged d
 
 ### Starter Code 
 
-Let's start out with a blank website with just the boilerplate code. If you need a refresher on basic web dev, you can check out [Intro To Web Dev](./intro-to-web-dev). Something like this:
+Let's start out with a blank website with just the boilerplate code. If you need a refresher on basic web dev, you can check out [Intro To Web Dev](../intro-to-web-dev). Something like this:
 
 ```file
 └── using-web-ui-libraries

@@ -139,7 +139,7 @@ $~ pwd
 $~ ls
 ngrok
 
-$~ ./ngrok http 5000
+$~ ../ngrok http 5000
 
 ngrok by @inconshreveable                                                                                      (Ctrl+C to quit)
                                                                                                                                
