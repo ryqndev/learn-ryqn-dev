@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
-import articles from './src/content/Articles.json'
+import path from 'path';
+import articles from './src/content/articles/Articles.json'
 
 exports.onCreateBabelConfig = ({ actions }) => {
 	actions.setBabelPlugin({
@@ -11,6 +12,8 @@ exports.onCreateBabelConfig = ({ actions }) => {
 };
 
 exports.createPages = async ({ actions: { createPage } }) => {
+	const fetchArticle = link => readFileSync(`./src/content/articles${link}/README.md`, 'utf-8');
+
 	articles.forEach(article => {
 		createPage({
 			path: `/articles${article.link}`,
@@ -20,7 +23,12 @@ exports.createPages = async ({ actions: { createPage } }) => {
 	});
 };
 
-const fetchArticle = link => {
-    const markdownContent = readFileSync(`./src/content${link}/README.md`, 'utf-8');
-	return markdownContent;
-};
+exports.onCreateWebpackConfig = function ({ actions }) {
+	actions.setWebpackConfig({
+		resolve: {
+			alias: {
+				'@app': path.resolve(__dirname, 'src')
+			}
+		}
+	})
+}

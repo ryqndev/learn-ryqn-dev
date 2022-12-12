@@ -1,8 +1,9 @@
 a.container:any-link {
-    color: #F68080;
+    color: var(--accent-alt);
     font-weight: bold;
-    
+    transition: color 250ms;
+
     &:hover {
-        color: var(--accent-alt);
+        color: var(--accent);
     }
 }

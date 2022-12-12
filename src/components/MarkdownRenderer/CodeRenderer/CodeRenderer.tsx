@@ -8,7 +8,6 @@ import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
 import { PalenightTheme } from './theme';
 import { useState } from 'react';
-import clsx from 'clsx';
 
 const Code: CodeComponent = ({
 	node,
@@ -17,7 +16,6 @@ const Code: CodeComponent = ({
 	inline,
 }: CodeProps) => {
 	const [minimized, setMinimized] = useState(false);
-	const [hover, setHover] = useState(false);
 
 	if (inline) return <span className={cn.inline}>{children}</span>;
 
@@ -59,28 +57,10 @@ const Code: CodeComponent = ({
 				<svg
 					height='44px'
 					xmlns='http://www.w3.org/2000/svg'
-					onMouseOver={() => setHover(true)}
-					onMouseOut={() => setHover(false)}
+					onClick={() => setMinimized(p => !p)}
 				>
-					<circle cx='25px' cy='22px' r='6.5px' fill='red'></circle>
-					<circle
-						cx='48px'
-						cy='22px'
-						r='6.5px'
-						fill='yellow'
-						onClick={() => setMinimized(p => !p)}
-					/>
-
-					<rect
-						x={45}
-						y={21.25}
-						width='6'
-						height={1.5}
-						// fill='black'
-						rx={0.5}
-						className={clsx(cn.icon, hover && cn.hovered)}
-					/>
-
+					<circle cx='25px' cy='22px' r='6.5px' fill='red' />
+					<circle cx='48px' cy='22px' r='6.5px' fill='yellow' />
 					<circle cx='71px' cy='22px' r='6.5px' fill='green' />
 				</svg>
 				<h3>{node?.data?.meta as string}</h3>

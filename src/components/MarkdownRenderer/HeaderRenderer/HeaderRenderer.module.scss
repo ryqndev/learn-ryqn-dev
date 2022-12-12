@@ -1,31 +1,48 @@
-h1.header,
-h2.header,
-h3.header,
-h4.header {
+.header {
     font-family: 'Raleway', sans-serif;
     color: var(--accent);
+    font-weight: bold;
 }
 
 .article {
-    padding: 0px 0px 30px;
+    transform: translate(0, -60%);
+    
+    a:visited {
+        color: var(--accent-alt);
+    }
 
     h1.header {
         font-size: 4rem;
+        padding-bottom: 20px;
+        color: #dbafff;
+
 
         @media screen and (max-width: 800px) {
             font-size: 2.3rem;
         }
+        @media screen and (max-width: 1400px) {
+            font-size: 3rem;
+        }
     }
 }
 
+h2.header, h3.header {
+    position: sticky;
+    background-color: var(--background);
+    z-index: 10;
+}
+
 h2.header {
+    top: 0;
     font-size: 2rem;
-    padding: 40px 0px 20px;
+    padding: 80px 0px calc(15px + 1.4rem);
 }
 
 h3.header {
-    font-size: 1.8rem;
-    padding: 30px 0px;
+    top: calc(90px + 2rem);
+    font-size: 1.4rem;
+    padding-bottom: 15px;
+    color: var(--accent-alt);
 }
 
 h4.header {

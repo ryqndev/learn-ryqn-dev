@@ -5,6 +5,7 @@ const config: GatsbyConfig = {
 		title: `learn.ryqn.dev`,
 		siteUrl: `https://learn.ryqn.dev`,
 	},
+	trailingSlash: "never",
 	graphqlTypegen: true,
 	plugins: [
 		'gatsby-plugin-image',
@@ -13,6 +14,13 @@ const config: GatsbyConfig = {
 		'gatsby-plugin-sass',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
+		'gatsby-plugin-react-svg',
+		{
+			resolve: "gatsby-plugin-anchor-links",
+			options: {
+				duration: 750
+			}
+		},
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {

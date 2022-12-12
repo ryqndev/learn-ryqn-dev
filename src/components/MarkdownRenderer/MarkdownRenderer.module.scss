@@ -14,8 +14,9 @@ ul>a {
 }
 
 p.p {
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Mukta';
     line-height: 1.8em;
+    font-size: 1.2em;
     margin: 20px 0px;
 }
 
@@ -64,6 +65,10 @@ p.p {
     margin: 2px 2px;
 }
 
+pre {
+    white-space: break-spaces;
+}
+
 .blockquote {
     font-size: 0.9em;
     padding: 20px 40px;
@@ -73,5 +78,5 @@ p.p {
 
 .bolded {
     font-weight: bold;
-    color: var(--accent-alt);
+    color: var(--accent);
 }

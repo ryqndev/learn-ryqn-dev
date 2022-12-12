@@ -1,0 +1,95 @@
+.container {
+    position: relative;
+    display: grid;
+    place-content: center;
+
+    &>.input {
+        box-sizing: border-box;
+        height: 37px;
+        font-size: 18px;
+        width: 280px;
+        padding: 6px 10px 6px 38px;
+        border-radius: 4px;
+        background-color: #343949;
+        color: var(--text);
+        caret-color: var(--accent);
+        transition: width 350ms;
+        border: none;
+    }
+
+    &:focus-within {
+        &>.input {
+            width: min(800px, 50vw);
+            outline: none;
+        }
+
+        &>.results {
+            padding: 8px;
+            height: auto;
+            overflow-y: scroll;
+            max-height: 70vh;
+        }
+    }
+
+    &>.results {
+        box-sizing: border-box;
+        background-color: #343949;
+        position: absolute;
+        top: 48px;
+        width: 100%;
+        display: grid;
+        row-gap: 8px;
+        border-radius: 4px;
+        height: 0px;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+.icon {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    padding: 8px 8px;
+    fill: var(--accent);
+}
+
+.link {
+    color: var(--text);
+    text-decoration: none;
+    display: grid;
+    row-gap: 8px;
+    padding: 16px;
+    border-radius: 4px;
+    transition: background-color 250ms;
+
+    &:hover {
+        background-color: #252a3b;
+        &>.summary {
+            color: white;
+        }
+    }
+
+    &>.title {
+        font-size: 1.4em;
+        font-weight: bold;
+        color: var(--accent);
+        transition: color 250ms;
+    }
+    &>.summary {
+        color: grey;
+    }
+
+    &>.tags {
+        padding: 8px 0 0;
+
+        &>.tag {
+            display: inline;
+            padding: 4px 6px;
+            margin-right: 8px;
+            background-color: #252a3b;
+            border-radius: 4px;
+        }
+    }
+    
+}

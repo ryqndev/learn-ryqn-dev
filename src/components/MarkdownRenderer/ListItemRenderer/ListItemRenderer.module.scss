@@ -1,0 +1,33 @@
+.container {
+    display: block;
+    margin: 10px 0;
+
+    font-size: 1.3em;
+    font-family: 'Raleway', sans-serif;
+    color: var(--text);
+    transition: color 250ms;
+
+    &>.point {
+        margin: 0 30px;
+    }
+
+    &>.text {
+        display: inline-block;
+        border-bottom: 2px solid #00000000;
+        transition: border-color 250ms;
+        padding: 5px 0;
+        font-weight: 400;
+    }
+
+    &:hover {
+        color: var(--accent-alt);
+
+        &>.text {
+            border-bottom-color: var(--accent-alt);
+        }
+    }
+}
+
+.indent {
+    padding-left: 60px;
+}
