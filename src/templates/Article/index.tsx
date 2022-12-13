@@ -1,7 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import { memo } from 'react';
-import { Layout, MarkdownRenderer } from '../../components';
+import { Layout, MarkdownRenderer } from '@components';
 import { PageProps } from 'gatsby';
 import * as cn from './Article.module.scss';
 import Head from './components/Head';

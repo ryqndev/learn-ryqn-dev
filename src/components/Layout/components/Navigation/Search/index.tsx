@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useState } from 'react';
-import articles from '@app/content/articles/Articles.json';
+import articles from '@content/articles/Articles.json';
 import * as cn from './Search.module.scss';
 import SearchIcon from './search.svg';
 import Fuse from 'fuse.js';
 import { SearchResult } from './SearchResult';
-import { IArticleMetaData } from '@app/templates/Article/types';
+import { IArticleMetaData } from '@templates/Article/types';
 
 const Search = () => {
 	const [results, setResults] = useState<IArticleMetaData[]>([]);

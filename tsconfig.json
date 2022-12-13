@@ -13,12 +13,12 @@
 		"strict": true, /* Skip type checking .d.ts files that are included with TypeScript. */
 		"skipLibCheck": true,
 		"resolveJsonModule": true,
-		"baseUrl": "src"
-	},
-	"paths": {
-		"@app/*": [
-			"./src/*"
-		]
+		"baseUrl": "src",
+		"paths": {
+			"@components": ["components"],
+			"@content": ["content"],
+			"@templates": ["templates"]
+		},
 	},
 	"include": [
 		"./src/**/*",
