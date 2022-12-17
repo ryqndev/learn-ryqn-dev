@@ -1,0 +1,21 @@
+- problem: Convert (map) this array of integers into another array where all the values are incremented by 1
+  initial: |
+    function incrementAllValues(arr) {
+      return arr.map(value => {
+        // increment value and return it
+      });
+    }
+  inputs: 
+    - [1, 2, 3 ]
+    - [5, 4, 3, 2, 1]
+    - [0]
+    - []
+  results: 
+    - [2, 3, 4 ]
+    - [6, 5, 4, 3, 2]
+    - [1]
+    - []
+  solution: |
+    function incrementAllValues(arr) {
+      return arr.map(value => value + 1);
+    }

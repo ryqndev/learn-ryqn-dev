@@ -1,8 +1,10 @@
+import { Layout } from '@components';
+
 const IndexPage = () => {
 	return (
-		<main >
-			
-		</main>
+		<Layout>
+			<main></main>
+		</Layout>
 	);
 };
 export const Head = () => {

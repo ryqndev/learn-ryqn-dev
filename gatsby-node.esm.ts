@@ -1,6 +1,8 @@
 import { readFileSync } from 'fs';
 import path from 'path';
+import yaml from 'js-yaml';
 import articles from './src/content/articles/Articles.json'
+import labs from './src/content/labs/Labs.json'
 
 exports.onCreateBabelConfig = ({ actions }) => {
 	actions.setBabelPlugin({
@@ -16,9 +18,19 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
 	articles.forEach(article => {
 		createPage({
-			path: `/articles${article.link}`,
+			path: `/article${article.link}`,
 			component: require.resolve('./src/templates/Article/index.tsx'),
 			context: { ...article, content: fetchArticle(article.link) },
+		});
+	});
+
+	const fetchLabExercises = (link, exercise) => yaml.load(readFileSync(`./src/content/labs${link}/${exercise}`, 'utf-8'));
+
+	labs.forEach(lab => {
+		createPage({
+			path: `/lab${lab.link}`,
+			component: require.resolve('./src/templates/Lab/index.tsx'),
+			context: { ...lab, exercises: lab.exercises.map(exercise => fetchLabExercises(lab.link, exercise)) },
 		});
 	});
 };

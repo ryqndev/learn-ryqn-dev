@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Javascript .map() exercises",
+        "link": "/js-array-map",
+        "exercises": [
+            "basic.yaml",
+            "vanilla.yaml"
+        ]
+    }
+]
