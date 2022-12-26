@@ -5,7 +5,7 @@ import { Layout, MarkdownRenderer } from '@components';
 import { PageProps } from 'gatsby';
 import * as cn from './Article.module.scss';
 import Head from './components/Head';
-import { IArticle } from './types';
+import { IArticle } from './types';  
 
 const Article = ({ pageContext }: PageProps<any, IArticle>) => {
 	const { content, link } = pageContext;

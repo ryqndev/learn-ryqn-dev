@@ -19,6 +19,7 @@
 
     &:focus-within {
         &>.input {
+            box-sizing: border-box;
             width: min(800px, 50vw);
             outline: none;
         }
@@ -43,6 +44,10 @@
         height: 0px;
         padding: 0;
         overflow: hidden;
+
+        &>.overflow {
+            width: calc(min(800px, 50vw) - 16px);
+        }
     }
 }
 
@@ -84,9 +89,9 @@
         padding: 8px 0 0;
 
         &>.tag {
-            display: inline;
+            display: inline-block;
             padding: 4px 6px;
-            margin-right: 8px;
+            margin: 0 8px 8px 0;
             background-color: #252a3b;
             border-radius: 4px;
         }

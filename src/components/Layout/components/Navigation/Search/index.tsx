@@ -39,10 +39,12 @@ const Search = () => {
 			/>
 			<SearchIcon className={cn.icon} viewBox='0 0 48 48' />
 			<div className={cn.results} tabIndex={0}>
-				{results.map(article => (
-					<SearchResult {...article} />
-				))}
-				{!results.length && <div>No results found</div>}
+				<div className={cn.overflow}>
+					{results.map(article => (
+						<SearchResult {...article} />
+					))}
+					{!results.length && <div>No results found</div>}
+				</div>
 			</div>
 		</div>
 	);
