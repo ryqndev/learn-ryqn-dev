@@ -1,8 +1,9 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
-import articles from './src/content/articles/Articles.json'
-import labs from './src/content/labs/Labs.json'
+import articles from './src/content/articles/Articles.json';
+import labs from './src/content/labs/Labs.json';
+import tutorials from './src/content/tutorials/Tutorials.json';
 
 exports.onCreateBabelConfig = ({ actions }) => {
 	actions.setBabelPlugin({
@@ -31,6 +32,16 @@ exports.createPages = async ({ actions: { createPage } }) => {
 			path: `/lab${lab.link}`,
 			component: require.resolve('./src/templates/Lab/index.tsx'),
 			context: { ...lab, exercises: lab.exercises.map(exercise => fetchLabExercises(lab.link, exercise)) },
+		});
+	});
+
+	const fetchTutorial = link => readFileSync(`./src/content/tutorials${link}/README.md`, 'utf-8');
+
+	tutorials.forEach(tutorial => {
+		createPage({
+			path: `/tutorial${tutorial.link}`,
+			component: require.resolve('./src/templates/Tutorial/index.tsx'),
+			context: { ...tutorial, content: fetchTutorial(tutorial.link) },
 		});
 	});
 };
