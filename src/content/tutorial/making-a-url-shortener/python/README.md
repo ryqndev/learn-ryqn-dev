@@ -29,7 +29,7 @@ Here, we will **write a URL shortener service in Python**. This article is meant
 Ideally, you'll be able to see the process a developer goes through when writing software and learn enough from the system so you have *some* direction when you work on your own project!
 
 ## Background info
-If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](../designing-a-url-shortener) first.
+If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](https://learn.ryqn.dev/article/designing-a-url-shortener) first.
 
 We are essentially developing this:
 ![Demo of basic functionality of app](./assets/demo.gif)
@@ -43,7 +43,7 @@ In our design doc, we realized we needed a web application server. In Python, th
 *We will be using Flask due to its simplicity but you may want to look at a more in-depth breakdown between the two tools when you're doing professional development.*
 
 ## Installation and Setup
-We need to first install Python3 and  Flask, and setup our boilerplate code. Go ahead and hop [here](https://learn.ryqn.dev/starting-out-with-flask#write-a-flask-program-in-5-lines-of-code) first and follow these instructions until the `Where do we go from here?` section.
+We need to first install Python3 and  Flask, and setup our boilerplate code. Go ahead and hop [here](https://learn.ryqn.dev/article/starting-out-with-flask#write-a-flask-program-in-5-lines-of-code) first and follow these instructions until the `Where do we go from here?` section.
 
 ## Ready to start coding
 After following the steps from the link above, you should end up with this basic structure:

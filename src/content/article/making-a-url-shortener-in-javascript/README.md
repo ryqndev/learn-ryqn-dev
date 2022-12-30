@@ -29,7 +29,7 @@ Here, we will **write a URL shortener service in Javascript**. This article is m
 Ideally, you'll be able to see the process a developer goes through when writing software and learn enough from the system so you have *some* direction when you work on your own project!
 
 ## Background info
-If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](../designing-a-url-shortener) first.
+If you want to dive straight into code, you can go straight to [Installation and Setup](#installation-and-setup). Otherwise, I would recommend you read an [in-depth explanation of the design of our system](https://learn.ryqn.dev/article/designing-a-url-shortener) first.
 
 We are essentially developing this:
 ![Time sequence diagram](../redirection-diagram.png)

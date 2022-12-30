@@ -51,11 +51,11 @@ $ npm -v
 
 ## Test Setup
 
-Once you've have all of these: VSCode, Browser, and Node/NPM, you're ready to get started on coding React! If you're here for a workshop, read below first. Otherwise, let's first [run through setting up our first React project](../creating-your-first-react-project).
+Once you've have all of these: VSCode, Browser, and Node/NPM, you're ready to get started on coding React! If you're here for a workshop, read below first. Otherwise, let's first [run through setting up our first React project](https://learn.ryqn.dev/article/creating-your-first-react-project).
 
 ### Hack at UCI React Workshop
 November 18, 2021 @DBH
 
 If you're here to just install and setup React for a workshop I'm doing, then you can pretty much stop right here. I'll be skimming through this write up at the start to make sure everyone has this stuff ready if they want to follow along and live code with me. 
 
-If you want to test everything to make sure that you have everything working (completely optional), you can read [the next section](../creating-your-first-react-project) to start a quick project. I'll be doing that exact process live during the workshop but if you want to test everything works first, you can check it out. We will also be building from that boilerplate code so it'll be a small headstart if you have it done.
+If you want to test everything to make sure that you have everything working (completely optional), you can read [the next section](https://learn.ryqn.dev/article/creating-your-first-react-project) to start a quick project. I'll be doing that exact process live during the workshop but if you want to test everything works first, you can check it out. We will also be building from that boilerplate code so it'll be a small headstart if you have it done.

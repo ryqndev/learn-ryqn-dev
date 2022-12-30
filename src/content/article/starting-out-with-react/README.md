@@ -49,7 +49,7 @@ The official definition: `React is a Javascript library for building UI's (User 
 
 The top AI/ML researchers today are all using Python to write their complex and computationally expensive neural nets and whatnot yet Python has a reputation for being 'slow'. And that's true. Certain operations in Python are much slower than if it were to be implemented in C++ (except for the Python libraries written in C, of course) so why not write all AI/ML in C++ to get the maximum efficiency? Here's another question, **should an AI/ML researcher have to concern themselves with how memory management? no**. They have better shit to do - like writing smart stuff (I have no clue, I'm not that smart). So C++ developers can write fast mathematical operations in C++ and allow Python to call these functions and you get stuff like numpy. 
 
-That's *sorta* like React. It's not exactly a perfect analogy because in most cases, React is likely more efficient than the traditional HTML/CSS/JS version (assuming humans write normal error-prone code). React makes developing dynamic web applications simpler by extracting away the stuff that you shouldn't need to worry about. 
+That's *sorta* like React. It's not exactly a perfect analogy because in most cases, React is likely more efficient than the traditional HTML/CSS/JS version (assuming humans write normal error-prone code). React makes developing dynamic web applications simpler by extracting away the stuff that you shouldn't need to worry about - like updating the website. 
 
 Similar to how **Python allows AI/ML researchers to focus on the actual AI/ML** part of their job as opposed to worrying about writing memory-efficient code, **React allows front-end developers to focus on creating beautiful, interactive websites** without having to worry about *how* to implement things (like *how* to change text on a screen).
 
@@ -98,10 +98,12 @@ However, in React, we practice **declarative** and **reactive programming**. In 
 
 This is called reactive and declarative programming because we simply say what value should change and let React take care of displaying this change to end-users; this concept is what makes React such a powerful tool for web developers. We no longer need to worry about *how* to make it work, it just works.
 
+If you take away one thing from this, it's that when you write React, you're only responsible for transforming the data into visual HTML elements. React will take care of the "which" things to update and the "when". I will admit though, in this simple example, it's hard to see exactly why it's easier to write but we can try:
+
 ## More advanced use case
 **tl;dr for this section** it's very difficult to keep our data in memory in sync with the same data we display in the browser if we do it manually (i.e. without a library like React).
 
-That example was to show how it worked, but let's see how this helps us in *actual* production code. I want you to imagine how an app like Twitter or Facebook can benefit from this.
+That example was to show how it worked, but let's see how this helps us in *actual* production code. I want you to imagine how a large app like Twitter or Facebook can benefit from this.
 
 Imagine we were writing something that resembled Facebook's news feed. When we fetch data from our database, they'll give us an array of post data like this:
 
@@ -153,13 +155,13 @@ Since framework preference is mostly just a matter of personal preference, I wou
 
 ## Write a basic React program
 
-Before we actually write React, you should have an understanding of basic HTML/JS. You can learn the basics [here](../intro-to-web-dev).
+Before we actually write React, you should have an understanding of basic HTML/JS. You can learn the basics [here](https://learn.ryqn.dev/article/intro-to-web-dev).
 
 ### Installation and Setup
 
-You can find instructions on how to install React [here](../setting-up-react).
+You can find instructions on how to install React [here](https://learn.ryqn.dev/article/setting-up-react).
 
-Then, you can move on and setup your first React project using Create React App [here](../creating-your-first-react-project).
+Then, you can move on and setup your first React project using Create React App [here](https://learn.ryqn.dev/article/creating-your-first-react-project).
 
 ### Understanding the code
 

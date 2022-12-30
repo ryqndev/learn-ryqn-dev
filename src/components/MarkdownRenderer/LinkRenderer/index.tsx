@@ -7,9 +7,9 @@ const LinkRenderer = ({
 	href,
 	children,
 }: HTMLAnchorElement & { children: ReactNode }) => {
-	if (href.substring(0, 3) === '../')
+	if (href.substring(0, 1) === '.')
 		return (
-			<Link className={cn.container} to={`/articles${href.substring(2)}`}>
+			<Link className={cn.container} to={href}>
 				{children}
 			</Link>
 		);

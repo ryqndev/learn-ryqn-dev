@@ -1,4 +1,4 @@
-import { Layout } from '@components';
+import Layout from '@components/Layout';
 
 const IndexPage = () => {
 	return (
@@ -10,7 +10,7 @@ const IndexPage = () => {
 export const Head = () => {
 	return (
 		<>
-			<title>main</title>
+			<title>Learn</title>
 			<link
 				href='https://fonts.googleapis.com/css2?family=Nunito&family=Plus+Jakarta+Sans:wght@400;800&display=swap'
 				rel='stylesheet'

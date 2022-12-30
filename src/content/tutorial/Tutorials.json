@@ -1,7 +1,7 @@
 [
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": "/making-a-url-shortener-in-python",
+        "link": ["tutorial", "making-a-url-shortener", "python"],
         "title": "Making a URL shortener in Python",
         "summary": "This is the practical tutorial after the designing-a-url-shortener article in which we implement the design specified in Python using Flask.",
         "tags": ["web developement", "API", "backend", "server", "Python", "Flask", "intermediate"],

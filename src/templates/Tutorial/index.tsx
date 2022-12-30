@@ -10,7 +10,7 @@ const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
 	const { content, link } = pageContext;
 
 	const transformImageUri = (uri: string) =>
-		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/tutorials${link}${uri.substr(
+		`https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/${link.join('/')}${uri.substr(
 			1
 		)}`;
 

@@ -1,9 +1,9 @@
 import { readFileSync } from 'fs';
 import path from 'path';
 import yaml from 'js-yaml';
-import articles from './src/content/articles/Articles.json';
-import labs from './src/content/labs/Labs.json';
-import tutorials from './src/content/tutorials/Tutorials.json';
+import articles from './src/content/article/Articles.json';
+import labs from './src/content/lab/Labs.json';
+import tutorials from './src/content/tutorial/Tutorials.json';
 
 exports.onCreateBabelConfig = ({ actions }) => {
 	actions.setBabelPlugin({
@@ -15,33 +15,37 @@ exports.onCreateBabelConfig = ({ actions }) => {
 };
 
 exports.createPages = async ({ actions: { createPage } }) => {
-	const fetchArticle = link => readFileSync(`./src/content/articles${link}/README.md`, 'utf-8');
+	const fetchArticle = link => readFileSync(`./src/content${link}/README.md`, 'utf-8');
 
 	articles.forEach(article => {
+		const link = '/' + article.link.join('/');
 		createPage({
-			path: `/article${article.link}`,
+			path: link,
 			component: require.resolve('./src/templates/Article/index.tsx'),
-			context: { ...article, content: fetchArticle(article.link) },
+			context: { ...article, content: fetchArticle(link) },
 		});
 	});
 
-	const fetchLabExercises = (link, exercise) => yaml.load(readFileSync(`./src/content/labs${link}/${exercise}`, 'utf-8'));
+	const fetchLabExercises = (link, exercise) => yaml.load(readFileSync(`./src/content${link}/${exercise}`, 'utf-8'));
 
 	labs.forEach(lab => {
+		const link = '/' + lab.link.join('/');
+
 		createPage({
-			path: `/lab${lab.link}`,
+			path: link,
 			component: require.resolve('./src/templates/Lab/index.tsx'),
-			context: { ...lab, exercises: lab.exercises.map(exercise => fetchLabExercises(lab.link, exercise)) },
+			context: { ...lab, exercises: lab.exercises.map(exercise => fetchLabExercises(link, exercise)) },
 		});
 	});
 
-	const fetchTutorial = link => readFileSync(`./src/content/tutorials${link}/README.md`, 'utf-8');
+	const fetchTutorial = link => readFileSync(`./src/content${link}/README.md`, 'utf-8');
 
 	tutorials.forEach(tutorial => {
+		const link = '/' + tutorial.link.join('/');
 		createPage({
-			path: `/tutorial${tutorial.link}`,
+			path: link,
 			component: require.resolve('./src/templates/Tutorial/index.tsx'),
-			context: { ...tutorial, content: fetchTutorial(tutorial.link) },
+			context: { ...tutorial, content: fetchTutorial(link) },
 		});
 	});
 };

@@ -1,6 +1,6 @@
 export interface IArticleMetaData {
     author: string[];
-    link: string;
+    link: string[];
     title: string;
     summary: string;
     tags: string[];

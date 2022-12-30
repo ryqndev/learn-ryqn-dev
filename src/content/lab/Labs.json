@@ -1,7 +1,7 @@
 [
     {
         "name": "Javascript .map() exercises",
-        "link": "/js-array-map",
+        "link": ["lab", "js-array-map"],
         "exercises": [
             "basic.yaml",
             "vanilla.yaml"

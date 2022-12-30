@@ -3,11 +3,10 @@ import gfm from 'remark-gfm';
 import { memo } from 'react';
 import { Layout, MarkdownRenderer } from '@components';
 import { PageProps } from 'gatsby';
-import * as cn from './Article.module.scss';
-import Head from './components/Head';
-import { IArticle } from './types';  
+import * as cn from './Tutorial.module.scss';
+import { IArticle } from '@templates/Article/types';
 
-const Article = ({ pageContext }: PageProps<any, IArticle>) => {
+const Tag = ({ pageContext }: PageProps<any, IArticle>) => {
 	const { content, link } = pageContext;
 
 	const transformImageUri = (uri: string) =>
@@ -17,7 +16,6 @@ const Article = ({ pageContext }: PageProps<any, IArticle>) => {
 
 	return (
 		<Layout>
-			<Head meta={pageContext} />
 			<div className={cn.container}>
 				<article className={cn.article}>
 					<ReactMarkdown
@@ -34,4 +32,4 @@ const Article = ({ pageContext }: PageProps<any, IArticle>) => {
 	);
 };
 
-export default memo(Article);
+export default memo(Tag);
