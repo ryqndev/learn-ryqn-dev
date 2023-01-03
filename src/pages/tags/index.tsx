@@ -20,7 +20,6 @@ const tags = [...articles, ...tutorials].reduce((acc, el): TagCount => {
 	return acc;
 }, {} as TagCount);
 
-console.log(tags);
 
 const Tags = () => {
 	return (

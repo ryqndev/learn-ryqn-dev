@@ -8,9 +8,9 @@
 * [API - Application Programming Interface](#api-/-application-programming-interface)
 * [How can we use API's?](#how-can-we-use-api's?)
 * [Demo](#demo)
-    * [No auth](#no-auth)
-    * [Bearer Token Auth](#bearer-token-auth)
-    * [OAuth 2.0](#oauth-2.0)
+    1. [No auth](#no-auth)
+    2. [Bearer Token Auth](#bearer-token-auth)
+    3. [OAuth 2.0](#oauth-2.0)
 * [Some free API's to look at](#some-free-api's-to-look-at)
 * [Why do companies offer API's?](#why-do-companies-offer-api's?)
 

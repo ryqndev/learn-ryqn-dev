@@ -4,14 +4,20 @@ import tutorials from '@content/tutorial/Tutorials.json';
 import * as cn from './Search.module.scss';
 import SearchIcon from './search.svg';
 import Fuse from 'fuse.js';
-import { SearchResult } from './SearchResult';
+import {
+	NoResultsFound,
+	Result as SearchResult,
+	Tooltip as SearchTooltip,
+} from './components';
 import { IArticleMetaData } from '@templates/Article/types';
+import { useKeyboard } from './controllers/useKeyboard';
 
 const content = [...articles, ...tutorials];
 
 const Search = () => {
 	const [results, setResults] = useState<IArticleMetaData[]>([]);
 	const [query, setQuery] = useState('');
+	const { selected } = useKeyboard(results);
 
 	const fuse = useMemo(
 		() =>
@@ -32,6 +38,7 @@ const Search = () => {
 
 	return (
 		<div className={cn.container}>
+			<div className={cn.backdrop}></div>
 			<input
 				id='search'
 				className={cn.input}
@@ -41,12 +48,18 @@ const Search = () => {
 				placeholder='Search...'
 			/>
 			<SearchIcon className={cn.icon} viewBox='0 0 48 48' />
+
 			<div className={cn.results} tabIndex={0}>
+				<SearchTooltip />
 				<div className={cn.overflow}>
-					{results.map(article => (
-						<SearchResult key={article.link.join('/')} {...article} />
+					{results.map((article, idx) => (
+						<SearchResult
+							key={article.link.join('/')}
+							selected={idx === selected}
+							{...article}
+						/>
 					))}
-					{!results.length && <div>No results found</div>}
+					{!results.length && <NoResultsFound />}
 				</div>
 			</div>
 		</div>

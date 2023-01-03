@@ -1,15 +1,23 @@
 .container {
     box-sizing: border-box;
-    height: 72px;
+    height: 74px;
     position: fixed;
     top: 0;
     width: 100%;
     display: grid;
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto 1fr auto;
     place-content: center;
-    padding: 0 20px;
+    padding: 0 18px;
     column-gap: 20px;
     z-index: 100;
+
+    &>.title {
+        font-family: "Hyperwave";
+        font-size: 2.3em;
+        display: grid;
+        place-content: center;
+        color: var(--accent);
+    }
 
     & img {
         height: 36px;

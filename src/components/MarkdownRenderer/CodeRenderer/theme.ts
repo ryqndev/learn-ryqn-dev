@@ -4,13 +4,13 @@ import { tags as t } from '@lezer/highlight';
 const PalenightTheme = createTheme({
     theme: 'dark',
     settings: {
-        background: '#292D3E',
+        background: '#242627',
         foreground: '#89DDFF',
-        caret: '#5d00ff',
-        selection: '#036dd626',
+        caret: '#fff',
+        selection: '#8a91991a',
         selectionMatch: '#036dd626',
         lineHighlight: '#8a91991a',
-        gutterBackground: '#292D3E',
+        gutterBackground: '#242627',
         gutterForeground: '#8a919966',
     },
     styles: [

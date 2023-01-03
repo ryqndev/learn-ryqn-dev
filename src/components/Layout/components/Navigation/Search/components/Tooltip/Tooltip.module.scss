@@ -1,0 +1,26 @@
+.container {
+    display: grid;
+    place-content: center start;
+    box-sizing: border-box;
+    padding: 24px 16px;
+    grid-auto-flow: column;
+    column-gap: 8px;
+    position: sticky;
+    top: 0px;
+    background-color: var(--card);
+
+    &>.icon {
+        fill: var(--accent);
+        border: 2px solid var(--accent);
+        border-radius: 2px;
+        height: 16px;
+        width: 16px;
+        background-color: black;
+    }
+
+    &>p {
+        color: var(--accent);
+        display: grid;
+        place-content: center;
+    }
+}
