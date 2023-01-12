@@ -2,7 +2,7 @@
 
 *Note: This was originally content that was made as a reference sheet for a workshop which includes a live demo. If I can find the live demo, I'll go ahead and attach it here but for now, this is just some random content I added here since I thought the content might be interesting to someone. Hopefully, I'll get around to rewriting this section so it's a complete read*
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [API - Application Programming Interface](#api-/-application-programming-interface)
@@ -14,6 +14,8 @@
 * [Some free API's to look at](#some-free-api's-to-look-at)
 * [Why do companies offer API's?](#why-do-companies-offer-api's?)
 
+
+```
 
 ## Intro
 

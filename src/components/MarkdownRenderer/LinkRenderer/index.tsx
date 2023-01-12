@@ -15,10 +15,11 @@ const LinkRenderer = ({
 		);
 	if (href.substring(0, 1) === '#')
 		return (
-			<AnchorLink to={href} className={cn.container}>
+			<AnchorLink to={'./' + href} className={cn.container}>
 				{children}
 			</AnchorLink>
 		);
+
 	return (
 		<a
 			className={cn.container}

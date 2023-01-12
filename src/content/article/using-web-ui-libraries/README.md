@@ -1,6 +1,6 @@
 # Using Web UI Libraries
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [What are UI component libraries?](#what-are-ui-component-libraries?)
@@ -8,10 +8,12 @@
 * [What's different among web UI libraries?](#what's-different-among-web-ui-libraries?)
 * [Other Libraries](#other-libraries)
 * [Code Demo](#code-demo)
-    1. [Boilerplate Code](#boilerplate-code)
+    1. [Starter Code](#starter-code)
     2. [Import the library](#import-the-library)
-    3. [Starter Code](#starter-code)
+    3. [Example Code](#example-code)
     
+```
+
 ## Intro
 Let's explore how we can utilize UI component libraries built for web technologies - HTML/CSS/JS. Specifically, we'll be looking into these web UI libraries built for vanilla JS (i.e. not React, Vue, Angular, etc.). **The goal here is to learn how we can implement and use UI libraries to help us develop our webapps.** Before I dive into *how* to use these libraries, let's look at exactly what they are, what they do, and why we should use them.
 
@@ -137,7 +139,7 @@ We just added line 10, 11, and 14 to import the library through the use of a CDN
 
 
 
-### Starter Code
+### Example Code
 
 This a slight variation of the starter code from the VanillaJS workshop. Most of the HTML is the same and there's a slight difference in the javascript but mostly, I've stripped out the CSS.
 

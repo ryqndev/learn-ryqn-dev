@@ -1,5 +1,7 @@
 # JS array .map() Lab
 
+```
+
 ## Intro
 We'll be covering what is probably the most important function in front-end development: `.map()`. To really understand how powerful and useful this is, we need to make sure we know the basics: `loops`. What is a loop? It's a method of logic control flow based on iteration until a condition is met. In other words, it does something over and over again. Ideally, by now you're familiar with loops as a concept but here are some examples of loops in langauges you might be familiar with:
 

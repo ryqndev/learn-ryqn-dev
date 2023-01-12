@@ -31,9 +31,9 @@ const Search = () => {
 	);
 
 	useEffect(() => {
-		if (!query.length) return setResults(content);
-
-		setResults(fuse.search(query).map(res => res.item));
+		setResults(
+			!query.length ? content : fuse.search(query).map(({ item }) => item)
+		);
 	}, [fuse, query]);
 
 	return (

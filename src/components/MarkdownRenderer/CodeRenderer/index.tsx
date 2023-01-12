@@ -8,6 +8,7 @@ import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
 import { PalenightTheme } from './theme';
 import { useState } from 'react';
+import { TableOfContents } from '../TableOfContents';
 
 const Code: CodeComponent = ({
 	node,
@@ -27,6 +28,8 @@ const Code: CodeComponent = ({
 			return <>{children}</>;
 		case 'file':
 			return <FileStructureDisplay value={children} />;
+		case 'table-of-contents':
+			return <TableOfContents value={children} />;
 		case 'html':
 			extensions.push(html());
 			break;

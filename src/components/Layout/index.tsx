@@ -32,6 +32,7 @@ export const Head = () => (
 			href='https://fonts.googleapis.com/css?family=B612+Mono'
 			rel='stylesheet'
 		/>
+		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap" rel="stylesheet" /> 
 		<link
 			href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;800'
 			rel='stylesheet'

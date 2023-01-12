@@ -1,7 +1,8 @@
 # Making a URL shortener in Python
 
 *The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-url-shortener-in-python/docs). To run it, you need to [setup Flask](https://learn.ryqn.dev/starting-out-with-flask#installation-and-setup). Once that's done, you can type `flask run` in your terminal to start the webserver*
-## Table of Contents
+
+```table-of-contents
 
 * [Intro](#intro)
 * [Background info](#background-info)
@@ -13,11 +14,11 @@
     2. [Get link from alias](#get-link-from-alias)
     3. [Finishing up business logic](#finishing-up-business-logic)
 * [Understanding servers and web requests](#understanding-servers-and-web-requests)
-* [Writing the Flask code](#attaching-flask)
+* [Writing the Flask code](#writing-the-flask-code)
     1. [Creating a web interface](#creating-a-web-interface)
     1. [Redirecting](#redirecting)
 * [Final Result](#final-result)
-
+```
 
 ## Intro 
 This tutorial assumes basic knowledge of Python3 (variables, functions, if-statements, dictionaries, import python modules).

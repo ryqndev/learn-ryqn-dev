@@ -11,15 +11,20 @@ export interface IStandardHeaderProps {
 	};
 }
 
-const StandardHeader: HeadingComponent = ({
-	children,
-	node: { tagName },
-}) => {
+const convertToHashLinkID = content => content.split(' ').join('-').toLowerCase().replace(/[^a-z0-9#\-]/gi, '');
+
+const StandardHeader: HeadingComponent = ({ children, node: { tagName } }) => {
 	const HeaderLevel = tagName;
 	const content: string = (children?.[0] as string) ?? '';
-	const convertToHashLink = content.split(' ').join('-').toLowerCase();
 
-	return <HeaderLevel className={cn.header} id={convertToHashLink}>{children}</HeaderLevel>;
+	return (
+		<>
+			<HeaderLevel className={cn.invisible} id={convertToHashLinkID(content)}>
+				{children}
+			</HeaderLevel>
+			<HeaderLevel className={cn.header} id={convertToHashLinkID(content) + '-visible'}>{children}</HeaderLevel>
+		</>
+	);
 };
 
-export { StandardHeader };
+export { StandardHeader, convertToHashLinkID };

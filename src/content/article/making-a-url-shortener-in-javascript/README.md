@@ -1,7 +1,8 @@
 # Making a URL shortener in Javascript
 
 *The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-url-shortener-in-javascript/docs). To run it, you need to [setup Express.js](https://learn.ryqn.dev/starting-out-with-nodejs#installation-and-setup).*
-## Table of Contents
+
+```table-of-contents
 
 * [Intro](#intro)
 * [Background info](#background-info)
@@ -18,6 +19,8 @@
     1. [Redirecting](#redirecting)
 * [Final Result](#final-result)
 
+
+```
 
 ## Intro
 This tutorial assumes basic knowledge of Javascript (variables, functions, if-statements, loops).

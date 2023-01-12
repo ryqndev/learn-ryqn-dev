@@ -1,12 +1,14 @@
 # Learning about http requests
 
-## Table of Contents
+```table-of-contents
 
 * [What are HTTP requests](#what-are-http-requests?)
 * [HTTP Request Methods](#http-request-methods)
 * [HTTP Response Codes](#http-response-codes)
 * [Testing HTTP requests](#testing-http-requests)
 * [When to make HTTP requests](#when-to-make-http-requests)
+
+```
 
 ## What are HTTP requests?
 

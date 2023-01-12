@@ -1,6 +1,6 @@
 # Setting up React
 
-## Table of Contents
+```table-of-contents
 
 * [Very short intro about React](#very-short-intro-about-react)
 * [Installation and Setup](#installation-and-setup)
@@ -10,6 +10,8 @@
 * [Test Setup](#test-setup)
 * [Hack at UCI React Workshop](#hack-at-uci-react-workshop)
     
+```
+
 ## Very short intro about React
 
 React (React.js) is a Javascript library that makes building web interfaces easier for developers. It is one of the most popular web frameworks and is developed by Facebook. 

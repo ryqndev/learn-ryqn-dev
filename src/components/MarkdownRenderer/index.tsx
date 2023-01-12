@@ -14,7 +14,6 @@ import type {
 	ReactMarkdownProps,
 } from 'react-markdown/lib/complex-types';
 import { StandardHeader } from './HeaderRenderer';
-import { TableOfContent } from './TableOfContent';
 
 const MarkdownRenderer: SpecialComponents & NormalComponents = {
 	code: CodeRenderer,
@@ -32,7 +31,7 @@ const MarkdownRenderer: SpecialComponents & NormalComponents = {
 	h6: StandardHeader,
 	p: ({ children }) => <p className={cn.p}>{children}</p>,
 	ol: ({ children }: ReactMarkdownProps) => <ol>{children}</ol>,
-	ul: TableOfContent,
+	ul: ({ children }: ReactMarkdownProps) => <ul>{children}</ul>,
 	li: ListItemRenderer,
 	a: LinkRenderer,
 	strong: ({ children }: ReactMarkdownProps) => (

@@ -1,6 +1,6 @@
 # Starting out with React
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [What is React?](#what-is-react?)
@@ -14,6 +14,7 @@
 * [React Examples](#react-examples)
 * [Recap](#recap)
     
+```
 
 ## Intro
 

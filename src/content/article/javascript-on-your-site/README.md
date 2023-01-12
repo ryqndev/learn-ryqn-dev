@@ -1,6 +1,6 @@
 # Javascript on your site
 
-## Table of Contents
+```table-of-contents
 
 * [Overview](#overview)
 * [HTML](#html)
@@ -9,6 +9,8 @@
 * [Tying it all together](#tying-it-all-together)
     1. [Website Strucutre](#website-structure)
 * [Learn More](#learn-more)
+
+```
 
 ## Overview
 

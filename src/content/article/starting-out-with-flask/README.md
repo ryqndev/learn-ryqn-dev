@@ -1,13 +1,13 @@
 # Starting out with Flask
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [What is Flask?](#what-is-flask?)
 * [When should I use Flask?](#when-should-i-use-flask?)
 * [Write a Flask program in 5 lines of code](#write-a-flask-program-in-5-lines-of-code)
     1. [Installation and Setup](#installation-and-setup)
-    2. [5 Lines of Code](#5-lines-of-code)
+    2. [Five Lines of Code](#five-lines-of-code)
     3. [Running our webserver](#running-our-webserver)
 * [Understanding what we just did](#understanding-what-we-just-did)
     1. [Analyzing our source code](#analyzing-our-source-code)
@@ -15,6 +15,7 @@
     3. [Testing our web server](#testing-our-web-server)
 * [Where do we go from here?](#where-do-we-go-from-here?)
     
+```
 
 ## Intro
 

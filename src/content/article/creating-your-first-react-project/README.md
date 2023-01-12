@@ -1,13 +1,13 @@
 # Creating your first React project
 
-## Table of Contents
-
+```table-of-contents
 * [Installing React](#installing-react)
 * [I have Node / NPM installed](#i-have-node-/-npm-installed)
     1. [Running Create React App](#running-create-react-app)
     2. [Running our test server](#running-our-test-server)
     3. [About CRA](#about-cra)
 * [Ready to learn React](#ready-to-learn-react)
+```
 
 ## Installing React
 

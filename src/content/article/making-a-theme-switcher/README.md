@@ -2,7 +2,7 @@
 
 *Note: This is not a complete guide on dark mode, but rather a quickstart for new developers to get a theme setup up and running in a small codebase. For a more in-depth analysis regarding dark modes, you can check out [this](https://ryanfeigenbaum.com/dark-mode/) amazing article  written by Ryan Feigenbaum.*
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [Why have a dark mode?](#why-have-a-dark-mode?)
@@ -21,7 +21,9 @@
 * [Just the code](#just-the-code)
     
 
-#### Intro
+```
+
+## Intro
 
 For people who have used their phones/computer in the dark, dark mode is one of the most coveted features around. Before we dive into how we can create a dark mode and toggle it, let's first take a look at what dark mode is. Dark mode is a design concept that utilizes light colors (usually white or pastel-like colors) for text and icons contrasted with a dark background, as opposed to the usual dark colored text on a light background (like a book or print newspaper). 
 

@@ -1,7 +1,6 @@
 # Designing a URL shortener
 
-## Table of Contents
-
+```table-of-contents
 * [Intro](#intro)
 * [What is a URL shortener?](#what-is-a-url-shortener?)
 * [Why would I use a URL shortener](#why-would-i-use-a-url-shortener?)
@@ -14,6 +13,8 @@
     5. [User Interface](#user-interface)
     6. [Design decisions](#design-decisions)
 * [Putting it all together](#putting-it-all-together)
+
+```
 
 ## Intro
 This is a part of a series of design docs for different types of applications. Each of these design docs will (hopefully) have tutorials on how to implement them in various languages. The point of these are not to write a production-ready application but provide some direction on how to develop certain apps. This means that the best or most efficient solution may not always be provided - but rather, the one that gets the job done without significant drawbacks.

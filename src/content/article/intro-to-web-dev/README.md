@@ -1,6 +1,6 @@
 # Intro to web dev
 
-## Table of Contents
+```table-of-contents
 
 * [Intro](#intro)
 * [HTML](#html)
@@ -9,6 +9,8 @@
 * [Tying it all together](#tying-it-all-together)
     1. [Website Strucutre](#website-structure)
 * [Learn More](#learn-more)
+
+```
 
 ## Intro
 

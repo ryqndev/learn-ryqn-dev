@@ -2,8 +2,7 @@
 
 *note* this is a setup cheatsheet for hackers who need Flask. This tutorial is specifically for setting up Flask as a backend server and assumes you have a separate codebase for your frontend. For those of you know what SSR is, this tutorial is for a client-side rendered (CSR) front-end that calls a Flask backend for data only as opposed to server-side rendered (SSR) Flask web server that serves templated html files. If you don't know what this means, don't worry! It's only for people who know what they're looking for.
 
-## Table of Contents
-
+```table-of-contents
 * [Intro](#intro)
 * [What is Flask?](#what-is-flask?)
 * [How to use this doc?](#how-to-use-this-doc?)
@@ -22,6 +21,7 @@
     2. [Why do I need a backend?](#why-do-i-need-a-backend?)
     3. [Yelp API example](#yelp-api-example)
     
+```
 
 ## Intro
 
