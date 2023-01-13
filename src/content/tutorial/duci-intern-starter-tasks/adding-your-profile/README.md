@@ -29,7 +29,7 @@ import CURRENT_BOARD from 'assets/data/currentBoard.json';
 // rendering logic
 {CURRENT_BOARD.map((member, i) => (
     <div className={cn.container} key={i}>
-        <img 
+        <img t
             src={require(`assets/images/board/current/${data.photo}`).default}
             alt={data.name + ' headshot'}
         />
