@@ -12,7 +12,7 @@ import {
 import { IArticleMetaData } from '@templates/Article/types';
 import { useKeyboard } from './controllers/useKeyboard';
 
-const content = [...articles, ...tutorials];
+const content = [...articles, ...tutorials].filter(item => !item?.hidden);
 
 const Search = () => {
 	const [results, setResults] = useState<IArticleMetaData[]>([]);

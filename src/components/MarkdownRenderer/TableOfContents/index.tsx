@@ -5,6 +5,7 @@ import * as cn from './TableOfContent.module.scss';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
 import { useState } from 'react';
 import { useLayoutEffect } from 'react';
+import clsx from 'clsx';
 
 const TableOfContents = ({ value }: ReactMarkdownProps) => {
 	return (
@@ -27,8 +28,8 @@ const TOCInlineRenderer = {
 			});
 
 			try {
-				observer.observe(document.querySelector(anchorHref));
-				return () => observer.unobserve(document.querySelector(anchorHref));
+				observer.observe(document.querySelector(anchorHref + '-visible'));
+				return () => observer.unobserve(document.querySelector(anchorHref + '-visible'));
 			}
 			catch(e) {
 				console.error(`This article is malformed - some links might or might not work. Error: ${anchorHref}`);
@@ -36,8 +37,8 @@ const TOCInlineRenderer = {
 		});
 
 		return (
-			<AnchorLink to={location.pathname + anchorHref} className={cn.link}>
-				<span style={{color: visible ? 'var(--accent)' : '#848484'}}>{children}</span>
+			<AnchorLink to={location.pathname + anchorHref} className={clsx(cn.link, visible && cn.highlight)}>
+				{children}
 			</AnchorLink>
 		);
 	},

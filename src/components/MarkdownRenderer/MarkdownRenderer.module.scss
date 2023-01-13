@@ -18,12 +18,14 @@ p.p {
     line-height: 1.8em;
     font-size: 1.2em;
     margin: 20px 0px;
+    padding: 0 8px;
 }
 
 
 .li{
-    margin: 5px 0px;
-    padding: 5px 0px;
+    margin: 4px 32px;
+    padding: 4px 8px;
+    list-style: disc;
 
     span {
         color: var(--accent);
@@ -56,14 +58,6 @@ p.p {
     overflow-y: scroll;
 }
 
-.inline {
-    background-color: #292D3E;
-    color: white;
-    padding: 0px 5px;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    margin: 2px 2px;
-}
 
 pre {
     white-space: break-spaces;

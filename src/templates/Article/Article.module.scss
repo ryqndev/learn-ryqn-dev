@@ -13,6 +13,7 @@
     .article {
         grid-column: 2/3;
         padding-top: 50vh;
+        padding-bottom: 30vh;
         width: calc(60vw - 100px);
 
         @media screen and (max-width: 950px) {

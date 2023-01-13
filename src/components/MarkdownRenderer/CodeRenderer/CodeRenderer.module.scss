@@ -56,4 +56,8 @@
 
 .inline { 
     color: var(--accent);
+    padding: 4px 6px;
+    line-height: 2em;
+    border-radius: 2px; 
+    background-color: var(--card);
 }

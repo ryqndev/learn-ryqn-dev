@@ -5,6 +5,7 @@ import { Layout, MarkdownRenderer } from '@components';
 import { PageProps } from 'gatsby';
 import * as cn from './Tutorial.module.scss';
 import { IArticle } from '@templates/Article/types';
+import Head from '@templates/Article/components/Head';
 
 const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
 	const { content, link } = pageContext;
@@ -16,6 +17,7 @@ const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
 
 	return (
 		<Layout>
+			<Head meta={pageContext} />	
 			<div className={cn.container}>
 				<article className={cn.article}>
 					<ReactMarkdown

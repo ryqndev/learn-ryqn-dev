@@ -63,7 +63,7 @@ Then, we need to install the Flask library itself to be able to use it and we'll
 pip install flask
 ```
 
-#### 5 Lines of Code
+### Five Lines of Code
 
 Now that we have Flask installed, let's go ahead and open up a brand new python file for us to write our code in and call it `app.py`. Go ahead and copy the following 5 lines into the file and I'll explain what they mean in a bit.
 
@@ -77,7 +77,7 @@ def index():
 	return "Hello World!"
 ```
 
-#### Running our webserver
+### Running our webserver
 
 With the base source code, we can finally run our program and so first, we'll let flask know that the starting point of our app is in our `app.py` file. To do this on mac, we type this command in the terminal:
 
@@ -106,7 +106,7 @@ Use a production WSGI server instead.
 
 ## Understanding what we just did
 
-#### Analyzing our source code
+### Analyzing our source code
 
 Looking at our source code, let's analyze what each lines does. I've copied the same thing again for convenience.
 
@@ -129,7 +129,7 @@ Line 6: Basic function definition. The function name is not important and can be
 
 Line 7: Our function doesn't actually do anything here and will return a string with the value "Hello World!" but keep in mind that this is a regular Python function and we can do anything we want inside this function whether it be making a complex calculation or calling other functions.
 
-#### Analyzing our terminal
+### Analyzing our terminal
 
 After we run the command `~$ flask run` in the terminal, we get the following:
 
@@ -146,7 +146,7 @@ The only important part about this is the very last line that says:
 
 This means that our webserver is now running and *listening* for requests at that endpoint. 
 
-#### Testing our web server
+### Testing our web server
 
 To test if our web server is running, we can go ahead and send a request to it to see if we get the correct response. We can do that by opening up our most favorite browser (could be chrome, firefox, safari, etc.) and navigating to the endpoint flask has given us at [http://127.0.0.1:5000/](http://127.0.0.1:5000/) which is the same thing as [http://localhost:5000](http://localhost:5000). The way we would say this in english is "localhost port 5000".
 

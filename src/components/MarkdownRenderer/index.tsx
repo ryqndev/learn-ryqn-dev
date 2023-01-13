@@ -3,7 +3,6 @@
  *
  * @description react-markdown custom renderer
  */
-import ListItemRenderer from './ListItemRenderer';
 import CodeRenderer from './CodeRenderer';
 import LinkRenderer from './LinkRenderer';
 import * as cn from './MarkdownRenderer.module.scss';
@@ -32,7 +31,7 @@ const MarkdownRenderer: SpecialComponents & NormalComponents = {
 	p: ({ children }) => <p className={cn.p}>{children}</p>,
 	ol: ({ children }: ReactMarkdownProps) => <ol>{children}</ol>,
 	ul: ({ children }: ReactMarkdownProps) => <ul>{children}</ul>,
-	li: ListItemRenderer,
+	li: ({ children }) => <li className={cn.li}>{children}</li>,
 	a: LinkRenderer,
 	strong: ({ children }: ReactMarkdownProps) => (
 		<strong className={cn.bolded}>{children}</strong>

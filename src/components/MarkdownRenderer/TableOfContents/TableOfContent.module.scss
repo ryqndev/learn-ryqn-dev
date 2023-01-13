@@ -19,7 +19,19 @@
     text-decoration: none;
     color: #848484;
 
+    &.highlight {
+        color: var(--accent);
+    }
+
     &:hover, &:active {
         color: var(--accent);
     }
+}
+
+li:last-child {
+    margin-bottom: 0px;
+}
+
+.list {
+    
 }

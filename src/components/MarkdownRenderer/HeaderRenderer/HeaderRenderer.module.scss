@@ -39,17 +39,17 @@ h2.header, h3.header {
 h2.header {
     top: 0;
     font-size: 2rem;
-    padding: 80px 0px calc(15px + 1.4rem);
+    padding: 80px 8px calc(15px + 1.4rem);
 }
 
 h3.header {
     top: calc(90px + 2rem);
     font-size: 1.4rem;
-    padding-bottom: 15px;
+    padding: 0 8px 15px;
     color: var(--accent-alt);
 }
 
 h4.header {
     font-size: 1.5rem;
-    padding: 20px 0px;
+    padding: 20px 8px;
 }

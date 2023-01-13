@@ -228,17 +228,17 @@ So since our server is running on the internet that only exists on our computer,
 
 [https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/hackathon-flask/docs](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/hackathon-flask/docs)
 
-### Run python in the browser
+## Run python in the browser
 
 *"I know python so I want to use python but I also want to write a website"*
 
-#### You can't
+### You can't
 
 **Long story short, you can't.** The browser can only understand HTML/CSS/JS. This is where a backend server comes in. A server is essentially another computer that sits on the internet listening for, and responding to, **http requests**. 
 
 You can run your server in whatever language you want, but for hackathons I recommend Python/Flask. Python is the programming language and Flask is the Python library that makes it easy to run a server. Flask isn't the only option for Python, of course -  Django is another popular python library for webservers - but for hackathons, beginners, and prototypers, I *highly* recommend Flask.
 
-#### Flask flow chart
+### Flask flow chart
 
 When you run a server, you're essentially putting your computer on the internet and it is always listening for **http requests**. When your server receives a request, it proceses it (i.e. runs a python function) and returns the result to the person or computer making the request in the form of an **http response**.
 
@@ -246,7 +246,7 @@ So, your website will send an **http request** to your Flask server and sending 
 
 In this case, you're not *technically* executing python in the browser -- you're really just telling another computer that *can* run python what to do through the internet. 
 
-#### Is this a good idea?
+### Is this a good idea?
 
 **Depends on the idea.**
 
@@ -266,7 +266,7 @@ A quick example in case it's still not very clear: Take instagram/facebook/twitt
 
 If you want more examples or are still confused, fear not, it's a hard concept to follow at first so go ahead and find me or send me a message and I'll happily explain it in person.
 
-#### Basic Flask server
+### Basic Flask server
 
 ```file
 └── basic-test (folder)
@@ -308,11 +308,11 @@ def add():
 When we run it, we can test our server to see how it works:
 ![Add basic example](./assets/add-example.png)
 
-### Wrap your already written Python code in Flask
+## Wrap your already written Python code in Flask
 
 Read the concepts listed above. The only difference between the above and below is that we will import our files and wrap them in Flask endpoints. If you know how do basic imports in Python, then this part is self-explanatory.
 
-#### Quick example
+### Quick example
 
 ```file
 └── yelp-test (folder)
@@ -350,10 +350,10 @@ def yelp_default_test():
 
 ```
 
-### Call an API 
+## Call an API 
 
 
-#### Brief intro to API's using Yelp as an example
+### Brief intro to API's using Yelp as an example
 
 We can think of API's (in a hackathon sense atleast) as a way to utilize another program's functionality. As an example, we can take a look at the Yelp API. Yelp, if you're not familiar, is a platform for users to review businesses. Because of this, Yelp actually has a very, very big and comprehensive database of restaurants and businesses and they offer this service to developers for free (as of 2022 - we don't expect this to change). And so, Yelp offers something called an API (Application Programming Interface) - i.e. an interface, or bridge, that connects your service to theirs - detailing how anyone can make use of this service.
 
@@ -362,7 +362,7 @@ So, as a quick example, if your hackathon idea is an app that displays a list of
 One thing to note is that to call the Yelp API, you need to have a Yelp API key. This is a secret key that is used to authenticate your application given to you when you sign up for the Yelp API - which is used to rate limit your calls to ensure you're not abusing the Yelp API.
 
 
-#### Why do I need a backend?
+### Why do I need a backend?
 
 You can call API's directly from the website. In fact, when your front-end makes a request to your backend, that's an example of an API call. So then the question is, why would I need to setup and run a backend server to make Yelp API calls when I could just do it from the front-end and bypass a backend altogether? This is because the Yelp API actually doesn't allow their service to be reached from a browser/website (unless it's the actual Yelp website). 
 
@@ -380,7 +380,7 @@ Yelp will return an **http response** to the backend ->
 
 backend will return contents of that **http response** to the website -> website will transform the raw JSON data into meaningful visual HTML components that users can understand easily.
 
-#### Yelp API example
+### Yelp API example
 
 ```file
 └── yelp-test (folder)
