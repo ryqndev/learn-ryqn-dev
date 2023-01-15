@@ -3,19 +3,63 @@
     display: grid;
     place-content: center;
 
-    &>.input {
-        box-sizing: border-box;
+    &>.wrapper {
         height: 38px;
-        font-size: 18px;
-        width: 280px;
-        padding: 6px 10px 6px 38px;
-        border-radius: 4px;
-        background-color: var(--card);
-        color: var(--text);
-        caret-color: var(--accent);
         transition: width 350ms;
-        border: none;
+        position: absolute;
+        right: 0px;
+        width: 38px;
+
+        @media screen and (min-width: 980px) {
+            position: static;
+            width: 280px;
+        }
+
+        &>.input {
+            box-sizing: border-box;
+            height: 38px;
+            font-size: 18px;
+            padding: 6px 0px 6px 38px;
+            border-radius: 4px;
+            background-color: var(--card);
+            color: var(--text);
+            caret-color: var(--accent);
+            border: none;
+            width: 0;
+
+
+            @media screen and (min-width: 980px) {
+                padding: 6px 10px 6px 38px;
+                width: 100%;
+            }
+        }
+
+        &>.results {
+            box-sizing: border-box;
+            background-color: var(--card);
+            position: absolute;
+            top: 56px;
+            width: calc(100vw - 36px);
+            border-radius: 4px;
+            height: 0px;
+            padding: 0;
+            overflow: hidden;
+            left: -53px;
+
+            @media screen and (min-width: 980px) {
+                left: 0px;
+                width: 100%;
+            }
+
+            &>.overflow {
+                display: grid;
+                row-gap: 8px;
+                width: 100%;
+            }
+        }
+
     }
+
     &>.backdrop {
         background-color: transparent;
         height: 100vh;
@@ -33,50 +77,60 @@
         &>.backdrop {
             background-color: #00000088;
         }
-        &>.input {
-            box-sizing: border-box;
-            width: min(800px, 50vw);
-            outline: none;
-        }
 
-        &>.results {
-            padding: 0 8px 16px;
-            height: auto;
-            overflow-y: scroll;
-            max-height: calc(100vh - 100px);
+        &>.wrapper {
+            width: calc(100vw - 88px);
 
-            scrollbar-width: none; /* Firefox */
-            -ms-overflow-style: none;  /* Internet Explorer 10+ */
-            &::-webkit-scrollbar { /* WebKit */
-                width: 0;
-                height: 0;
+            @media screen and (min-width: 980px) {
+                width: min(800px, 50vw);
+            }
+
+            &>.input {
+                width: 100%;
+                box-sizing: border-box;
+                outline: none;
+            }
+
+            &>.results {
+                padding: 0 8px 16px;
+                height: auto;
+                overflow-y: scroll;
+                max-height: calc(100vh - 100px);
+
+                scrollbar-width: none;
+                /* Firefox */
+                -ms-overflow-style: none;
+
+                /* Internet Explorer 10+ */
+                &::-webkit-scrollbar {
+                    /* WebKit */
+                    width: 0;
+                    height: 0;
+                }
             }
         }
-    }
 
-    &>.results {
-        box-sizing: border-box;
-        background-color: var(--card);
-        position: absolute;
-        top: 60px;
-        width: 100%;
-        border-radius: 4px;
-        height: 0px;
-        padding: 0;
-        overflow: hidden;
 
-        &>.overflow {
-            display: grid;
-            row-gap: 8px;
-            width: calc(min(800px, 50vw) - 16px);
-        }
+
     }
 }
 
 .icon {
     position: absolute;
+    left: 0;
+    top: 0;
     height: 24px;
     width: 24px;
     padding: 8px 8px;
     fill: var(--accent);
+    pointer-events: none;
+    user-select: none;
+}
+
+.label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0px;
+    width: 0px;
 }

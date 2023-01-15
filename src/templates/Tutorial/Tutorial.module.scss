@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: 1fr auto;
     margin: 0 auto;
-    padding: 0 60px;
 
     @media screen and (max-width: 800px) {
         padding: 100px 0px 100px;
@@ -12,12 +11,22 @@
 
     .article {
         grid-column: 2/3;
-        padding-top: 50vh;
-        padding-bottom: 30vh;
-        width: max(55vw, 600px);
+        padding: 140px 10px;
+        box-sizing: border-box;
+        width: 100vw;
+        // font-size: 0.8em;
 
-        @media screen and (max-width: 950px) {
-            padding-top: 60px;
+        @media screen and (min-width: 980px) {
+            padding: 200px 20px;
+            width: 65vw;
+        }
+        @media screen and (min-width: 1100px) {
+            padding: 50vh 30px;
+        }
+        @media screen and (min-width: 1400px) {
+            padding: 50vh 80px;
+            left: 100px;
+            width: 70vw;
         }
     }
 }

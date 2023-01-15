@@ -39,29 +39,38 @@ const Search = () => {
 	return (
 		<div className={cn.container}>
 			<div className={cn.backdrop}></div>
-			<input
-				id='search'
-				className={cn.input}
-				type='text'
-				value={query}
-				onChange={e => setQuery(e.target.value)}
-				placeholder='Search...'
-			/>
-			<SearchIcon className={cn.icon} viewBox='0 0 48 48' />
+			<div className={cn.wrapper}>
+				<input
+					id='search'
+					className={cn.input}
+					type='text'
+					value={query}
+					onChange={e => setQuery(e.target.value)}
+					placeholder='Search...'
+				/>
+				
+				<label htmlFor='search ' className={cn.label}>
+					<SearchIcon className={cn.icon} viewBox='0 0 48 48' htmlFor="search"/>
+				</label>
 
-			<div className={cn.results} tabIndex={0}>
-				<SearchTooltip />
-				<div className={cn.overflow}>
-					{results.map((article, idx) => (
-						<SearchResult
-							key={article.link.join('/')}
-							selected={idx === selected}
-							{...article}
-						/>
-					))}
-					{!results.length && <NoResultsFound />}
+				<div className={cn.results} tabIndex={0}>
+
+					<SearchTooltip />
+
+					<div className={cn.overflow}>
+						{results.map((article, idx) => (
+							<SearchResult
+								key={article.link.join('/')}
+								selected={idx === selected}
+								{...article}
+							/>
+						))}
+						{!results.length && <NoResultsFound />}
+					</div>
 				</div>
 			</div>
+
+			
 		</div>
 	);
 };
