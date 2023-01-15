@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunklearn_ryqn_dev=self.webpackChunklearn_ryqn_dev||[]).push([[765],{1765:function(e,n,a){e.exports=a.p+"static/media/README.eccdab28e05d1b664146.md"}}]);
