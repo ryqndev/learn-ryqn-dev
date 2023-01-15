@@ -65,10 +65,12 @@ You don't need to worry about what any of this code is doing (we'll learn about 
 
 If you're curious:
 
-Line 6: `CURRENT_BOARD` is the array of raw board data.
+Line 6: `CURRENT_BOARD` is the array of raw board member data.
+
 Line 8: The first thing we render is their profile picture. The raw board data has information regarding the name of the image file and so we take that value and plug it into an `<img />` component.
 
 Line 13: Display the board members' name.
+
 Line 14: Display the board members' position.
 
 Line 16-27: Members can optionally have up to 3 social links. We once again utilize the `.map()` function to dynamically create social icon links for every member.
@@ -77,30 +79,21 @@ The only thing to take note of is the data structure (a.k.a. schema) in which we
 
 The schema for board members (and intern board members alike) is as follows:
 
-```json BoardMembers
-CURRENT_BOARD = BoardMember[]
-```
-
 ```json BoardMember schema
 {
     "name": string,
     "position": string,
     "photo": string,
-    "links": SocialLink[]
-}
-```
-```json SocialLink schema
-{
-    "type": "instagram" | "linkedin" | "website",
-    "href": string
-}
+    "links": {
+        "type": "instagram" | "linkedin" | "website",
+        "href": string
+    }[]
+}[]
 ```
 
-You can look at the other entries in the data files to figure out what is correct but in general, what the above means is: we have this piece of data called `CURRENT_BOARD` or `CURRENT_BOARD_INTERNS` that contains 1 piece of data: an Array of `BoardMember` objects.
+`CURRENT_BOARD` and `CURRENT_INTERNS` will have the value above: an array of board member objects.
 
-The next question is, what is the schema of a `BoardMember` object? Well, it has 4 properties: `name`, `position`, `photo` and `links`. Now the first 3 properties have a value of string type but links has a type of `SocialLink` array.
-
-Then, we ask, what's the schema of a `SocialLink`? Well it's a small object with only 2 properties: `type` and `href`. `href` is a string but what is `type`? `type` is essentially a string value except there are only 3 valid strings: `"instagram"`, `"linkedin"` and `"website"`. This is because our code will use this value to determine which icon to use.
+In addition to the other properties like `name` and `position`, there exists a property called `links` which is an array of link objects with 3 possible values for `type`.
 
 
 ## Adding your data
@@ -140,4 +133,27 @@ What does every profile have? It has a profile picture, a name, a position, and 
 
 When you open up the file, you should see a well-formed JSON object in the form of an array. This is the list of intern board members. Add yourself to the very end of it while following the syntax from the other members above.
 
-One thing to note though, make sure you're following all the JSON specifications (like no trailing comma on the last item) otherwise it will completely crash. Once you're done, check your dev server again [localhost:3000](http://localhost:3000) and navigate to the `/about` section to verify visually that you've updated the
+One thing to note though, make sure you're following all the JSON specifications (like no trailing comma on the last item) otherwise it will completely crash. 
+
+### Verify your changes
+
+Once you're done, check your dev server again [localhost:3000](http://localhost:3000) and navigate to the `/about` section to verify visually that your profile is up there.
+
+When we write code, it's important to test well and test often - it costs nothing to run our code so do it everytime you make changes.
+
+### Submit a PR
+
+Once you've written in your changes and verify that everything is running fine, it's time to merge our code to the main code base.
+
+Currently, your code changes only exist on your local computer and don't actually affect the hosted website. What we need to do now is go through the review process of merging our code with `main`.
+
+Go ahead and follow this article on how to submit a proper PR.
+
+### Make changes
+
+After you make your PR, various reviewers will read through your code and either say it's all good, or request changes. If changes get requested, you're responsible for following through on the comments and making the changes until you get approval from a reviewer. Then, you can merge and delete the branch. 
+
+## Deploying the code
+
+Once your changes are merged to the `main` branch of the codebase, we can build the code and deploy it onto the hosting servers. You can do this by running `npm run deploy` in the terminal.
+
