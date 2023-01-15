@@ -3,9 +3,12 @@ import { Helmet } from 'react-helmet';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { Navigation } from './components';
 import * as cn from './Layout.module.scss';
+import { useLocation } from '@reach/router';
 import './styles/main.scss';
 
 const Layout = ({ children }: { children: ReactNode }) => {
+	const location = useLocation();
+
 	return (
 		<>
 			<Head />
@@ -32,7 +35,10 @@ export const Head = () => (
 			href='https://fonts.googleapis.com/css?family=B612+Mono'
 			rel='stylesheet'
 		/>
-		<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap" rel="stylesheet" /> 
+		<link
+			href='https://fonts.googleapis.com/css2?family=Lexend:wght@800&display=swap'
+			rel='stylesheet'
+		/>
 		<link
 			href='https://fonts.googleapis.com/css2?family=Raleway:wght@400;800'
 			rel='stylesheet'

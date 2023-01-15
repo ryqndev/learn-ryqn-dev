@@ -3,9 +3,9 @@ import gfm from 'remark-gfm';
 import { ReactMarkdownProps } from 'react-markdown/lib/complex-types';
 import * as cn from './TableOfContent.module.scss';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { useState } from 'react';
-import { useLayoutEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import clsx from 'clsx';
+import { useLocation } from '@reach/router';
 
 const TableOfContents = ({ value }: ReactMarkdownProps) => {
 	return (
@@ -19,6 +19,7 @@ const TableOfContents = ({ value }: ReactMarkdownProps) => {
 
 const TOCInlineRenderer = {
 	a: ({ children, href }) => {
+		const location = useLocation();
 		const anchorHref = href.replace(/[^a-z0-9#\-]/gi, '');
 		const [visible, setVisible] = useState(true);
 
@@ -28,16 +29,25 @@ const TOCInlineRenderer = {
 			});
 
 			try {
-				observer.observe(document.querySelector(anchorHref + '-visible'));
-				return () => observer.unobserve(document.querySelector(anchorHref + '-visible'));
+				observer.observe(
+					document.querySelector(anchorHref + '-visible')
+				);
+				return () =>
+					observer.unobserve(
+						document.querySelector(anchorHref + '-visible')
+					);
+			} catch (e) {
+				console.error(
+					`This article is malformed - some links might or might not work. Error: ${anchorHref}`
+				);
 			}
-			catch(e) {
-				console.error(`This article is malformed - some links might or might not work. Error: ${anchorHref}`);
-			} 
 		});
 
 		return (
-			<AnchorLink to={location.pathname + anchorHref} className={clsx(cn.link, visible && cn.highlight)}>
+			<AnchorLink
+				to={location.pathname + anchorHref}
+				className={clsx(cn.link, visible && cn.highlight)}
+			>
 				{children}
 			</AnchorLink>
 		);

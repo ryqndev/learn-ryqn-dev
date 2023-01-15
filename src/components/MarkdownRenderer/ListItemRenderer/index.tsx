@@ -4,12 +4,15 @@ import type { ReactElement } from 'react';
 import type { LiComponent } from 'react-markdown/lib/ast-to-react';
 import { ListItem } from './ListItemRenderer';
 import * as cn from './ListItemRenderer.module.scss';
+import {useLocation} from '@reach/router';
 
 const ListItemRenderer: LiComponent = ({
 	ordered,
 	children,
 	...props
 }): ReactElement | null => {
+	const location = useLocation();
+
 	const extraTextFromInnerLink = node =>
 		node.children?.[0]?.children?.[0]?.value;
 
