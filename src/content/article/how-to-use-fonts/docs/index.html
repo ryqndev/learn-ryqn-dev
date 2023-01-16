@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lato Font Example</title>
+
+    <!-- I like to embed my fonts at the bottom of the head tag but it doesn't really matter where you put it -->
+
+    <!-- The selection below is copied straight from: https://fonts.google.com/specimen/Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Now that I have the font assets imported, I can use this font wherever -->
+
+    <style>
+        body {
+            display: grid;
+            place-content: center;
+        }
+        .container {
+            width: 300px;
+            padding: 20px;
+            border: 2px solid #ccc;
+        }
+
+        .container {
+            font-family: 'Lato', sans-serif;
+        } 
+
+        p {
+            max-width: 340px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Here is a title that's bold (header tags are bold by default)</h1>
+        <p>
+            As per the CSS styles, the [h1] tag above is using the Bold Lato (weight of 700) font. This paragraph tag is
+                using the normal weight Lato font (weight of 400).
+        </p>
+    </div>
+
+    <p>
+        This part of the website is unstyled and therefore does not have a font specified. This will NOT use Lato but
+        instead use the default font specified by the browser or OS.
+    </p>
+</body>
+
+</html>

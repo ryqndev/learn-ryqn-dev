@@ -195,7 +195,7 @@ This code will result in a site that looks and operates like this:
 
 ![final-result](./assets/final-result.gif)
 
-#### Website Structure
+### Website Structure
 
 There is a certain structure that all HTML files need to have which looks like this
 

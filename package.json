@@ -11,14 +11,14 @@
     "develop": "gatsby develop",
     "start": "gatsby develop",
     "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d build",
+    "deploy": "gatsby build && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@codemirror/lang-css": "^6.0.1",
-    "@codemirror/lang-html": "^6.4.0",
+    "@codemirror/lang-html": "^6.4.1",
     "@codemirror/lang-javascript": "^6.1.1",
     "@codemirror/lang-python": "^6.1.0",
     "@lezer/common": "^1.0.2",
@@ -50,7 +50,7 @@
     "react-markdown": "^8.0.4",
     "react-transition-group": "^4.4.5",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.56.1"
+    "sass": "^1.57.1"
   },
   "devDependencies": {
     "@types/node": "^18.11.10",

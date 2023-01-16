@@ -1,6 +1,17 @@
 [
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
+        "link": ["article", "how-to-use-fonts"],
+        "title": "Using Fonts in your Website",
+        "summary": "Learn how to find, import, and use various fonts to make your site unique. First, I'll give you a quick 5 minute how-to if you're pressed for time (like a hackathon) and if you're interested, I'll tell you some other tips and tricks to make you a font-master",
+        "tags": ["web developement", "beginner", "frontend", "Google Fonts", "fonts", "HTML", "CSS"],
+        "date": {
+            "updated": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)",
+            "uploaded": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)"
+        }
+    },
+    {
+        "author": ["Ryan Yang", "https://ryqn.dev"],
         "link": ["article", "using-web-ui-libraries"],
         "title": "Using UI libraries in HTML/CSS/JS",
         "summary": "Designing and developing custom web components is challenging. Let's learn how to utilize prebuilt UI libraries to supercharge our projects",

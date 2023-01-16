@@ -13,7 +13,7 @@
         "author": ["Ryan Yang", "https://ryqn.dev"],
         "link": ["tutorial", "duci-intern-starter-tasks", "setup"],
         "title": "Design@UCI Intern Starter Tasks: Setup",
-        "summary": "For D@UCI internal use.",
+        "summary": "For Design@UCI internal use. Anyone is free to read these tutorials but you won't have perms to edit the codebase, obviously. These are the set up instructions so we can get started on our first tasks!",
         "tags": ["D@UCI"],
         "date": {
             "updated": "Thu Jan 12 2023 09:41:06 GMT-0800 (Pacific Standard Time)",
@@ -25,7 +25,7 @@
         "author": ["Ryan Yang", "https://ryqn.dev"],
         "link": ["tutorial", "duci-intern-starter-tasks", "adding-your-profile"],
         "title": "Design@UCI Intern Starter Tasks: Adding Your Profile",
-        "summary": "For D@UCI internal use.",
+        "summary": "For Design@UCI internal use. Anyone is free to read these tutorials but you won't have perms to edit the codebase, obviously. Here, our first task will be to edit our board profiles. In doing so, you'll become familiar with how developers within teams can collaborate on a single project with Git/Github",
         "tags": ["D@UCI"],
         "date": {
             "updated": "Thu Jan 13 2023 07:05:00 GMT-0800 (Pacific Standard Time)",

@@ -1,8 +1,8 @@
-```
+
 
 ## Intro
 
-Git is one of the most popular version control systems out there. Similarly, Github is one of the most popular places to host repositories that uses Git for version control. So here, we'll be learning 
+Git is one of the most popular version control systems out there. Similarly, Github is one of the most popular places to host repositories that uses Git for version control. So here, we'll be learning how to make pull requests 
 
 ## Steps to follow
 
@@ -23,7 +23,7 @@ To make a pull request, you need to first put your code in a separate branch.
 ### Push your branch
 
 ```bash
-git push --set-upstream <branch-name>
+git push --set-upstream origin <branch-name>
 
 ```
 
