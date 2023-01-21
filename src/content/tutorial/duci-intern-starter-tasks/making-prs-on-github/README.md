@@ -11,7 +11,7 @@
     6. [Write up your PR](#write-up-your-pr)
     7. [Assign reviewers](#assign-reviewers)
     7. [Make changes](#make-changes)
-
+* [Condensed commands](#condensed-commands)
 ```
 
 
@@ -133,7 +133,7 @@ Even though this one overarching feature, we might have multiple commits to save
 
 In our case though, we're just updating a single entry and it's not too complicated so we only really need one commit in this PR. Once we've commited, we now need to push this branch onto Github. It exists on our local computer, but not the public repo that's hosted on the internet and Github. To do this, we need to run `git push --set-upstream origin <branch-name>` as follows:
 
-```bash
+```bash terminal
 $ git push --set-upstream origin rqy/update-board-members
 
 Enumerating objects: 11, done.
@@ -185,3 +185,32 @@ When reviewers look at your work, they'll either request changes or approve. If 
 If the change that was requested was significant enough, you may also want to edit your PR description.
 
 After you've made changes, re-request review from those that asked for changes until you get an approval. Once it's approved, go ahead and merge and delete the branch.
+
+
+## Condensed Commands
+
+If you've already done this before and just need to commands to refresh your memory, here they are:
+
+```git terminal
+$ git switch main
+$ git pull
+$ git switch -c <initials>/<content-of-update>
+$ git add .
+$ git commit -m "message about what changed in this commit"
+$ git push --set-upstream origin rqy/update-board-members
+
+$ git add .
+$ git commit -m "message about what changed in this commit"
+$ git push
+
+```
+
+Repeat lines 8-10 if you're adding new commits to an already created branch. Notice, you don't need the long `git push --set-upstream` command since we've already created the remote branch.
+
+When you've merged your PR, don't forget to switch back to main and pull your changes
+
+```bash terminal
+$ git switch main
+$ git pull
+
+```
