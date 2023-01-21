@@ -1,3 +1,20 @@
+# Design@UCI Intern Program - Making PRs on Github
+```table-of-contents
+
+* [Intro](#intro)
+* [Steps to follow](#steps-to-follow)
+    1. [Clone the codebase](#clone-the-codebase)
+    2. [Pull latest main](#pull-latest-main)
+    3. [Create a new branch](#create-a-new-branch)
+    4. [Make your changes](#make-your-changes)
+    5. [Make a commit](#make-a-commit)
+    6. [Write up your PR](#write-up-your-pr)
+    7. [Assign reviewers](#assign-reviewers)
+    7. [Make changes](#make-changes)
+
+```
+
+
 ## Intro
 
 Git is one of the most popular version control systems out there. Similarly, Github is one of the most popular places to host repositories that uses Git for version control. So here, we'll be learning how to make pull requests. This is a copy-paste of [Making PRs on Github](./article/making-prs-on-github) except I'll have all the exact commands added here with respect to the Design@UCI code repo.
