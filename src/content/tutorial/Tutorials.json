@@ -32,5 +32,17 @@
             "uploaded": "Thu Jan 13 2023 07:05:00 GMT-0800 (Pacific Standard Time)"
         },
         "hidden": true
+    },
+    {
+        "author": ["Ryan Yang", "https://ryqn.dev"],
+        "link": ["tutorial", "duci-intern-starter-tasks", "making-prs-on-github"],
+        "title": "Design@UCI Intern Starter Tasks: Making PR's on Github",
+        "summary": "For Design@UCI internal use. Anyone is free to read these tutorials but you won't have perms to edit the codebase, obviously. We'll be learning how to submit a PR to get our changes reviewed and merged into the main code base.",
+        "tags": ["D@UCI"],
+        "date": {
+            "updated": "Sat Jan 21 2023 14:34:52 GMT-0800 (Pacific Standard Time)",
+            "uploaded": "Sat Jan 21 2023 14:34:52 GMT-0800 (Pacific Standard Time)"
+        },
+        "hidden": true
     }
 ]

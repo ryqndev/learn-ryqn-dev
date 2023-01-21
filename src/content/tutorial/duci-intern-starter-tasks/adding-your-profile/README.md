@@ -147,7 +147,7 @@ Once you've written in your changes and verify that everything is running fine, 
 
 Currently, your code changes only exist on your local computer and don't actually affect the hosted website. What we need to do now is go through the review process of merging our code with `main`.
 
-Go ahead and follow this article on how to submit a proper PR.
+Go ahead and follow [this article on how to submit a proper PR](/tutorial/duci-intern-starter-tasks/making-prs-on-github).
 
 ### Make changes
 

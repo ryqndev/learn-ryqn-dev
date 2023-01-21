@@ -1,0 +1,33 @@
+.container {
+    padding: 80px 80px;
+
+    &>.hero {
+        position: absolute;
+        bottom: 80px;
+
+        & h1 {
+            font-family: 'Passion One', cursive;
+            font-size: 13vw;
+            margin: 0;
+            line-height: 0.8em;
+            color: var(--accent);
+            user-select: none;
+        }
+    }
+
+    &>.explore {
+        position: absolute;
+        right: 20vw;
+        top: 50vh;
+        transform: translate3d(-50%, -50%);
+        font-family: "Lexend";
+        font-size: 30px;
+        border-bottom: 4px solid transparent;
+        transition: border-color 250ms;
+        cursor: pointer;
+
+        &:hover {
+            border-bottom-color: var(--accent);
+        }
+    }
+}

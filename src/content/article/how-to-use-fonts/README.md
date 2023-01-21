@@ -5,9 +5,13 @@
 * [Overview](#overview)
 * [Good, free fonts quick](#good-free-fonts-quick)
     1. [Go on Google Fonts](#go-on-google-fonts)
-    1. [Find a font you want to use](#find-a-font-you-want-to-use)
-    1. [Embedding your fonts](#embedding-your-fonts)
+    2. [Find a font you want to use](#find-a-font-you-want-to-use)
+    3. [Embedding your fonts](#embedding-your-fonts)
 * [Basic HTML example](#basic-html-example)
+* [Quick, final notes](#quick-final-notes)
+    1. [If you're using React](#if-youre-using-react)
+    2. [If you're using SSG](#if-youre-using-ssg)
+    3. [Users have custom software](#users-have-custom-software)
 
 ```
 
@@ -15,7 +19,7 @@
 
 We'll go over how you can pick and choose fonts (on Google Fonts), and then embed them in your web app. First section will be the quick nitty-gritty how to copy and paste stuff to success and then I'll dive in a bit deeper into the other stuff you can do with fonts so if you're looking at a quick how-to, you can stop reading this and go striaght to the [next section](#good-free-fonts-quick).
 
-
+The next section is more about best practices when it comes to embedding fonts. For production apps, we largely want to prevent embedding a  billion fonts (fonts are big assets) and want to make sure there are fallbacks if fonts aren't accessible. We'll also go over how to work with CSS styles to make our fonts perfect.
 
 ## Good, free fonts quick
 
@@ -96,6 +100,8 @@ Here's a basic example of how you would import the `Lato` font shown above if yo
         }
 
         .container {
+            /* This is the font property to be embedded in the CSS */
+            /* This can be found under the Link section in Google Fonts */
             font-family: 'Lato', sans-serif;
         } 
 
@@ -110,7 +116,7 @@ Here's a basic example of how you would import the `Lato` font shown above if yo
         <h1>Here is a title that's bold (header tags are bold by default)</h1>
         <p>
             As per the CSS styles, the [h1] tag above is using the Bold Lato (weight of 700) font. This paragraph tag is
-                using the normal weight Lato font (weight of 400).
+            using the normal weight Lato font (weight of 400).
         </p>
     </div>
 
@@ -130,7 +136,7 @@ Which looks like this:
 
 It's not the sexiest example, but it shows how to use fonts
 
-## Quick notes
+## Quick, final notes
 
 Before I dive deeper into using fonts in web projects, there are some small things to note.
 
@@ -145,3 +151,18 @@ This is for those using something like Next.js or Gatsby. You're probably using 
 ### Users have custom software
 
 If your user has a custom font extension installed in their web browser or their device, it'll likely override your custom font. (if you've ever seen those people with phones that have *every* letter in italics or something like that).
+
+
+## Styling your fonts
+
+I briefly mentioned that each font has different styles and these styles get selected depending on the CSS properties applied to them.
+
+Let's look at how we can use the different font styles.
+
+To use different boldness sizes of fonts, you specify the `font-weight` property. You can read the MDN documentation on how to use `font-weight` [here](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+
+```css styles.css
+p {
+    font-weight: 400; 
+}
+```

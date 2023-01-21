@@ -6,6 +6,8 @@ declare module "*.svg";
 declare module "*.jpeg";
 declare module "*.jpg";
 
+declare module '@ryqndev/footer';
+
 declare module '*.yaml' {
     const data: any
     export default data
