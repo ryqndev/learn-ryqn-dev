@@ -44,5 +44,17 @@
             "uploaded": "Sat Jan 21 2023 14:34:52 GMT-0800 (Pacific Standard Time)"
         },
         "hidden": true
+    },
+    {
+        "author": ["Ryan Yang", "https://ryqn.dev"],
+        "link": ["tutorial", "webapp-demos", "hack-at-uci-2023"],
+        "title": "Hack at UCI 2023: Product Design & Web Dev Intro",
+        "summary": "For Hack at UCI 2023's first workshop of the event, we'll go over basic product design and then use what we've learned there to translate into a basic web app. The focus here will be on the various parts that exist and how they interact with each other to form a cohesive app.",
+        "tags": ["hackathon", "HackAtUCI", "web developement", "Flask", "frontend", "backend", "Yelp API", "Yelp", "Transloc"],
+        "date": {
+            "updated": "Wed Feb 01 2023 14:51:38 GMT-0800 (Pacific Standard Time)",
+            "uploaded": "Wed Feb 01 2023 14:51:38 GMT-0800 (Pacific Standard Time)"
+        },
+        "hidden": true
     }
 ]
