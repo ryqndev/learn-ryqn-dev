@@ -4,6 +4,9 @@
 
 * [Overview](#overview)
 * [Why wouldn't you want an Web App?](#why-wouldnt-you-want-a-web-app)
+* [Ideation](#ideation)
+    1. [Data Sources](#data-sources)
+    2. [Architecture](#architecture)
 ```
 
 ## Overview
@@ -28,8 +31,7 @@ You can make games in the web (see: Agar.io, kahoot, [that one egg shooting game
 
 - You need to use sensors on a phone
 
-Laptops and desktops don't have pedometers or gyroscopes. Can you imagine someone trying to use
-
+Laptops and desktops don't have pedometers or gyroscopes. 
 
 ## Ideation
 
@@ -42,5 +44,23 @@ So, a common way to sort of "force" and idea at a hackathon is to work backwards
 I know that Yelp has a gigantic database of restaurants and businesses and their data. I can google something like: `Yelp API` and see that Yelp, indeed, does have an API. 
 
 ![Yelp Fusion API homepage](./assets/yelp-api.png)
+
+
+
+### Architecture
+
+So now we have an idea. Great! How do we execute it? Since we came up with our idea backwards, it's actually almost guaranteed that it'll work. If you were to come up with an idea organically, you first need to do research if it's actually *possible* or doable before you start working on it. What you'll find here, unfortunately, is that a lot of REALLY REALLY good ideas fall short because one tiny piece of the application just isn't doable yet.
+
+For most web apps (and apps in general), you're going to need a frontend and a backend. Frontend, in general, refers to the interface that our users will interact with when using our app. Backend, is our business logic. It is all the code that will make our application do what we said it does.
+
+> If you think about how a piano works, the key is the frontend, the hammer, the strings and everything that makes the actual sound is the backend. 
+
+### Live Demo
+
+
+Backend Tasks:
+
+1. [Make API call to Yelp]()
+2. [setup Flask](https://learn.ryqn.dev/article/hackathon-flask)
 
 
