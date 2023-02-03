@@ -21,7 +21,7 @@ Development-wise, it's extremely simple to get started. To write and run code, y
 
 So, it's easy to run and easy to code. Why would we want anything else?
 
-## Why Wouldn't you want a Web App?
+## Why wouldn't you want a Web App?
 
 There are some good reasons why you wouldn't want to make a web-app. We have multiple different programming languages and systems for a reason. Here are some examples and reasons:
 
@@ -46,7 +46,6 @@ I know that Yelp has a gigantic database of restaurants and businesses and their
 ![Yelp Fusion API homepage](./assets/yelp-api.png)
 
 
-
 ### Architecture
 
 So now we have an idea. Great! How do we execute it? Since we came up with our idea backwards, it's actually almost guaranteed that it'll work. If you were to come up with an idea organically, you first need to do research if it's actually *possible* or doable before you start working on it. What you'll find here, unfortunately, is that a lot of REALLY REALLY good ideas fall short because one tiny piece of the application just isn't doable yet.
@@ -57,10 +56,21 @@ For most web apps (and apps in general), you're going to need a frontend and a b
 
 ### Live Demo
 
-
 Backend Tasks:
 
-1. [Make API call to Yelp]()
-2. [setup Flask](https://learn.ryqn.dev/article/hackathon-flask)
+1. [Make API call to Yelp](https://learn.ryqn.dev/article/quick-api-call-lesson)
+2. [Setup Flask backend](https://learn.ryqn.dev/article/hackathon-flask)
+3. Test your backend
+
+Frontend Tasks:
+
+1. [Intro to Web Dev](https://learn.ryqn.dev/article/intro-to-web-dev)
+    * [if you want to try React](https://learn.ryqn.dev/article/setting-up-react)
+    * [create react app](https://learn.ryqn.dev/article/creating-your-first-react-project)
+2. Test your backend
+
+## Wrapping up
+
+This hopefully gives a good overview of how to create a hackathon web app project. The learning of the languages and actual implementation is left up to you but hopefully have left enough resources here to get everyone started!
 
 
