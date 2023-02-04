@@ -6,25 +6,16 @@
 <ol style="padding-left:32px;list-style:decimal">
 <li><a class="TableOfContent-module--link--ad54b TableOfContent-module--highlight--5a003" href="/tutorial/webapp-demos/hack-at-uci-2023#data-sources">Data Sources</a></li>
 <li><a class="TableOfContent-module--link--ad54b TableOfContent-module--highlight--5a003" href="/tutorial/webapp-demos/hack-at-uci-2023#architecture">Architecture</a></li>
+<li><a class="TableOfContent-module--link--ad54b TableOfContent-module--highlight--5a003" href="/tutorial/webapp-demos/hack-at-uci-2023#live-demo">Live Demo</a></li>
 </ol>
 </li>
+<li><a class="TableOfContent-module--link--ad54b TableOfContent-module--highlight--5a003" href="/tutorial/webapp-demos/hack-at-uci-2023#wrapping-up">Wrapping Up</a></li>
 </ul></div></pre>
 <h2 class="HeaderRenderer-module--invisible--4d7eb" id="overview">Overview</h2><h2 class="HeaderRenderer-module--header--c2e07" id="overview-visible">Overview</h2>
 <p class="MarkdownRenderer-module--p--c3f17">Welcome to Hack at UCI 2023! The general, overarching goal at a hackathon is to create <span class="italicize">something</span>. There&#x27;s no limit on what you can make or how you make it but we tend to see web apps as the most popular submission. This is in part because web apps are <span class="italicize">(arguably)</span> the simplest to use but also <span class="italicize">(arguably)</span> the simplest to get started.</p>
 <p class="MarkdownRenderer-module--p--c3f17">As some quick examples, you could create a game in Unity but that requires exporting some executable that someone has to download on their phone or computer. You could create an Android or iOS native app, but then you only have a product that works on a single OS (can&#x27;t write an iOS app that works on Android and vice versa). You could write some AI/ML or data vis applications in R or Python, but that requires a user to have R or Python installed on their computer.</p>
 <p class="MarkdownRenderer-module--p--c3f17">For the average joe, if you give them a website, they can open it on their phone, tablet, or computer and expect it to work on any operating system or browser - without needing to install anything or do any setup on their device. They click on a link and everything just ... works!</p>
 <p class="MarkdownRenderer-module--p--c3f17">Development-wise, it&#x27;s extremely simple to get started. To write and run code, you only need a text editor and a browser (which you already have if you&#x27;re reading this).</p>
-<p class="MarkdownRenderer-module--p--c3f17">So, it&#x27;s easy to run and easy to code. Why would we want anything else?</p>
-<h2 class="HeaderRenderer-module--invisible--4d7eb" id="why-wouldnt-you-want-a-web-app">Why wouldn&#x27;t you want a Web App?</h2><h2 class="HeaderRenderer-module--header--c2e07" id="why-wouldnt-you-want-a-web-app-visible">Why wouldn&#x27;t you want a Web App?</h2>
-<p class="MarkdownRenderer-module--p--c3f17">There are some good reasons why you wouldn&#x27;t want to make a web-app. We have multiple different programming languages and systems for a reason. Here are some examples and reasons:</p>
-<ul>
-<li class="MarkdownRenderer-module--li--ff148">You want to make a game</li>
-</ul>
-<p class="MarkdownRenderer-module--p--c3f17">You can make games in the web (see: Agar.io, kahoot, <a class="LinkRenderer-module--container--7e4c7" href="https://shellshock.io/" target="_blank" rel="noopener noreferrer">that one egg shooting game</a>) but what you&#x27;ll notice is that these games are 1. not low-latency dependent and 2. not graphically intensive. Games like LoL or Valorant can&#x27;t be written into the web because they are ping reliant. These are games of skill and any network latency massively disrupts the skill factor of the game. Web is written using TCP connections which are much slower than UDP connections that a native C++ client can use. Similarly, most graphically intensive games are written in C++ or C# - languages that have memory management done by the user. This is because graphically intensive games require extremely efficient code - something that web tech doens&#x27;t have <span class="italicize">just</span> yet (talk to me if you&#x27;re interested in where this is going. hint hint it&#x27;s called WebAssembly). Also, assets are EXPENSIVE. Most websites should be under 1-2 MB in size. Games like Lost Ark and Cyberpunk are usually 100&#x27;s of GB in size. Long story short, if you&#x27;re planning on making a beautiful, massive 3d world with many assets - stick to C++ or C# (Unity).</p>
-<ul>
-<li class="MarkdownRenderer-module--li--ff148">You need to use sensors on a phone</li>
-</ul>
-<p class="MarkdownRenderer-module--p--c3f17">Laptops and desktops don&#x27;t have pedometers or gyroscopes.</p>
 <h2 class="HeaderRenderer-module--invisible--4d7eb" id="ideation">Ideation</h2><h2 class="HeaderRenderer-module--header--c2e07" id="ideation-visible">Ideation</h2>
 <p class="MarkdownRenderer-module--p--c3f17">Ideation comes from different angles depending on the context. If you&#x27;re a product designer for a company, your new product will likely stem from one of the products your company already makes. If you work for Garmin under the GPS making team, you might find yourself trying to come up with ways that you can improve people&#x27;s lives when they&#x27;re using a Garmin GPS Product. For a hackathon though, you can create <span class="italicize">anything</span>. Although offers you flexibility, the paradox of choice makes it fairly difficult to find a starting point in your ideation.</p>
 <p class="MarkdownRenderer-module--p--c3f17">So, a common way to sort of &quot;force&quot; and idea at a hackathon is to work backwards. Rather than trying to figure out a problem that you want to solve with your app, you can look at the list of data and tools you have at your disposal and work backwards to see if these things can solve issues that currently exist.</p>
@@ -38,12 +29,6 @@
 <p class="MarkdownRenderer-module--p--c3f17">If you think about how a piano works, the key is the frontend, the hammer, the strings and everything that makes the actual sound is the backend.</p>
 </div>
 <h3 class="HeaderRenderer-module--invisible--4d7eb" id="live-demo">Live Demo</h3><h3 class="HeaderRenderer-module--header--c2e07" id="live-demo-visible">Live Demo</h3>
-<p class="MarkdownRenderer-module--p--c3f17">Backend Tasks:</p>
-<ol>
-<li class="MarkdownRenderer-module--li--ff148"><a class="LinkRenderer-module--container--7e4c7" href="https://learn.ryqn.dev/article/quick-api-call-lesson" target="_blank" rel="noopener noreferrer">Make API call to Yelp</a></li>
-<li class="MarkdownRenderer-module--li--ff148"><a class="LinkRenderer-module--container--7e4c7" href="https://learn.ryqn.dev/article/hackathon-flask" target="_blank" rel="noopener noreferrer">Setup Flask backend</a></li>
-<li class="MarkdownRenderer-module--li--ff148">Test your backend</li>
-</ol>
 <p class="MarkdownRenderer-module--p--c3f17">Frontend Tasks:</p>
 <ol>
 <li class="MarkdownRenderer-module--li--ff148"><a class="LinkRenderer-module--container--7e4c7" href="https://learn.ryqn.dev/article/intro-to-web-dev" target="_blank" rel="noopener noreferrer">Intro to Web Dev</a>
@@ -54,8 +39,15 @@
 </li>
 <li class="MarkdownRenderer-module--li--ff148">Test your backend</li>
 </ol>
+<p class="MarkdownRenderer-module--p--c3f17">Backend Tasks:</p>
+<ol>
+<li class="MarkdownRenderer-module--li--ff148"><a class="LinkRenderer-module--container--7e4c7" href="https://learn.ryqn.dev/article/quick-api-call-lesson" target="_blank" rel="noopener noreferrer">Make API call to Yelp</a></li>
+<li class="MarkdownRenderer-module--li--ff148"><a class="LinkRenderer-module--container--7e4c7" href="https://learn.ryqn.dev/article/hackathon-flask" target="_blank" rel="noopener noreferrer">Setup Flask backend</a></li>
+<li class="MarkdownRenderer-module--li--ff148">Test your backend</li>
+</ol>
 <h2 class="HeaderRenderer-module--invisible--4d7eb" id="wrapping-up">Wrapping up</h2><h2 class="HeaderRenderer-module--header--c2e07" id="wrapping-up-visible">Wrapping up</h2>
-<p class="MarkdownRenderer-module--p--c3f17">This hopefully gives a good overview of how to create a hackathon web app project. The learning of the languages and actual implementation is left up to you but hopefully have left enough resources here to get everyone started!</p></article></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tutorial/webapp-demos/hack-at-uci-2023";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p class="MarkdownRenderer-module--p--c3f17">This hopefully gives a good overview of how to create a hackathon web app project. The learning of the languages and actual implementation is left up to you but hopefully have left enough resources here to get everyone started!</p>
+<p class="MarkdownRenderer-module--p--c3f17">I&#x27;ll be mentoring for the entire event so if you have questions, try and find me and I&#x27;ll do my best to help y&#x27;all&#x27;s!</p></article></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/tutorial/webapp-demos/hack-at-uci-2023";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >
