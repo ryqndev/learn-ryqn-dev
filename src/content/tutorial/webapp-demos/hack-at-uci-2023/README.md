@@ -7,6 +7,8 @@
 * [Ideation](#ideation)
     1. [Data Sources](#data-sources)
     2. [Architecture](#architecture)
+    3. [Live Demo](#live-demo)
+* [Wrapping Up](#wrapping-up)
 ```
 
 ## Overview
@@ -18,20 +20,6 @@ As some quick examples, you could create a game in Unity but that requires expor
 For the average joe, if you give them a website, they can open it on their phone, tablet, or computer and expect it to work on any operating system or browser - without needing to install anything or do any setup on their device. They click on a link and everything just ... works!
 
 Development-wise, it's extremely simple to get started. To write and run code, you only need a text editor and a browser (which you already have if you're reading this). 
-
-So, it's easy to run and easy to code. Why would we want anything else?
-
-## Why wouldn't you want a Web App?
-
-There are some good reasons why you wouldn't want to make a web-app. We have multiple different programming languages and systems for a reason. Here are some examples and reasons:
-
-- You want to make a game
-
-You can make games in the web (see: Agar.io, kahoot, [that one egg shooting game](https://shellshock.io/)) but what you'll notice is that these games are 1. not low-latency dependent and 2. not graphically intensive. Games like LoL or Valorant can't be written into the web because they are ping reliant. These are games of skill and any network latency massively disrupts the skill factor of the game. Web is written using TCP connections which are much slower than UDP connections that a native C++ client can use. Similarly, most graphically intensive games are written in C++ or C# - languages that have memory management done by the user. This is because graphically intensive games require extremely efficient code - something that web tech doens't have *just* yet (talk to me if you're interested in where this is going. hint hint it's called WebAssembly). Also, assets are EXPENSIVE. Most websites should be under 1-2 MB in size. Games like Lost Ark and Cyberpunk are usually 100's of GB in size. Long story short, if you're planning on making a beautiful, massive 3d world with many assets - stick to C++ or C# (Unity). 
-
-- You need to use sensors on a phone
-
-Laptops and desktops don't have pedometers or gyroscopes. 
 
 ## Ideation
 
@@ -56,12 +44,6 @@ For most web apps (and apps in general), you're going to need a frontend and a b
 
 ### Live Demo
 
-Backend Tasks:
-
-1. [Make API call to Yelp](https://learn.ryqn.dev/article/quick-api-call-lesson)
-2. [Setup Flask backend](https://learn.ryqn.dev/article/hackathon-flask)
-3. Test your backend
-
 Frontend Tasks:
 
 1. [Intro to Web Dev](https://learn.ryqn.dev/article/intro-to-web-dev)
@@ -69,8 +51,15 @@ Frontend Tasks:
     * [create react app](https://learn.ryqn.dev/article/creating-your-first-react-project)
 2. Test your backend
 
+Backend Tasks:
+
+1. [Make API call to Yelp](https://learn.ryqn.dev/article/quick-api-call-lesson)
+2. [Setup Flask backend](https://learn.ryqn.dev/article/hackathon-flask)
+3. Test your backend
+
+
 ## Wrapping up
 
 This hopefully gives a good overview of how to create a hackathon web app project. The learning of the languages and actual implementation is left up to you but hopefully have left enough resources here to get everyone started!
 
-
+I'll be mentoring for the entire event so if you have questions, try and find me and I'll do my best to help y'all's!

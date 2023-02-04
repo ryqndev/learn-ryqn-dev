@@ -24,10 +24,6 @@ const Home = () => {
 					<h1 style={{color: 'white'}}>RYQN.</h1>
 					<h1 style={{color: 'white'}}>DEV.</h1>
 				</div>
-
-				<div className={cn.explore}>
-					> explore
-				</div>
 			</main>
 			{/* <Footer  /> */}
 		</Layout>
