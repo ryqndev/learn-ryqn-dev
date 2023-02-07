@@ -2,7 +2,7 @@ import { IArticleMetaData } from '@templates/Article/types';
 import { useCallback, useEffect, useState } from 'react';
 import { navigate } from '@reach/router';
 
-const useKeyboard = (results: IArticleMetaData[]) => {
+const useKeyboard = (results: IArticleMetaData[], containerRef: HTMLDivElement | null) => {
 	const [selected, setSelected] = useState(0);
 	const numOfResults = results.length;
 
@@ -20,8 +20,10 @@ const useKeyboard = (results: IArticleMetaData[]) => {
 	);
 
 	useEffect(() => {
-		window.addEventListener('keydown', handleKeyPress);
-		return () => window.removeEventListener('keydown', handleKeyPress);
+		if(!containerRef) return;
+		
+		containerRef.addEventListener('keydown', handleKeyPress);
+		return () => containerRef.removeEventListener('keydown', handleKeyPress);
 	}, [handleKeyPress]);
 
 	return { selected };

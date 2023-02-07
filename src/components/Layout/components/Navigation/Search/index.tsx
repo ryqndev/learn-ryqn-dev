@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import articles from '@content/article/Articles.json';
 import tutorials from '@content/tutorial/Tutorials.json';
 import * as cn from './Search.module.scss';
@@ -15,9 +15,10 @@ import { useKeyboard } from './controllers/useKeyboard';
 const content = [...articles, ...tutorials].filter(item => !item?.hidden);
 
 const Search = () => {
+	const containerRef = useRef<HTMLDivElement>(null);
 	const [results, setResults] = useState<IArticleMetaData[]>([]);
 	const [query, setQuery] = useState('');
-	const { selected } = useKeyboard(results);
+	const { selected } = useKeyboard(results, containerRef?.current);
 
 	const fuse = useMemo(
 		() =>
@@ -37,7 +38,7 @@ const Search = () => {
 	}, [fuse, query]);
 
 	return (
-		<div className={cn.container}>
+		<div className={cn.container} ref={containerRef}>
 			<div className={cn.backdrop}></div>
 			<div className={cn.wrapper}>
 				<input
@@ -49,7 +50,7 @@ const Search = () => {
 					placeholder='Search...'
 				/>
 				
-				<label htmlFor='search ' className={cn.label}>
+				<label htmlFor='search' className={cn.label}>
 					<SearchIcon className={cn.icon} viewBox='0 0 48 48' htmlFor="search"/>
 				</label>
 

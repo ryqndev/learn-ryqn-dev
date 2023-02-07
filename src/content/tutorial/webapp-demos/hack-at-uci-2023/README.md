@@ -63,3 +63,9 @@ Backend Tasks:
 This hopefully gives a good overview of how to create a hackathon web app project. The learning of the languages and actual implementation is left up to you but hopefully have left enough resources here to get everyone started!
 
 I'll be mentoring for the entire event so if you have questions, try and find me and I'll do my best to help y'all's!
+
+## Final Questions
+
+- Any part of that unclear that you want to revisit?
+- Any ideas for styling things? 
+- 

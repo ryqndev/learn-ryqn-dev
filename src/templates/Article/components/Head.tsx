@@ -29,6 +29,8 @@ const Head = ({ meta: { title, date, author, summary, tags } }: IHeadProps) => {
 			<meta property='article:published_time' content={toISO(uploaded)} />
 			<meta property='article:modified_time' content={toISO(updated)} />
 
+			<meta name="google-site-verification" content="o0xH1avXNyKssUbhu7Vi6uxIaRBziY2vNFX8IXDOvdE" />
+
 			<meta name='robots' content='index, follow' />
 		</Helmet>
 	);

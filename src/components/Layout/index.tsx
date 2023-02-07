@@ -56,6 +56,8 @@ export const Head = () => (
 			data-domain='learn.ryqn.dev'
 			src='https://plausible.io/js/plausible.js'
 		></script>
+		
+		<meta name="google-site-verification" content="o0xH1avXNyKssUbhu7Vi6uxIaRBziY2vNFX8IXDOvdE" />
 	</Helmet>
 );
 
