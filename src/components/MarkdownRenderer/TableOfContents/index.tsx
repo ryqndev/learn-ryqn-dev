@@ -9,10 +9,15 @@ import { useLocation } from '@reach/router';
 
 const TableOfContents = ({ value }: ReactMarkdownProps) => {
 	return (
-		<div className={cn.container}>
-			<ReactMarkdown remarkPlugins={[gfm]} components={TOCInlineRenderer}>
-				{value[0]}
-			</ReactMarkdown>
+		<div className={cn.grid}>
+			<div className={cn.container}>
+				<ReactMarkdown
+					remarkPlugins={[gfm]}
+					components={TOCInlineRenderer}
+				>
+					{value[0]}
+				</ReactMarkdown>
+			</div>
 		</div>
 	);
 };
@@ -24,18 +29,15 @@ const TOCInlineRenderer = {
 		const [visible, setVisible] = useState(true);
 
 		useLayoutEffect(() => {
+			const anchor = document.querySelector(anchorHref + '-visible');
+			if (!anchor) return;
 			const observer = new IntersectionObserver(([entry]) => {
 				setVisible(entry.isIntersecting);
 			});
 
 			try {
-				observer.observe(
-					document.querySelector(anchorHref + '-visible')
-				);
-				return () =>
-					observer.unobserve(
-						document.querySelector(anchorHref + '-visible')
-					);
+				observer.observe(anchor);
+				return () => observer.unobserve(anchor);
 			} catch (e) {
 				console.error(
 					`This article is malformed - some links might or might not work. Error: ${anchorHref}`

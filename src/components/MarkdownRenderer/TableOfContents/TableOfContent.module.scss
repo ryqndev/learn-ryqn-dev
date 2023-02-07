@@ -1,13 +1,12 @@
-.container {
+.grid {
     @media screen and (min-width: 980px) {
         height: 100vh;
-        display: grid;
-        place-content: center;
-        overflow-x: hidden;
         position: fixed;
         top: 0;
-        left: 20px;
         max-width: calc(35vw - 25px);
+        left: 20px;
+        display: grid;
+        place-content: center;
     }
     @media screen and (min-width: 1100px) {
         left: 30px;
@@ -17,7 +16,25 @@
         left: 100px;
         max-width: calc(30vw - 100px);
     }
+
+    .container {    
+        @media screen and (min-width: 980px) {
+            height: min-content;
+            overflow-x: hidden;
+            max-height: calc(100vh - 140px);
+            overflow-y: scroll;
+        }
+        @media screen and (min-width: 1100px) {
+            left: 30px;
+            max-width: calc(30vw - 30px);
+        }
+        @media screen and (min-width: 1400px) {
+            left: 100px;
+            max-width: calc(30vw - 100px);
+        }
+    }
 }
+
 
 .link {
     box-sizing: border-box;
