@@ -397,6 +397,8 @@ from your_code import really_complex_function
 app = Flask(__name__)
 CORS(app)
 
+YELP_AUTH_TOKEN = 'some-key-i-got-from-yelp'
+
 # Access this endpoint through: http://localhost:5000/
 @app.route('/')
 def index():
@@ -418,7 +420,7 @@ def yelp_default_test():
 
 ```
 
-Don't forget to replace **line 9** with your own yelp api key above.
+Don't forget to replace **line 10** with your own yelp api key above.
 
 Assuming you have Python3 / pip and can access it through Terminal(Mac) or Command Line/Powershell(Windows), you can get started by running these commands in the directory of the project
 

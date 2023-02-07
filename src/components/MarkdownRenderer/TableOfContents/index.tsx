@@ -3,11 +3,11 @@ import gfm from 'remark-gfm';
 import { ReactMarkdownProps } from 'react-markdown/lib/complex-types';
 import * as cn from './TableOfContent.module.scss';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect, ReactNode } from 'react';
 import clsx from 'clsx';
 import { useLocation } from '@reach/router';
 
-const TableOfContents = ({ value }: ReactMarkdownProps) => {
+const TableOfContents = ({ value }: {value: string}) => {
 	return (
 		<div className={cn.grid}>
 			<div className={cn.container}>
@@ -15,7 +15,7 @@ const TableOfContents = ({ value }: ReactMarkdownProps) => {
 					remarkPlugins={[gfm]}
 					components={TOCInlineRenderer}
 				>
-					{value[0]}
+					{value}
 				</ReactMarkdown>
 			</div>
 		</div>

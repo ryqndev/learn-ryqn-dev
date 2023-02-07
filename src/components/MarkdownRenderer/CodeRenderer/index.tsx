@@ -29,7 +29,7 @@ const Code: CodeComponent = ({
 		case 'file':
 			return <FileStructureDisplay value={children} />;
 		case 'table-of-contents':
-			return <TableOfContents value={children} />;
+			return <TableOfContents value={children[0] as string} />;
 		case 'html':
 			extensions.push(html());
 			break;
