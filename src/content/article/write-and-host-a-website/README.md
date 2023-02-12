@@ -116,7 +116,7 @@ Now, we're going to type these commands in this exact order:
 3. `git commit -m "initial commit"`
 4. Paste the selection from Github
 
-![pushing to github](./assets/pushing-to-github)
+![pushing to github](./assets/pushing-to-github.png)
 
 I pasted a snippet above of me running those commands. You'll see that after I pasted the code from Github, I got an error:
 

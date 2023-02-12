@@ -48,6 +48,7 @@ const Search = () => {
 					value={query}
 					onChange={e => setQuery(e.target.value)}
 					placeholder='Search...'
+					autoComplete='off'
 				/>
 				
 				<label htmlFor='search' className={cn.label}>
