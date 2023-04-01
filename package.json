@@ -14,7 +14,8 @@
     "deploy": "gatsby build && gh-pages -d public",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "update": "node scripts/update-content-list.js"
   },
   "dependencies": {
     "@codemirror/lang-css": "^6.0.1",
