@@ -19,7 +19,6 @@
     1. [Redirecting](#redirecting)
 * [Final Result](#final-result)
 
-
 ```
 
 ## Intro

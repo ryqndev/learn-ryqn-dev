@@ -3,6 +3,51 @@
     - https://ryqn.dev
   link:
     - tutorial
+    - intro-to-data-visualization
+    - python
+    - plotly 
+  title: Intro to data viz with Python [Plotly]
+  summary: >-
+    This is the practical tutorial for learning data visualization basics with 
+    plotly library - a derivative of the popular Javascript plottling library.
+  tags:
+    - data
+    - visualization
+    - Plotly
+    - Python
+    - Flask
+    - beginner
+  date:
+    updated: Tue, 5 Apr 2021 3:47:00 PST
+    uploaded: Tue, 4 Apr 2021 18:20:00 PST
+- author:
+    - Ryan Yang
+    - https://ryqn.dev
+  link:
+    - tutorial
+    - intro-to-data-visualization
+    - python
+    - matplotlib 
+  title: Intro to data viz with Python [Matplotlib]
+  summary: >-
+    This is the practical tutorial for learning data visualization basics with 
+    Matplot library - one of the oldest and most widely used plotting libraries 
+    for Python
+  tags:
+    - data
+    - visualization
+    - Matplotlib
+    - Python
+    - Flask
+    - beginner
+  date:
+    updated: Tue, 1 Apr 2021 15:46:00 PST
+    uploaded: Tue, 1 Apr 2021 15:46:00 PST
+- author:
+    - Ryan Yang
+    - https://ryqn.dev
+  link:
+    - tutorial
     - making-a-url-shortener
     - python
   title: Making a URL shortener in Python
