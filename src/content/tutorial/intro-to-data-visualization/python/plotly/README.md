@@ -1,7 +1,6 @@
 # Intro to data viz with Python [Plotly]
 
-*The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-url-shortener-in-python/docs).
-
+*The finished code can be found [here](https://github.com/ryqndev/learn-ryqn-dev/blob/main/src/content/tutorial/intro-to-data-visualization/python/plotly/docs/main.py).*
 
 ```table-of-contents
 * [Overview](#overview)
@@ -20,7 +19,11 @@
 
 ## Overview
 
+![heatmap of earthquakes on the west coast of USA](./assets/kepler.png)
+> [Heatmap of earthquakes](https://kepler.gl/demo/earthquakes). Despite over 54,000 data points, we can understand it at a glance.
+
 What is data visualization? I'd describe it as a way of understanding extremely large sets of data at a glance. When it comes to creating data visualizations, it really just comes down to two parts: First, aggregate and format your data. Then, transform that data into a visual representation. If you think about it, if you break down the word data visualization into two parts, you get: data and visualization. If you take away one thing today, it's that! So let's learn how to do it.
+
 
 ## Intro
 
@@ -35,18 +38,18 @@ Also, since we're using plotly, you're going to want to have [plotly installed](
 ### My setup
 
 For reference, this will be my setup:
-- Python3 (version 3.7.9 to be specific)
-- VSCode (my code editor)
+- [Python3](https://realpython.com/installing-python/) (version 3.7.9 to be specific)
+- [VSCode](https://code.visualstudio.com/download) (my code editor)
 
-We'll also need to following Python libraries:
-- plotly (I'll be on 5.14)
-- kaleido (if you want to save charts as images instead of html files)
+We'll also need the following Python libraries:
+- [plotly](https://pypi.org/project/plotly/) (I'll be on 5.14)
+- [kaleido](https://pypi.org/project/kaleido/) (if you want to save charts as images instead of html files)
 
 ## Getting started
 
 Let's verify that everything in our setup is working as intended. We'll start by importing plotly and [copying the basic starter code from the website docs](https://plotly.com/python/getting-started/).
 
-I went ahead and created a new folder on my computer and added a file called `main.py`. The exact file name and folder location is arbitrary so don't feel like you need to copy exactly.
+I went ahead and created a new folder on my computer desktop and added a file called `main.py`. The exact file name and folder location is arbitrary so don't feel like you need to copy exactly.
 
 In my file, I copied the following code:
 ```python main.py
@@ -94,7 +97,7 @@ First, we need to get the entire data set we're working with. Usually every data
 
 We need to first find a data set we want to work with. If you're trying to create some sort of visualization to supplement your research for example, you might already have a data set that you're working with. Otherwise, if you're coming up with a project or research idea, you'll likely want to explore several data sets and see if there's any story there worth telling.
 
-Plotly actually happens to provide users with a bunch of data sets built into the library. This is super cool because it means we can quickly test out different charts without having to worry about finding data for them. You can find the entire list [here](https://plotly.com/python-api-reference/generated/plotly.data.html#module-plotly.data) and to access them, all you have to do is access the `data` property of the plotly library.
+Plotly actually happens to provide users with a bunch of data sets built into the library. This is super cool because it means we can quickly test out different charts without having to worry about finding data for them. You can find the entire list [here](https://plotly.com/python-api-reference/generated/plotly.data.html#module-plotly.data) and to access them, all you have to do is call the `data` property of the plotly library.
 
 Here are some examples:
 
@@ -115,17 +118,15 @@ For this example, let's go ahead and use the gapminder data set.
 
 There isn't much work needed here when we're using the built-in data sets. However, if you're creating your own data set from your own research, you'll likely need to clean it up by removing outliers and whatnot.
 
-### Formatting the data
+### Choosing our idea
 
-Once have a data set, we need to decide what story we're going to tell with our visualizations. When I print out the gapminder data set, I can see that it contains information regarding countries and their population sizes, GDPs, and life expectancies as they change over time. 
+Once we have a data set, we need to decide what story we're going to tell with our visualizations. When I print out the gapminder data set, I can see that it contains information regarding countries and their population sizes, GDPs, and life expectancies as they change over time. 
 
-I suddenly have this idea that I think it would be cool if I could see the change in population growth over time for ALL countries. I now need to figure out how to format my data to make this type of visualization possible. 
+At this point, it's time to tap into your own creativity and think critically about what connections you could make with your data set.
 
-To do this, I need to keep track of three distinct values (most 2d charts only have two): the country, the year, and the population size. Now the fun part, I need to figure out which type of chart would allow me to tell this story of population sizes for various countries over time.
+For our example here, we'll try to show the change in population growth over time for ALL countries. Now, we need to choose the right type of visualization that will do this data justice.
 
 ### Choosing the right chart
-
-Let's think back to our goal: we want to see how countries' population sizes have changed over time. How can we represent population size over time? Well, we can do a basic line plot and do a separate line for each country.
 
 To pick the best chart for the job, we should first figure out what [charts are available](https://plotly.com/python/getting-started/#overview) for us to use in the plotly library. I screenshotted a bunch of them for you here:
 
@@ -143,3 +144,17 @@ To pick the best chart for the job, we should first figure out what [charts are 
 
 [3D Charts:](https://plotly.com/python/3d-charts/)
 ![3d chart list example](./assets/3d_charts.png)
+
+Let's think back to our goal: we want to see how countries' population sizes have changed over time. How can we represent population size over time? There's no "right" answer here - usually there's a few different ways to represent the same data but each one tells a different story.
+
+I'm going to show you this exact same data set with two different charts so you can see what I mean by a "different story" but for the code example, I'm going to pick a 2d histogram - which is pretty much a heatmap.
+
+### Read the docs
+
+Let's take a look at the [documentation for the histogram](https://plotly.com/python-api-reference/generated/plotly.express.density_heatmap.html) and see what arguments we can pass in to create and customize our chart.
+
+### Formatting the data
+
+To do this, I need to keep track of three distinct values (most 2d charts only have two): the country, the year, and the population size. Now the fun part, I need to figure out which type of chart would allow me to tell this story of population sizes for various countries over time.
+
+![doc](./assets/doc.png)
