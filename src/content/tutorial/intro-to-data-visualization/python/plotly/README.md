@@ -22,7 +22,7 @@
 ![heatmap of earthquakes on the west coast of USA](./assets/kepler.png)
 > [Heatmap of earthquakes](https://kepler.gl/demo/earthquakes). Despite over 54,000 data points, we can understand it at a glance.
 
-What is data visualization? I'd describe it as a way of understanding extremely large sets of data at a glance. When it comes to creating data visualizations, it really just comes down to two parts: First, aggregate and format your data. Then, transform that data into a visual representation. If you think about it, if you break down the word data visualization into two parts, you get: data and visualization. If you take away one thing today, it's that! So let's learn how to do it.
+What is data visualization? I'd describe it as a way of understanding extremely large sets of data at a glance. When it comes to creating data visualizations, it really just comes down to two parts: First, aggregate and format your data. Then, transform that data into a visual representation. If you think about it, if you break down the word data visualization into two parts, you get: data and visualization. So let's learn how to do it.
 
 
 ## Intro
@@ -46,7 +46,7 @@ We'll also need the following Python libraries:
 - [pandas](https://pypi.org/project/pandas/) (I'll be on 1.3.5)
 - [kaleido](https://pypi.org/project/kaleido/) (if you want to save charts as images instead of html files)
 
-If you want to just copy my setup, you can copy my [`requirements.txt` file here](https://github.com/ryqndev/learn-ryqn-dev/blob/main/src/content/tutorial/intro-to-data-visualization/python/plotly/docs/requirements.txt) and run `pip3 install -r requirements.txt` in your terminal.
+If you want to just copy my setup, you can copy my `requirements.txt` file [here](https://github.com/ryqndev/learn-ryqn-dev/blob/main/src/content/tutorial/intro-to-data-visualization/python/plotly/docs/requirements.txt) and run `pip3 install -r requirements.txt` in your terminal.
 
 ## Getting started
 
@@ -91,7 +91,7 @@ In this case, we're going to store the figure to a variable called `fig` and the
 
 Now that you've seen a basic use case of plotly, let's make a chart of our own.
 
-Remember how I mentioned earlier that data visualization is composed of two main parts? I sorta half lied. Although getting the data is the first half of data visualization, there's multiple steps involved. Let's break it down.
+Remember how I mentioned earlier that data visualization is composed of two parts? I sorta half lied. Although getting the data is the first half of data visualization, there's multiple steps involved. Let's break it down.
 
 First, we need to get the entire data set we're working with. Usually every data set will have multiple unrelated columns and rows and you'll find yourself throwing away some of the data - or even needing more. Once you've found a data set you want to work with, you then need to clean it, mutate it, and then format it.
 
@@ -176,8 +176,13 @@ After that is a tiny blurb that describes what this function does exactly:
 
 > In a density heatmap, rows of `data_frame` are grouped together into coloured rectangles to visualize the 2D distribution of an aggregate function `histfunc` (e.g. the count or sum) of the value `z`
 
-And now the important part: a description of each parameter and what data it expects for it.
+And now the important part: a description of each parameter and what data it expects for it. We can worry about customizing our chart later to look pretty - first, let's understand how to pass in data to the chart.
 
+The data objects that come with plotly are all `pandas` dataframes. For those of you who are unfamiliar, `pandas` is a data analysis library that allows you to easily manipulate and analyze data. You'll see how simple it is to manipulate data with `pandas` in the next section but for now, all we need to know is that we'll be using the `data_frame` parameter of `density_heatmap()` and passing in our `gapminder_data` object.
+
+A `dataframe` is really just an excel spreadsheet. It's a multidimensional array of data that has rows and columns and if we just print out the dataframe in python, we'll see this:
+
+![dataframe example](./assets/data_frame.png)
 
 
 ### Formatting the data
