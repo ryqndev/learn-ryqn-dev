@@ -43,7 +43,10 @@ For reference, this will be my setup:
 
 We'll also need the following Python libraries:
 - [plotly](https://pypi.org/project/plotly/) (I'll be on 5.14)
+- [pandas](https://pypi.org/project/pandas/) (I'll be on 1.3.5)
 - [kaleido](https://pypi.org/project/kaleido/) (if you want to save charts as images instead of html files)
+
+If you want to just copy my setup, you can copy my [`requirements.txt` file here](https://github.com/ryqndev/learn-ryqn-dev/blob/main/src/content/tutorial/intro-to-data-visualization/python/plotly/docs/requirements.txt) and run `pip3 install -r requirements.txt` in your terminal.
 
 ## Getting started
 
@@ -153,8 +156,31 @@ I'm going to show you this exact same data set with two different charts so you 
 
 Let's take a look at the [documentation for the histogram](https://plotly.com/python-api-reference/generated/plotly.express.density_heatmap.html) and see what arguments we can pass in to create and customize our chart.
 
+![plotly density heatmap docs](./assets/heatmap_docs.png)
+
+I found this page by looking for the heatmap link in the [Full API Reference page](https://plotly.com/python-api-reference/index.html) - specifically under the `express` module.
+
+Let's dissect this documentation page to see what every part means. 
+
+The title `plotly.express.density_heatmap` is what we need to import to use this function. Since we're already importing the `plotly.express` module, we can just call the `density_heatmap` function from it - which will look something like this:
+
+```python main.py
+import plotly.express as px
+
+fig = px.density_heatmap()
+```
+
+Now, to customize our heatmap, the `density_heatmap` has a ton of parameters that we can pass in. The section immediately below the title lists the entire list of parameters as well as their default values. Most of these default values will be of `None` type so if you don't pass anything in, you'll just get the base look.
+
+After that is a tiny blurb that describes what this function does exactly:
+
+> In a density heatmap, rows of `data_frame` are grouped together into coloured rectangles to visualize the 2D distribution of an aggregate function `histfunc` (e.g. the count or sum) of the value `z`
+
+And now the important part: a description of each parameter and what data it expects for it.
+
+
+
 ### Formatting the data
 
 To do this, I need to keep track of three distinct values (most 2d charts only have two): the country, the year, and the population size. Now the fun part, I need to figure out which type of chart would allow me to tell this story of population sizes for various countries over time.
 
-![doc](./assets/doc.png)
