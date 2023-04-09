@@ -184,6 +184,31 @@ A `dataframe` is really just an excel spreadsheet. It's a multidimensional array
 
 ![dataframe example](./assets/data_frame.png)
 
+Just based on what we see here, we see a subset of a dataset of over 1700 rows that each detail the population size, GDP, and life expectancy of a country over a period of time - let's plot this data!
+
+
+### Basic heatmap
+
+Looking at the data above, let's just go ahead and try to display a basic chart. Our goal here is to create a heatmap that helps us visualize the population sizes of countries over time and so, we'll specify the columns we want to use for the x and y axes and the z axis.
+
+```python main.py 
+import plotly.express as px
+import plotly.data as data
+
+gapminder_data = data.gapminder()
+
+fig = px.density_heatmap(data_frame=gapminder_data, x="year", y="country", z="pop", histfunc="avg")
+fig.show()
+```
+
+Which results in this cute chart: 
+![basic gapminder heatmap chart](./assets/basic_heatmap_example.png)
+
+What did we do here? We essentially just passed in the entire data frame and told the chart to use the `year` column for the x axis, the `country` column for the y axis, and the `pop` column for the z axis. One thing about histograms - they don't *plot* data, they *aggregate* data. So, we need to tell the chart how to aggregate the data. We do this by passing in the `histfunc` parameter and telling it to use the `avg` function (by default it will `sum` data).
+
+The `histfunc` is applied on all `z` values that have been `binned` together as it says in the parameter list:
+
+![z definition](./assets/z_doc.png)
 
 ### Formatting the data
 

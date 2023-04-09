@@ -51,6 +51,10 @@ Formatting the data
 # fig.write_html(file=f"{FIGURES_FOLDER_NAME}/formatted_heatmap.html", auto_open=True)
 
 
+# import plotly.express as px
+# import plotly.data as data
 
 gapminder_data = data.gapminder()
-print(gapminder_data)
+
+fig = px.density_heatmap(data_frame=gapminder_data, x="year", y="country", z="pop", histfunc="avg")
+fig.show()
