@@ -81,16 +81,24 @@ fig.write_html(
   auto_open=True
 )
 
-formatted_data = gapminder_data[gapminder_data['continent'] == 'Americas']
-formatted_data['pop_pct_change'] = formatted_data.groupby("country")[
-    'pop'].pct_change() * 100
 
+"""
+Final Product:
+https://learn.ryqn.dev/tutorial/intro-to-data-visualization/python/plotly#final-product
+
+Add some finishing touches here to make the chart ready for public viewing.
+"""
+
+# First year has no growth - removing here
 formatted_data = formatted_data[formatted_data['year'] >= 1957]
 
-
+# Sort the countries by the sum of population growth % over the years
 country_sum = formatted_data.groupby(
     'country')['pop_pct_change'].sum().reset_index()
 formatted_data = formatted_data.merge(country_sum, on='country')
+
+# When we merged the data, we now have pop_pct_change_x which is the 
+# old data and pop_pct_change_y which has the value of the sum
 formatted_data = formatted_data.sort_values(by='pop_pct_change_y')
 
 fig = px.density_heatmap(
@@ -101,16 +109,25 @@ fig = px.density_heatmap(
     histfunc="avg",
     nbinsx=20,
     nbinsy=20,
+
+    # add a title to the chart at the top
     title="Population Growth in the Americas",
+
+    # alter the labels of the axes
     labels={
         "country": "Country",
         "year": "Year",
     },
 )
+
+# This changes the hover popup to be a templated html string.
+# <br> is a line break in html and the %{ } is the python template syntax.
+# so everything within the { } is executed as python.
 fig.update_traces(
     hovertemplate='Country: %{y}<br>Year: %{x}<br>Pop. growth (%): %{z:.2f}<br>',
 )
 
+# The legend on the right is called a color bar. We can change the title of it here.
 fig.update_layout(
     coloraxis_colorbar={
         "title": "Population Growth (%)"

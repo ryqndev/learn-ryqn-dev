@@ -342,4 +342,11 @@ fig.write_html(
 
 Giving us this chart:
 
-![final heatmap](./assets/final-heatmap.png)`
+![final heatmap](./assets/final-heatmap.png)
+
+## Source code
+
+As mentioned at the start, the entire code demo can be found [here](https://github.com/ryqndev/learn-ryqn-dev/blob/main/src/content/tutorial/intro-to-data-visualization/python/plotly/docs/main.py).
+
+If you run this `main.py` file (with all the libraries installed), it will save all of the generated HTML files into a `figures` folder in the same directory as the `main.py` file and also open them in the browser at the same time.
+
