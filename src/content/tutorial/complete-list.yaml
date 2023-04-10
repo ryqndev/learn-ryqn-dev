@@ -27,17 +27,17 @@
     - tutorial
     - intro-to-data-visualization
     - python
-    - matplotlib 
-  title: Intro to data viz with Python [Matplotlib]
+  title: Intro to data viz with Python
   summary: >-
-    This is the practical tutorial for learning data visualization basics with 
-    Matplot library - one of the oldest and most widely used plotting libraries 
-    for Python
+    Let's look at what data visualization looks like in Python. Where do we 
+    start? and what should we learn?
   tags:
     - data
     - visualization
     - Matplotlib
     - Python
+    - Plotly
+    - Plotnine
     - Flask
     - beginner
   date:

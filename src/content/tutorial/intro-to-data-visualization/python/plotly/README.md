@@ -12,8 +12,13 @@
 * [Let's make our own chart](#lets-make-our-own-chart)
     1. [Getting the data](#getting-the-data)
     2. [Cleaning the data](#cleaning-the-data)
-    3. [Formatting the data](#formatting-the-data)
+    3. [Choosing our idea](#choosing-our-idea)
     4. [Choosing the right chart](#choosing-the-right-chart)
+    5. [Read the docs](#read-the-docs)
+    6. [Basic heatmap](#basic-heatmap)
+    7. [Customizing the chart](#customizing-the-chart)
+    8. [Formatting the data](#formatting-the-data)
+    9. [Final product](#final-product)
 
 ```
 
@@ -202,15 +207,135 @@ fig.show()
 ```
 
 Which results in this cute chart: 
-![basic gapminder heatmap chart](./assets/basic_heatmap_example.png)
+![basic gapminder heatmap chart](./assets/basic-heatmap-example.png)
 
-What did we do here? We essentially just passed in the entire data frame and told the chart to use the `year` column for the x axis, the `country` column for the y axis, and the `pop` column for the z axis. One thing about histograms - they don't *plot* data, they *aggregate* data. So, we need to tell the chart how to aggregate the data. We do this by passing in the `histfunc` parameter and telling it to use the `avg` function (by default it will `sum` data).
+What did we do here? We essentially just passed in the entire data frame and told the chart to use the `year` column for the x axis, the `country` column for the y axis, and the `pop` column for the z axis. One thing about histograms - they don't *plot* data, they *aggregate* data. So, we need to tell the chart how to aggregate the data. We do this by passing in the `histfunc` parameter and telling it to use the `avg` function (by default it will `sum` data) on data values that have been `binned` togther.
 
 The `histfunc` is applied on all `z` values that have been `binned` together as it says in the parameter list:
 
-![z definition](./assets/z_doc.png)
+![z definition](./assets/z-doc.png)
+
+
+### Customizing the chart
+
+The chart we made is pretty cool - except it doesn't provide that much value for us. Here are a list of problems with it:
+- The `x` axis here is categorical and doesn't make sense to hide labels (which is done because there are too many countries to list at once)
+- The vast majority of data here is blue, simply because China and India have such large populations, it makes the rest of the data look like it's not there
+- The chart itself is pretty, but the rest of the chart is pretty plain.
+
+So what can we do here?
+- We can limit the `x` axis here to only show a select few countries at a time.
+- We still want to visualize population growth over time but what we can do here to highlight the differences is to show change in growth by %, rather than the absolute population.
+- Let's add some spice to it.
 
 ### Formatting the data
 
-To do this, I need to keep track of three distinct values (most 2d charts only have two): the country, the year, and the population size. Now the fun part, I need to figure out which type of chart would allow me to tell this story of population sizes for various countries over time.
+We haven't done any data manipulation just yet ... but we're about to! As with anything in the coding realm, there's multiple correct ways of doing things so I'll go ahead and show a couple ways of doing the exact same thing and you can take your pick with what makes more sense or might be easier for you to understand.
 
+#### First problem statement: We need to limit the number of countries being shown at any time.
+
+There are a couple directions we can go here like only showing the top 10 most populated countries, or showing the top 10 growth countries but let's just do a basic filter operation where we only show countries in the Americas.
+
+```python main.py
+import plotly.data as data
+
+gapminder_data = data.gapminder()
+
+# This is called a mask. It's a boolean array that tells us which rows to keep that is created by comparing the values in the "continent" column to "Americas". This is probably the fastest method.
+filtered_data = gapminder_data[gapminder_data["continent"] == "Americas"]
+# If you wanna see that the boolean array looks like, you can print the command below
+# print(gapminder_data["continent"] == "Americas")
+
+# This is a query operation. It's much slower but likely more familiar if you're used to working with SQL queries.
+filtered_data = gapminder_data.query("continent == 'Americas'")
+```
+
+#### Second problem statement: We want to show % change in pop growth, rather than the absolute value.
+
+This is a slightly more complicated data manipulation operation than the last one because now, we need to derive new data from existing data. The gapminder dataset doesn't just have a column that we can use to get the population growth % so we can go ahead and create one by using the pandas built-in `pct_change()` function.
+
+```python main.py
+import plotly.express as px
+import plotly.data as data
+
+gapminder_data = data.gapminder()
+
+formatted_data = gapminder_data[gapminder_data['continent'] == 'Americas']
+
+# Calculate the percentage change in population from the previous year
+formatted_data['pop_pct_change'] = formatted_data.groupby("country")['pop'].pct_change() * 100
+
+# Another way of doing the above:
+# formatted_data["pop_pct_change"] = formatted_data.groupby("country")["pop"].apply(lambda x: x.pct_change() * 100)
+
+fig = px.density_heatmap(
+    data_frame=formatted_data, 
+    x="year", 
+    y="country", 
+    z="pop_pct_change", 
+    histfunc="avg",
+    nbinsx=20, 
+    nbinsy=20
+)
+fig.write_html(
+  file=f"{FIGURES_FOLDER_NAME}/formatted_heatmap.html", 
+  auto_open=True
+)
+
+```
+
+![heatmap after formatting](./assets/formatted-heatmap.png)
+
+### Final Product
+
+Now that we have the bulk of the data down, let's go ahead and make this chart prettier. We'll do some more formatting and sorting to make the chart more informative while also making it look more aesthetically pleasing. By sorting the values, we end up grouping a lot of the same colors to create a beautiful gradient, rather than a random clump of colors.
+
+Then, we utilize the `update_traces` and `update_layout` functions that are built into the `Figure` object to change the text and formatting of the hover tooltip and legend respectively.
+
+```python main.py
+import plotly.express as px
+import plotly.data as data
+
+gapminder_data = data.gapminder()
+formatted_data = gapminder_data[gapminder_data['continent'] == 'Americas']
+formatted_data['pop_pct_change'] = formatted_data.groupby("country")[
+    'pop'].pct_change() * 100
+
+formatted_data = formatted_data[formatted_data['year'] >= 1957]
+
+
+country_sum = formatted_data.groupby(
+    'country')['pop_pct_change'].sum().reset_index()
+formatted_data = formatted_data.merge(country_sum, on='country')
+formatted_data = formatted_data.sort_values(by='pop_pct_change_y')
+
+fig = px.density_heatmap(
+    data_frame=formatted_data,
+    x="year",
+    y="country",
+    z="pop_pct_change_x",
+    histfunc="avg",
+    nbinsx=20,
+    nbinsy=20,
+    title="Population Growth in the Americas",
+    labels={
+        "country": "Country",
+        "year": "Year",
+    },
+)
+fig.update_traces(
+    hovertemplate='Country: %{y}<br>Year: %{x}<br>Pop. growth (%): %{z:.2f}<br>',
+)
+
+fig.update_layout(
+    coloraxis_colorbar={
+        "title": "Population Growth (%)"
+    },
+)
+
+fig.write_html(
+    file=f"{FIGURES_FOLDER_NAME}/gfp_formatted_heatmap.html",
+    auto_open=True
+)
+
+```
