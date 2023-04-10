@@ -284,7 +284,7 @@ fig.write_html(
 
 ```
 
-![heatmap after formatting](./assets/formatted-heatmap.png)
+![heatmap after formatting](./assets/formatted-chart.png)
 
 ### Final Product
 
@@ -339,3 +339,7 @@ fig.write_html(
 )
 
 ```
+
+Giving us this chart:
+
+![final heatmap](./assets/final-heatmap.png)`
