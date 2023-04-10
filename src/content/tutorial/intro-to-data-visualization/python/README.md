@@ -22,13 +22,8 @@ Python is the language of choice for most data scientists. Because of this, tons
 
 
 ## tl;dr
-| Feature             | Plotly            | Matplotlib        | Plotnine          |
-|---------------------|------------------|-------------------|-------------------|
-| Interactivity       | Yes              | No                | No                |
-| Output formats      | Multiple         | Static images     | Static images     |
-| Ease of use         | Easy             | Moderate          | Moderate          |
-| Flexibility         | Moderate         | High              | High              |
-| Community and support | Active and growing | Established and extensive | Active and growing |
+
+![chart](./assets/chart.png)
 
 
 ## Some differences
