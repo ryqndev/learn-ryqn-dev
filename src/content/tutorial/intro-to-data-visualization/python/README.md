@@ -30,15 +30,11 @@ Python is the language of choice for most data scientists. Because of this, tons
 
 Plotly, Matplotlib, and Plotnine are all Python libraries for creating visualizations, but they have some key differences:
 
-    Interactivity: Plotly is designed to create interactive visualizations that can be manipulated and explored in real-time, while Matplotlib and Plotnine primarily create static visualizations.
-
-    Output formats: Plotly can output visualizations in a variety of formats, including HTML, SVG, and PDF, while Matplotlib and Plotnine typically output static images (e.g. PNG, JPG, or PDF).
-
-    Ease of use: Plotly is generally considered to be more user-friendly and easier to use than Matplotlib and Plotnine, especially for creating interactive visualizations. Plotly provides a set of high-level functions and APIs that make it easy to create complex visualizations with minimal code.
-
-    Flexibility: Matplotlib and Plotnine provide a wide range of customization options, allowing users to create highly-customized visualizations with full control over every aspect of the chart. Plotly also provides customization options, but may not be as flexible as Matplotlib and Plotnine in some cases.
-
-    Community and support: Matplotlib and Plotnine have been around longer than Plotly and have a large and established user community, as well as extensive documentation and resources available online. Plotly is also well-supported, but may have fewer resources available for certain types of problems.
+* **Interactivity**: Plotly is designed to create interactive visualizations that can be manipulated and explored in real-time, while Matplotlib and Plotnine primarily create static visualizations.
+* **Output formats**: Plotly can output visualizations in a variety of formats, including HTML, SVG, and PDF, while Matplotlib and Plotnine typically output static images (e.g. PNG, JPG, or PDF).
+* **Ease of use**: Plotly is generally considered to be more user-friendly and easier to use than Matplotlib and Plotnine, especially for creating interactive visualizations. Plotly provides a set of high-level functions and APIs that make it easy to create complex visualizations with minimal code.
+* **Flexibility**: Matplotlib and Plotnine provide a wide range of customization options, allowing users to create highly-customized visualizations with full control over every aspect of the chart. Plotly also provides customization options, but may not be as flexible as Matplotlib and Plotnine in some cases.
+* **Community and support**: Matplotlib and Plotnine have been around longer than Plotly and have a large and established user community, as well as extensive documentation and resources available online. Plotly is also well-supported, but may have fewer resources available for certain types of problems.
 
 Overall, the choice of which library to use depends on your specific needs and requirements. If you need to create interactive visualizations that can be explored in real-time, Plotly is likely the best choice. If you need to create highly-customized static visualizations with full control over every aspect of the chart, Matplotlib or Plotnine may be more suitable.
 
