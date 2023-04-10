@@ -19,7 +19,7 @@
     7. [Customizing the chart](#customizing-the-chart)
     8. [Formatting the data](#formatting-the-data)
     9. [Final product](#final-product)
-
+* [Source Code](#source-code)
 ```
 
 ## Overview
