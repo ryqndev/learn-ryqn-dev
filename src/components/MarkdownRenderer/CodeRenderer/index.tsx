@@ -9,6 +9,7 @@ import { css } from '@codemirror/lang-css';
 import { PalenightTheme } from './theme';
 import { useState } from 'react';
 import { TableOfContents } from '../TableOfContents';
+import { Video } from './Video';
 
 const Code: CodeComponent = ({
 	node,
@@ -26,6 +27,8 @@ const Code: CodeComponent = ({
 		case undefined:
 		case null:
 			return <>{children}</>;
+		case 'video':
+			return <Video link={children[0] as string}/>
 		case 'file':
 			return <FileStructureDisplay value={children} />;
 		case 'table-of-contents':

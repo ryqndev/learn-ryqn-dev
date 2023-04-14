@@ -2,6 +2,7 @@
 
 ```table-of-contents
 
+* [Recording](#recording)
 * [Overview](#overview)
 * [Why wouldn't you want an Web App?](#why-wouldnt-you-want-a-web-app)
 * [Ideation](#ideation)
@@ -9,6 +10,11 @@
     2. [Architecture](#architecture)
     3. [Live Demo](#live-demo)
 * [Wrapping Up](#wrapping-up)
+```
+
+## Recording
+```video
+https://www.youtube-nocookie.com/embed/d8Oedd2DMco
 ```
 
 ## Overview
