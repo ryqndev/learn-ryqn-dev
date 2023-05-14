@@ -3,19 +3,26 @@
 ```table-of-contents
 
 * [Overview](#overview)
+* [Prerequisites](#prerequisites)
 * [Types of events](#types-of-events)
 * [Reacting to events](#reacting-to-events)
+  1. [Other Elements](#other-elements)
 * [Common event examples](#common-event-examples)
-    1. [Clicking a button](#clicking-a-button)
-    2. [Taking in user input](#taking-in-user-input)
-    3. [Reacting to user input](#reacting-to-user-input)
-    4. [Keyboard events](#keyboard-events)
+  1. [Clicking a button](#clicking-a-button)
+  2. [Taking in user input](#taking-in-user-input)
+  3. [Reacting to user input](#reacting-to-user-input)
+  4. [Keyboard events](#keyboard-events)
 
 ```
 
 ## Overview
 
 Events are a core part of the web experience. In fact, we tend to say that the web experience is event driven. So that begs the question, what is an event? An event can be anything: a button click, a page load, mouse hover, or even something set on a timer. Events are a way for developers to bring interactivity to the webpage. After every event, a developer can make read the metadata about that event, and choose to act on it. Let's take a look at how we would do this:
+
+## Prerequisites
+- Basic HTML
+- Basic Javascript
+- Understand how to reference HTML objects from Javascript
 
 ## Types of events
 
@@ -66,6 +73,7 @@ On line 3: I create a function called `clicked`. I can call the function by runn
 
 On line 7: I add an event listener by calling the `addEventListener()` function that's a part of every HTML element and specify 2 things in the parameters: the `type of event` and the `callback function` that triggers when the attached event is triggered.
 
+One thing to note here, when you're passing the function into the `addEventListener`, you **must** omit the `()`. The `()` means that you want to call the function immediately, when in fact, what you want is to pass the *reference* of the function to the event listener so that **they** can call it when the event gets triggered. (By **they**, I mean the browser)
 
 ### Other elements
 
@@ -198,7 +206,7 @@ input.addEventListener('change', handleChange);
 
 ### Keyboard events
 
-Keyboard events are a HUGE part of any web application. Sometimes, the web app can be completely centered around keyboard events. For example, games are the biggest users when it comes to keyboard events. Arrow keys and W/A/S/D are very often used as movement commands and are integral to any game. Even business applications like Excel/Figma/Google Docs rely heavily on keyboard events - imagine using any of those without common hotkeys like `Cntrl + C` or `Cntrl + V`.
+Keyboard events are a HUGE part of any web application. Sometimes, the web app can be completely centered around keyboard events. For example, games are the biggest users when it comes to keyboard events. Arrow keys and W/A/S/D are very often used as movement commands and are integral to any game. Even business applications like Excel/Figma/Google Docs rely heavily on keyboard events - imagine using any of those without common hotkeys like `Ctrl + C` or `Ctrl + V`.
 
 What's the difference between what I'm about to show you and the one above? The one above is only relevant to the input tag (so if you type outside of it, it won't register) but also, there are tons of keys that don't work inside an input tag like the `Enter` key, Arrow keys, and `Cmd` on Mac or `Alt` on Windows.
 
@@ -225,4 +233,32 @@ function handleChange(event) {
 
 input.addEventListener('change', handleChange);
 
+```
+
+### Data Fetching events
+
+Sometimes, you'll want to fetch data from an external source, usually in response to some sort of user interaction. In this next example, imagine you have a text box for users to search for restaurants within a certain area.
+
+```html index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event fun!</title>
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <input type="text" id="user-input" />
+    <button id="btn">Click me!</btn>
+  </body>
+</html>
+
+```
+
+```js script.js
+function getRestaurants(location){
+  fetch('').then((response) => {
+    // do something with the response
+  })
+
+}
 ```
