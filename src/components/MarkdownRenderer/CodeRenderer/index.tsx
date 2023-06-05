@@ -1,5 +1,5 @@
 import CodeMirror from '@uiw/react-codemirror';
-import FileStructureDisplay from './FileStructureDisplay';
+import {FileStructureDisplay, ParsedFileStructureDisplay} from './components/FileStructureDisplay/FileStructureDisplay';
 import type { CodeComponent, CodeProps } from 'react-markdown/lib/ast-to-react';
 import * as cn from './CodeRenderer.module.scss';
 import { javascript } from '@codemirror/lang-javascript';
@@ -7,7 +7,7 @@ import { python } from '@codemirror/lang-python';
 import { html } from '@codemirror/lang-html';
 import { css } from '@codemirror/lang-css';
 import { PalenightTheme } from './theme';
-import { useState } from 'react';
+import { ReactNode, useState } from 'react';
 import { TableOfContents } from '../TableOfContents';
 import { Video } from './Video';
 
@@ -31,6 +31,8 @@ const Code: CodeComponent = ({
 			return <Video link={children[0] as string}/>
 		case 'file':
 			return <FileStructureDisplay value={children} />;
+		case 'file-json':
+			return <ParsedFileStructureDisplay value={children[0] as string} />;
 		case 'table-of-contents':
 			return <TableOfContents value={children[0] as string} />;
 		case 'html':

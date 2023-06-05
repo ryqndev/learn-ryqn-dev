@@ -3,6 +3,28 @@
     - https://ryqn.dev
   link:
     - tutorial
+    - web-dev
+    - fundamentals
+    - events 
+  title: "Web Dev Fundamentals: Events"
+  summary: >-
+    Events are the main drivers for interactivity in the web. Let's take a look at a couple of them and how we can react to them as developers.
+  tags:
+    - html
+    - js
+    - Javascript
+    - events
+    - fundamentals
+    - frontend
+    - beginner
+  date:
+    updated: Tue, 14 Apr 2023 16:41:00 PST
+    uploaded: Tue, 14 Apr 2023 16:41:00 PST
+- author:
+    - Ryan Yang
+    - https://ryqn.dev
+  link:
+    - tutorial
     - intro-to-data-visualization
     - python
     - plotly 
@@ -18,8 +40,8 @@
     - Flask
     - beginner
   date:
-    updated: Tue, 5 Apr 2021 3:47:00 PST
-    uploaded: Tue, 4 Apr 2021 18:20:00 PST
+    updated: Tue, 5 Apr 2022 3:47:00 PST
+    uploaded: Tue, 4 Apr 2022 18:20:00 PST
 - author:
     - Ryan Yang
     - https://ryqn.dev

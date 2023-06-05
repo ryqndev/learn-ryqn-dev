@@ -59,9 +59,16 @@ Flask is a python library. This means we're going to need to have python install
 
 To start off, let's create a new folder for our backend code and create a python file called `app.py` inside it.
 
-```file
-└── basic-test (folder)
-    └── app.py (python file)
+```file-json
+{
+    "name": "basic-test",
+    "contents": [
+        {
+            "name": "app.py", 
+            "type": "python"
+        }
+    ]
+}
 ```
 
 ```python app.py

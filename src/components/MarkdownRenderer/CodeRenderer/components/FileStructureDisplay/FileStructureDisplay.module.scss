@@ -1,0 +1,105 @@
+.container {
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+
+    border-radius: 8px;
+    background-color: var(--card);
+    padding: 16px 16px 24px;
+
+    & h3 {
+        font-weight: bold;
+        color: gray;
+        margin: 0 0 16px;
+        grid-column: 1 / -1;
+    }
+
+    & .file {
+        grid-column: 3 / -1;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 4px;
+    }
+
+    & .folder {
+        grid-column: 3 / -1;
+        row-gap: 4px;
+        display: grid;
+        grid-template-columns: auto auto 1fr;
+        column-gap: 2px;
+
+        & .name {
+            cursor: pointer;
+        }
+
+        & .folderIcon {
+            cursor: pointer;
+        }
+
+        & .arrow {
+            cursor: pointer;
+
+            & svg {
+                fill: white;
+                height: 1em;
+                width: 1em;
+            }
+
+            &.open {
+                transform: rotateZ(0deg);
+            }
+
+            transform: rotateZ(-90deg);
+            transition: transform 250ms;
+        }
+    }
+
+    i {
+        display: grid;
+        place-content: center;
+    }
+    i.python:before {
+        font-family: Mfizz;
+        content: "\f14c";
+        color: #377EF0;
+    }
+    i.js:before {
+        font-family: Mfizz;
+        content: "\f129";
+        color: #F0DC4E;
+    }
+    i.markdown:before {
+        font-family: octicons;
+        content: "\f0c9";
+        color: #269EE9;
+    }
+    i.html:before {
+        font-family: FontAwesome;
+        content: "\f13b";
+        color: #E64C18;
+    }
+    i.npm:before {
+        font-family: file-icons;
+        content: "\e91c";
+        color: #CC3534;
+    }
+    i.arrow:before {
+        font-family: octicons;
+        content: "\f078";
+        color: #888888;
+    }
+    i.folderIcon:before {
+        font-family: octicons;
+        content: "\f016";
+        color: #FFFFFF;
+    }
+
+    i:before{
+        font-size: 1em;
+        font-weight: normal;
+        font-style: normal;
+        width: 1em;
+        height: 1em;
+        -webkit-font-smoothing: antialiased;
+    }
+
+}

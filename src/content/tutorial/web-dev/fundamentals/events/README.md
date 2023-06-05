@@ -12,6 +12,7 @@
   2. [Taking in user input](#taking-in-user-input)
   3. [Reacting to user input](#reacting-to-user-input)
   4. [Keyboard events](#keyboard-events)
+  5. [Data Fetching events](#data-fetching-events)
 
 ```
 
@@ -77,7 +78,7 @@ One thing to note here, when you're passing the function into the `addEventListe
 
 ### Other elements
 
-Even though a button is normally associated with clicking, you can actually attach the `click` handler onto pretty much any element. This is because 
+Even though a button is normally associated with clicking, you can actually attach the `click` handler onto pretty much any element. You could attach it to an `<img />` element or a `<div></div>` - the sky's the limit. Similarly, you can attach other types of events (some listed below) like keyboard input event or mouse overs.
 
 ```html index.html
 <!DOCTYPE html>
@@ -256,9 +257,10 @@ Sometimes, you'll want to fetch data from an external source, usually in respons
 
 ```js script.js
 function getRestaurants(location){
-  fetch('').then((response) => {
-    // do something with the response
-  })
+  const API_ENDPOINT = 'https://raw.githubusercontent.com/ryqndev/learn-ryqn-dev/main/src/content/tutorial/web-dev/fundamentals/events/fake-api/irvine-restaurants.json'
 
+  fetch(API_ENDPOINT).then((res) => res.json()).then(response => {
+    console.log(response);
+  });
 }
 ```

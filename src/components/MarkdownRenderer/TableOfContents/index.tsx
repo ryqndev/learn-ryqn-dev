@@ -3,7 +3,7 @@ import gfm from 'remark-gfm';
 import { ReactMarkdownProps } from 'react-markdown/lib/complex-types';
 import * as cn from './TableOfContent.module.scss';
 import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { useState, useLayoutEffect, ReactNode } from 'react';
+import { useState, useLayoutEffect } from 'react';
 import clsx from 'clsx';
 import { useLocation } from '@reach/router';
 

@@ -18,6 +18,7 @@
     1. [Creating a web interface](#creating-a-web-interface)
     1. [Redirecting](#redirecting)
 * [Final Result](#final-result)
+
 ```
 
 ## Intro 
@@ -50,7 +51,7 @@ We need to first install Python3 and  Flask, and setup our boilerplate code. Go 
 After following the steps from the link above, you should end up with this basic structure:
 ```file
 └── url-shortener
-            └── app.py
+    └── app.py
 ```
 
 ```python app.py
@@ -270,7 +271,6 @@ To serve websites in Flask, we're going to use a function called `render_templat
 	│	└── styles.css
 	├── app.py
 	└── business_logic.py
-
 
 ```
 ```html templates/index.html

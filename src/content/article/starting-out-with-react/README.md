@@ -169,18 +169,32 @@ Then, you can move on and setup your first React project using Create React App 
 
 The file structure for our project looks mostly like this.
 
-```file
-├── node_modules
-│	└── ... 
-├── README.md
-├── package-lock.json
-├── package.json
-├── public
-│	└── index.html
-└── src
-	├── App.js
-	└── index.js
-
+```file-json
+{
+  "name": "create-react-app-sample",
+  "contents": [
+    {
+      "name": "node_modules",
+      "contents": []
+    },
+    {
+      "name": "src",
+      "contents": [
+        { "name": "App.js", "type": "js" },
+        { "name": "index.js", "type": "js" }
+      ]
+    },
+    {
+      "name": "public",
+      "contents": [
+        { "name": "index.html", "type": "html" }
+      ]
+    },
+    { "name": "README.md", "type": "markdown" },
+    { "name": "package-lock.json", "type": "npm" },
+    { "name": "package.json", "type": "npm" }
+  ]
+}
 ```
 
 node_modules, package.json, package-lock.json are all things related to NPM. When we download libraries and packages, they go inside the node_modules folder and are listed in the package.json.
