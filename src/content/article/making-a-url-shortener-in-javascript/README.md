@@ -47,9 +47,13 @@ We need to first install Python3 and  Flask, and setup our boilerplate code. Go 
 
 ## Ready to start coding
 After following the steps from the link above, you should end up with this basic structure:
-```file
-└── url-shortener
-	└── app.py
+```file-json
+{
+  "name": "url-shortener",
+  "contents": [
+    { "name": "app.py", "type": "python" }
+  ]
+}
 ```
 
 ```python app.py
@@ -94,11 +98,14 @@ We *could* write all of our code in one file - it would be okay since our codeba
 
 With that in mind, let's go ahead and create a new file in the same folder called `business_logic.py` and here we'll first list out all of the functions we expect to have.
 
-```file
-└── url-shortener
-            ├── app.py
-            └── business_logic.py
-
+```file-json
+{
+  "name": "url-shortener",
+  "contents": [
+    { "name": "app.py", "type": "python" },
+    { "name": "business_logic.py", "type": "python" }
+  ]
+}
 ```
 
 ```python business_logic.py
@@ -261,15 +268,26 @@ I'm going to skip over the details of how to write a website for now (I have oth
 
 To serve websites in Flask, we're going to use a function called `render_template` that takes in an HTML file and a list of variables. We'll embed variables later on but for now, we just want to return a simple website that has a text input and a shorten! button. By default, Flask will look for templates in the `/templates` folder in our filesystem. In addition to the HTML, we need to add some CSS styles so our website doesn't look THAT ugly. We'll put these in a `/static` folder and you can just copy and paste these until you're more familiar with front-end web development.
 
-```file
-└── url-shortener
-	├── templates
-	│	└── index.html
-	├── static
-	│	└── styles.css
-	├── app.py
-	└── business_logic.py
-
+```file-json
+{
+  "name": "url-shortener",
+  "contents": [
+    { 
+        "name": "templates", 
+        "contents": [ 
+            {"name": "index.html", "type": "html" }
+        ] 
+    },
+    { 
+        "name": "static", 
+        "contents": [ 
+            {"name": "styles.css", "type": "css" }
+        ] 
+    },
+    { "name": "app.py", "type": "python" },
+    { "name": "business_logic.py", "type": "python" }
+  ]
+}
 
 ```
 ```html templates/index.html
@@ -383,17 +401,26 @@ On line 11: we invoke the function we wrote earlier in `business_logic.py` \
 On line 12: we return an HTML file again, except this time we pass in the generated alias into the template to be displayed
 
 Since we're returning a different webpage, let's create `result.html` and define it like so:
-```file
-└── url-shortener
-	├── templates
-	│	├── result.html
-	│	└── index.html
-	├── static
-	│	└── styles.css
-	├── app.py
-	└── business_logic.py
-
-
+```file-json
+{
+  "name": "url-shortener",
+  "contents": [
+    { 
+        "name": "templates", 
+        "contents": [ 
+            {"name": "index.html", "type": "html" }
+        ] 
+    },
+    { 
+        "name": "static", 
+        "contents": [ 
+            {"name": "styles.css", "type": "css" }
+        ] 
+    },
+    { "name": "app.py", "type": "python" },
+    { "name": "business_logic.py", "type": "python" }
+  ]
+}
 ```
 ```html templates/result.html
 <!DOCTYPE html>
@@ -452,17 +479,26 @@ On line 6: Instead of returning HTML like we've done before, we will return a re
 
 ## Final result
 Our final result should look like this:
-```file
-└── url-shortener
-	├── templates
-	│	├── result.html
-	│	└── index.html
-	├── static
-	│	└── styles.css
-	├── app.py
-	└── business_logic.py
-
-
+```file-json
+{
+  "name": "url-shortener",
+  "contents": [
+    { 
+        "name": "templates", 
+        "contents": [ 
+            {"name": "index.html", "type": "html" }
+        ] 
+    },
+    { 
+        "name": "static", 
+        "contents": [ 
+            {"name": "styles.css", "type": "css" }
+        ] 
+    },
+    { "name": "app.py", "type": "python" },
+    { "name": "business_logic.py", "type": "python" }
+  ]
+}
 ```
 
 ```html templates/result.html

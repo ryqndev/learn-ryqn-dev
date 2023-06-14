@@ -63,11 +63,15 @@ There are other parts as well - like lights and textures - but we'll cover them 
 
 We'll start off with a barebones project that looks like this:
 
-```file
-└── ryqndev-three-js (folder)
-    ├── script.js
-    ├── styles.css 
-    └── index.html
+```file-json
+{
+  "name": "ryqndev-three-js",
+  "contents": [
+    { "name": "index.html", "type": "html" },
+    { "name": "styles.css", "type": "css" },
+    { "name": "script.js", "type": "js" }
+  ]
+}
 ```
 
 ```html index.html

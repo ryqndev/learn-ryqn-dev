@@ -38,11 +38,15 @@ You can see the end results below to get a feel for what dark mode looks like in
 #### Starting code
 Imagine we have the following website without dark mode (a.k.a. light mode) that we want to add dark mode to:
 
-```file
-└── making-a-theme-switcher
-    ├── index.html
-    ├── styles.css
-    └── script.js
+```file-json
+{
+  "name": "making-a-theme-switcher",
+  "contents": [
+    { "name": "index.html", "type": "html" },
+    { "name": "styles.css", "type": "css" },
+    { "name": "script.js", "type": "js" }
+  ]
+}
 ```
 
 ```html index.html

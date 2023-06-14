@@ -192,10 +192,14 @@ Keep this running in addition to your server. Notice on `Forwarding` section, yo
 ## call your backend from your frontend
 Now that we have our server link, we need to access the server from our front-end (website). Let's create a brand new folder somewhere (since our front-end will not share any code with the backend) and create a basic html file with javascript.
 
-```file
-└── frontend-test (folder)
-    ├── script.js (javascript file)
-    └── index.html (html file)
+```file-json
+{
+    "name": "frontend-test",
+    "contents": [
+        { "name": "script.js", "type": "js" },
+        { "name": "index.html", "type": "html" }
+    ]
+}
 ```
 
 ```html index.html
@@ -275,9 +279,13 @@ If you want more examples or are still confused, fear not, it's a hard concept t
 
 ### Basic Flask server
 
-```file
-└── basic-test (folder)
-    └── app.py (python file)
+```file-json
+{
+    "name": "basic-test",
+    "contents": [
+        { "name": "app.py", "type": "python" }
+    ]
+}
 ```
 
 ```python app.py
@@ -321,10 +329,14 @@ Read the concepts listed above. The only difference between the above and below 
 
 ### Quick example
 
-```file
-└── yelp-test (folder)
-    ├── your_code.py (your custom python file)
-    └── app.py (python file)
+```file-json
+{
+    "name": "yelp-test",
+    "contents": [
+        { "name": "your_code.py", "type": "python" },
+        { "name": "app.py", "type": "python" }
+    ]
+}
 ```
 
 ```python your_code.py
@@ -389,9 +401,13 @@ backend will return contents of that **http response** to the website -> website
 
 ### Yelp API example
 
-```file
-└── yelp-test (folder)
-    └── app.py (python file)
+```file-json
+{
+    "name": "yelp-test",
+    "contents": [
+        { "name": "app.py", "type": "python" }
+    ]
+}
 ```
 
 ```python app.py

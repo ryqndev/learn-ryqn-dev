@@ -70,11 +70,15 @@ Let's see how we can use Semantic UI in a fresh web app. To not get too bogged d
 
 Let's start out with a blank website with just the boilerplate code. If you need a refresher on basic web dev, you can check out [Intro To Web Dev](https://learn.ryqn.dev/article/intro-to-web-dev). Something like this:
 
-```file
-└── using-web-ui-libraries
-    ├── index.html
-    ├── styles.css
-    └── script.js
+```file-json
+{
+  "name": "using-web-ui-libraries",
+  "contents": [
+    { "name": "index.html", "type": "html" },
+    { "name": "styles.css", "type": "css" },
+    { "name": "script.js", "type": "js" }
+  ]
+}
 ```
 
 ```html index.html
