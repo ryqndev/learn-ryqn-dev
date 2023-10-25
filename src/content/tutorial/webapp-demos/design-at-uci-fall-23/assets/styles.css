@@ -1,0 +1,54 @@
+body {
+    margin: 0px;
+    font-size: 2em;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #151515;
+    color: white;
+
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    border: 2px solid white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 5px 1px #888;
+    width: 480px;
+}
+
+.label {
+    text-align: center;
+    padding: 60px;
+}
+
+#result {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 120px;
+}
+
+#result > button {
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#result > .count {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-content: center;
+    text-align: center;
+}
+
+span {
+    font-size: 0.4em;
+    color: gray;
+}

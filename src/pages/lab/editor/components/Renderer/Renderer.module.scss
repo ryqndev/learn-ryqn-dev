@@ -1,0 +1,41 @@
+.container {
+    height: calc(100vh - 100px);
+    background-color: var(--card);
+    border-radius: 4px;
+
+    & > .header {
+
+        display: grid;
+        grid-template-columns: auto 1fr;
+
+        & svg {
+            width: 100px;
+        }
+
+        &>.url {
+            display: grid;
+            place-content: center start;
+            width: 100%;
+
+            & input {
+                width: 100%;
+            }
+        }
+
+    }
+
+
+    &>.renderer{ 
+        padding: 0 20px 20px;
+        height: calc(100% - 44px);
+        box-sizing: border-box;
+    
+
+
+        &>.backdrop {
+            background-color: white;
+            color: black;
+            height: 100%;
+        }
+    }
+}

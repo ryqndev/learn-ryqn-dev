@@ -1,0 +1,19 @@
+.container {
+    display: grid;
+    grid-template-columns: minmax(250px, auto) 1fr 30vw;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 18px;
+    box-sizing: border-box;
+    height: calc(100vh - 102px);
+
+    &>.editor {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 20px;
+        background-color: var(--card);
+        border-radius: 4px;
+
+        overflow: scroll;
+    }
+}
