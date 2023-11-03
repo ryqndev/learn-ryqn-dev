@@ -4,23 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Title shows up in the browser tab -->
+    <title>Really Cool Recipe Generator</title>
+
+    <!-- These three links below give us fonts for from google fonts -->
+    <!-- You can read how to do this here: https://learn.ryqn.dev/article/how-to-use-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- imports our own Javascript code -->
     <script src="./script.js"></script>
+
+    <!-- imports our own CSS code -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
 </head>
 
 <body>
-    <div>
-        <input type="text" id="ingredients" />
-        <select id="diet">
-            <option value="none">none</option>
-            <option value="vegetarian">vegetarian</option>
-            <option value="vegan">vegan</option>
-            <option value="pescatarian">pescatarian</option>
-        </select>
-        <button onclick="getRecipe()">find ingredients</button>
-    </div>
+    <!-- Sections are similar to divs -->
+    <section class="hero">
+        <h1>Really <span class="title-gradient">Cool Recipe</span> Generator</h1>
+        <p>Short on time? Got a midterm soon but still want to eat healthy? Or just bored and want to make something
+            random? We got you.</p>
 
-    <div id="result"> Recipe will show up here</div>
+        <button class="submit center">Begin Now</button>
+    </section>
+
+    <!-- Adding an id here allows us to target this element with Javascript -->
+    <!-- In this case, we are using it so that we can edit this entire HTML element to render the results -->
+    <section id="main">
+        <div class="question">
+            <h1>🥢</h1>
+            <div>
+                <h2>Select your Cooking Equipment</h2>
+                <p>Separate your available equipment with a comma</p>
+                <!-- Adding an id here allows us to target this element with Javascript -->
+                <!-- In this case, we are using it to get the .value that the user types in -->
+                <input id="equipment" placeholder="Enter an item..." />
+            </div>
+        </div>
+        <div class="question">
+            <h1>🥒</h1>
+            <div>
+                <h2>What do you have in your Fridge?</h2>
+                <p>Ingredients you have or want to use. Separate with commas</p>
+                <input id="ingredients" placeholder="Enter an item..." />
+
+                <button onclick="getRecipe()" class="submit">Generate</button>
+            </div>
+        </div>
+    </section>
+
 </body>
 
 </html>

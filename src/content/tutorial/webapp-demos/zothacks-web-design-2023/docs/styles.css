@@ -1,41 +1,62 @@
 html, body {
+    /*
+     * We use a font here that gets imported in our HTML head section. 
+     * If you're curious how to get your own custom fonts in your website, 
+     * you can read this guide:
+     * DOCS: https://learn.ryqn.dev/article/how-to-use-fonts 
+     */
     font-family: 'Inter', sans-serif;
     margin: 0;
+    padding-bottom: 20vh;
 }
 
 section {
-    display: grid;
-    place-content: center;
+    /* 
+     * You can do some pretty complex math with using the calc() function.
+     * Namely, we're saying make the width 100% of the screen width (vw = viewport width)
+     * and then subtracting 80px (40px for each side)
+     * DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/calc
+     */
+    width: calc(100vw - 80px);
+
+    /* This is just a way to center things horizontally */
+    margin: 0 auto;
 }
 
 .hero {
-    max-width: calc(100vw - 40px);
-    height: 30vh;
+    /* 
+     * Setting display type to grid allows you to position elements in a certain way
+     * DOCS: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
+     */
+    display: grid;
+
+    /* 
+     * gap can only be used when the display is grid. It means to position immediate
+     * children elements 40px away from each other 
+     */
+    gap: 40px;
+    /* 
+     * place-content is also only used when display is grid. Just puts all of the 
+     * children in the middle.
+     */
+    place-content: center;
+
+    max-width: 800px;
+    height: 100vh;
     width: 100vw;
-    gap: 20px;
+
 }
-.hero > h1 {
+
+/* 
+ * All header tags (h1, h2, h3, ...) come with a margin by default
+ * Since we have our own designs, we will remove them and style
+ * the rest ourselves
+ */
+h1 {
     font-size: 3em;
     text-align: center;
     margin: 0;
 }
-
-.hero > p {
-    max-width: 80vw;
-    margin: 0 auto;
-    text-align: center;
-    color: gray;
-    line-height: 1.5em;
-}
-
-.hero > h1 > span {
-    background: linear-gradient(90deg, #0047FF, #9B78FF);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: transparent;
-}
-
 h2 {
     margin: 0;
 }
@@ -44,16 +65,43 @@ p {
     color: gray;
 }
 
-input {
-    border: 2px solid lightgray;
-    padding: 16px;
-    border-radius: 16px;
+/* . means we're targeting an element with class="hero" */
+/* The space here means only p tags inside .hero */
+.hero p {
+    margin: 0 auto;
+    text-align: center;
+    color: gray;
+    line-height: 1.5em;
 }
 
+/* The space here means only span tags inside h1 tags inside .hero */
+.hero h1 span {
+    background: linear-gradient(90deg, #0047FF, #9B78FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+/* # means we're targeting an element with id="main" */
+#main {
+    margin: 80px auto;
+    max-width: 600px;
+    display: grid;
+    gap: 20px;
+}
+
+input {
+    border: 2px solid lightgray;
+    padding: 12px 16px;
+    border-radius: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
 .submit {
     margin-top: 80px;
-    width: min-content;
+    width: max-content;
     background-color: #0047FF;
     color: white;
     border-radius: 12px;
@@ -61,9 +109,124 @@ input {
     padding: 8px 16px;
 }
 
+.submit.center {
+    padding: 16px 32px;
+    border-radius: 20px;
+    font-size: 1.1em;
+    margin: 0 auto;
+}
+
+.question {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    margin: 20px 0;
+}
 
 .result {
-    border: 2px solid lightgray;
+    border: 2px solid rgb(238, 238, 238);
     padding: 16px;
     border-radius: 16px;
+    transition: border-color 250ms;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px;
+    gap: 12px;
+}
+
+.result img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.result h2 {
+    font-size: 1em;
+}
+
+.result:hover {
+    border-color: #5A88FF;
+}
+
+.result h2 {
+    font-size: 1em;
+}
+
+
+.result .list {
+    display: grid;
+}
+
+.result .tag {
+    place-self: end start;
+    background: #F7FAFC;
+    width: max-content;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+/* 
+ * Read docs on how to style a dialog modal here: 
+ * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog
+ */
+dialog {
+    /* 
+     * Position fixed allows us to use top and left to position with
+     * respect to the screen. By saying top = 10% of the screen height and
+     * left = 50% of screen width minus half of the dialog width, we center
+     * this element perfectly in the center of the screen, no matter where you scroll
+     */
+    position: fixed;
+    top: 10vh;
+    width: 400px;
+    max-height: 80vh;
+    left: calc(50vw - 225px);
+    margin: 0;
+    border: none;
+    overflow: scroll;
+    border-radius: 12px;
+}
+
+dialog .close {
+    /* 
+     * position absolute is similar to position fixed but the difference is,
+     * absolute will always position relative to the nearest parent that is 
+     * fixed/absolute/relative whereas fixed will position relative to the screen.
+     * In other words, this close button is positioned top/right with respect to
+     * the dialog, rather than the entire screen
+     */
+    position: absolute;
+    right: 20px;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    color: gray;
+    display: grid;
+    place-content: center;
+}
+
+dialog .content {
+    display: grid;
+    gap: 40px;
+    padding: 20px;
+    color: gray;
+    line-height: 1.9em;
+}
+dialog img {
+    width: 100%;
+    border-radius: 12px;
+}
+dialog p {
+    margin: none;
+}
+
+/* This backdrop only shows if you trigger the dialog element with .showModal() */
+dialog::backdrop {
+    background: black;
+    opacity: 0.3;
 }
