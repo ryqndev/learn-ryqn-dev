@@ -62,6 +62,7 @@ function renderRecipe(recipeData) {
     // generate all the HTML in one go, and then attach listeners to them
     for (let idx = 0; idx < recipeData.results.length; idx++) {
         let recipe = recipeData.results[idx];
+        let generatedId = "result-" + idx;
 
         document
             .getElementById(generatedId)

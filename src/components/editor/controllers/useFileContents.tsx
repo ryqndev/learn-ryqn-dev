@@ -1,4 +1,4 @@
-import { Folder, Workspace } from "pages/lab/types";
+import { Folder, Workspace } from "@components/editor/types";
 import { useCallback, useState } from "react";
 
 export type FileContentMap = {

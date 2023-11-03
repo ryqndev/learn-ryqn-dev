@@ -1,4 +1,4 @@
-import { Workspace } from "pages/lab/types";
+import { Workspace } from "@components/editor/types";
 
 export const DEFAULT_WORKSPACE: Workspace = {
     name: "Workspace",
