@@ -4,12 +4,12 @@ html, body {
 }
 
 section {
- 
     display: grid;
     place-content: center;
 }
 
 .hero {
+    max-width: calc(100vw - 40px);
     height: 30vh;
     width: 100vw;
     gap: 20px;
@@ -31,6 +31,7 @@ section {
 .hero > h1 > span {
     background: linear-gradient(90deg, #0047FF, #9B78FF);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: transparent;
 }
@@ -60,3 +61,9 @@ input {
     padding: 8px 16px;
 }
 
+
+.result {
+    border: 2px solid lightgray;
+    padding: 16px;
+    border-radius: 16px;
+}
