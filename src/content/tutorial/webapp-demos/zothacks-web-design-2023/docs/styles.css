@@ -1,0 +1,62 @@
+html, body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+section {
+ 
+    display: grid;
+    place-content: center;
+}
+
+.hero {
+    height: 30vh;
+    width: 100vw;
+    gap: 20px;
+}
+.hero > h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 0;
+}
+
+.hero > p {
+    max-width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    color: gray;
+    line-height: 1.5em;
+}
+
+.hero > h1 > span {
+    background: linear-gradient(90deg, #0047FF, #9B78FF);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    color: gray;
+}
+
+input {
+    border: 2px solid lightgray;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+
+.submit {
+    margin-top: 80px;
+    width: min-content;
+    background-color: #0047FF;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    padding: 8px 16px;
+}
+
