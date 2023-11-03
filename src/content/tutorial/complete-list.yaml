@@ -193,3 +193,53 @@
       updated: Sun Oct 29 2023 16:27:16 GMT-0700 (Pacific Daylight Time)
       uploaded: Sun Oct 29 2023 16:27:16 GMT-0700 (Pacific Daylight Time)
   hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
+      - webapp-demos
+      - zothacks-web-design-2023
+  title: "Zothacks 2023: Intro to Web Design"
+  summary: >-
+      Part two of Zothack's two part web development workshop where we show the process 
+      of developing an recipe finding application from scratch. This workshop 
+      focuses on the design aspect of web development and mostly covers
+      design fundamentals and how to implement them in CSS
+  tags:
+      - ZotHacks
+      - Design
+      - DesignAtUCI
+      - web developement
+      - frontend
+  date:
+      updated: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
+      uploaded: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
+  hidden: true
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
+      - webapp-demos
+      - zothacks-web-dev-2023
+  title: "Zothacks 2023: Intro to Web Development"
+  summary: >-
+      Part one of Zothack's two part web development workshop where we show the process 
+      of developing an recipe finding application from scratch. This workshop 
+      focuses on the engineering part of web development and mostly covers
+      just HTML and Javascript.
+  tags:
+      - ZotHacks
+      - Design
+      - DesignAtUCI
+      - web developement
+      - frontend
+      - spoontacular
+      - recipe
+      - javascript
+      - HTML
+  date:
+      updated: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
+      uploaded: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
+  hidden: false
