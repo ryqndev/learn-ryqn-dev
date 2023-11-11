@@ -65,7 +65,7 @@ Some examples:
 
 > [https://ryqn.dev](https://ryqn.dev) - My personal website lmaoooo. It uses a [React](https://react.dev/) port of [Three.js](https://threejs.org/) called [react-three-fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) to render a fun 3d model of Aldrich Park in UCI based on some beautiful concept art by [Ryan Hartanto](https://ryanhartanto.com/) under Hack at UCI (with their permission of course).
 
-> [http://vr.ff.com/us/](http://vr.ff.com/us/) - This is the sample web app I show during the workshop of the 3d car. It's super fun to play around with and fairly straightforward but hopefully goes to show _where_ we can go.
+> [https://vr.ff.com/us/](https://vr.ff.com/us/) - This is the sample web app I show during the workshop of the 3d car. It's super fun to play around with and fairly straightforward but hopefully goes to show _where_ we can go.
 
 ### Other cool design examples
 
@@ -141,7 +141,7 @@ Again, most of these intro concepts are covered in [my intro to web dev article]
 
 This one is probably the hardest part to fully understand but the general gist of it is: we are going to query someone else's database for their data to render onto our website. This is especially common when you want to make an application that integrates with another company's data. For example, let's say you wanted to make an app that would play a random song from someone's spotify playlist and make them guess which song it is (btw, Spotify's terms and conditions specifically **forbids** making any kind of game with their API - i know, it sucks, but this is just an example). There's no way for you create an entire song database or get a users spotify playlists without integrating with their API.
 
-In this case, we're integrating with an API that aggregates COVID stats. (I don't know how relevant this article will be 5 years from now) What we do here is use a built-in javascript function called `[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)`.
+In this case, we're integrating with an API that aggregates COVID stats. (I don't know how relevant this article will be 5 years from now) What we do here is use a built-in javascript function called [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
 
 Essentially, what the Fetch API does is it "fetches" data from another website. In this case, "another website" means a website that serves pure data (known as JSON). Traditionally, when you go on a website, you're getting their `.html` file, but the internet is not limited to only sending one file type. In fact, in most website, we're sending multiple different file types: `.html`, `.css`, `.js`, any media formats (`.png`, `.jpeg`, `.mp4`), and raw data formats (`.csv`, `.json`).
 
