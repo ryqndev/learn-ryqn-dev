@@ -1,12 +1,20 @@
 # Zothacks 2023: Intro to Web Dev
 
 ```table-of-contents
+* [Recording](#recording)
 * [Overview](#overview)
 * [Web Dev Basics](#web-dev-basics)
+* [What are we making?](#what-are-we-making?)
 * [Other Resources](#other-resources)
     1. [Workshops](#workshops)
     2. [References](#references)
 
+```
+
+## Recording
+
+```video
+https://www.youtube-nocookie.com/embed/KOdc9Bx_cmY
 ```
 
 ## Overview
@@ -16,6 +24,11 @@ This is part one of a two part workshop. First, we'll learn some basic HTML and 
 You can find a finished version of our codebase here: [Really cool recipe generator source code with just HTML and JS](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/tutorial/webapp-demos/zothacks-web-dev-2023/docs)
 
 After the next workshop, we'll add styling and you can see and advance of that source code here: [Really cool recipe generator with styling source code](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/tutorial/webapp-demos/zothacks-web-design-2023/docs)
+
+### Sneak peek
+
+![Recipe app without styling](./assets/recipe-app-without-styling.png)
+![Recipe app with styling](./assets/recipe-app-styled.png)
 
 ## Web Dev Basics
 
