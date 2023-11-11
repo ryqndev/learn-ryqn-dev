@@ -1,5 +1,7 @@
 # Design at UCI Fall 2023: Intro to Frontend Development
 
+![decorative banner](./assets/hero.png)
+
 ```table-of-contents
 
 * [Recording](#recording)
