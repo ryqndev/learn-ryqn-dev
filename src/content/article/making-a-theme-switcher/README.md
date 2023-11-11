@@ -1,6 +1,6 @@
 # Making a dark / light mode theme switcher
 
-*Note: This is not a complete guide on dark mode, but rather a quickstart for new developers to get a theme setup up and running in a small codebase. For a more in-depth analysis regarding dark modes, you can check out [this](https://ryanfeigenbaum.com/dark-mode/) amazing article  written by Ryan Feigenbaum.*
+_Note: This is not a complete guide on dark mode, but rather a quickstart for new developers to get a theme setup up and running in a small codebase. For a more in-depth analysis regarding dark modes, you can check out [this](https://ryanfeigenbaum.com/dark-mode/) amazing article written by Ryan Feigenbaum._
 
 ```table-of-contents
 
@@ -19,23 +19,24 @@
     3. [Saving and loading themes](#saving-and-loading-themes)
 * [Finishing touches](#finishing-touches)
 * [Just the code](#just-the-code)
-    
+
 
 ```
 
 ## Intro
 
-For people who have used their phones/computer in the dark, dark mode is one of the most coveted features around. Before we dive into how we can create a dark mode and toggle it, let's first take a look at what dark mode is. Dark mode is a design concept that utilizes light colors (usually white or pastel-like colors) for text and icons contrasted with a dark background, as opposed to the usual dark colored text on a light background (like a book or print newspaper). 
-
+For people who have used their phones/computer in the dark, dark mode is one of the most coveted features around. Before we dive into how we can create a dark mode and toggle it, let's first take a look at what dark mode is. Dark mode is a design concept that utilizes light colors (usually white or pastel-like colors) for text and icons contrasted with a dark background, as opposed to the usual dark colored text on a light background (like a book or print newspaper).
 
 ## Why have a dark mode?
 
-Aside from dark mode looking cooler than light mode (personal and subjective preference, of course), dark mode can reduce eyestrain in low-light conditions. Ever surf the web on your phone at night and you visit a page that completely blinds you with white light? 
+Aside from dark mode looking cooler than light mode (personal and subjective preference, of course), dark mode can reduce eyestrain in low-light conditions. Ever surf the web on your phone at night and you visit a page that completely blinds you with white light?
 
 You can see the end results below to get a feel for what dark mode looks like in case you're unfamiliar but without further ado, let's go ahead and implement it
 
 ## Implementing dark mode
+
 #### Starting code
+
 Imagine we have the following website without dark mode (a.k.a. light mode) that we want to add dark mode to:
 
 ```file-json
@@ -52,22 +53,25 @@ Imagine we have the following website without dark mode (a.k.a. light mode) that
 ```html index.html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dark Theme Switcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./script.js"></script>
-  </head>
-  <body>
-    <div class="card">
-      <h1>Ryan Yang</h1>
-      <hr />
-      <p>
-        I am a front-end developer who should be doing 
-        work but is sidetracked playing Maplestory
-      </p>
-    </div>
-  </body>
+    <head>
+        <title>Dark Theme Switcher</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <div class="card">
+            <h1>Ryan Yang</h1>
+            <hr />
+            <p>
+                I am a front-end developer who should be doing work but is
+                sidetracked playing Maplestory
+            </p>
+        </div>
+    </body>
 </html>
 ```
 
@@ -82,7 +86,7 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 
     /* here are the styles below we want to 'toggle' later */
     background-color: white;
@@ -109,6 +113,7 @@ hr {
 ```javascript script.js
 // our javascript is empty.... for now!
 ```
+
 When we test this code in the browser, we get something that looks like this:
 
 ![Light mode look](./assets/light_mode.png)
@@ -127,13 +132,13 @@ body {
 /* ... */
 .card {
     /* ... */
-    background-color: #15171A;
+    background-color: #15171a;
 }
 ```
+
 Swapping these styles will result in something that looks like this:
 
 ![Dark Mode Image](./assets/dark_mode.png)
-
 
 ## CSS Variables
 
@@ -145,15 +150,13 @@ There are a couple ways to implement a dark mode but the way I'll be showing you
 
 Since there are 3 things we want to toggle, we will only use 3 variables.
 
-
 | Elements that will change styles | Light Mode (color/hex code) | Dark Mode (color/hex code) |
-|----------------------------------|-----------------------------|----------------------------|
-| Background color of page         | white / #FFFFFF             | *dark grey / #151515       |
-| Background color of card item    | white / #FFFFFF             | *dark blue-grey / #15171A  |
+| -------------------------------- | --------------------------- | -------------------------- |
+| Background color of page         | white / #FFFFFF             | \*dark grey / #151515      |
+| Background color of card item    | white / #FFFFFF             | \*dark blue-grey / #15171A |
 | Color of text                    | black / #000000             | white / #FFFFFF            |
 
 \* - description of color, not actual CSS value
-
 
 #### Declaring CSS Variables
 
@@ -168,9 +171,9 @@ First, we need to initialize the variables and give them a default value. We can
 /* ... */
 ```
 
-Ok. What the *heck* did we just do? Well, the general CSS syntax is still the same where we have our selector and a bunch of `[property]: [value];`'s for the selector. Our selector is `:root`, which is a level above `html` and so that allows us to use these variables from anywhere in our CSS code. (If you're comfortable with programming concepts, you can think of these as global variables.)
+Ok. What the _heck_ did we just do? Well, the general CSS syntax is still the same where we have our selector and a bunch of `[property]: [value];`'s for the selector. Our selector is `:root`, which is a level above `html` and so that allows us to use these variables from anywhere in our CSS code. (If you're comfortable with programming concepts, you can think of these as global variables.)
 
-What might not be familiar, however, are the properties for the selector. The `--` in front of the property lets our CSS know that we are declaring values for a CSS variable, not a CSS style. Everything after the `--` and before the `:` is our variable name. CSS variables are case sensitive and we use, by convention, a single dash, `-`, if our variable name has multiple words. 
+What might not be familiar, however, are the properties for the selector. The `--` in front of the property lets our CSS know that we are declaring values for a CSS variable, not a CSS style. Everything after the `--` and before the `:` is our variable name. CSS variables are case sensitive and we use, by convention, a single dash, `-`, if our variable name has multiple words.
 
 #### Using CSS Variables
 
@@ -201,15 +204,15 @@ Notice, we simply replaced the value of the CSS style with the variable name. We
 
 #### Dynamically changing our CSS Variables
 
-Let's recap what we've done so far. Instead of having hardcoded values in our CSS styles, we've now attached CSS variables to our styles and defined the *default* values in our `:root` selector. However, none of this gives us dark mode, nor does it allow us to toggle our styles yet. 
+Let's recap what we've done so far. Instead of having hardcoded values in our CSS styles, we've now attached CSS variables to our styles and defined the _default_ values in our `:root` selector. However, none of this gives us dark mode, nor does it allow us to toggle our styles yet.
 
 The next question is, how do we now utilize our CSS variables and change them on the fly? Take a look:
 
 ```javascript script.js
-function changeToDarkMode(){
-    document.documentElement.style.setProperty('--background', "#151515");
-    document.documentElement.style.setProperty('--card-background', "#15171A");
-    document.documentElement.style.setProperty('--text-color', "white");
+function changeToDarkMode() {
+    document.documentElement.style.setProperty("--background", "#151515");
+    document.documentElement.style.setProperty("--card-background", "#15171A");
+    document.documentElement.style.setProperty("--text-color", "white");
 }
 ```
 
@@ -220,25 +223,31 @@ We can, say, attach this function to a button in our HTML and when we click it, 
 ```html index.html
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Dark Theme Switcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script src="./script.js"></script>
-  </head>
-  <body>
-    <button onclick="changeToDarkMode();">Click me to enable dark mode!</button>
-    <div class="card">
-      <h1>Ryan Yang</h1>
-      <hr />
-      <p>
-        I am a front-end developer who should be doing 
-        work but is sidetracked playing Maplestory
-      </p>
-    </div>
-  </body>
+    <head>
+        <title>Dark Theme Switcher</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <script src="./script.js"></script>
+    </head>
+    <body>
+        <button onclick="changeToDarkMode();">
+            Click me to enable dark mode!
+        </button>
+        <div class="card">
+            <h1>Ryan Yang</h1>
+            <hr />
+            <p>
+                I am a front-end developer who should be doing work but is
+                sidetracked playing Maplestory
+            </p>
+        </div>
+    </body>
 </html>
 ```
+
 ```css style.css
 :root {
     --background: white;
@@ -252,11 +261,11 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     background-color: var(--background);
     color: var(--text-color);
 }
-button{
+button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -277,11 +286,12 @@ hr {
     background-color: var(--card-background);
 }
 ```
+
 ```javascript script.js
-function changeToDarkMode(){
-    document.documentElement.style.setProperty('--background', "#151515");
-    document.documentElement.style.setProperty('--card-background', "#15171A");
-    document.documentElement.style.setProperty('--text-color', "white");
+function changeToDarkMode() {
+    document.documentElement.style.setProperty("--background", "#151515");
+    document.documentElement.style.setProperty("--card-background", "#15171A");
+    document.documentElement.style.setProperty("--text-color", "white");
 }
 ```
 
@@ -293,25 +303,31 @@ This results in a webpage with a button that can toggle our page into dark mode 
 
 Great! So we can turn our website into dark mode with the press of a button... but how do we turn back if we like it better in light mode? This is going to take some engineering on our part.
 
-First, we're going to need *another* variable - only this time it'll be in javascript - that can keep track of what mode we are in so we know what mode we'll be toggling into.
+First, we're going to need _another_ variable - only this time it'll be in javascript - that can keep track of what mode we are in so we know what mode we'll be toggling into.
 
 ```javascript script.js
 let darkTheme = false;
 
-function toggleTheme(){
+function toggleTheme() {
     // check if we are currently in dark theme
-    if(darkTheme){
+    if (darkTheme) {
         // if we are in dark theme, we should switch to 'light' styles
-        document.documentElement.style.setProperty('--background', "white");
-        document.documentElement.style.setProperty('--card-background', "white");
-        document.documentElement.style.setProperty('--text-color', "black");
-    }else{
+        document.documentElement.style.setProperty("--background", "white");
+        document.documentElement.style.setProperty(
+            "--card-background",
+            "white"
+        );
+        document.documentElement.style.setProperty("--text-color", "black");
+    } else {
         // ...otherwise switch to dark styles
-        document.documentElement.style.setProperty('--background', "#151515");
-        document.documentElement.style.setProperty('--card-background', "#15171A");
-        document.documentElement.style.setProperty('--text-color', "white");
+        document.documentElement.style.setProperty("--background", "#151515");
+        document.documentElement.style.setProperty(
+            "--card-background",
+            "#15171A"
+        );
+        document.documentElement.style.setProperty("--text-color", "white");
     }
-    // finally, don't forget to change our darkTheme variable to reflect the new 
+    // finally, don't forget to change our darkTheme variable to reflect the new
     // styles we just added
     darkTheme = !darkTheme;
 }
@@ -322,26 +338,32 @@ function toggleTheme(){
 When our user toggles a theme and leaves the website, we should keep track of their preference so that the next time they visit the site, they won't have to toggle again. Here, we can use the built in [LocalStorage]('https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage') object to help us save data in the browser in between sessions (persistent storage).
 
 ```javascript script.js
-// the ?? operator is called the nullish-coalescing operator which allows us to 
+// the ?? operator is called the nullish-coalescing operator which allows us to
 // set a default value in case a localStorage value is not found
-let darkTheme = JSON.parse(localStorage.getItem('theme')) ?? false;
+let darkTheme = JSON.parse(localStorage.getItem("theme")) ?? false;
 // we also use JSON.parse(...) because localStorage always saves values as a string
-// but we need to parse the string for the actual boolean variable 
+// but we need to parse the string for the actual boolean variable
 
-function toggleThemeAndSave(){
-    if(darkTheme){
-        document.documentElement.style.setProperty('--background', "white");
-        document.documentElement.style.setProperty('--card-background', "white");
-        document.documentElement.style.setProperty('--text-color', "black");
-    }else{
-        document.documentElement.style.setProperty('--background', "#151515");
-        document.documentElement.style.setProperty('--card-background', "#15171A");
-        document.documentElement.style.setProperty('--text-color', "white");
+function toggleThemeAndSave() {
+    if (darkTheme) {
+        document.documentElement.style.setProperty("--background", "white");
+        document.documentElement.style.setProperty(
+            "--card-background",
+            "white"
+        );
+        document.documentElement.style.setProperty("--text-color", "black");
+    } else {
+        document.documentElement.style.setProperty("--background", "#151515");
+        document.documentElement.style.setProperty(
+            "--card-background",
+            "#15171A"
+        );
+        document.documentElement.style.setProperty("--text-color", "white");
     }
-    // finally, don't forget to change our darkTheme variable to reflect the new 
+    // finally, don't forget to change our darkTheme variable to reflect the new
     // styles we just added and save it to our localstorage
     darkTheme = !darkTheme;
-    localStorage.setItem('theme', darkTheme);
+    localStorage.setItem("theme", darkTheme);
 }
 ```
 
@@ -362,7 +384,7 @@ body {
     display: grid;
     height: 100vh;
     width: 100vw;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     background-color: var(--background);
     color: var(--text-color);
 
@@ -370,7 +392,7 @@ body {
     500 millisecond animation between the 2 values */
     transition: background-color 500ms, color 500ms;
 }
-button{
+button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -401,6 +423,7 @@ Which results in this:
 ![Final Demo](./assets/dark_mode_toggle_final.gif)
 
 ## Just the code
+
 You can find the code for a running example here: [https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-theme-switcher/docs](https://github.com/ryqndev/learn-ryqn-dev/tree/content-update/src/content/making-a-theme-switcher/docs)
 
 How do I run this code? Go ahead and click that link above ^ and download those 3 files (index.html, style.css, and script.js) and open up index.html in the browser. (You can do this by right clicking the file icon and selecting "Open with..." and selecting your preferred browser).

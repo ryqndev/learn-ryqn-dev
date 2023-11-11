@@ -1,6 +1,7 @@
 # Design at UCI Fall 2023: Intro to Frontend Development
 
 ![decorative banner](./assets/hero.png)
+_Note: You can find the finished source code [here](https://github.com/ryqndev/learn-ryqn-dev/tree/main/src/content/tutorial/webapp-demos/design-at-uci-fall-23/docs)._
 
 ```table-of-contents
 
