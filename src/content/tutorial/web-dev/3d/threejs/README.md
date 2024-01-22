@@ -70,7 +70,7 @@ With the above, we can create a quick npm project somewhere on our computer by c
 
 As an example on my mac, I did:
 
-```bash
+```bash terminal
 $ pwd
 /Users/ryqndev/Desktop
 
@@ -107,11 +107,13 @@ Every website starts with an HTML file - so let's create one. We'll create an ht
 
 Finally, we add one more line to the generated package.json in the scripts section:
 
-```json
+```json package.json
+    //...
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "vite"
     },
+    //...
 ```
 
 Now, in the terminal, we should be able to type `npm start` to run our entire dev server and you should be able to navigate to `localhost:5173` in the browser and see a blank screen.
@@ -128,3 +130,83 @@ At this stage, your file structure should mostly look like this:
     { "name": "package-lock.json", "type": "json" }  ]
 }
 ```
+
+### Starting our Javascript
+
+Compared to traditional web development, we won't actually be working with that much HTML or CSS. In a full fleshed out project, you'll likely want to incorporate _some_ HTML/CSS but for the 3d/interactive portion of your website, you'll be working almost exclusively in Javascript.
+
+With that in mind, let's go ahead and setup our Javascript and test that our vite setup is all working as intended.
+
+We'll create a javascript file in our folder, link it in our HTML, and then go ahead and try printing out the Three.js library in its entirety.
+
+```html index.html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="module" src="./script.js"></script>
+    </head>
+    <body></body>
+</html>
+```
+
+```js script.js
+// import ALL modules under this library into a variable called three.
+// this means you can access them by doing `THREE.Scene` or `THREE.Camera`
+import * as THREE from "three";
+
+// similarly, you could also import specific modules you want by doing something like:
+// import { scene, camera } from 'three';
+
+console.log(THREE);
+```
+
+### Starting Three
+
+Now to the fun part! tbh - the setup process for _any_ coding project usually takes the longest and is the most furstrating part so don't feel discouraged if you're running into a ton of issues now - it'll be more striaghtforward from here on .... anyways, as I mentioned earlier, every three.js project has a couple required elements: a scene, a camera, and a renderer.
+
+![star wars filming](./assets/star-wars-filming.jpg)
+
+Take a look at the above movie set (I had to do something star wars related :)) - in every film set, there's at least one camera: the camera in our app will be where the user is positioned within a 3d space. I.e. by controlling the camera, we can control what a user sees at any given time, and from what direction, etc. Similarly, all of the filming usually takes place inside a soundstage or maybe even in nature. That area is what we call a _scene_. In our scene, we can place object, draw landscapes, and essentially is the thing we decorate to give our users something pretty to look at.
+
+Lastly, the entire job of the renderer is to transform what the camera is seeing into a 2d picture that we place onto our _canvas_ in the HTML.
+
+Let's go ahead and replace our `script.js` with the following:
+
+```js script.js
+import * as THREE from "three";
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(
+    75,
+    window.innerWidth / window.innerHeight,
+    0.1,
+    1000
+);
+
+const renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const cube = new THREE.Mesh(geometry, material);
+scene.add(cube);
+
+camera.position.z = 5;
+
+function animate() {
+    requestAnimationFrame(animate);
+
+    cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;
+
+    renderer.render(scene, camera);
+}
+
+animate();
+```
+
+![cube](./assets/cube.gif)
