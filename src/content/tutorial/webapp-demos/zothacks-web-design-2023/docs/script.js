@@ -1,7 +1,7 @@
 // To use the spoonacular API, you need to register for a free API key.
 // You can do that here: https://spoonacular.com/food-api/console#Dashboard
 // and then paste it below. It should be some random string of characters
-const SPOONACULAR_API_KEY = "PASTE YOUR API KEY HERE";
+const SPOONACULAR_API_KEY = "e48fbba8411448e5b8ab14fe8b083c61";
 
 // This function will pull values from the website, and then pass them
 // into an API call, and then call another function with the result
@@ -13,7 +13,7 @@ function getRecipe() {
     // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
     // The code below is pretty standard and you can copy paste it as needed.
     fetch(
-        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SPOONACULAR_API_KEY}&ingredients=${ingredients}&equipment=${equipment}&number=10&addRecipeInformation=true`
+        `https://api.spoonacular.com/recipes/complexSearch?apiKey=${SPOONACULAR_API_KEY}&includeIngredients=${ingredients}&equipment=${equipment}&number=10&addRecipeInformation=true`
     )
         .then((res) => res.json())
         // This line of code below calls the function we define on line 25
@@ -62,6 +62,7 @@ function renderRecipe(recipeData) {
     // generate all the HTML in one go, and then attach listeners to them
     for (let idx = 0; idx < recipeData.results.length; idx++) {
         let recipe = recipeData.results[idx];
+        let generatedId = "result-" + idx;
 
         document
             .getElementById(generatedId)
