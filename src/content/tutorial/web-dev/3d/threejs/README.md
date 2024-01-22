@@ -209,4 +209,6 @@ function animate() {
 animate();
 ```
 
+Put it all together and we should get something that looks like this:
+
 ![cube](./assets/cube.gif)
