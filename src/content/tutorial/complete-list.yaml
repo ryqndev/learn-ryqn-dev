@@ -6,6 +6,30 @@
       - web-dev
       - 3d
       - threejs
+      - custom-objects
+  title: "Three.js: Custom Objects"
+  summary: >-
+      Learn how to add your own custom objects into our Three.js scene.
+  tags:
+      - html
+      - js
+      - Javascript
+      - 3d
+      - frontend
+      - beginner
+      - three.js
+  date:
+      updated: Sun, 21 Jan 2024 20:09:00 PST
+      uploaded: Sun, 21 Apr 2024 20:09:00 PST
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
+      - web-dev
+      - 3d
+      - threejs
+      - basic
   title: "Web Dev 3D: Three.js"
   summary: >-
       Learn about 3d web development with three.js

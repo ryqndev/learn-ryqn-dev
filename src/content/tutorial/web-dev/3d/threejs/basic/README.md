@@ -7,7 +7,9 @@
     2. [Prerequisites](#prerequisites)
 * [Getting Started](#getting-started)
     1. [Concepts](#concepts)
-    2. [Boilerplate code](#boilerplate-code)
+    2. [Setting up](#setting-up)
+    3. [Starting our Javascript](#starting-our-javascript)
+    4. [Starting Three](#starting-three)
 ```
 
 ## Overview
@@ -212,3 +214,10 @@ animate();
 Put it all together and we should get something that looks like this:
 
 ![cube](./assets/cube.gif)
+
+## Next Steps
+
+Now that we've learned the foundational basics, it's time to level up and figure out where to go from here. Here are some potential directions:
+
+-   We could add some physics with either [cannon.js](https://sbcode.net/threejs/physics-cannonjs/) or [rapier.js](https://rapier.rs/docs/user_guides/javascript/getting_started_js)
+-   [We can render custom objects](../)
