@@ -10,6 +10,7 @@
     2. [Setting up](#setting-up)
     3. [Starting our Javascript](#starting-our-javascript)
     4. [Starting Three](#starting-three)
+* [Next Steps](#next-steps)
 ```
 
 ## Overview
@@ -220,4 +221,4 @@ Put it all together and we should get something that looks like this:
 Now that we've learned the foundational basics, it's time to level up and figure out where to go from here. Here are some potential directions:
 
 -   We could add some physics with either [cannon.js](https://sbcode.net/threejs/physics-cannonjs/) or [rapier.js](https://rapier.rs/docs/user_guides/javascript/getting_started_js)
--   [We can render custom objects](../)
+-   [We can render custom objects](../custom-objects)

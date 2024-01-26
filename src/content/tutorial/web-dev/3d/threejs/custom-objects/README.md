@@ -6,7 +6,8 @@
     1. [Context](#context)
 * [Render a custom object](#render-a-custom-object)
     1. [Boilerplate](#boilerplate)
-    2. [Sample 3d file](#sample-3d-file)
+    2. [Getting our 3d asset](#getting-our-3d-asset)
+    3. [Load in our 3d model](#load-in-our-3d-model)
 ```
 
 ## Overview

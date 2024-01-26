@@ -7,9 +7,9 @@
       - 3d
       - threejs
       - custom-objects
-  title: "Three.js: Custom Objects"
+  title: "Web Dev 3D [Three.js]: Custom Objects"
   summary: >-
-      Learn how to add your own custom objects into our Three.js scene.
+      Learn how to add your own custom objects into our Three.js scene. I'll provide a GLTF file for y'all's to try out.
   tags:
       - html
       - js
@@ -30,9 +30,10 @@
       - 3d
       - threejs
       - basic
-  title: "Web Dev 3D: Three.js"
+  title: "Web Dev 3D [Three.js]: Basics"
   summary: >-
-      Learn about 3d web development with three.js
+      Learn about 3d web development with three.js - the most popular 3d web 
+      development library.
   tags:
       - html
       - js
@@ -53,7 +54,8 @@
       - events
   title: "Web Dev Fundamentals: Events"
   summary: >-
-      Events are the main drivers for interactivity in the web. Let's take a look at a couple of them and how we can react to them as developers.
+      Events are the main drivers for interactivity in the web. Let's take a 
+      look at a couple of them and how we can react to them as developers.
   tags:
       - html
       - js

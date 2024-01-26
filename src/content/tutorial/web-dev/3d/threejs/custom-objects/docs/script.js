@@ -12,12 +12,19 @@ const camera = new THREE.PerspectiveCamera(
 
 const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
 document.body.appendChild(renderer.domElement);
 
 const light = new THREE.DirectionalLight(0xffffff); // soft white light
 scene.add(light);
 
-camera.position.z = 5;
+const light2 = new THREE.AmbientLight(0xffffff, 0.3); // soft white light
+scene.add(light2);
+
+camera.position.y = 10;
+camera.position.x = 30;
+camera.position.z = 20;
 
 const loader = new GLTFLoader();
 
