@@ -3,6 +3,32 @@
       - https://ryqn.dev
   link:
       - tutorial
+      - webapp-demos
+      - hack-at-uci-2024
+  title: "Hack at UCI 2024: Product Design & Web Dev Intro"
+  summary: >-
+      For Hack at UCI 2024's first workshop of the event, we'll go over basic
+      product design and then use what we've learned there to translate into a
+      basic web app. The focus here will be on the various parts that exist and
+      how they interact with each other to form a cohesive app.
+  tags:
+      - hackathon
+      - HackAtUCI
+      - web developement
+      - Flask
+      - frontend
+      - backend
+      - Yelp API
+      - Yelp
+  date:
+      updated: Fri Jan 26 2024 16:09:38 GMT-0800 (Pacific Standard Time)
+      uploaded: Fri Jan 26 2024 16:09:38 GMT-0800 (Pacific Standard Time)
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
       - web-dev
       - 3d
       - threejs

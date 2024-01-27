@@ -1,0 +1,19 @@
+.btn {
+    border: 2px solid gray;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color 350ms;
+}
+
+.btn:hover {
+    color: white;
+    background-color: #151515;
+}
+
+.result {
+    border: 5px solid gray;
+    border-radius: 4px;
+    margin: 20px;
+}
