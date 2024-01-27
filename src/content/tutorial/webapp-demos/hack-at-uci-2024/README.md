@@ -9,8 +9,8 @@
     1. [Data Sources](#data-sources)
     2. [Architecture](#architecture)
 * [Live Demo](#live-demo)
-    1. [Frontend Prerequisites](#frontend-prerequisistes)
-    2. [Backend Prerequisites](#backend-prerequisistes)
+    1. [Frontend Prerequisites](#frontend-prerequisites)
+    2. [Backend Prerequisites](#backend-prerequisites)
 * [Additional Resources](#additional-resources)
 * [Wrapping Up](#wrapping-up)
 ```
