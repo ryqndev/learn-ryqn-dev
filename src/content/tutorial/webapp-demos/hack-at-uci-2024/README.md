@@ -8,7 +8,9 @@
 * [Ideation](#ideation)
     1. [Data Sources](#data-sources)
     2. [Architecture](#architecture)
-    3. [Live Demo](#live-demo)
+* [Live Demo](#live-demo)
+    1. [Frontend Prerequisites](#frontend-prerequisistes)
+    2. [Backend Prerequisites](#backend-prerequisistes)
 * [Additional Resources](#additional-resources)
 * [Wrapping Up](#wrapping-up)
 ```
@@ -70,7 +72,7 @@ For most web apps (and apps in general), you're going to need a frontend and a b
 
 > If you think about how a piano works, the key is the frontend, the hammer, the strings and everything that makes the actual sound is the backend. The resulting sound is what gets sent back to the frontend so the user can hear it.
 
-### Live Demo
+## Live Demo
 
 Frontend Tasks:
 
@@ -84,6 +86,18 @@ Backend Tasks:
 1. [Make API call to Yelp](https://learn.ryqn.dev/article/quick-api-call-lesson)
 2. [Setup Flask backend](https://learn.ryqn.dev/article/hackathon-flask)
 3. Test your backend
+
+### Frontend Prerequisites
+
+-   browser (Chrome/Firefox)
+-   code editor (I prefer [VSCode](https://code.visualstudio.com/))
+
+### Backend Prerequisites
+
+-   python3
+-   pip (or some other way of installing python packages)
+-   code editor (I prefer [VSCode](https://code.visualstudio.com/)), it should be able to run the python code
+-   ngrok (maybe, depends if you want to host it onto the internet)
 
 ## Wrapping up
 
