@@ -2,7 +2,6 @@
 
 ```table-of-contents
 
-* [Recording](#recording)
 * [Overview](#overview)
 * [Team Split](#team-split)
 * [Ideation](#ideation)
@@ -13,12 +12,6 @@
     2. [Backend Prerequisites](#backend-prerequisites)
 * [Additional Resources](#additional-resources)
 * [Wrapping Up](#wrapping-up)
-```
-
-## Recording
-
-```video
-https://www.youtube-nocookie.com/embed/d8Oedd2DMco
 ```
 
 ## Overview
@@ -111,7 +104,7 @@ I'll be mentoring for the entire event so if you have questions, try and find me
 
 This is by far the best source of documentation for ANYTHING native to the web. This means, built-in javascript functions and other browser API's and all of their documentation. If you want to work with Dates, for example, you'll want to look at the JS Date Object. If you want to work with a browser API like WebSpeech, WebAudio, WebGl, Navigator, etc. all the documentation is there.
 
-### API's
+### APIs
 
 For company specific API's, there'll usually be a documentation site and it's just Google-fu trying to find it. I'd suggest trying to implement their quickstart (usually they have a basic tutorial) and then once you get that down, you can start adding your own take and flavor of how this API should be used.
 
