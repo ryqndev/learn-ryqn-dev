@@ -28,6 +28,8 @@ For our starter code, we'll just use the finished code in the previous section w
 
 Here, I'll be using a 3d asset that's in a GLTF file format. GLTF is the most common format for 3d web developers.
 
+[Download all of these files](https://github.com/ryqndev/learn-ryqn-dev/tree/d897baf461fc34cb440e59a2815a0fadba8db29a/src/content/tutorial/web-dev/3d/threejs/custom-objects/docs/assets/island)
+
 ### Load in our 3d model
 
 We'll be loading in our GLTF using the [GLTFLoader](https://threejs.org/docs/#examples/en/loaders/GLTFLoader) that comes with three.js. To do this, all we need to do is copy the load function into our script.js file:

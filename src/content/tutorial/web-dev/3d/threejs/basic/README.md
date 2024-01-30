@@ -2,6 +2,7 @@
 
 ```table-of-contents
 
+* [Recording](#recording)
 * [Overview](#overview)
     1. [Background](#background)
     2. [Prerequisites](#prerequisites)
@@ -11,6 +12,12 @@
     3. [Starting our Javascript](#starting-our-javascript)
     4. [Starting Three](#starting-three)
 * [Next Steps](#next-steps)
+```
+
+## Recording
+
+```video
+https://www.youtube-nocookie.com/embed/5qSaEU15ndc
 ```
 
 ## Overview

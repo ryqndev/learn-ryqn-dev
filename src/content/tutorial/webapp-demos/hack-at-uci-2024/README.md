@@ -11,6 +11,7 @@
     1. [Frontend Prerequisites](#frontend-prerequisites)
     2. [Backend Prerequisites](#backend-prerequisites)
 * [Additional Resources](#additional-resources)
+    1. [MDN](#mdn)
 * [Wrapping Up](#wrapping-up)
 ```
 
@@ -100,7 +101,9 @@ I'll be mentoring for the entire event so if you have questions, try and find me
 
 ## Additional Resources
 
-#### [MDN](https://developer.mozilla.org/en-US/)
+### MDN
+
+[MDN](https://developer.mozilla.org/en-US/)
 
 This is by far the best source of documentation for ANYTHING native to the web. This means, built-in javascript functions and other browser API's and all of their documentation. If you want to work with Dates, for example, you'll want to look at the JS Date Object. If you want to work with a browser API like WebSpeech, WebAudio, WebGl, Navigator, etc. all the documentation is there.
 
