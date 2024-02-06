@@ -1,13 +1,19 @@
 # Three.js - Custom Objects
 
 ```table-of-contents
-
+* [Recording](#recording)
 * [Overview](#overview)
     1. [Context](#context)
 * [Render a custom object](#render-a-custom-object)
     1. [Boilerplate](#boilerplate)
     2. [Getting our 3d asset](#getting-our-3d-asset)
     3. [Load in our 3d model](#load-in-our-3d-model)
+```
+
+## Recording
+
+```video
+https://www.youtube-nocookie.com/embed/5qSaEU15ndc
 ```
 
 ## Overview

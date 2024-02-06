@@ -1,8 +1,7 @@
 import * as cn from "./Lab.module.scss";
 import { memo } from "react";
 
-import { Layout } from "@components";
-import { Head } from "@components/Layout";
+import { Layout, Head } from "@components";
 // import { Editor } from "../../components/editor/Editor";
 
 const Lab = memo(function Lab() {

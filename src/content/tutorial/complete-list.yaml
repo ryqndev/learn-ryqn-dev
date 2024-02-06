@@ -3,6 +3,28 @@
       - https://ryqn.dev
   link:
       - tutorial
+      - intro-to-data-visualization
+  title: "Intro to Data Visualization"
+  summary: >-
+      What is Data visualization?
+  tags:
+      - beginner
+      - data science
+  date:
+      updated: Mon Feb 5 2024 18:59:38 GMT-0800 (Pacific Standard Time)
+      uploaded: Mon Feb 5 2024 18:59:38 GMT-0800 (Pacific Standard Time)
+  hidden: false
+  links:
+      to:
+          - Intro to data viz with Python
+          - Intro to data viz with R
+      from:
+          - Computer Science
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
       - webapp-demos
       - hack-at-uci-2024
   title: "Hack at UCI 2024: Product Design & Web Dev Intro"
@@ -47,6 +69,9 @@
   date:
       updated: Sun, 21 Jan 2024 20:09:00 PST
       uploaded: Sun, 21 Apr 2024 20:09:00 PST
+  links:
+      from:
+          - "Web Dev 3D [Three.js]: Basics"
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -70,6 +95,11 @@
   date:
       updated: Sun, 21 Jan 2024 18:30:00 PST
       uploaded: Sun, 21 Apr 2024 18:30:00 PST
+  links:
+      to:
+          - "Web Dev 3D [Three.js]: Custom Objects"
+      from:
+          - Intro to Web Dev
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -93,6 +123,9 @@
   date:
       updated: Tue, 14 Apr 2023 16:41:00 PST
       uploaded: Tue, 14 Apr 2023 16:41:00 PST
+  links:
+      from:
+          - Intro to Web Dev
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -115,6 +148,31 @@
   date:
       updated: Tue, 5 Apr 2022 3:47:00 PST
       uploaded: Tue, 4 Apr 2022 18:20:00 PST
+  links:
+      from:
+          - Intro to data viz with Python
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
+      - intro-to-data-visualization
+      - R
+  title: Intro to data viz with R
+  summary: >-
+      Let's look at what data visualization looks like in R. Where do we 
+      start? and what should we learn?
+  tags:
+      - data
+      - visualization
+      - R
+      - beginner
+  date:
+      updated: Tue, 5 Apr 2022 3:47:00 PST
+      uploaded: Tue, 4 Apr 2022 18:20:00 PST
+  links:
+      from:
+          - Intro to Data Visualization
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -242,6 +300,9 @@
       updated: Wed Feb 01 2023 14:51:38 GMT-0800 (Pacific Standard Time)
       uploaded: Wed Feb 01 2023 14:51:38 GMT-0800 (Pacific Standard Time)
   hidden: false
+  links:
+      from:
+          - Intro to Web Dev
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -266,6 +327,9 @@
       updated: Sun Oct 29 2023 16:27:16 GMT-0700 (Pacific Daylight Time)
       uploaded: Sun Oct 29 2023 16:27:16 GMT-0700 (Pacific Daylight Time)
   hidden: false
+  links:
+      from:
+          - Intro to Web Dev
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -288,7 +352,10 @@
   date:
       updated: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
       uploaded: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
-  hidden: true
+  hidden: false
+  links:
+      from:
+          - Intro to Web Dev
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -316,3 +383,6 @@
       updated: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
       uploaded: Fri Nov 03 2023 04:45:45 GMT-0700 (Pacific Daylight Time)
   hidden: false
+  links:
+      from:
+          - Intro to Web Dev

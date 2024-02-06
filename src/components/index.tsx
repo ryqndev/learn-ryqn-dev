@@ -1,7 +1,4 @@
-import MarkdownRenderer from "./MarkdownRenderer";
-import Layout from './Layout';
+export { Navigation } from "./Layout/components/Navigation/Navigation";
 
-export {
-    MarkdownRenderer,
-    Layout,
-}
+export { MarkdownRenderer } from "./MarkdownRenderer/MarkdownRenderer";
+export { Layout, Head } from "./Layout/Layout";
