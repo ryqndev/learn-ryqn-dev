@@ -31,18 +31,8 @@ export const Search = () => {
         }),
         []
     );
-    const closeSearchBarShortcutRegistration = useMemo(
-        () => ({
-            combination: ["Meta", ";"],
-            label: "Search...",
-            description: "Open up the search bar",
-            onTrigger: () => inputRef.current?.blur(),
-        }),
-        []
-    );
 
     useKeyboardShortcuts(searchBarShortcutRegistration);
-    useKeyboardShortcuts(closeSearchBarShortcutRegistration);
 
     const fuse = useMemo(
         () =>

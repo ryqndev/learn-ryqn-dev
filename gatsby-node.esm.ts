@@ -58,7 +58,19 @@ exports.createPages = async ({ actions: { createPage } }) => {
     });
 };
 
-exports.onCreateWebpackConfig = function ({ actions }) {
+exports.onCreateWebpackConfig = function ({ stage, loaders, actions }) {
+    if (stage === "build-html") {
+        actions.setWebpackConfig({
+            module: {
+                rules: [
+                    {
+                        test: /react-force-graph-3d/,
+                        use: loaders.null(),
+                    },
+                ],
+            },
+        });
+    }
     actions.setWebpackConfig({
         resolve: {
             alias: {

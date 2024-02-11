@@ -14,6 +14,7 @@
       to:
           - Intro to Web Dev
           - Intro to Data Visualization
+          - Learning about HTTP requests
   value: 100
 - author:
       - Ryan Yang
@@ -46,6 +47,9 @@
   date:
       updated: Tue, 14 Dec 2021 18:34:32 GMT
       uploaded: Tue, 14 Dec 2021 18:34:32 GMT
+  links:
+      from:
+          - Learning about HTTP requests
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -134,6 +138,9 @@
   date:
       updated: Thu, 18 Feb 2021 20:56:54 GMT
       uploaded: Thu, 18 Feb 2021 20:45:32 GMT
+  links:
+      to:
+          - Introduction to API Calls
 - author:
       - Ryan Yang
       - https://ryqn.dev
