@@ -3,6 +3,32 @@
       - https://ryqn.dev
   link:
       - tutorial
+      - web-dev
+      - backend
+      - java
+      - spring
+      - setup
+  title: "Making a backend in Java [Spring]: Setup"
+  summary: >-
+      Having decided to write a backend in Java, let's look at how we would start 
+      a backend project in Spring - the most popular web server framework for Java.
+  tags:
+      - beginner
+      - backend
+      - java
+      - spring
+  date:
+      updated: Mon Feb 19 2024 15:47:38 GMT-0800 (Pacific Standard Time)
+      uploaded: Mon Feb 19 2024 15:47:38 GMT-0800 (Pacific Standard Time)
+  hidden: false
+  links:
+      from:
+          - Intro to backend development
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
       - intro-to-data-visualization
   title: "Intro to Data Visualization"
   summary: >-
@@ -52,6 +78,7 @@
   link:
       - tutorial
       - web-dev
+      - frontend
       - 3d
       - threejs
       - custom-objects
@@ -78,6 +105,7 @@
   link:
       - tutorial
       - web-dev
+      - frontend
       - 3d
       - threejs
       - basic
@@ -106,6 +134,7 @@
   link:
       - tutorial
       - web-dev
+      - frontend
       - fundamentals
       - events
   title: "Web Dev Fundamentals: Events"
@@ -196,6 +225,9 @@
   date:
       updated: Tue, 1 Apr 2021 15:46:00 PST
       uploaded: Tue, 1 Apr 2021 15:46:00 PST
+  links:
+      to:
+          - Intro to data viz with Python [Plotly]
 - author:
       - Ryan Yang
       - https://ryqn.dev

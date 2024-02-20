@@ -1,6 +1,24 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
+  link: /intro-to-backend-dev
+  title: Intro to Backend Development
+  summary: >-
+      What is backend development? When is it used? How is it used? and more importantly, how can I get started?
+  tags:
+      - beginner
+  date:
+      updated: Mon, 19 Feb 2024 15:38:32 PST
+      uploaded: Mon, 19 Feb 2024 15:38:32 PST
+  links:
+      from:
+          - Intro to Web Dev
+      to:
+          - Making a backend in Java [Spring]
+          - Learning about HTTP requests
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
   link: /computer-science
   title: Computer Science
   summary: >-

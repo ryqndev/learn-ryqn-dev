@@ -1,4 +1,4 @@
-import { ExplorerNode } from "..";
+import { ExplorerNode } from "../[...]";
 import cn from "./Label.module.scss";
 
 export const Label = ({ val }: ExplorerNode) => {

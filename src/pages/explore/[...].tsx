@@ -1,10 +1,12 @@
 import { Head, Layout } from "@components";
 
-import ForceGraph3D from "react-force-graph-3d";
+import ForceGraph3D, { NodeObject } from "react-force-graph-3d";
 import graph from "@content/graph.json";
 import { memo, useCallback } from "react";
 import { Label } from "./components/Label";
 import { createStringFromReactNode } from "./createHTMLStringFromReact";
+
+import { navigate } from "gatsby";
 
 export type ExplorerNode = (typeof graph.nodes)[0];
 
@@ -14,6 +16,17 @@ function Explorer() {
             createStringFromReactNode(<Label {...props} />),
         []
     );
+
+    const onNodeClick = (node: NodeObject<ExplorerNode>) => {
+        const link = node.val.link;
+
+        if (Array.isArray(link)) {
+            navigate("/explore/" + link.join("/"));
+            return;
+        }
+
+        navigate("/explore" + node.val.link);
+    };
 
     return (
         <Layout>
@@ -34,7 +47,10 @@ function Explorer() {
                         return "#ffffff";
                     }}
                     linkWidth={0.4}
-                    nodeLabel={getLabel}
+                    onNodeClick={onNodeClick}
+                    // nodeLabel={() =>
+                    //     `<div onclick="alert('aint no way')">LABEL</div>`
+                    // }
                 />
             </main>
         </Layout>
