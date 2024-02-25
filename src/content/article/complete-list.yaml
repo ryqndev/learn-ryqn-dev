@@ -16,6 +16,7 @@
       to:
           - Making a backend in Java [Spring]
           - Learning about HTTP requests
+  hidden: false
 - author:
       - Ryan Yang
       - https://ryqn.dev

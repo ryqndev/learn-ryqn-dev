@@ -5,35 +5,42 @@ const config: GatsbyConfig = {
         title: `learn.ryqn.dev`,
         siteUrl: `https://learn.ryqn.dev`,
     },
-    trailingSlash: "never",
+    trailingSlash: `never`,
     graphqlTypegen: true,
     plugins: [
-        "gatsby-plugin-image",
-        "gatsby-plugin-react-helmet",
-        "gatsby-plugin-sitemap",
-        "gatsby-plugin-sass",
-        "gatsby-plugin-sharp",
-        "gatsby-transformer-sharp",
-        "gatsby-plugin-react-svg",
+        `gatsby-plugin-image`,
+        `gatsby-plugin-react-helmet`,
+        `gatsby-plugin-sitemap`,
+        `gatsby-plugin-sass`,
+        `gatsby-plugin-sharp`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-react-svg`,
         {
-            resolve: "gatsby-plugin-anchor-links",
+            resolve: `gatsby-plugin-page-creator`,
+            options: {
+                path: `${__dirname}/src/pages`,
+                ignore: [`*/components/*`, `*/controllers/*`],
+            },
+        },
+        {
+            resolve: `gatsby-plugin-anchor-links`,
             options: {
                 duration: 750,
             },
         },
         {
-            resolve: "gatsby-plugin-manifest",
+            resolve: `gatsby-plugin-manifest`,
             options: {
-                icon: "src/assets/logo.png",
+                icon: `src/assets/logo.png`,
             },
         },
         {
-            resolve: "gatsby-source-filesystem",
+            resolve: `gatsby-source-filesystem`,
             options: {
-                name: "images",
-                path: "./src/assets/",
+                name: `images`,
+                path: `./src/assets/`,
             },
-            __key: "images",
+            __key: `images`,
         },
     ],
 };

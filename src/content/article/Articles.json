@@ -8,14 +8,24 @@
         "date": {
             "updated": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)",
             "uploaded": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)"
-        }
+        },
+        "hidden": false
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
         "link": ["article", "write-and-host-a-website"],
         "title": "Write and Host a Website",
         "summary": "You've been working hard on honing your web-dev skills and are ready for the world to see. Let's find out how to deploy our HTML code on Github Pages for free so that anyone connected to the internet can see our website that we've made.",
-        "tags": ["web developement", "beginner", "frontend", "fonts", "HTML", "Git", "Github", "Github Pages"],
+        "tags": [
+            "web developement",
+            "beginner",
+            "frontend",
+            "fonts",
+            "HTML",
+            "Git",
+            "Github",
+            "Github Pages"
+        ],
         "date": {
             "updated": "Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)",
             "uploaded": "Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)"
@@ -26,7 +36,15 @@
         "link": ["article", "how-to-use-fonts"],
         "title": "Using Fonts in your Website",
         "summary": "Learn how to find, import, and use various fonts to make your site unique. First, I'll give you a quick 5 minute how-to if you're pressed for time (like a hackathon) and if you're interested, I'll tell you some other tips and tricks to make you a font-master",
-        "tags": ["web developement", "beginner", "frontend", "Google Fonts", "fonts", "HTML", "CSS"],
+        "tags": [
+            "web developement",
+            "beginner",
+            "frontend",
+            "Google Fonts",
+            "fonts",
+            "HTML",
+            "CSS"
+        ],
         "date": {
             "updated": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)",
             "uploaded": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)"
@@ -37,7 +55,15 @@
         "link": ["article", "using-web-ui-libraries"],
         "title": "Using UI libraries in HTML/CSS/JS",
         "summary": "Designing and developing custom web components is challenging. Let's learn how to utilize prebuilt UI libraries to supercharge our projects",
-        "tags": ["web developement", "beginner", "frontend", "API", "JS", "HTML", "CSS"],
+        "tags": [
+            "web developement",
+            "beginner",
+            "frontend",
+            "API",
+            "JS",
+            "HTML",
+            "CSS"
+        ],
         "date": {
             "updated": "Thu Nov 23 2022 22:29:00 GMT-0700 (Pacific Daylight Time)",
             "uploaded": "Thu Nov 03 2022 20:04:00 GMT-0700 (Pacific Daylight Time)"
@@ -103,7 +129,13 @@
         "link": ["article", "designing-a-url-shortener"],
         "title": "Designing a URL shortener",
         "summary": "You might have heard of services like Bit.ly or TinyURL and wondered, how are these URL shorteners made? We'll explore the designs of these systems and then code our own.",
-        "tags": ["web developement", "API", "backend", "server", "intermediate"],
+        "tags": [
+            "web developement",
+            "API",
+            "backend",
+            "server",
+            "intermediate"
+        ],
         "date": {
             "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
             "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
@@ -114,7 +146,14 @@
         "link": ["article", "intro-to-web-dev"],
         "title": "Intro to Web Dev",
         "summary": "Assuming you have no experience with web development, we investigate the languages that make up the web and analyze a basic sample",
-        "tags": ["HTML", "CSS", "JS", "frontend", "web developement", "beginner"],
+        "tags": [
+            "HTML",
+            "CSS",
+            "JS",
+            "frontend",
+            "web developement",
+            "beginner"
+        ],
         "date": {
             "updated": "Wed, 17 Mar 2021 17:54:32 GMT",
             "uploaded": "Wed, 17 Mar 2021 17:54:32 GMT"
@@ -136,7 +175,14 @@
         "link": ["article", "starting-out-with-flask"],
         "title": "Starting out with Flask",
         "summary": "Explore the Flask framework for Python and understand when we should use it. Then, we'll run our own Flask app in under 8 lines of code. Finally, we'll take look at the various use cases of Flask and you can decide which way you would prefer to use it.",
-        "tags": ["Python", "Flask", "backend", "server", "web developement", "beginner"],
+        "tags": [
+            "Python",
+            "Flask",
+            "backend",
+            "server",
+            "web developement",
+            "beginner"
+        ],
         "date": {
             "updated": "Thu, 18 Feb 2021 03:43:45 GMT",
             "uploaded": "Wed, 17 Feb 2021 23:08:03 GMT"
@@ -147,7 +193,17 @@
         "link": ["article", "making-a-theme-switcher"],
         "title": "Making a dark / light mode theme switcher",
         "summary": "Learn how to setup a theme toggler with just CSS and Javascript. We'll be using CSS variables and utilizing Javascript functions to swap out styles. Then, we'll use Local Storage to save the theme and load it in future use.",
-        "tags": ["HTML", "CSS", "JS", "CSS Variables", "LocalStorage", "UI", "frontend", "web developement", "beginner"],
+        "tags": [
+            "HTML",
+            "CSS",
+            "JS",
+            "CSS Variables",
+            "LocalStorage",
+            "UI",
+            "frontend",
+            "web developement",
+            "beginner"
+        ],
         "date": {
             "updated": "Tue, 09 Feb 2021 17:33:38 GMT",
             "uploaded": "Tue, 02 Feb 2021 14:16:25 GMT"

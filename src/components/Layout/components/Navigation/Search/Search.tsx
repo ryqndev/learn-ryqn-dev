@@ -7,11 +7,11 @@ import Fuse from "fuse.js";
 import {
     NoResultsFound,
     Result as SearchResult,
-    Tooltip as SearchTooltip,
-} from "./components";
+} from "./components/Result/Result";
 import { IArticleMetaData } from "@templates/Article/types";
 import { useKeyboardShortcuts } from "@controllers";
 import { useKeyboard } from "./controllers/useKeyboard";
+import { Tooltip as SearchTooltip } from "./components/Tooltip/Tooltip";
 
 const content = [...articles, ...tutorials].filter((item) => !item?.hidden);
 

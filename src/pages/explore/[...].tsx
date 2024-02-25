@@ -1,49 +1,30 @@
-import { Head, Layout } from "@components";
+import { Layout } from "@components";
 
-import ForceGraph3D, { NodeObject } from "react-force-graph-3d";
-import graph from "@content/graph.json";
-import { memo } from "react";
+import { InteractiveGraph } from "./components/InteractiveGraph";
+import { useExplorerGraph } from "./controllers/useExplorerGraph";
+import { SelectedNodeDetails } from "./components/SelectedNodeDetails";
+import * as cn from "./Explore.module.scss";
 
-import { navigate } from "gatsby";
-
-export type ExplorerNode = (typeof graph.nodes)[0];
-
-function Explorer() {
-    const onNodeClick = (node: NodeObject<ExplorerNode>) => {
-        const link = node.val.link;
-
-        if (Array.isArray(link)) {
-            navigate("/explore/" + link.join("/"));
-            return;
-        }
-
-        navigate("/explore" + node.val.link);
-    };
+const Explore = () => {
+    const { graph, selectNode, selectedNode } = useExplorerGraph();
 
     return (
         <Layout>
-            <Head />
-            <main>
-                <ForceGraph3D
-                    nodeThreeObjectExtend={true}
-                    graphData={graph}
-                    nodeResolution={20}
-                    nodeRelSize={8}
-                    nodeVal={({ val }) =>
-                        val?.value ?? (val?.links?.to?.length ?? 0.1) / 20
-                    }
-                    nodeColor={({ val }) => {
-                        if (val.title === "Computer Science") return "#ff00ff";
-                        if (val.type === "tutorial") return "#00ffff";
-                        if (val.type === "article") return "#ffff00";
-                        return "#ffffff";
-                    }}
-                    linkWidth={0.4}
-                    onNodeClick={onNodeClick}
+            <main className={cn.container}>
+                <InteractiveGraph
+                    className={cn.graph}
+                    graph={graph}
+                    selectNode={selectNode}
                 />
+                {selectedNode && (
+                    <SelectedNodeDetails
+                        className={cn.details}
+                        selectedNode={selectedNode}
+                    />
+                )}
             </main>
         </Layout>
     );
-}
+};
 
-export default memo(Explorer);
+export default Explore;

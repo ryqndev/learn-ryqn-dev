@@ -24,8 +24,8 @@ const Home = () => {
             <main className={cn.container}>
                 <div className={cn.hero}>
                     <h1>LEARN.</h1>
-                    <h1 style={{ color: "white" }}>RYQN.</h1>
-                    <h1 style={{ color: "white" }}>DEV.</h1>
+                    <h1>RYQN.</h1>
+                    <h1>DEV.</h1>
                 </div>
             </main>
             {/* <Footer  /> */}
