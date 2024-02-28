@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import graph from "@content/graph.json";
 
+export type Graph = typeof graph;
 export type ExplorerNode = (typeof graph)["nodes"][number]["val"];
 
 export function updateURL(url: string) {

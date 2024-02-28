@@ -14,7 +14,7 @@
       from:
           - Intro to Web Dev
       to:
-          - Making a backend in Java [Spring]
+          - "Making a backend in Java [Spring]: Setup"
           - Learning about HTTP requests
   hidden: false
 - author:

@@ -2,7 +2,7 @@ import { Layout } from "@components";
 
 import { InteractiveGraph } from "./components/InteractiveGraph";
 import { useExplorerGraph } from "./controllers/useExplorerGraph";
-import { SelectedNodeDetails } from "./components/SelectedNodeDetails";
+import { SelectedNodeDetails } from "./components/SelectedNodeDetails/SelectedNodeDetails";
 import * as cn from "./Explore.module.scss";
 
 const Explore = () => {
@@ -20,6 +20,7 @@ const Explore = () => {
                     <SelectedNodeDetails
                         className={cn.details}
                         selectedNode={selectedNode}
+                        graph={graph}
                     />
                 )}
             </main>

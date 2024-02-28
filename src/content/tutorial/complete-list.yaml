@@ -23,7 +23,7 @@
   hidden: false
   links:
       from:
-          - Intro to backend development
+          - Intro to Backend Development
 - author:
       - Ryan Yang
       - https://ryqn.dev
@@ -89,8 +89,8 @@
       - html
       - js
       - Javascript
-      - 3d
       - frontend
+      - 3d
       - beginner
       - three.js
   date:

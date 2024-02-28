@@ -1,5 +1,5 @@
 import loadable from "@loadable/component";
-import { HTMLProps, useCallback } from "react";
+import { HTMLProps, useCallback, useEffect, useState } from "react";
 import { GraphData, NodeObject } from "react-force-graph-3d";
 
 const ForceGraph3D = loadable(() => import("react-force-graph-3d"));
@@ -7,6 +7,11 @@ const ForceGraph3D = loadable(() => import("react-force-graph-3d"));
 interface InteractiveGraphProps extends HTMLProps<HTMLDivElement> {
     graph: GraphData;
     selectNode: any;
+}
+
+interface Dimension {
+    width: number;
+    height: number;
 }
 
 export const InteractiveGraph = ({
@@ -18,8 +23,27 @@ export const InteractiveGraph = ({
         []
     );
 
+    const [dimensions, setDimensions] = useState<Dimension>({
+        height: window.innerHeight,
+        width: window.innerWidth,
+    });
+
+    const resize = useCallback(() => {
+        setDimensions({
+            height: window.innerHeight,
+            width: window.innerWidth,
+        });
+    }, []);
+
+    useEffect(() => {
+        window.addEventListener("resize", resize);
+        return () => window.removeEventListener("resize", resize);
+    }, []);
+
     return (
         <ForceGraph3D
+            height={dimensions.height}
+            width={dimensions.width}
             graphData={graph}
             nodeResolution={20}
             nodeRelSize={8}
