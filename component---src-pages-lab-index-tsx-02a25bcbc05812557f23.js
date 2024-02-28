@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunklearn_ryqn_dev=self.webpackChunklearn_ryqn_dev||[]).push([[759],{7753:function(n,e,a){a.r(e),a.d(e,{default:function(){return c}});var r=a(6540),s=a(6977),u=a(4848);var c=(0,r.memo)((function(){return(0,u.jsxs)(s.PE,{children:[(0,u.jsx)(s.p3,{}),(0,u.jsx)("main",{className:"Lab-module--container--5ba9a"})]})}))}}]);
+//# sourceMappingURL=component---src-pages-lab-index-tsx-02a25bcbc05812557f23.js.map
