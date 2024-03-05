@@ -17,7 +17,7 @@
         "clean": "gatsby clean",
         "typecheck": "tsc --noEmit",
         "refresh": "curl -X POST localhost:8000/__refresh",
-        "update": "node scripts/update-content-list.js"
+        "update": "node scripts/update-content-list.js && node scripts/create-page-graph.ts"
     },
     "dependencies": {
         "@codemirror/lang-css": "^6.2.1",

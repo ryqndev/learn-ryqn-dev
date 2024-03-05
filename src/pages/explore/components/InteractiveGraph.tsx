@@ -52,11 +52,11 @@ export const InteractiveGraph = ({
             }
             nodeColor={({ val }) => {
                 if (val.title === "Computer Science") return "#ff00ff";
-                if (val.type === "tutorial") return "#00ffff";
-                if (val.type === "article") return "#ffff00";
-                return "#ffffff";
+                if (val.type === "workshop") return "#ffff00";
+                return "#00ffff";
             }}
             onNodeClick={onNodeClick}
+            backgroundColor="#141617"
             linkWidth={0.4}
         />
     );

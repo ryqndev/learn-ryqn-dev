@@ -16,7 +16,6 @@ const initializeFileContents = (
         if (item?.type) {
             contents[currentPath + "/" + item.name] = item.content;
         } else {
-            console.log("ABOUTTA D OIT", item);
             initializeFileContents(
                 item,
                 currentPath + "/" + item.name,

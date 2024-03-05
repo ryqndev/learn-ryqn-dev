@@ -1,6 +1,7 @@
 .container {
     height: 100vh;
     width: 100vw;
+    background-color: #141617;
 
     & .graph {
         position: relative;
@@ -9,17 +10,24 @@
     }
 
     & .details {
+        color: #aaa;
         height: calc(100vh - 96px);
         width: min(40vw, 400px);
         position: absolute;
         bottom: 18px;
         right: 18px;
-
         background-color: #242627;
 
         border-radius: 4px;
         box-sizing: border-box;
+
         padding: 30px;
+
+
+        h2 {
+            color: white;
+        }
+
     }
 }
 

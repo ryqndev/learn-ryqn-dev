@@ -19,7 +19,7 @@ const config: GatsbyConfig = {
             resolve: `gatsby-plugin-page-creator`,
             options: {
                 path: `${__dirname}/src/pages`,
-                ignore: [`*/components/*`, `*/controllers/*`],
+                ignore: [`*/components/**`, `*/controllers/**`],
             },
         },
         {

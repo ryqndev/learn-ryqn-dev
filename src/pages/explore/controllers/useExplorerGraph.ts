@@ -15,6 +15,11 @@ export const useExplorerGraph = () => {
     const [selectedNode, setSelectedNode] = useState<ExplorerNode>();
 
     useEffect(() => {
+        // if()
+        console.log("@ryqnd", window.location);
+    }, []);
+
+    useEffect(() => {
         if (!selectedNode) return;
 
         /**

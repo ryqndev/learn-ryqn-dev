@@ -1,11 +1,23 @@
 .container {
     display: grid;
     gap: 20px;
+    grid-template-rows: 1fr 50px;
+    height: 100%;
 
-    & h2 {
-        font-size: 2em;
-        font-weight: bold;
+    & .inner {
+        display: grid;
+        gap: 20px;
+        height: min-content;
+        color: white;
+
+        & h2.title {
+            font-size: 2em;
+            font-weight: bold;
+            color: var(--accent);
+        }
+    
     }
+
 
     & ul {
         & li {
@@ -14,12 +26,33 @@
             
             & a {
                 text-decoration: none;
-                color: white;
+                color: #ccc;
+                transition: color 250ms;
+
+                &:visited {
+                    color: #888;
+                }
 
                 &:hover {
                     text-decoration: underline;
+                    color: #fff;
                 }
             }
+        }
+    }
+
+    & a.cta {
+        color: black;
+        font-weight: bold;
+        background-color: var(--accent);
+        display: grid;
+        place-content: center;
+        text-decoration: none;
+        border-radius: 2px;
+        transition: filter 250ms;
+        
+        &:hover {
+            filter: brightness(0.8);
         }
     }
 }

@@ -17,8 +17,8 @@ function createGinormousJSON(allowHidden = false) {
             })
         );
         const aggregate = [
-            ...tutorialData.map((e) => ({ ...e, type: "tutorial" })),
-            ...articleData.map((e) => ({ ...e, type: "article" })),
+            ...tutorialData.map((e) => ({ ...e })),
+            ...articleData.map((e) => ({ ...e })),
         ].reduce(
             (acc, cur) => {
                 if (!allowHidden && cur.hidden) return acc;
@@ -29,22 +29,23 @@ function createGinormousJSON(allowHidden = false) {
                 });
                 console.log(cur?.links?.to);
                 console.log(cur?.links?.from);
-                if (cur?.links?.to?.length) {
-                    cur.links.to.forEach((link) =>
+                // if (cur?.links?.to?.length) {
+                [...(cur.links?.to ?? []), ...(cur?.links?.from ?? [])].forEach(
+                    (link) =>
                         acc.links.push({
                             source: cur.title,
                             target: link,
                         })
-                    );
-                }
-                if (cur?.links?.from?.length) {
-                    cur.links.from.forEach((link) =>
-                        acc.links.push({
-                            source: cur.title,
-                            target: link,
-                        })
-                    );
-                }
+                );
+                // }
+                // if (cur?.links?.from?.length) {
+                //     cur.links.from.forEach((link) =>
+                //         acc.links.push({
+                //             source: cur.title,
+                //             target: link,
+                //         })
+                //     );
+                // }
 
                 return acc;
             },
