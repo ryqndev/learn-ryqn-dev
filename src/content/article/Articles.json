@@ -1,14 +1,15 @@
 [
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "quick-api-call-lesson"],
-        "title": "Quick API call lesson",
-        "summary": "For all those in a hackathon rush, this is a quick rundown on how to use the Yelp API and then prototype it with Insomnia, and then generate the code for you to use.",
-        "tags": ["web developement", "beginner", "backend", "API", "Yelp"],
+        "link": ["article", "how-to-use-fonts"],
+        "title": "Using Fonts in your Website",
+        "summary": "Learn how to find, import, and use various fonts to make your site unique. First, I'll give you a quick 5 minute how-to if you're pressed for time (like a hackathon) and if you're interested, I'll tell you some other tips and tricks to make you a font-master",
+        "tags": ["beginner"],
         "date": {
-            "updated": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)",
-            "uploaded": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)"
+            "updated": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)",
+            "uploaded": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)"
         },
+        "links": { "from": ["Intro to Web Dev"] },
         "hidden": false
     },
     {
@@ -16,102 +17,91 @@
         "link": ["article", "write-and-host-a-website"],
         "title": "Write and Host a Website",
         "summary": "You've been working hard on honing your web-dev skills and are ready for the world to see. Let's find out how to deploy our HTML code on Github Pages for free so that anyone connected to the internet can see our website that we've made.",
-        "tags": [
-            "web developement",
-            "beginner",
-            "frontend",
-            "fonts",
-            "HTML",
-            "Git",
-            "Github",
-            "Github Pages"
-        ],
+        "tags": ["beginner"],
         "date": {
             "updated": "Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)",
             "uploaded": "Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)"
-        }
+        },
+        "links": { "from": ["Intro to Web Dev"] },
+        "hidden": false
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "how-to-use-fonts"],
-        "title": "Using Fonts in your Website",
-        "summary": "Learn how to find, import, and use various fonts to make your site unique. First, I'll give you a quick 5 minute how-to if you're pressed for time (like a hackathon) and if you're interested, I'll tell you some other tips and tricks to make you a font-master",
-        "tags": [
-            "web developement",
-            "beginner",
-            "frontend",
-            "Google Fonts",
-            "fonts",
-            "HTML",
-            "CSS"
-        ],
+        "link": ["article", "quick-api-call-lesson"],
+        "title": "Quick API call lesson",
+        "summary": "For all those in a hackathon rush, this is a quick rundown on how to use the Yelp API and then prototype it with Insomnia, and then generate the code for you to use.",
+        "tags": ["beginner"],
         "date": {
-            "updated": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)",
-            "uploaded": "Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)"
-        }
+            "updated": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)",
+            "uploaded": "Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)"
+        },
+        "links": { "from": ["Intro to APIs"] },
+        "hidden": false
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "using-web-ui-libraries"],
-        "title": "Using UI libraries in HTML/CSS/JS",
-        "summary": "Designing and developing custom web components is challenging. Let's learn how to utilize prebuilt UI libraries to supercharge our projects",
-        "tags": [
-            "web developement",
-            "beginner",
-            "frontend",
-            "API",
-            "JS",
-            "HTML",
-            "CSS"
-        ],
+        "link": ["article", "intro-to-backend-dev"],
+        "title": "Intro to Backend Development",
+        "summary": "What is backend development? When is it used? How is it used? and more importantly, how can I get started?",
+        "tags": ["beginner"],
         "date": {
-            "updated": "Thu Nov 23 2022 22:29:00 GMT-0700 (Pacific Daylight Time)",
-            "uploaded": "Thu Nov 03 2022 20:04:00 GMT-0700 (Pacific Daylight Time)"
-        }
+            "updated": "Mon, 19 Feb 2024 15:38:32 PST",
+            "uploaded": "Mon, 19 Feb 2024 15:38:32 PST"
+        },
+        "links": {
+            "from": ["Intro to Web Dev"],
+            "to": [
+                "Making a backend in Java [Spring]: Setup",
+                "Learning about HTTP requests"
+            ]
+        },
+        "hidden": false
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "hackathon-flask"],
-        "title": "Flask Quickstart (for hackathons)",
-        "summary": "A quickstart tutorial into using Flask. Meant to be short and to the point with a quick barebones starter code boilerplate to get you running asap.",
-        "tags": ["web developement", "beginner", "Python", "Flask", "backend"],
+        "link": ["article", "computer-science"],
+        "title": "Computer Science",
+        "summary": "What is Computer Science? This is the central article that links to every other part of the site",
+        "tags": ["beginner"],
         "date": {
-            "updated": "Fri Feb 25 2022 18:17:00 GMT-0800 (Pacific Standard Time)",
-            "uploaded": "Fri Feb 25 2022 18:17:00 GMT-0800 (Pacific Standard Time)"
-        }
+            "updated": "Mon, 5 Feb 2024 18:57:32 PST",
+            "uploaded": "Mon, 5 Feb 2024 18:57:32 PST"
+        },
+        "links": {
+            "to": [
+                "Intro to Web Dev",
+                "Intro to Data Visualization",
+                "Intro to APIs"
+            ]
+        },
+        "value": 100
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "api-call-introduction"],
-        "title": "Introduction to API Calls",
-        "summary": "An intro to API calls. Expand your ability to create powerful applications by utilizing large datasets and other functionalities. ",
-        "tags": ["web developement", "intermediate"],
+        "link": ["article", "intro-to-apis"],
+        "title": "Intro to APIs",
+        "summary": "An intro to API calls. Expand your ability to create powerful applications by utilizing large datasets and other functionalities.",
+        "tags": ["web developement", "beginner"],
         "date": {
-            "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
+            "updated": "Tue, 25 Mar 2024 18:38:55 GMT",
             "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
-        }
-    },
-    {
-        "author": ["Ryan Yang", "https://ryqn.dev"],
-        "link": ["article", "creating-your-first-react-project"],
-        "title": "Creating your first React project",
-        "summary": "A continuation on Starting out with React, this is the second part of a workshop series for HackUCI.",
-        "tags": ["web developement", "React", "frontend", "JS", "intermediate"],
-        "date": {
-            "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
-            "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
+        },
+        "links": {
+            "from": ["Computer Science"],
+            "to": ["Learning about HTTP requests", "Quick API call lesson"]
         }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
         "link": ["article", "starting-out-with-react"],
         "title": "Starting out with React",
-        "summary": "An intro to React. We'll be drawing comparisons to how we would normally write code in vanilla javascript and see how it's simpler in React. ",
+        "summary": "An intro to React. We'll be drawing comparisons to how we would normally write code in vanilla javascript and see how it's simpler in React.",
         "tags": ["web developement", "React", "frontend", "JS", "intermediate"],
         "date": {
             "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
             "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
-        }
+        },
+        "links": { "from": ["Learning about HTTP requests"] }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
@@ -122,7 +112,8 @@
         "date": {
             "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
             "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
-        }
+        },
+        "links": { "to": ["Starting out with React"] }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
@@ -139,7 +130,8 @@
         "date": {
             "updated": "Tue, 14 Dec 2021 18:34:32 GMT",
             "uploaded": "Tue, 14 Dec 2021 18:34:32 GMT"
-        }
+        },
+        "links": { "to": ["Making a URL shortener in Python"] }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
@@ -157,6 +149,20 @@
         "date": {
             "updated": "Wed, 17 Mar 2021 17:54:32 GMT",
             "uploaded": "Wed, 17 Mar 2021 17:54:32 GMT"
+        },
+        "links": {
+            "to": [
+                "Zothacks 2023: Intro to Web Design",
+                "Zothacks 2023: Intro to Web Development",
+                "Design at UCI Fall 2023: Intro to Frontend Development",
+                "Hack at UCI 2023: Product Design & Web Dev Intro",
+                "Hack at UCI 2024: Product Design & Web Dev Intro",
+                "Web Dev Fundamentals: Events",
+                "Web Dev 3D [Three.js]: Basics",
+                "Starting out with Flask",
+                "Starting out with React"
+            ],
+            "from": ["Computer Science"]
         }
     },
     {
@@ -168,7 +174,8 @@
         "date": {
             "updated": "Thu, 18 Feb 2021 20:56:54 GMT",
             "uploaded": "Thu, 18 Feb 2021 20:45:32 GMT"
-        }
+        },
+        "links": { "from": ["Intro to APIs"] }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
@@ -186,7 +193,8 @@
         "date": {
             "updated": "Thu, 18 Feb 2021 03:43:45 GMT",
             "uploaded": "Wed, 17 Feb 2021 23:08:03 GMT"
-        }
+        },
+        "links": { "to": ["Making a URL shortener in Python"] }
     },
     {
         "author": ["Ryan Yang", "https://ryqn.dev"],
@@ -207,6 +215,7 @@
         "date": {
             "updated": "Tue, 09 Feb 2021 17:33:38 GMT",
             "uploaded": "Tue, 02 Feb 2021 14:16:25 GMT"
-        }
+        },
+        "links": { "from": ["Intro to Web Dev"] }
     }
 ]

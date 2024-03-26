@@ -1,7 +1,63 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /intro-to-backend-dev
+  link:
+      - article
+      - how-to-use-fonts
+  title: Using Fonts in your Website
+  summary: >-
+      Learn how to find, import, and use various fonts to make your site unique. First, I'll give you a quick 5 minute how-to if you're pressed for time (like a hackathon) and if you're interested, I'll tell you some other tips and tricks to make you a font-master
+  tags:
+      - beginner
+  date:
+      updated: Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)
+      uploaded: Mon Jan 16 2023 10:41:29 GMT-0800 (Pacific Standard Time)
+  links:
+      from:
+          - Intro to Web Dev
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - article
+      - write-and-host-a-website
+  title: Write and Host a Website
+  summary: >-
+      You've been working hard on honing your web-dev skills and are ready for the world to see. Let's find out how to deploy our HTML code on Github Pages for free so that anyone connected to the internet can see our website that we've made.
+  tags:
+      - beginner
+  date:
+      updated: Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)
+      uploaded: Mon Jan 23 2023 12:31:24 GMT-0800 (Pacific Standard Time)
+  links:
+      from:
+          - Intro to Web Dev
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - article
+      - quick-api-call-lesson
+  title: Quick API call lesson
+  summary: >-
+      For all those in a hackathon rush, this is a quick rundown on how to use the Yelp API and then prototype it with Insomnia, and then generate the code for you to use.
+  tags:
+      - beginner
+  date:
+      updated: Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)
+      uploaded: Fri Feb 03 2023 00:31:31 GMT-0800 (Pacific Standard Time)
+  links:
+      from:
+          - Intro to APIs
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - article
+      - intro-to-backend-dev
   title: Intro to Backend Development
   summary: >-
       What is backend development? When is it used? How is it used? and more importantly, how can I get started?
@@ -20,7 +76,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /computer-science
+  link:
+      - article
+      - computer-science
   title: Computer Science
   summary: >-
       What is Computer Science? This is the central article that links to every other part of the site
@@ -33,26 +91,36 @@
       to:
           - Intro to Web Dev
           - Intro to Data Visualization
-          - Learning about HTTP requests
+          - Intro to APIs
   value: 100
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /api-call-introduction
-  title: Introduction to API Calls
+  link:
+      - article
+      - intro-to-apis
+  title: Intro to APIs
   summary: >-
       An intro to API calls. Expand your ability to create powerful applications
       by utilizing large datasets and other functionalities.
   tags:
       - web developement
-      - intermediate
+      - beginner
   date:
-      updated: Tue, 14 Dec 2021 18:34:32 GMT
+      updated: Tue, 25 Mar 2024 18:38:55 GMT
       uploaded: Tue, 14 Dec 2021 18:34:32 GMT
+  links:
+      from:
+          - Computer Science
+      to:
+          - Learning about HTTP requests
+          - Quick API call lesson
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /starting-out-with-react
+  link:
+      - article
+      - starting-out-with-react
   title: Starting out with React
   summary: >-
       An intro to React. We'll be drawing comparisons to how we would normally
@@ -72,7 +140,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /setting-up-react
+  link:
+      - article
+      - setting-up-react
   title: Setting up React
   summary: A quick start on how to set up React for coding.
   tags:
@@ -90,7 +160,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /designing-a-url-shortener
+  link:
+      - article
+      - designing-a-url-shortener
   title: Designing a URL shortener
   summary: >-
       You might have heard of services like Bit.ly or TinyURL and wondered, how
@@ -111,7 +183,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /intro-to-web-dev
+  link:
+      - article
+      - intro-to-web-dev
   title: Intro to Web Dev
   summary: >-
       Assuming you have no experience with web development, we investigate the
@@ -142,7 +216,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /learning-about-http-requests
+  link:
+      - article
+      - learning-about-http-requests
   title: Learning about HTTP requests
   summary: >-
       Here, we will take a look at how we are using HTTP requests whenever we
@@ -158,12 +234,14 @@
       updated: Thu, 18 Feb 2021 20:56:54 GMT
       uploaded: Thu, 18 Feb 2021 20:45:32 GMT
   links:
-      to:
-          - Introduction to API Calls
+      from:
+          - Intro to APIs
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /starting-out-with-flask
+  link:
+      - article
+      - starting-out-with-flask
   title: Starting out with Flask
   summary: >-
       Explore the Flask framework for Python and understand when we should use it.
@@ -186,7 +264,9 @@
 - author:
       - Ryan Yang
       - https://ryqn.dev
-  link: /making-a-theme-switcher
+  link:
+      - article
+      - making-a-theme-switcher
   title: Making a dark / light mode theme switcher
   summary: >-
       Learn how to setup a theme toggler with just CSS and Javascript. We'll be
