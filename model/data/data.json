@@ -1,0 +1,34 @@
+{
+    "train": [
+        {
+            "question": "What is web development?",
+            "answer": "Web development is the ability to create a web-based application."
+        },
+        {
+            "question": "What is HTML in simple terms?",
+            "answer": "HTML denotes the content and structure of a website."
+        },
+        {
+            "question": "What is CSS in simple terms?",
+            "answer": "CSS makes a website pretty"
+        },
+        {
+            "question": "What is JS in simple terms?",
+            "answer": "JS provides interactivity to a webpage."
+        },
+        {
+            "question": "What does JS stand for?",
+            "answer": "JS is short for Javascript"
+        },
+        {
+            "question": "What is HTML short for?",
+            "answer": "HyperText Markup Language"
+        }
+    ],
+    "test": [
+        {
+            "question": "What is Javascript in simple terms?",
+            "answer": "Javascript provides interactivity to a webpage."
+        }
+    ]
+}

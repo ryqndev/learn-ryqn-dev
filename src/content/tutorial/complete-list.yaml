@@ -3,6 +3,29 @@
       - https://ryqn.dev
   link:
       - tutorial
+      - webapp-demos
+      - intro-to-web-dev
+  title: Intro to Web Dev [Hackathon Edition]
+  summary: >-
+      Intro to web development with HTML/CSS/JS and a Flask backend
+  tags:
+      - hackathon
+      - web developement
+      - Flask
+      - frontend
+      - backend
+      - Yelp API
+      - Yelp
+  date:
+      updated: Sat May 25 2024 12:40:17 GMT-0700 (Pacific Daylight Time)
+      uploaded: Sat May 25 2024 12:40:17 GMT-0700 (Pacific Daylight Time)
+  type: workshop
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
       - web-dev
       - backend
       - java
