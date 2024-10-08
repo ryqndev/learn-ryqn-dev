@@ -1,0 +1,17 @@
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #2d273e;
+    color: white;
+
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.box {
+    height: 180px;
+    width: 300px;
+    background-color: #f3ddb8;
+    border-radius: 4px;
+}
