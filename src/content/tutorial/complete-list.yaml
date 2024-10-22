@@ -4,6 +4,25 @@
   link:
       - tutorial
       - webapp-demos
+      - gwc-ivc-2024
+  title: Intro to Web Development [Halloween Edition]
+  summary: >-
+      Intro to web development with HTML/CSS/JS with a halloween theme
+  tags:
+      - web developement
+      - frontend
+      - TMDB
+  date:
+      updated: Mon Oct 07 2024 17:40:16 GMT-0700 (Pacific Daylight Time)
+      uploaded: Mon Oct 07 2024 17:40:16 GMT-0700 (Pacific Daylight Time)
+  type: workshop
+  hidden: false
+- author:
+      - Ryan Yang
+      - https://ryqn.dev
+  link:
+      - tutorial
+      - webapp-demos
       - intro-to-web-dev
   title: Intro to Web Dev [Hackathon Edition]
   summary: >-

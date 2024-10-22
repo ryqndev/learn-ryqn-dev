@@ -9,52 +9,52 @@ importers:
   .:
     dependencies:
       '@codemirror/lang-css':
-        specifier: ^6.2.1
+        specifier: ^6.3.0
         version: 6.3.0(@codemirror/view@6.34.1)
       '@codemirror/lang-html':
-        specifier: ^6.4.8
+        specifier: ^6.4.9
         version: 6.4.9
       '@codemirror/lang-javascript':
         specifier: ^6.2.2
         version: 6.2.2
       '@codemirror/lang-python':
-        specifier: ^6.1.4
+        specifier: ^6.1.6
         version: 6.1.6(@codemirror/view@6.34.1)
       '@lezer/common':
-        specifier: ^1.0.2
+        specifier: ^1.2.2
         version: 1.2.2
       '@lezer/highlight':
-        specifier: ^1.1.3
+        specifier: ^1.2.1
         version: 1.2.1
       '@loadable/component':
-        specifier: ^5.16.3
+        specifier: ^5.16.4
         version: 5.16.4(react@18.3.1)
       '@react-three/drei':
-        specifier: ^9.97.4
-        version: 9.114.0(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0))(@types/react@18.3.11)(@types/three@0.161.2)(immer@9.0.21)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0)
+        specifier: ^9.114.2
+        version: 9.114.2(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0))(@types/react@18.3.11)(@types/three@0.161.2)(immer@9.0.21)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0)
       '@react-three/fiber':
-        specifier: ^8.15.16
+        specifier: ^8.17.9
         version: 8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0)
       '@ryqndev/footer':
         specifier: ^3.2.3
         version: 3.2.3
       '@types/js-yaml':
-        specifier: ^4.0.5
+        specifier: ^4.0.9
         version: 4.0.9
       '@types/react-transition-group':
-        specifier: ^4.4.5
+        specifier: ^4.4.11
         version: 4.4.11
       '@types/three':
         specifier: ^0.161.2
         version: 0.161.2
       '@uiw/codemirror-themes':
-        specifier: ^4.19.4
+        specifier: ^4.23.5
         version: 4.23.5(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)
       '@uiw/react-codemirror':
-        specifier: ^4.21.23
+        specifier: ^4.23.5
         version: 4.23.5(@babel/runtime@7.25.7)(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.34.1)(codemirror@6.0.1(@lezer/common@1.2.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       clsx:
-        specifier: ^2.1.0
+        specifier: ^2.1.1
         version: 2.1.1
       codemirror:
         specifier: ^6.0.1
@@ -69,7 +69,7 @@ importers:
         specifier: ^6.6.2
         version: 6.6.2
       gatsby:
-        specifier: ^5.13.3
+        specifier: ^5.13.7
         version: 5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5)
       gatsby-plugin-anchor-links:
         specifier: ^1.2.1
@@ -78,13 +78,13 @@ importers:
         specifier: ^3.13.1
         version: 3.13.1(@babel/core@7.25.7)(gatsby-plugin-sharp@5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0))(gatsby-source-filesystem@5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5)))(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-plugin-manifest:
-        specifier: ^5.2.0
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0)
       gatsby-plugin-page-creator:
         specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0)
       gatsby-plugin-react-helmet:
-        specifier: ^6.2.0
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(react-helmet@6.1.0(react@18.3.1))
       gatsby-plugin-react-svg:
         specifier: ^3.3.0
@@ -93,16 +93,16 @@ importers:
         specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(sass@1.79.4)(webpack@5.95.0)
       gatsby-plugin-sharp:
-        specifier: ^5.2.0
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0)
       gatsby-plugin-sitemap:
-        specifier: ^6.2.0
+        specifier: ^6.13.1
         version: 6.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       gatsby-source-filesystem:
-        specifier: ^5.2.0
+        specifier: ^5.13.1
         version: 5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))
       gatsby-transformer-sharp:
-        specifier: ^5.2.0
+        specifier: ^5.13.1
         version: 5.13.1(gatsby-plugin-sharp@5.13.1(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0))(gatsby@5.13.7(babel-eslint@10.1.0(eslint@7.32.0))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@0.21.3)(typescript@4.9.5))(graphql@16.9.0)
       js-yaml:
         specifier: ^4.1.0
@@ -111,13 +111,13 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.1
         version: 18.3.1(react@18.3.1)
       react-force-graph-3d:
-        specifier: ^1.24.1
+        specifier: ^1.24.4
         version: 1.24.4(react@18.3.1)
       react-helmet:
         specifier: ^6.1.0
@@ -132,7 +132,7 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       sass:
-        specifier: ^1.71.1
+        specifier: ^1.79.4
         version: 1.79.4
       svg-react-loader:
         specifier: ^0.4.6
@@ -142,25 +142,25 @@ importers:
         version: 0.161.0
     devDependencies:
       '@types/loadable__component':
-        specifier: ^5.13.8
+        specifier: ^5.13.9
         version: 5.13.9
       '@types/node':
-        specifier: ^22.7.4
-        version: 22.7.4
+        specifier: ^22.7.5
+        version: 22.7.5
       '@types/react':
-        specifier: ^18.0.26
+        specifier: ^18.3.11
         version: 18.3.11
       '@types/react-dom':
-        specifier: ^18.0.9
+        specifier: ^18.3.0
         version: 18.3.0
       '@types/react-helmet':
-        specifier: ^6.1.6
+        specifier: ^6.1.11
         version: 6.1.11
       gh-pages:
         specifier: ^6.1.1
         version: 6.1.1
       typescript:
-        specifier: ^4.9.3
+        specifier: ^4.9.5
         version: 4.9.5
 
 packages:
@@ -877,8 +877,8 @@ packages:
       '@codemirror/view': ^6.0.0
       '@lezer/common': ^1.0.0
 
-  '@codemirror/commands@6.6.2':
-    resolution: {integrity: sha512-Fq7eWOl1Rcbrfn6jD8FPCj9Auaxdm5nIK5RYOeW7ughnd/rY5AmPg6b+CfsG39ZHdwiwe8lde3q8uR7CF5S0yQ==}
+  '@codemirror/commands@6.7.0':
+    resolution: {integrity: sha512-+cduIZ2KbesDhbykV02K25A5xIVrquSPz4UxxYBemRlAT2aW8dhwUgLDwej7q/RJUHKk4nALYcR1puecDvbdqw==}
 
   '@codemirror/lang-css@6.3.0':
     resolution: {integrity: sha512-CyR4rUNG9OYcXDZwMPvJdtb6PHbBDKUc/6Na2BIwZ6dKab1JQqKa4di+RNRY9Myn7JB81vayKwJeQ7jEdmNVDA==}
@@ -1474,8 +1474,8 @@ packages:
   '@react-spring/types@9.6.1':
     resolution: {integrity: sha512-POu8Mk0hIU3lRXB3bGIGe4VHIwwDsQyoD1F394OK7STTiX9w4dG3cTLljjYswkQN+hDSHRrj4O36kuVa7KPU8Q==}
 
-  '@react-three/drei@9.114.0':
-    resolution: {integrity: sha512-+3EjUS47DEInY3LoTabA0t2AC62hgJvhZmQggZC1iTTZNrnyGQ9EQVYKP3e4kYyq2cnRAYptRnonSRF3RZkStA==}
+  '@react-three/drei@9.114.2':
+    resolution: {integrity: sha512-CRUP4jOh8oUp2Wa6nY1M0BFAbVPLqCNBlmFPuVbHh9hew7utvm1EQoAf37kaWPDEa5uujEOM0VVselsLwHLVaA==}
     peerDependencies:
       '@react-three/fiber': '>=8.0'
       react: '>=18.0'
@@ -1672,11 +1672,8 @@ packages:
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
 
-  '@types/node@18.19.54':
-    resolution: {integrity: sha512-+BRgt0G5gYjTvdLac9sIeE0iZcJxi4Jc4PV5EUzqi+88jmQLr+fRZdv2tCTV7IHKSGxM6SaLoOXQWWUiLUItMw==}
-
-  '@types/node@22.7.4':
-    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
+  '@types/node@22.7.5':
+    resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
 
   '@types/node@8.10.66':
     resolution: {integrity: sha512-tktOkFUA4kXx2hhhrB8bIFb5TbwzS4uOhKEmwiD+NoiL0qtP2OQ9mFldbgD4dV1djrlBYP6eBuQZiWjuHUpqFw==}
@@ -2978,8 +2975,8 @@ packages:
   ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
 
-  electron-to-chromium@1.5.32:
-    resolution: {integrity: sha512-M+7ph0VGBQqqpTT2YrabjNKSQ2fEl9PVx6AK3N558gDH9NO8O6XN9SXXFWRo9u9PbEg/bWq+tjXQr+eXmxubCw==}
+  electron-to-chromium@1.5.33:
+    resolution: {integrity: sha512-+cYTcFB1QqD4j4LegwLfpCNxifb6dDFUAwk6RsLusCwIaZI6or2f+q8rs5tTB2YC53HhOlIbEaqHMAAC8IOIwA==}
 
   email-addresses@5.0.0:
     resolution: {integrity: sha512-4OIPYlA6JXqtVn8zpHpGiI7vE6EQOAg16aGnDMIAlZVinnoZ8208tW1hAbjWydgN/4PLTT9q+O1K6AH/vALJGw==}
@@ -6524,9 +6521,6 @@ packages:
     resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
     engines: {node: '>=0.10.0'}
 
-  undici-types@5.26.5:
-    resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
-
   undici-types@6.19.8:
     resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
 
@@ -7851,7 +7845,7 @@ snapshots:
       '@codemirror/view': 6.34.1
       '@lezer/common': 1.2.2
 
-  '@codemirror/commands@6.6.2':
+  '@codemirror/commands@6.7.0':
     dependencies:
       '@codemirror/language': 6.10.3
       '@codemirror/state': 6.4.1
@@ -8651,7 +8645,7 @@ snapshots:
 
   '@react-spring/types@9.6.1': {}
 
-  '@react-three/drei@9.114.0(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0))(@types/react@18.3.11)(@types/three@0.161.2)(immer@9.0.21)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0)':
+  '@react-three/drei@9.114.2(@react-three/fiber@8.17.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0))(@types/react@18.3.11)(@types/three@0.161.2)(immer@9.0.21)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(three@0.161.0)':
     dependencies:
       '@babel/runtime': 7.25.7
       '@mediapipe/tasks-vision': 0.10.8
@@ -8784,7 +8778,7 @@ snapshots:
     dependencies:
       '@types/http-cache-semantics': 4.0.4
       '@types/keyv': 3.1.4
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
       '@types/responselike': 1.0.3
 
   '@types/common-tags@1.8.4': {}
@@ -8795,7 +8789,7 @@ snapshots:
 
   '@types/cors@2.8.17':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/debounce@1.2.4': {}
 
@@ -8823,17 +8817,17 @@ snapshots:
   '@types/glob@5.0.38':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/hast@3.0.4':
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
 
   '@types/http-cache-semantics@4.0.4': {}
 
   '@types/http-proxy@1.17.15':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/js-yaml@4.0.9': {}
 
@@ -8843,7 +8837,7 @@ snapshots:
 
   '@types/keyv@3.1.4':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/loadable__component@5.13.9':
     dependencies:
@@ -8857,28 +8851,24 @@ snapshots:
 
   '@types/mdast@4.0.4':
     dependencies:
-      '@types/unist': 2.0.11
+      '@types/unist': 3.0.3
 
   '@types/minimatch@5.1.2': {}
 
   '@types/mkdirp@0.5.2':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/ms@0.7.34': {}
 
   '@types/node-fetch@2.6.11':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
       form-data: 4.0.0
 
   '@types/node@17.0.45': {}
 
-  '@types/node@18.19.54':
-    dependencies:
-      undici-types: 5.26.5
-
-  '@types/node@22.7.4':
+  '@types/node@22.7.5':
     dependencies:
       undici-types: 6.19.8
 
@@ -8921,16 +8911,16 @@ snapshots:
 
   '@types/responselike@1.0.3':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/rimraf@2.0.5':
     dependencies:
       '@types/glob': 5.0.38
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
 
   '@types/semver@7.5.8': {}
 
@@ -9045,10 +9035,10 @@ snapshots:
       '@typescript-eslint/types': 5.62.0
       eslint-visitor-keys: 3.4.3
 
-  '@uiw/codemirror-extensions-basic-setup@4.23.5(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/commands@6.6.2)(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)':
+  '@uiw/codemirror-extensions-basic-setup@4.23.5(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/commands@6.7.0)(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)':
     dependencies:
       '@codemirror/autocomplete': 6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2)
-      '@codemirror/commands': 6.6.2
+      '@codemirror/commands': 6.7.0
       '@codemirror/language': 6.10.3
       '@codemirror/lint': 6.8.2
       '@codemirror/search': 6.5.6
@@ -9064,11 +9054,11 @@ snapshots:
   '@uiw/react-codemirror@4.23.5(@babel/runtime@7.25.7)(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/theme-one-dark@6.1.2)(@codemirror/view@6.34.1)(codemirror@6.0.1(@lezer/common@1.2.2))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@babel/runtime': 7.25.7
-      '@codemirror/commands': 6.6.2
+      '@codemirror/commands': 6.7.0
       '@codemirror/state': 6.4.1
       '@codemirror/theme-one-dark': 6.1.2
       '@codemirror/view': 6.34.1
-      '@uiw/codemirror-extensions-basic-setup': 4.23.5(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/commands@6.6.2)(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)
+      '@uiw/codemirror-extensions-basic-setup': 4.23.5(@codemirror/autocomplete@6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2))(@codemirror/commands@6.7.0)(@codemirror/language@6.10.3)(@codemirror/lint@6.8.2)(@codemirror/search@6.5.6)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)
       codemirror: 6.0.1(@lezer/common@1.2.2)
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
@@ -9653,7 +9643,7 @@ snapshots:
   browserslist@4.24.0:
     dependencies:
       caniuse-lite: 1.0.30001667
-      electron-to-chromium: 1.5.32
+      electron-to-chromium: 1.5.33
       node-releases: 2.0.18
       update-browserslist-db: 1.1.1(browserslist@4.24.0)
 
@@ -9874,7 +9864,7 @@ snapshots:
   codemirror@6.0.1(@lezer/common@1.2.2):
     dependencies:
       '@codemirror/autocomplete': 6.18.1(@codemirror/language@6.10.3)(@codemirror/state@6.4.1)(@codemirror/view@6.34.1)(@lezer/common@1.2.2)
-      '@codemirror/commands': 6.6.2
+      '@codemirror/commands': 6.7.0
       '@codemirror/language': 6.10.3
       '@codemirror/lint': 6.8.2
       '@codemirror/search': 6.5.6
@@ -10445,7 +10435,7 @@ snapshots:
 
   ee-first@1.1.1: {}
 
-  electron-to-chromium@1.5.32: {}
+  electron-to-chromium@1.5.33: {}
 
   email-addresses@5.0.0: {}
 
@@ -10483,7 +10473,7 @@ snapshots:
     dependencies:
       '@types/cookie': 0.4.1
       '@types/cors': 2.8.17
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.4.2
@@ -12287,13 +12277,13 @@ snapshots:
 
   jest-worker@26.6.2:
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
       merge-stream: 2.0.0
       supports-color: 7.2.0
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 18.19.54
+      '@types/node': 22.7.5
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -14982,8 +14972,6 @@ snapshots:
       which-boxed-primitive: 1.0.2
 
   unc-path-regex@0.1.2: {}
-
-  undici-types@5.26.5: {}
 
   undici-types@6.19.8: {}
 

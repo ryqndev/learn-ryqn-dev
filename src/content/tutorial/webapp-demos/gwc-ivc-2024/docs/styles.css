@@ -1,0 +1,96 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #2d273e;
+    color: white;
+
+    font-family: "Rethink Sans", sans-serif;
+
+    height: 100vh;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#movie-list {
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 0 20vw;
+    overflow-x: scroll;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
+.movie-list-item {
+    display: grid;
+    place-self: center;
+    grid-template-rows: 1fr 100px;
+    height: min-content;
+    width: 300px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    padding: 20px;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.movie-list-item h2 {
+    font-size: 1em;
+    color: #f3ddb8;
+    text-align: center;
+}
+
+.movie-list-item img {
+    display: grid;
+    place-self: center;
+    max-width: 300px;
+
+    border-radius: 8px;
+}
+
+dialog {
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+}
+
+.modal {
+    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px;
+    background-color: #000000ae;
+    place-content: center;
+}
+
+.modal img {
+    border: 1px solid #f3ddb8;
+    place-self: center;
+    border-radius: 4px;
+}
+
+.modal .description {
+    max-width: 600px;
+    place-self: center;
+    color: #f3ddb8;
+}
+
+.modal h1 {
+    font-size: 3em;
+    line-height: 1em;
+}
+
+.modal p {
+    font-size: 1.2em;
+}
