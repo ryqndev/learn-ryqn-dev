@@ -20,12 +20,6 @@ function parseResponseAsJSON(response) {
 }
 
 function displayMovieRecommendations(jsonResponse) {
-    console.log("Parsed Response in JSON format:", jsonResponse);
-    console.log(
-        "Parsed Response in JSON format:",
-        document.getElementById("movie-list")
-    );
-
     document.getElementById("movie-list").innerHTML = "";
 
     let movieList = jsonResponse.results;
@@ -51,11 +45,8 @@ function displayMovieRecommendations(jsonResponse) {
 }
 
 function openMovieDetailPopup(movie) {
-    console.log(movie);
     let modal = document.createElement("dialog");
-
     modal.style.backgroundImage = `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`;
-
     modal.innerHTML = `
         <div class="modal">
             <div class="description">
@@ -65,11 +56,9 @@ function openMovieDetailPopup(movie) {
             <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}">
         <div>
     `;
-
     modal.addEventListener("click", function () {
         modal.close();
     });
     document.body.appendChild(modal);
-
     modal.showModal();
 }
