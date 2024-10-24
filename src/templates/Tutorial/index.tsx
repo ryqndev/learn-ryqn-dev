@@ -10,10 +10,13 @@ import Head from "@templates/Article/components/Head";
 const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
     const { content, link } = pageContext;
 
-    const transformImageUri = (uri: string) =>
-        `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/${link.join(
-            "/"
-        )}${uri.substr(1)}`;
+    const transformUri = (uri: string, element: string) => {
+        return element === "img"
+            ? `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/${link.join(
+                  "/"
+              )}${uri.substr(1)}`
+            : uri;
+    };
 
     return (
         <Layout>
@@ -23,7 +26,7 @@ const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
                     <ReactMarkdown
                         remarkPlugins={[gfm]}
                         components={MarkdownRenderer}
-                        urlTransform={transformImageUri}
+                        urlTransform={transformUri}
                     >
                         {content}
                     </ReactMarkdown>

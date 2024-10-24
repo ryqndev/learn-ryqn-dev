@@ -49,7 +49,7 @@ Phew. Ok let's get started. All web development is done in three language: HTML,
 
 That's it. Knowing these will let you know exactly which languages you need to work in to get the job done.
 
-I have a slightly condensed version below but it's probably better to read [this instead](../../../article/intro-to-web-dev/)
+I have a slightly condensed version below but it's probably better to read [this instead](https://learn.ryqn.dev/article/intro-to-web-dev/)
 
 ### HTML
 
@@ -178,7 +178,7 @@ where you can find your API key in your dashboard of the TMDB website: https://w
 
 OR... if you're too lazy to do that, you can just uncomment line 25 in the script.js file and and comment out lines 18-23 which will swap out the API call with a hardcoded response that I saved from making the call earlier.
 
-> Note: This implementation relies on using an API which you can find a quick tutorial on how I make this [with the Yelp API here](../../../article/intro-to-web-dev/). You'd swap this out with the [TMDB API](https://developer.themoviedb.org/docs/getting-started).
+> Note: This implementation relies on using an API which you can find a quick tutorial on how I make this [with the Yelp API here](https://learn.ryqn.dev/article/intro-to-web-dev/). You'd swap this out with the [TMDB API](https://developer.themoviedb.org/docs/getting-started).
 
 ```file-json
 {
@@ -186,7 +186,7 @@ OR... if you're too lazy to do that, you can just uncomment line 25 in the scrip
   "contents": [
     { "name": "index.html", "type": "html" },
     { "name": "styles.css", "type": "css" },
-    { "name": "script.js", "type": "js" }
+    { "name": "script.js", "type": "js" },
     { "name": "keys.js", "type": "js" }
   ]
 }
@@ -437,14 +437,14 @@ Firefox/Chrome on an iOS device is actually running the same rendering engine as
 
 ## References
 
-[Using custom fonts](../../../article/how-to-use-fonts)
+[Using custom fonts](https://learn.ryqn.dev/article/how-to-use-fonts)
 How to find free fonts, import them, and use them in your website.
 
-[Basic Javascript events](../../../tutorial/web-dev/fundamentals/events)
+[Basic Javascript events](https://learn.ryqn.dev/tutorial/web-dev/fundamentals/events)
 Listening to button clicks, getting user text inputs, getting keyboard events
 
-[Quick API call lesson](../../../article/quick-api-call-lesson)
+[Quick API call lesson](https://learn.ryqn.dev/article/quick-api-call-lesson)
 I reference this article earlier but to recap, it teaches you how I ended with the code for that fetch call to get data from an online resource like an API.
 
-[Host your website](../../../article/write-and-host-a-website)
+[Host your website](https://learn.ryqn.dev/article/write-and-host-a-website)
 Once you're done with your website, learn how to put it online for everyone to see for free!
