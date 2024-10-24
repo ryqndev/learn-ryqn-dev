@@ -12,6 +12,7 @@
     1. [Design](#design)
     1. [Finished Code](#finished-code)
 * [Browsers](#browsers)
+* [References](#references)
 
 ```
 
@@ -22,15 +23,15 @@
 Requirements:
 
 -   Computer (doesn't matter mac/windows/linux/etc.)
--   text editor (prefer a code editor like VSCode)
+-   text editor (prefer a code editor like [VSCode](https://code.visualstudio.com/))
 
 How dope is that? you literally only need a computer and a code editor. The reason why is because in web development, we run/test all of our code in the browser which comes default on every personal computer. In fact, you could probably even use a phone for this (super not recommended though.. do it for the memes)
 
 Soft requirements:
 
-For your IDE (Integrated Developer Environment, aka code editor), would highly recommend VSCode. This is (as of 2024) the industry standard and I'd estimate 90% of web developers in silicon valley use it. I've seen others: webstorm, vi/vim but would say VSCode is probably your choice to start off with.
+For your IDE (Integrated Developer Environment, aka code editor), would highly recommend VSCode. This is (as of 2024) the industry standard and I'd estimate 90% of web developers in silicon valley use it. I've seen others: webstorm, vi/vim but would say [VSCode](https://code.visualstudio.com/) is probably your choice to start off with.
 
-For browsers, would prefer if you had chrome/firefox (tbh chrome _probably_ better). This is for three main reasons: 1. they have the best developer environment, 2. they have the largest market share (safari is important to test on but their dev ex is not the best) and 3. they have the most support for common web standards.
+For browsers, would prefer if you had [chrome](https://www.google.com/chrome/)/[firefox](https://www.mozilla.org/en-US/firefox/) (tbh chrome _probably_ better). This is for three main reasons: 1. they have the best developer environment, 2. they have the largest market share (safari is important to test on but their dev ex is not the best) and 3. they have the most support for common web standards.
 
 You can read the [browsers](#browsers) section down below for more information.
 
@@ -40,7 +41,7 @@ This workshop is geared for folks who are interested in web development (...or e
 
 ## Basics
 
-Phew. Ok let's get started. All web development is done in three language: HTML, CSS, and Javascript (JS). Now, before you get too spooked, it's not really three entire languages you have to learn.. each language is like 1/3 of the entire "web development language" and this actually makes things easier. If you take nothing away from this entire workshop, I'd want you to at least remember these quick one line zingers I use:
+Phew. Ok let's get started. All web development is done in three language: HTML, CSS, and Javascript (JS). Now, before you get too spooked (no pun intended), it's not really three entire languages you have to learn... each language is like 1/3 of the entire "web development language" and this actually makes things easier. If you take nothing away from this entire workshop, I'd want you to at least remember these quick one line zingers I use:
 
 1. HTML denotes the content and structure of a website.
 2. CSS makes things pretty
@@ -165,6 +166,18 @@ and when you click on one of them, you'll get this popup to help read more about
 
 ### Finished Code
 
+The most important thing here if you want to copy and paste and try running it is to add a `keys.js` file and add the following:
+
+```js keys.js
+let authorizationCode = "PUT UR CODE HERE";
+```
+
+where you can find your API key in your dashboard of the TMDB website: https://www.themoviedb.org/settings/api which looks like this once you create a free account:
+
+![api dashboard](./assets/api.png)
+
+OR... if you're too lazy to do that, you can just uncomment line 25 in the script.js file and and comment out lines 18-23 which will swap out the API call with a hardcoded response that I saved from making the call earlier.
+
 > Note: This implementation relies on using an API which you can find a quick tutorial on how I make this [with the Yelp API here](../../../article/intro-to-web-dev/). You'd swap this out with the [TMDB API](https://developer.themoviedb.org/docs/getting-started).
 
 ```file-json
@@ -174,6 +187,7 @@ and when you click on one of them, you'll get this popup to help read more about
     { "name": "index.html", "type": "html" },
     { "name": "styles.css", "type": "css" },
     { "name": "script.js", "type": "js" }
+    { "name": "keys.js", "type": "js" }
   ]
 }
 ```
@@ -322,6 +336,8 @@ dialog {
 function getMovies() {
     const options = {
         headers: {
+            // authorizationCode is a variable I set in the keys.js file
+            // which isn't public on github because it has my private API key
             Authorization: authorizationCode,
         },
     };
@@ -337,7 +353,7 @@ function getMovies() {
         .then(parseResponseAsJSON)
         .then(displayMovieRecommendations);
 
-    displayMovieRecommendations(SAMPLE_RESPONSE);
+    // displayMovieRecommendations(SAMPLE_RESPONSE);
 }
 
 /**
