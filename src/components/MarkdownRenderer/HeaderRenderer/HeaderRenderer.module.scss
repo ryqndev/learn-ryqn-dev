@@ -10,7 +10,7 @@
 
 .article {
     transform: translate(0, -60%);
-    
+
     a:visited {
         color: var(--accent-alt);
     }
@@ -24,13 +24,15 @@
         @media screen and (max-width: 800px) {
             font-size: 2.3rem;
         }
+
         @media screen and (max-width: 1400px) {
             font-size: 3rem;
         }
     }
 }
 
-h2.header, h3.header {
+h2.header,
+h3.header {
     position: sticky;
     background-color: var(--background);
     z-index: 10;

@@ -15,7 +15,8 @@
 }
 
 .video {
-    padding-bottom: 56.25%; /* creates a 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* creates a 16:9 aspect ratio */
     width: 100%;
     position: relative;
     overflow: hidden;
@@ -50,6 +51,7 @@
             cursor: pointer !important;
         }
     }
+
     .editor {
         padding: 0px 10px 20px 10px;
 
@@ -68,10 +70,10 @@
     }
 }
 
-.inline { 
+.inline {
     color: var(--accent);
     padding: 4px 6px;
     line-height: 2em;
-    border-radius: 2px; 
+    border-radius: 2px;
     background-color: var(--card);
 }

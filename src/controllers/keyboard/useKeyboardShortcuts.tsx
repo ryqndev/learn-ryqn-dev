@@ -20,10 +20,8 @@ export const useKeyboardShortcuts = ({
 
     const onKeydown = useCallback(
         (e: KeyboardEvent) => {
-            console.log(e, "down");
-
             setPressed((prev) => ({ ...prev, [e.key]: true }));
-            if (e.key === "k") e.preventDefault();
+            // if (e.key === "k") e.preventDefault(); <- this is a hilarious bug i found during calhacks... looks like iforgot to implement the cmd + k feature
         },
         [setPressed]
     );

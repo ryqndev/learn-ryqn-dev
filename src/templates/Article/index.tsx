@@ -23,8 +23,7 @@ const Article = ({ pageContext }: PageProps<any, IArticle>) => {
                     <ReactMarkdown
                         remarkPlugins={[gfm]}
                         components={MarkdownRenderer}
-                        transformLinkUri={null}
-                        transformImageUri={transformImageUri}
+                        urlTransform={transformImageUri}
                     >
                         {content}
                     </ReactMarkdown>

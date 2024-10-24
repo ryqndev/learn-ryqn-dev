@@ -8,6 +8,7 @@ import clsx from "clsx";
 import { useLocation } from "@reach/router";
 
 const TableOfContents = ({ value }: { value: string }) => {
+    console.log("@ryqndev", value);
     return (
         <div className={cn.grid}>
             <div className={cn.container}>
@@ -30,6 +31,8 @@ const TOCInlineRenderer = {
 
         useLayoutEffect(() => {
             const anchor = document.querySelector(anchorHref + "-visible");
+
+            console.log("@ryqndev", anchor);
             if (!anchor) return;
             const observer = new IntersectionObserver(([entry]) => {
                 setVisible(entry.isIntersecting);

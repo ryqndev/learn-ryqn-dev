@@ -21,6 +21,8 @@ button {
     width: 100vw;
     box-sizing: border-box;
     padding: 0 20vw;
+
+    /* makes it horizontally scrollable if the content is larger than the parent container */
     overflow-x: scroll;
     display: grid;
     grid-auto-flow: column;
