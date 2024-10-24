@@ -122,7 +122,7 @@ Example for YELP: https://docs.developer.yelp.com/reference/v3_business_search
 [Using custom fonts](../../../article/how-to-use-fonts)
 How to find free fonts, import them, and use them in your website
 
-[Basic Javascript events](../../../tutorial/web-dev/fundamentals/events)
+[Basic Javascript events](../../../tutorial/web-dev/frontend/fundamentals/events)
 Listening to button clicks, getting user text inputs, getting keyboard events
 
 [Using UI libraries](../../../article/using-web-ui-libraries)

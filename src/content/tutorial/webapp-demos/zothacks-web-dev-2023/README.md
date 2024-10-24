@@ -53,7 +53,7 @@ Some quick reference articles if you're just trying to do one thing.
 > [Using custom fonts](../../../article/how-to-use-fonts)
 > How to find free fonts, import them, and use them in your website
 
-> [Basic Javascript events](../../../tutorial/web-dev/fundamentals/events)
+> [Basic Javascript events](../../../tutorial/web-dev/frontend/fundamentals/events)
 > Listening to button clicks, getting user text inputs, getting keyboard events
 
 > [Using UI libraries](../../../article/using-web-ui-libraries)

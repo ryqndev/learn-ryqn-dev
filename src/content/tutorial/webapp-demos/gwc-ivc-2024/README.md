@@ -440,7 +440,7 @@ Firefox/Chrome on an iOS device is actually running the same rendering engine as
 [Using custom fonts](https://learn.ryqn.dev/article/how-to-use-fonts)
 How to find free fonts, import them, and use them in your website.
 
-[Basic Javascript events](https://learn.ryqn.dev/tutorial/web-dev/fundamentals/events)
+[Basic Javascript events](https://learn.ryqn.dev/tutorial/web-dev/frontend/fundamentals/events)
 Listening to button clicks, getting user text inputs, getting keyboard events
 
 [Quick API call lesson](https://learn.ryqn.dev/article/quick-api-call-lesson)
