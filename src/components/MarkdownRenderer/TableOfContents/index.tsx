@@ -8,7 +8,6 @@ import clsx from "clsx";
 import { useLocation } from "@reach/router";
 
 const TableOfContents = ({ value }: { value: string }) => {
-    console.log("@ryqndev", value);
     return (
         <div className={cn.grid}>
             <div className={cn.container}>

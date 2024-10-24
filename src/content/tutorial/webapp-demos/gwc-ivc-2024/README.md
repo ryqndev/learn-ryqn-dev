@@ -15,6 +15,8 @@
 
 ```
 
+> You can find all the [source code for this app here](https://github.com/ryqndev/learn-ryqn-dev/tree/20242740ba79679e70eb14da7c7cdc208f8c125a/src/content/tutorial/webapp-demos/gwc-ivc-2024/docs). It's fully commented to help you understand how each line works.
+
 ## What you need
 
 Requirements:
@@ -411,6 +413,22 @@ function openMovieDetailPopup(movie) {
 
 ## Browsers
 
+(I added this portion earlier but idr a good place to put it so i'm just leaving it here oops...)
+
 Browsers are lowk one of the bigger pain points of web development. There are like 3 main browsers out there (chrome/firefox/safari) and quite literally, they each have a different rendering engine. What that means is your code can actually run differently if your users have different browsers. Not only that, different browsers have different version and are even different on different devices (yikes!!).
 
 Firefox/Chrome on an iOS device is actually running the same rendering engine as Safari which means that you're actually abiding by Safari limitations. Some browsers like Arc and Brave have some market share but they all use the webkit based rendering engine underneach -> which is known as Chromium and is thus similar to Chrome. There's so much extra information on this that I could probably write up an entire article on this but until you start writing production level applications, you can ignore this part for now.
+
+## References
+
+[Using custom fonts](../../../article/how-to-use-fonts)
+How to find free fonts, import them, and use them in your website.
+
+[Basic Javascript events](../../../tutorial/web-dev/fundamentals/events)
+Listening to button clicks, getting user text inputs, getting keyboard events
+
+[Quick API call lesson](../../../article/quick-api-call-lesson)
+I reference this article earlier but to recap, it teaches you how I ended with the code for that fetch call to get data from an online resource like an API.
+
+[Host your website](../../../article/write-and-host-a-website)
+Once you're done with your website, learn how to put it online for everyone to see for free!

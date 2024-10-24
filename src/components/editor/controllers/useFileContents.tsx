@@ -11,7 +11,6 @@ const initializeFileContents = (
     contents: FileContentMap = {}
 ) => {
     for (const item of folder.contents) {
-        console.log("@ryqndev", item);
         // its a file
         if (item?.type) {
             contents[currentPath + "/" + item.name] = item.content;

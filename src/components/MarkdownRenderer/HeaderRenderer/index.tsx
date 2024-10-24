@@ -19,8 +19,6 @@ const convertToHashLinkID = (content) =>
         .replace(/[^a-z0-9#\-]/gi, "");
 
 const StandardHeader: HeadingComponent = ({ children, node: { tagName } }) => {
-    console.log("@ryqndev", children, tagName);
-
     const HeaderLevel = tagName;
     const content: string = children ?? "";
 

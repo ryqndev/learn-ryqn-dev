@@ -1,14 +1,17 @@
 <!DOCTYPE html>
+<!-- We actually get most of this code by just typing ! into an empty html file and it generates this HTML boilerplate -->
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        <!-- This sets the text in the tab in the browser -->
         <title>Spoooky</title>
 
         <!-- import your CSS file -->
         <link rel="stylesheet" type="text/css" href="./styles.css" />
 
+        <!-- import fonts. I have a tutorial on how to find and use these fonts in the writeup -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -21,6 +24,8 @@
         <script src="./SAMPLE_RESPONSE.js"></script>
         <script src="./script.js"></script>
     </head>
+
+    <!-- as soon as the page loads for the first time, trigger the getMovies function we've linked in the script.js file above -->
     <body onload="getMovies()">
         <nav>SPOOOKY</nav>
         <div class="container">
