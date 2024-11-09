@@ -1,4 +1,4 @@
-import ReactMarkdown, { uriTransformer } from "react-markdown";
+import ReactMarkdown from "react-markdown";
 import gfm from "remark-gfm";
 import { memo } from "react";
 import { Layout, MarkdownRenderer } from "@components";
@@ -11,7 +11,7 @@ const Article = ({ pageContext }: PageProps<any, IArticle>) => {
     const { content, link } = pageContext;
 
     const transformUri = (uri: string, element: string) => {
-        return element === "img"
+        return element === "src"
             ? `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/${link.join(
                   "/"
               )}${uri.substr(1)}`

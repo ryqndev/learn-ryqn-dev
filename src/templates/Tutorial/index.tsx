@@ -11,7 +11,7 @@ const Tutorial = ({ pageContext }: PageProps<any, IArticle>) => {
     const { content, link } = pageContext;
 
     const transformUri = (uri: string, element: string) => {
-        return element === "img"
+        return element === "src"
             ? `https://cdn.jsdelivr.net/gh/ryqndev/learn-ryqn-dev/src/content/${link.join(
                   "/"
               )}${uri.substr(1)}`

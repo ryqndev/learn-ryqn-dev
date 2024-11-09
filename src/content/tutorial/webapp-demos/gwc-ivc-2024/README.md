@@ -4,13 +4,13 @@
 
 * [Overview](#overview)
 * [Basics](#basics)
-    1.[HTML](#html)
+    1. [HTML](#html)
     2. [CSS](#css)
     3. [CSS for positioning](#css-for-positioning)
     4. [Javascript](#js)
 * [Build our spooky app](#build-our-spooky-app)
     1. [Design](#design)
-    1. [Finished Code](#finished-code)
+    2. [Finished Code](#finished-code)
 * [Browsers](#browsers)
 * [References](#references)
 
